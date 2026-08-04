@@ -1,0 +1,21 @@
+
+> Configure project :
+Fabric Loom: 1.17.17
+
+> Task :compileJava
+警告: 未知的枚举常量 Level.FULL
+  原因: 找不到com.google.j2objc.annotations.ReflectionSupport$Level的类文件
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\jei\FusionRecipeCategory.java:56: 警告: [removal] IRecipeCategory 中的 getBackground() 已过时, 且标记为待删除
+   public IDrawable getBackground() {
+                    ^
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+注: 某些输入文件使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+2 个警告
+
+[Incubating] Problems report is available at: file:///D:/Project/Heart/Heartbound-Port/restore-1.21.1/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 12s
+1 actionable task: 1 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.1/userguide/configuration_cache_enabling.html

@@ -9,7 +9,7 @@
 |---|---|---|
 | 一 | 分析原始 JAR | ✅ 完成 |
 | 二 | 恢复 1.21.1 源码工程（remap + 反编译） | ✅ 完成（见 §14/§20） |
-| 三 | 修复恢复工程至 `./gradlew build` 通过 | ⏳ 基线：70 错误 / 2 警告，集中在 9 个文件 |
+| 三 | 修复恢复工程至 `./gradlew build` 通过 | ✅ 完成（70→0 错误；产物注解与原件逐字节一致） |
 | 四 | 1.21.1 基线验证（runClient） | ⏳ |
 | 五 | 迁移至 26.1.2 | ⏳ |
 
@@ -277,6 +277,20 @@ java -jar analysis/tools/vineflower-1.10.1.jar \
 - S2C（9）：ClothingArmorVisibility / OpenCustomizeScreen / OpenKoboldCustomizeScreen / PlayAttackAnimation / PlayCumHudAnimation / RefreshModels / RunAnimEvents / SceneOptions / TransformSceneOptions
 - 实体（8）：Aly / Bia / Coppie / CustomGirl / Ellie / Jenny / Kobold / Slime（+ GirlSceneEntity 场景实体、TransformablePlayer 变身玩家）
 
+## 22. 阶段三修复记录（70 → 0 错误）
+
+| 组 | 文件 | 根因 | 修复 |
+|---|---|---|---|
+| Mixin this 转型 | PlayerTransformationMixin(45)、LocalPlayerMixin(2)、PlayerRidingMixin(2) | vineflower 把 `(PlayerEntity)(Object)this` 双转型简化为 `(PlayerEntity)this`；`(Object)this instanceof X self` 模式匹配丢失 Object 基座 | 补回 `(Object)` 中间转型 |
+| SBL 依赖版本 | gradle.properties | 1.16.11 是 1.21.9/mojmap 重建（无 fabric.mod.json、loom 不 remap） | 换 **1.16.10**（1.21.1 原生 intermediary 构建，含 fabric.mod.json，loom 自动 remap） |
+| SBL 泛型 | BaseGirlEntityAI(14) | 裸类型 `new Idle()` 使 lambda 参数推断为 Object；`coreTasks(MultiTickTask<? super T>...)` 变参数组需显式 T | `<BaseGirlEntityAI>` 显式见证 + 变参直传 |
+| switch 作用域 | HeartboundPackets(2)、GirlSceneEntity(1) | Java 局部变量不可在嵌套块遮蔽（JLS 6.4）；vineflower 丢了 case 花括号 | case 体补花括号/重命名局部变量 |
+| 伪 @Override | DoubleSliderEntry、FreecamKeyMapping | `SliderWidget.setValue(double)`、`KeyBinding.reset()` 均为 private，vineflower 臆造 @Override | 删除 @Override |
+| 裸集合 | GirlChopTreesGoal | `ArrayList` 泛型丢失 → for-each 元素成 Object | `ArrayList<BlockPos>` |
+| 构造器引用 | HeartboundScreenHandlerRegistry | 丢失菱形运算符 | `new ExtendedScreenHandlerType<>(...)` |
+
+验证：`compileJava` 0 错误 → `build` 通过 → 产物 `heartbound-0.6.9+1.21.1_WIP3.jar`（310 类）；Mixin 注解字符串经 loom static remap 回 intermediary，与原始 JAR 的 token 数完全一致（MultiPlayerGameModeMixin 55=55）；无 refmap 属正常（static remap 模式）。
+
 ## 19. Git 提交计划
 
 - [x] `chore: initialize 1.21.1 restoration workspace`
@@ -284,6 +298,8 @@ java -jar analysis/tools/vineflower-1.10.1.jar \
 - [x] `build: configure fabric 1.21.1 environment`
 - [x] `fix: regenerate canonical wrapper, upgrade to gradle 9.5.1 + loom 1.17.17`
 - [x] `refactor: restore decompiled source tree`
-- [ ] `fix: ...`（阶段三，按组提交）
+- [x] `fix: switch smartbrainlib to 1.16.10 (1.21.1-native yarn build)`
+- [x] `fix: repair decompiled mixin casts and switch-case scoping`
+- [x] `fix: repair sbl generics and decompiler artifacts`
 - [ ] `build: establish working 1.21.1 baseline`（阶段四）
 - [ ] `chore: initialize 26.1.2 port`（阶段五）

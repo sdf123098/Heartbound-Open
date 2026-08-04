@@ -1,0 +1,66 @@
+
+> Configure project :
+Fabric Loom: 1.17.17
+
+> Task :compileJava
+警告: 未知的枚举常量 Level.FULL
+  原因: 找不到com.google.j2objc.annotations.ReflectionSupport$Level的类文件
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:128: 错误: 找不到符号
+         new OneRandomBehaviour(new SetRandomWalkTarget(), new Idle().runFor(entity -> entity.getRandom().nextBetween(30, 60)))
+                                                                                             ^
+  符号:   方法 getRandom()
+  位置: 类型为Object的变量 entity
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\jei\FusionRecipeCategory.java:56: 警告: [removal] IRecipeCategory 中的 getBackground() 已过时, 且标记为待删除
+   public IDrawable getBackground() {
+                    ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\networking\HeartboundPackets.java:191: 错误: 已在方法 registerC2SPackets()中定义了变量 sp
+                              ServerPlayerEntity sp = context.player();
+                                                 ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\networking\HeartboundPackets.java:202: 错误: 已在方法 registerC2SPackets()中定义了变量 sp
+                              ServerPlayerEntity sp = context.player();
+                                                 ^
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+注: 某些输入文件使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+3 个错误
+2 个警告
+
+> Task :compileJava FAILED
+
+[Incubating] Problems report is available at: file:///D:/Project/Heart/Heartbound-Port/restore-1.21.1/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  警告: 未知的枚举常量 Level.FULL
+    原因: 找不到com.google.j2objc.annotations.ReflectionSupport$Level的类文件
+  注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+  注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+  注: 某些输入文件使用或覆盖了已过时的 API。
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\jei\FusionRecipeCategory.java:56: 警告: [removal] IRecipeCategory 中的 getBackground() 已过时, 且标记为待删除
+     public IDrawable getBackground() {
+                      ^
+  注: 某些输入文件使用了未经检查或不安全的操作。
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\networking\HeartboundPackets.java:191: 错误: 已在方法 registerC2SPackets()中定义了变量 sp
+                                ServerPlayerEntity sp = context.player();
+                                                   ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\networking\HeartboundPackets.java:202: 错误: 已在方法 registerC2SPackets()中定义了变量 sp
+                                ServerPlayerEntity sp = context.player();
+                                                   ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:128: 错误: 找不到符号
+           new OneRandomBehaviour(new SetRandomWalkTarget(), new Idle().runFor(entity -> entity.getRandom().nextBetween(30, 60)))
+                                                                                               ^
+    符号:   方法 getRandom()
+    位置: 类型为Object的变量 entity
+  3 个错误
+  2 个警告
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 28s
+1 actionable task: 1 executed
