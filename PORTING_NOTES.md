@@ -7,9 +7,9 @@
 
 | 阶段 | 内容 | 状态 |
 |---|---|---|
-| 一 | 分析原始 JAR | ✅ 完成（本文件） |
-| 二 | 恢复 1.21.1 源码工程（remap + 反编译） | ⏳ 待执行 |
-| 三 | 修复恢复工程至 `./gradlew build` 通过 | ⏳ |
+| 一 | 分析原始 JAR | ✅ 完成 |
+| 二 | 恢复 1.21.1 源码工程（remap + 反编译） | ✅ 完成（见 §14/§20） |
+| 三 | 修复恢复工程至 `./gradlew build` 通过 | ⏳ 基线：70 错误 / 2 警告，集中在 9 个文件 |
 | 四 | 1.21.1 基线验证（runClient） | ⏳ |
 | 五 | 迁移至 26.1.2 | ⏳ |
 
@@ -257,13 +257,33 @@ java -jar analysis/tools/vineflower-1.10.1.jar \
 - 无全局 Gradle。⚠️ LuminaBox 系列工程的 gradlew / gradlew.bat / gradle-wrapper.jar 均已损坏（脚本含 LLM 垃圾文本且双重 `set --`；jar 缺 `Main-Class`）——**不可复用**，wrapper 一律用发行版 `gradle wrapper` 重新生成
 - **网络**：`services.gradle.org` 直连可用（307 → github.com），但 Java 客户端连 github 发行资产被重置 → wrapper 用腾讯镜像 `https://mirrors.cloud.tencent.com/gradle/gradle-9.5.1-bin.zip`（已验证 200）。生成 wrapper 时加 `--no-validate-url` 跳过联网校验。本机另有代理 127.0.0.1:7897（存活，备用）。
 
+## 20. 阶段二执行记录（2026-08-04）
+
+实际流程（全部已验证可复现）：
+
+1. **工具**：tiny-remapper 0.14.0 fat、yarn 1.21.1+build.3 mergedv2、vineflower 1.10.1（central）→ `analysis/tools/`（gitignore）。
+2. **MC 库**：Loom 1.17 缓存的 `minecraft-merged.jar` 是原始混淆名（`aa.class`）；intermediary 版在 `minecraftMaven/net/minecraft/minecraft-merged-intermediary/…-v2/*.jar`（tiny-remapper 库）；再用 tiny-remapper `official→named` 自建 `minecraft-named.jar`（vineflower 类型库，Yarn 的 Entity 在 `net/minecraft/entity/`）。
+3. **remap**：`tiny-remapper <原jar> <named.jar> <mappings.tiny> intermediary named <libs...>` —— 0.14 CLI 的位置参数就是 classpath；库含 MC-intermediary + geckolib/sbl/cloth/patchouli/jei/modmenu + fabric-api 49 个嵌套模块。MSYS 需 `MSYS2_ARG_CONV_EXCL='*'` + `cygpath -m`。
+4. **结果**：310 类全部 remap，非 Mixin 类 **0 残留**；23 个 Mixin 类的注解字符串（@Mixin targets / @Shadow / @Inject / @At / @Accessor）保留 intermediary（CLI 无 mixin 扩展）→ 用 `analysis/remap_mixin_strings.py` 按 tiny 映射后处理源码（两遍解析 tiny：文件按官方名排序，成员描述符里的类引用可能引用后文才出现的 c 行；m/f 行以 `\t` 开头，split 后索引 +1；@Mixin 简单类名需经 import/包/MC 简单名索引解析）。最终 **mixin 源码 0 残留**。
+5. **反编译**：vineflower `-e=<56 个库>` → 249 个 .java（内部类并入外类）。
+6. **资源**：python zipfile 精确提取 assets(592)/data(61)/fabric.mod.json/mixins.json/LICENSE/META-INF（MSYS unzip 通配符不可靠）。
+7. **编译基线**：`compileJava` = **70 错误 / 2 警告**，集中在 9 个文件：PlayerTransformationMixin(~22，变量重复/类型不兼容)、BaseGirlEntityAI(7，SBL 泛型)、HeartboundPackets(2，lambda 重复变量)、LocalPlayerMixin/PlayerRidingMixin(各 2)、其余 5 文件各 1。
+
+已知反编译瑕疵（阶段三处理）：vineflower 对 @Mixin 注解内的类引用漏写 import（3 处）；部分 lambda 作用域变量重名；SBL 泛型推断退化。
+
+## 21. 网络包清单（阶段二回填）
+
+- C2S（27）：AnimationFinish / AnimationSync / BonePosSync / CumKeybind / GirlCustomize / InventoryButton / KoboldCustomize / PlayerAnimLock / PlayerStripStart / PlayerStripToggle / RegisterCustomGirlMessage / RegisterCustomGirlRandomSound / RegisterCustomGirlSound / RemovePreviewEntity / ScenePhaseSync / SetGUIOpenState / SoundEventSync / StartScene / StopSceneOnServer / ThrustKeybind / TransformAnimationFinish / TransformRequest / TransformRevert / TransformSceneKeybind / TransformStartScene / TransformStopScene / TransformThrustKeyframe
+- S2C（9）：ClothingArmorVisibility / OpenCustomizeScreen / OpenKoboldCustomizeScreen / PlayAttackAnimation / PlayCumHudAnimation / RefreshModels / RunAnimEvents / SceneOptions / TransformSceneOptions
+- 实体（8）：Aly / Bia / Coppie / CustomGirl / Ellie / Jenny / Kobold / Slime（+ GirlSceneEntity 场景实体、TransformablePlayer 变身玩家）
+
 ## 19. Git 提交计划
 
 - [x] `chore: initialize 1.21.1 restoration workspace`
 - [x] `docs: document original jar structure`
 - [x] `build: configure fabric 1.21.1 environment`
 - [x] `fix: regenerate canonical wrapper, upgrade to gradle 9.5.1 + loom 1.17.17`
-- [ ] `refactor: restore decompiled source tree`（阶段二）
+- [x] `refactor: restore decompiled source tree`
 - [ ] `fix: ...`（阶段三，按组提交）
 - [ ] `build: establish working 1.21.1 baseline`（阶段四）
 - [ ] `chore: initialize 26.1.2 port`（阶段五）
