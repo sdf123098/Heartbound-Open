@@ -1,0 +1,18 @@
+pluginManagement {
+    repositories {
+        maven { name = 'Fabric'; url = 'https://maven.fabricmc.net/' }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    resolutionStrategy {
+        eachPlugin {
+            // Loom 1.13.6 的 plugin marker 不在 Fabric Maven 上（库构件在），
+            // 直接解析库构件（与原 JAR 构建工具链一致）。
+            if (requested.id.id == 'fabric-loom') {
+                useModule("net.fabricmc:fabric-loom:${requested.version}")
+            }
+        }
+    }
+}
+
+rootProject.name = 'heartbound-restore-1.21.1'
