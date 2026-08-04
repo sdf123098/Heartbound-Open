@@ -18,7 +18,7 @@ public abstract class PlayerRidingMixin {
       cancellable = true
    )
    private void heartbound$canAddPassenger(Entity passenger, CallbackInfoReturnable<Boolean> cir) {
-      if (this instanceof PlayerEntity self) {
+      if ((Object)this instanceof PlayerEntity self) {
          TransformablePlayer tp = (TransformablePlayer)self;
          if (tp.heartbound$isTransformSceneActive() || tp.heartbound$isWaitingForTarget()) {
             cir.setReturnValue(!self.hasPassengers());
@@ -32,7 +32,7 @@ public abstract class PlayerRidingMixin {
       cancellable = true
    )
    private void heartbound$getPassengerRidingPos(Entity passenger, CallbackInfoReturnable<Vec3d> cir) {
-      if (this instanceof PlayerEntity self) {
+      if ((Object)this instanceof PlayerEntity self) {
          TransformablePlayer tp = (TransformablePlayer)self;
          if (tp.heartbound$isTransformSceneActive()) {
             Vec3d bonePos = tp.heartbound$getPassengerBonePosition();

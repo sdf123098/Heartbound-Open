@@ -757,8 +757,8 @@ public abstract class GirlSceneEntity extends GirlEntity implements GeoEntity {
                   return PlayState.CONTINUE;
                }
 
-               String current = intros.get(Math.min(this.getIntroIndex(), intros.size() - 1));
-               return this.setSceneAnimIfChanged(state, current, LoopType.HOLD_ON_LAST_FRAME);
+               String currentIntro = intros.get(Math.min(this.getIntroIndex(), intros.size() - 1));
+               return this.setSceneAnimIfChanged(state, currentIntro, LoopType.HOLD_ON_LAST_FRAME);
             case HAVING_SEX:
                boolean thrustKeyDown = this.isThrusting();
                if (this.getCurrentSexAnim().isBlank()) {

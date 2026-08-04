@@ -125,7 +125,7 @@ public class HeartboundPackets {
                               BlockPos pos = girl.getBlockPos();
                               context.player().sendMessage(Text.translatable("msg.heartbound.baseSet", pos.getX(), pos.getY(), pos.getZ()), true);
                               break;
-                           case "sex":
+                           case "sex": {
                               ServerPlayerEntity sp = context.player();
                               if (sp.currentScreenHandler != sp.playerScreenHandler) {
                                  sp.currentScreenHandler.onClosed(sp);
@@ -139,6 +139,7 @@ public class HeartboundPackets {
                                  )
                               );
                               break;
+                           }
                            case "goToBase":
                               girl.teleportToBase();
                               break;
@@ -187,7 +188,7 @@ public class HeartboundPackets {
                                  girl.setChopping(false);
                               }
                               break;
-                           case "openInventory":
+                           case "openInventory": {
                               ServerPlayerEntity sp = context.player();
                               if (sp.currentScreenHandler != sp.playerScreenHandler) {
                                  sp.currentScreenHandler.onClosed(sp);
@@ -197,7 +198,8 @@ public class HeartboundPackets {
                               sp.openHandledScreen(new GirlInventoryScreenHandlerFactory(girl));
                               girl.setGUIOpenState(true, sp);
                               break;
-                           case "customize":
+                           }
+                           case "customize": {
                               ServerPlayerEntity sp = context.player();
                               if (sp.currentScreenHandler != sp.playerScreenHandler) {
                                  sp.currentScreenHandler.onClosed(sp);
@@ -206,6 +208,7 @@ public class HeartboundPackets {
 
                               ServerPlayNetworking.send(sp, new OpenCustomizeScreenS2CPacket(girl.getId(), girl.createTempClone().getId()));
                               break;
+                           }
                            default:
                               Heartbound.LOGGER.warn("Unknown Girl interaction: " + packet.actionId());
                         }

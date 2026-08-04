@@ -35,7 +35,7 @@ public class LocalPlayerMixin {
       cancellable = true
    )
    private void freecam$cancelFreeCameraPackets(CallbackInfo ci) {
-      if (this instanceof FreeCamera) {
+      if ((Object)this instanceof FreeCamera) {
          ci.cancel();
       }
    }
@@ -46,7 +46,7 @@ public class LocalPlayerMixin {
    )
    private void freecam$enforceFreeze(CallbackInfo ci) {
       if (this.freecam$shouldFreeze()) {
-         Entity self = (Entity)this;
+         Entity self = (Entity)(Object)this;
          if (this.freecam$frozenPos == null) {
             this.freecam$frozenPos = self.getPos();
          }

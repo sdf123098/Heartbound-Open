@@ -128,44 +128,44 @@ public abstract class PlayerTransformationMixin implements TransformablePlayer {
 
    @Override
    public String heartbound$getTransformGirlId() {
-      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_GIRL_ID);
+      return ((PlayerEntity)(Object)this).getDataTracker().get(HEARTBOUND_TRANSFORM_GIRL_ID);
    }
 
    @Override
    public void heartbound$setTransformGirlId(String girlId) {
-      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_GIRL_ID, girlId != null ? girlId : "");
+      ((PlayerEntity)(Object)this).getDataTracker().set(HEARTBOUND_TRANSFORM_GIRL_ID, girlId != null ? girlId : "");
       this.heartbound$setStripped(false);
-      ((PlayerEntity)this).calculateDimensions();
+      ((PlayerEntity)(Object)this).calculateDimensions();
    }
 
    @Override
    public boolean heartbound$isStripped() {
-      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_STRIPPED);
+      return ((PlayerEntity)(Object)this).getDataTracker().get(HEARTBOUND_TRANSFORM_STRIPPED);
    }
 
    @Override
    public void heartbound$setStripped(boolean stripped) {
-      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_STRIPPED, stripped);
+      ((PlayerEntity)(Object)this).getDataTracker().set(HEARTBOUND_TRANSFORM_STRIPPED, stripped);
    }
 
    @Override
    public boolean heartbound$isStripping() {
-      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_STRIPPING);
+      return ((PlayerEntity)(Object)this).getDataTracker().get(HEARTBOUND_TRANSFORM_STRIPPING);
    }
 
    @Override
    public void heartbound$setStripping(boolean stripping) {
-      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_STRIPPING, stripping);
+      ((PlayerEntity)(Object)this).getDataTracker().set(HEARTBOUND_TRANSFORM_STRIPPING, stripping);
    }
 
    @Override
    public boolean heartbound$isAnimLocked() {
-      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_ANIM_LOCKED);
+      return ((PlayerEntity)(Object)this).getDataTracker().get(HEARTBOUND_ANIM_LOCKED);
    }
 
    @Override
    public void heartbound$setAnimLocked(boolean locked) {
-      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_ANIM_LOCKED, locked);
+      ((PlayerEntity)(Object)this).getDataTracker().set(HEARTBOUND_ANIM_LOCKED, locked);
       if (!locked) {
          this.heartbound$animLockTicks = 0;
       }
@@ -179,126 +179,126 @@ public abstract class PlayerTransformationMixin implements TransformablePlayer {
 
    @Override
    public Scene heartbound$getTransformScene() {
-      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_SCENE);
+      return ((PlayerEntity)(Object)this).getDataTracker().get(HEARTBOUND_TRANSFORM_SCENE);
    }
 
    @Override
    public void heartbound$setTransformScene(Scene scene) {
-      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_SCENE, scene);
+      ((PlayerEntity)(Object)this).getDataTracker().set(HEARTBOUND_TRANSFORM_SCENE, scene);
    }
 
    @Override
    public ScenePhase heartbound$getTransformScenePhase() {
-      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_SCENE_PHASE);
+      return ((PlayerEntity)(Object)this).getDataTracker().get(HEARTBOUND_TRANSFORM_SCENE_PHASE);
    }
 
    @Override
    public void heartbound$setTransformScenePhase(ScenePhase phase) {
-      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_SCENE_PHASE, phase);
+      ((PlayerEntity)(Object)this).getDataTracker().set(HEARTBOUND_TRANSFORM_SCENE_PHASE, phase);
    }
 
    @Override
    public float heartbound$getTransformSceneProgress() {
-      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_SCENE_PROGRESS);
+      return ((PlayerEntity)(Object)this).getDataTracker().get(HEARTBOUND_TRANSFORM_SCENE_PROGRESS);
    }
 
    @Override
    public void heartbound$setTransformSceneProgress(float progress) {
-      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_SCENE_PROGRESS, progress);
+      ((PlayerEntity)(Object)this).getDataTracker().set(HEARTBOUND_TRANSFORM_SCENE_PROGRESS, progress);
    }
 
    @Override
    public float heartbound$getTransformCumThreshold() {
-      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_CUM_THRESHOLD);
+      return ((PlayerEntity)(Object)this).getDataTracker().get(HEARTBOUND_TRANSFORM_CUM_THRESHOLD);
    }
 
    @Override
    public void heartbound$setTransformCumThreshold(float threshold) {
-      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_CUM_THRESHOLD, threshold);
+      ((PlayerEntity)(Object)this).getDataTracker().set(HEARTBOUND_TRANSFORM_CUM_THRESHOLD, threshold);
    }
 
    @Override
    public boolean heartbound$isTransformThrusting() {
-      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_THRUSTING);
+      return ((PlayerEntity)(Object)this).getDataTracker().get(HEARTBOUND_TRANSFORM_THRUSTING);
    }
 
    @Override
    public void heartbound$setTransformThrusting(boolean thrusting) {
-      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_THRUSTING, thrusting);
+      ((PlayerEntity)(Object)this).getDataTracker().set(HEARTBOUND_TRANSFORM_THRUSTING, thrusting);
    }
 
    @Override
    public int heartbound$getTransformIntroIndex() {
-      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_INTRO_INDEX);
+      return ((PlayerEntity)(Object)this).getDataTracker().get(HEARTBOUND_TRANSFORM_INTRO_INDEX);
    }
 
    @Override
    public void heartbound$setTransformIntroIndex(int index) {
-      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_INTRO_INDEX, index);
+      ((PlayerEntity)(Object)this).getDataTracker().set(HEARTBOUND_TRANSFORM_INTRO_INDEX, index);
    }
 
    @Override
    public int heartbound$getTransformStationaryIndex() {
-      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_STATIONARY_INDEX);
+      return ((PlayerEntity)(Object)this).getDataTracker().get(HEARTBOUND_TRANSFORM_STATIONARY_INDEX);
    }
 
    @Override
    public void heartbound$setTransformStationaryIndex(int index) {
-      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_STATIONARY_INDEX, index);
+      ((PlayerEntity)(Object)this).getDataTracker().set(HEARTBOUND_TRANSFORM_STATIONARY_INDEX, index);
    }
 
    @Override
    public int heartbound$getTransformStationaryLoop() {
-      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_STATIONARY_LOOP);
+      return ((PlayerEntity)(Object)this).getDataTracker().get(HEARTBOUND_TRANSFORM_STATIONARY_LOOP);
    }
 
    @Override
    public void heartbound$setTransformStationaryLoop(int loop) {
-      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_STATIONARY_LOOP, loop);
+      ((PlayerEntity)(Object)this).getDataTracker().set(HEARTBOUND_TRANSFORM_STATIONARY_LOOP, loop);
    }
 
    @Override
    public int heartbound$getTransformStationaryLoopThreshold() {
-      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_STATIONARY_LOOP_THRESHOLD);
+      return ((PlayerEntity)(Object)this).getDataTracker().get(HEARTBOUND_TRANSFORM_STATIONARY_LOOP_THRESHOLD);
    }
 
    @Override
    public void heartbound$setTransformStationaryLoopThreshold(int threshold) {
-      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_STATIONARY_LOOP_THRESHOLD, threshold);
+      ((PlayerEntity)(Object)this).getDataTracker().set(HEARTBOUND_TRANSFORM_STATIONARY_LOOP_THRESHOLD, threshold);
    }
 
    @Override
    public Optional<UUID> heartbound$getTransformScenePartner() {
-      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_SCENE_PARTNER);
+      return ((PlayerEntity)(Object)this).getDataTracker().get(HEARTBOUND_TRANSFORM_SCENE_PARTNER);
    }
 
    @Override
    public void heartbound$setTransformScenePartner(@Nullable PlayerEntity player) {
       if (player == null) {
-         ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_SCENE_PARTNER, Optional.empty());
+         ((PlayerEntity)(Object)this).getDataTracker().set(HEARTBOUND_TRANSFORM_SCENE_PARTNER, Optional.empty());
       } else {
-         ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_SCENE_PARTNER, Optional.of(player.getUuid()));
+         ((PlayerEntity)(Object)this).getDataTracker().set(HEARTBOUND_TRANSFORM_SCENE_PARTNER, Optional.of(player.getUuid()));
       }
    }
 
    @Override
    public boolean heartbound$isWaitingForBed() {
-      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_WAITING_FOR_BED);
+      return ((PlayerEntity)(Object)this).getDataTracker().get(HEARTBOUND_WAITING_FOR_BED);
    }
 
    @Override
    public void heartbound$setWaitingForBed(boolean waiting) {
-      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_WAITING_FOR_BED, waiting);
+      ((PlayerEntity)(Object)this).getDataTracker().set(HEARTBOUND_WAITING_FOR_BED, waiting);
    }
 
    @Override
    public boolean heartbound$isWaitingForTarget() {
-      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_WAITING_FOR_TARGET);
+      return ((PlayerEntity)(Object)this).getDataTracker().get(HEARTBOUND_WAITING_FOR_TARGET);
    }
 
    @Override
    public void heartbound$setWaitingForTarget(boolean waiting) {
-      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_WAITING_FOR_TARGET, waiting);
+      ((PlayerEntity)(Object)this).getDataTracker().set(HEARTBOUND_WAITING_FOR_TARGET, waiting);
    }
 
    @Override
@@ -316,7 +316,7 @@ public abstract class PlayerTransformationMixin implements TransformablePlayer {
       at = {@At("TAIL")}
    )
    private void heartbound$tickAnimLock(CallbackInfo ci) {
-      PlayerEntity self = (PlayerEntity)this;
+      PlayerEntity self = (PlayerEntity)(Object)this;
       String currentGirlId = this.heartbound$getTransformGirlId();
       if (!currentGirlId.equals(this.heartbound$lastGirlId)) {
          this.heartbound$lastGirlId = currentGirlId;
@@ -351,7 +351,7 @@ public abstract class PlayerTransformationMixin implements TransformablePlayer {
 
    @Unique
    private void heartbound$tickTransformScene() {
-      PlayerEntity self = (PlayerEntity)this;
+      PlayerEntity self = (PlayerEntity)(Object)this;
       if (this.heartbound$isWaitingForBed()) {
          this.heartbound$tickWaitingForBed();
       } else if (this.heartbound$isWaitingForTarget()) {
@@ -401,7 +401,7 @@ public abstract class PlayerTransformationMixin implements TransformablePlayer {
 
    @Unique
    private void heartbound$tickWaitingForTarget() {
-      PlayerEntity self = (PlayerEntity)this;
+      PlayerEntity self = (PlayerEntity)(Object)this;
       if (self.getWorld() instanceof ServerWorld serverWorld) {
          for (ServerPlayerEntity other : serverWorld.getPlayers()) {
             if (other != self && !Heartbound.activeScenes.containsKey(other.getUuid())) {
@@ -424,7 +424,7 @@ public abstract class PlayerTransformationMixin implements TransformablePlayer {
 
    @Unique
    private void heartbound$tickWaitingForBed() {
-      PlayerEntity self = (PlayerEntity)this;
+      PlayerEntity self = (PlayerEntity)(Object)this;
       if (this.heartbound$bedPos == null) {
          this.heartbound$stopTransformScene();
       } else if (!Utils.checkForBlockAt(self.getWorld(), this.heartbound$bedPos, null, BlockTags.BEDS)) {
@@ -455,7 +455,7 @@ public abstract class PlayerTransformationMixin implements TransformablePlayer {
 
    @Unique
    private void heartbound$tickWaitingForContact() {
-      PlayerEntity self = (PlayerEntity)this;
+      PlayerEntity self = (PlayerEntity)(Object)this;
       if (self.getWorld() instanceof ServerWorld serverWorld) {
          for (ServerPlayerEntity other : serverWorld.getPlayers()) {
             if (other != self && !Heartbound.activeScenes.containsKey(other.getUuid())) {
@@ -477,7 +477,7 @@ public abstract class PlayerTransformationMixin implements TransformablePlayer {
 
    @Override
    public void heartbound$startTransformScene(Scene scene) {
-      PlayerEntity self = (PlayerEntity)this;
+      PlayerEntity self = (PlayerEntity)(Object)this;
       if (!this.heartbound$isTransformSceneActive()) {
          if (this.heartbound$isTransformed()) {
             if (!this.heartbound$isStripped() && scene.needsToStrip()) {
@@ -523,7 +523,7 @@ public abstract class PlayerTransformationMixin implements TransformablePlayer {
 
    @Unique
    private void heartbound$startRidingScene(PlayerEntity otherPlayer) {
-      PlayerEntity self = (PlayerEntity)this;
+      PlayerEntity self = (PlayerEntity)(Object)this;
       otherPlayer.setInvisible(true);
       this.heartbound$setTransformSceneProgress(0.0F);
       this.heartbound$setTransformCumThreshold(this.heartbound$getTransformScene().cumThreshold());
@@ -539,7 +539,7 @@ public abstract class PlayerTransformationMixin implements TransformablePlayer {
 
    @Override
    public void heartbound$stopTransformScene() {
-      PlayerEntity self = (PlayerEntity)this;
+      PlayerEntity self = (PlayerEntity)(Object)this;
       if (this.heartbound$isTransformSceneActive() || this.heartbound$isWaitingForBed() || this.heartbound$isWaitingForTarget()) {
          Heartbound.usedBeds.remove(self.getUuid());
          this.heartbound$bedPos = null;
@@ -578,7 +578,7 @@ public abstract class PlayerTransformationMixin implements TransformablePlayer {
 
    @Override
    public void heartbound$transformAnimationFinished() {
-      PlayerEntity self = (PlayerEntity)this;
+      PlayerEntity self = (PlayerEntity)(Object)this;
       if (!self.getWorld().isClient()) {
          if (this.heartbound$isTransformSceneActive()) {
             Scene scene = this.heartbound$getTransformScene();
@@ -635,7 +635,7 @@ public abstract class PlayerTransformationMixin implements TransformablePlayer {
          && this.heartbound$getTransformSceneProgress() >= this.heartbound$getTransformCumThreshold()
          && this.heartbound$getTransformScenePhase() != ScenePhase.CUM) {
          this.heartbound$setTransformScenePhase(ScenePhase.CUM);
-         PlayerEntity self = (PlayerEntity)this;
+         PlayerEntity self = (PlayerEntity)(Object)this;
          if (!self.getWorld().isClient()) {
             if (self instanceof ServerPlayerEntity serverSelf) {
                ServerPlayNetworking.send(serverSelf, new PlayCumHudAnimationS2CPacket());
@@ -654,7 +654,7 @@ public abstract class PlayerTransformationMixin implements TransformablePlayer {
       argsOnly = true
    )
    private Vec3d heartbound$freezeMovement(Vec3d movementInput) {
-      PlayerEntity self = (PlayerEntity)this;
+      PlayerEntity self = (PlayerEntity)(Object)this;
       if (this.heartbound$isAnimLocked()) {
          self.setVelocity(0.0, self.getVelocity().y, 0.0);
          return Vec3d.ZERO;
