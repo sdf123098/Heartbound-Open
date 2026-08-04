@@ -1,0 +1,538 @@
+
+> Configure project :
+Fabric Loom: 1.17.17
+
+> Task :compileJava
+警告: 未知的枚举常量 Level.FULL
+  原因: 找不到com.google.j2objc.annotations.ReflectionSupport$Level的类文件
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\GirlSceneEntity.java:760: 错误: 已在方法 handleAnimations(AnimationState<GirlSceneEntity>)中定义了变量 current
+               String current = intros.get(Math.min(this.getIntroIndex(), intros.size() - 1));
+                      ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:53: 错误: 无法访问LivingEntity
+public abstract class BaseGirlEntityAI extends TameableGirlEntity implements SmartBrainOwner<BaseGirlEntityAI> {
+                                                                                            ^
+  找不到net.minecraft.world.entity.LivingEntity的类文件
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:100: 错误: 不兼容的类型: BaseGirlEntityAI无法转换为LivingEntity
+      return new SmartBrainProvider(this);
+                                    ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:116: 错误: 无法访问Sensor
+      return List.of(new NearbyLivingEntitySensor().setPredicate((target, entity) -> target instanceof PlayerEntity), new HurtBySensor());
+                                                   ^
+  找不到net.minecraft.world.entity.ai.sensing.Sensor的类文件
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:120: 错误: 类型参数? extends BaseGirlEntityAI不在类型变量T的范围内
+   public BrainActivityGroup<? extends BaseGirlEntityAI> getCoreTasks() {
+                             ^
+  其中, T是类型变量:
+    T扩展已在类 BrainActivityGroup中声明的LivingEntity,SmartBrainOwner<T>
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:121: 错误: 无法访问Behavior
+      return BrainActivityGroup.coreTasks(new MultiTickTask[]{new LookAtTarget(), new MoveToWalkTarget()});
+                                                              ^
+  找不到net.minecraft.world.entity.ai.behavior.Behavior的类文件
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:121: 错误: 不兼容的类型: MoveToWalkTarget无法转换为MultiTickTask
+      return BrainActivityGroup.coreTasks(new MultiTickTask[]{new LookAtTarget(), new MoveToWalkTarget()});
+                                                                                  ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:121: 错误: 无法将类 BrainActivityGroup<T#1>中的方法 coreTasks应用到给定类型;
+      return BrainActivityGroup.coreTasks(new MultiTickTask[]{new LookAtTarget(), new MoveToWalkTarget()});
+                               ^
+  需要: Behavior[]
+  找到:    MultiTickTask[]
+  原因: 无法推断类型变量 T#2
+    (varargs 不匹配; MultiTickTask[]无法转换为Behavior)
+  其中, T#1,T#2是类型变量:
+    T#1扩展已在类 BrainActivityGroup中声明的LivingEntity,SmartBrainOwner<T#1>
+    T#2扩展已在方法 <T#2>coreTasks(Behavior...)中声明的LivingEntity,SmartBrainOwner<T#2>
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:125: 错误: 类型参数? extends BaseGirlEntityAI不在类型变量T的范围内
+   public BrainActivityGroup<? extends BaseGirlEntityAI> getIdleTasks() {
+                             ^
+  其中, T是类型变量:
+    T扩展已在类 BrainActivityGroup中声明的LivingEntity,SmartBrainOwner<T>
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:128: 错误: 不兼容的类型: FirstApplicableBehaviour无法转换为MultiTickTask
+            new FirstApplicableBehaviour(new SetPlayerLookTarget(), new SetRandomLookTarget()),
+            ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:129: 错误: 找不到符号
+            new OneRandomBehaviour(new SetRandomWalkTarget(), new Idle().runFor(entity -> entity.getRandom().nextBetween(30, 60)))
+                                                                                                ^
+  符号:   方法 getRandom()
+  位置: 类型为Object的变量 entity
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:129: 错误: 不兼容的类型: OneRandomBehaviour无法转换为MultiTickTask
+            new OneRandomBehaviour(new SetRandomWalkTarget(), new Idle().runFor(entity -> entity.getRandom().nextBetween(30, 60)))
+            ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:126: 错误: 无法将类 BrainActivityGroup<T#1>中的方法 idleTasks应用到给定类型;
+      return BrainActivityGroup.idleTasks(
+                               ^
+  需要: Behavior[]
+  找到:    MultiTickTask[]
+  原因: 无法推断类型变量 T#2
+    (varargs 不匹配; MultiTickTask[]无法转换为Behavior)
+  其中, T#1,T#2是类型变量:
+    T#1扩展已在类 BrainActivityGroup中声明的LivingEntity,SmartBrainOwner<T#1>
+    T#2扩展已在方法 <T#2>idleTasks(Behavior...)中声明的LivingEntity,SmartBrainOwner<T#2>
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:135: 错误: 类型参数? extends BaseGirlEntityAI不在类型变量T的范围内
+   public BrainActivityGroup<? extends BaseGirlEntityAI> getFightTasks() {
+                             ^
+  其中, T是类型变量:
+    T扩展已在类 BrainActivityGroup中声明的LivingEntity,SmartBrainOwner<T>
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:136: 错误: 无法将类 BrainActivityGroup<T#1>中的方法 empty应用到给定类型;
+      return BrainActivityGroup.empty();
+                               ^
+  需要: 没有参数
+  找到:    没有参数
+  原因: 推论变量 T#2 具有不兼容的上限 LivingEntity,SmartBrainOwner<T#2>
+  其中, T#1,T#2是类型变量:
+    T#1扩展已在类 BrainActivityGroup中声明的LivingEntity,SmartBrainOwner<T#1>
+    T#2扩展已在方法 <T#2>empty()中声明的LivingEntity,SmartBrainOwner<T#2>
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\config\gui\DoubleSliderEntry.java:155: 错误: 方法不会覆盖或实现超类型的方法
+      @Override
+      ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\config\keys\FreecamKeyMapping.java:27: 错误: 方法不会覆盖或实现超类型的方法
+   @Override
+   ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\ai\goal\GirlChopTreesGoal.java:430: 错误: 不兼容的类型: Object无法转换为BlockPos
+         for (BlockPos posx : var11) {
+                              ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\jei\FusionRecipeCategory.java:56: 警告: [removal] IRecipeCategory 中的 getBackground() 已过时, 且标记为待删除
+   public IDrawable getBackground() {
+                    ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\freecam\LocalPlayerMixin.java:38: 错误: 不兼容的类型: LocalPlayerMixin无法转换为FreeCamera
+      if (this instanceof FreeCamera) {
+          ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\freecam\LocalPlayerMixin.java:49: 错误: 不兼容的类型: LocalPlayerMixin无法转换为Entity
+         Entity self = (Entity)this;
+                               ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerRidingMixin.java:21: 错误: 不兼容的类型: PlayerRidingMixin无法转换为PlayerEntity
+      if (this instanceof PlayerEntity self) {
+          ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerRidingMixin.java:35: 错误: 不兼容的类型: PlayerRidingMixin无法转换为PlayerEntity
+      if (this instanceof PlayerEntity self) {
+          ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:131: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_GIRL_ID);
+                            ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:136: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_GIRL_ID, girlId != null ? girlId : "");
+                     ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:138: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      ((PlayerEntity)this).calculateDimensions();
+                     ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:143: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_STRIPPED);
+                            ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:148: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_STRIPPED, stripped);
+                     ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:153: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_STRIPPING);
+                            ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:158: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_STRIPPING, stripping);
+                     ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:163: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_ANIM_LOCKED);
+                            ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:168: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_ANIM_LOCKED, locked);
+                     ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:182: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_SCENE);
+                            ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:187: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_SCENE, scene);
+                     ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:192: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_SCENE_PHASE);
+                            ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:197: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_SCENE_PHASE, phase);
+                     ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:202: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_SCENE_PROGRESS);
+                            ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:207: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_SCENE_PROGRESS, progress);
+                     ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:212: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_CUM_THRESHOLD);
+                            ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:217: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_CUM_THRESHOLD, threshold);
+                     ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:222: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_THRUSTING);
+                            ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:227: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_THRUSTING, thrusting);
+                     ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:232: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_INTRO_INDEX);
+                            ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:237: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_INTRO_INDEX, index);
+                     ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:242: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_STATIONARY_INDEX);
+                            ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:247: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_STATIONARY_INDEX, index);
+                     ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:252: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_STATIONARY_LOOP);
+                            ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:257: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_STATIONARY_LOOP, loop);
+                     ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:262: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_STATIONARY_LOOP_THRESHOLD);
+                            ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:267: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_STATIONARY_LOOP_THRESHOLD, threshold);
+                     ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:272: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_SCENE_PARTNER);
+                            ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:278: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+         ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_SCENE_PARTNER, Optional.empty());
+                        ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:280: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+         ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_SCENE_PARTNER, Optional.of(player.getUuid()));
+                        ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:286: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_WAITING_FOR_BED);
+                            ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:291: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_WAITING_FOR_BED, waiting);
+                     ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:296: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_WAITING_FOR_TARGET);
+                            ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:301: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_WAITING_FOR_TARGET, waiting);
+                     ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:319: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      PlayerEntity self = (PlayerEntity)this;
+                                        ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:354: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      PlayerEntity self = (PlayerEntity)this;
+                                        ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:404: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      PlayerEntity self = (PlayerEntity)this;
+                                        ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:427: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      PlayerEntity self = (PlayerEntity)this;
+                                        ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:458: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      PlayerEntity self = (PlayerEntity)this;
+                                        ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:480: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      PlayerEntity self = (PlayerEntity)this;
+                                        ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:526: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      PlayerEntity self = (PlayerEntity)this;
+                                        ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:542: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      PlayerEntity self = (PlayerEntity)this;
+                                        ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:581: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      PlayerEntity self = (PlayerEntity)this;
+                                        ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:638: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+         PlayerEntity self = (PlayerEntity)this;
+                                           ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:657: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+      PlayerEntity self = (PlayerEntity)this;
+                                        ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\networking\HeartboundPackets.java:191: 错误: 已在方法 registerC2SPackets()中定义了变量 sp
+                              ServerPlayerEntity sp = context.player();
+                                                 ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\networking\HeartboundPackets.java:201: 错误: 已在方法 registerC2SPackets()中定义了变量 sp
+                              ServerPlayerEntity sp = context.player();
+                                                 ^
+D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\registries\HeartboundScreenHandlerRegistry.java:18: 错误: 不兼容的类型: 构造器引用无效
+      new ExtendedScreenHandlerType(GirlInventoryScreenHandler::new, HeartboundClient.GirlScreenData.PACKET_CODEC)
+                                    ^
+    对于GirlInventoryScreenHandler(int,PlayerInventory,Object), 找不到合适的构造器
+        构造器 GirlInventoryScreenHandler.GirlInventoryScreenHandler(int,PlayerInventory,GirlScreenData)不适用
+          (参数不匹配; Object无法转换为GirlScreenData)
+        构造器 GirlInventoryScreenHandler.GirlInventoryScreenHandler(int,PlayerInventory,int)不适用
+          (参数不匹配; Object无法转换为int)
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+注: 某些输入文件使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+注: 某些消息已经过简化; 请使用 -Xdiags:verbose 重新编译以获得完整输出
+70 个错误
+2 个警告
+
+> Task :compileJava FAILED
+
+[Incubating] Problems report is available at: file:///D:/Project/Heart/Heartbound-Port/restore-1.21.1/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:121: 错误: 无法将类 BrainActivityGroup<T#1>中的方法 coreTasks应用到给定类型;
+        return BrainActivityGroup.coreTasks(new MultiTickTask[]{new LookAtTarget(), new MoveToWalkTarget()});
+                                 ^
+    需要: Behavior[]
+    找到:    MultiTickTask[]
+    原因: 无法推断类型变量 T#2
+      (varargs 不匹配; MultiTickTask[]无法转换为Behavior)
+    其中, T#1,T#2是类型变量:
+      T#1扩展已在类 BrainActivityGroup中声明的LivingEntity,SmartBrainOwner<T#1>
+      T#2扩展已在方法 <T#2>coreTasks(Behavior...)中声明的LivingEntity,SmartBrainOwner<T#2>
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:126: 错误: 无法将类 BrainActivityGroup<T#1>中的方法 idleTasks应用到给定类型;
+        return BrainActivityGroup.idleTasks(
+                                 ^
+    需要: Behavior[]
+    找到:    MultiTickTask[]
+    原因: 无法推断类型变量 T#2
+      (varargs 不匹配; MultiTickTask[]无法转换为Behavior)
+    其中, T#1,T#2是类型变量:
+      T#1扩展已在类 BrainActivityGroup中声明的LivingEntity,SmartBrainOwner<T#1>
+      T#2扩展已在方法 <T#2>idleTasks(Behavior...)中声明的LivingEntity,SmartBrainOwner<T#2>
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:136: 错误: 无法将类 BrainActivityGroup<T#1>中的方法 empty应用到给定类型;
+        return BrainActivityGroup.empty();
+                                 ^
+    需要: 没有参数
+    找到:    没有参数
+    原因: 推论变量 T#2 具有不兼容的上限 LivingEntity,SmartBrainOwner<T#2>
+    其中, T#1,T#2是类型变量:
+      T#1扩展已在类 BrainActivityGroup中声明的LivingEntity,SmartBrainOwner<T#1>
+      T#2扩展已在方法 <T#2>empty()中声明的LivingEntity,SmartBrainOwner<T#2>
+  注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:53: 错误: 无法访问LivingEntity
+  public abstract class BaseGirlEntityAI extends TameableGirlEntity implements SmartBrainOwner<BaseGirlEntityAI> {
+                                                                                              ^
+    找不到net.minecraft.world.entity.LivingEntity的类文件
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:116: 错误: 无法访问Sensor
+        return List.of(new NearbyLivingEntitySensor().setPredicate((target, entity) -> target instanceof PlayerEntity), new HurtBySensor());
+                                                     ^
+    找不到net.minecraft.world.entity.ai.sensing.Sensor的类文件
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:121: 错误: 无法访问Behavior
+        return BrainActivityGroup.coreTasks(new MultiTickTask[]{new LookAtTarget(), new MoveToWalkTarget()});
+                                                                ^
+    找不到net.minecraft.world.entity.ai.behavior.Behavior的类文件
+  注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+  注: 某些输入文件使用或覆盖了已过时的 API。
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\config\gui\DoubleSliderEntry.java:155: 错误: 方法不会覆盖或实现超类型的方法
+        @Override
+        ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\config\keys\FreecamKeyMapping.java:27: 错误: 方法不会覆盖或实现超类型的方法
+     @Override
+     ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\jei\FusionRecipeCategory.java:56: 警告: [removal] IRecipeCategory 中的 getBackground() 已过时, 且标记为待删除
+     public IDrawable getBackground() {
+                      ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:120: 错误: 类型参数? extends BaseGirlEntityAI不在类型变量T的范围内
+     public BrainActivityGroup<? extends BaseGirlEntityAI> getCoreTasks() {
+                               ^
+    其中, T是类型变量:
+      T扩展已在类 BrainActivityGroup中声明的LivingEntity,SmartBrainOwner<T>
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:125: 错误: 类型参数? extends BaseGirlEntityAI不在类型变量T的范围内
+     public BrainActivityGroup<? extends BaseGirlEntityAI> getIdleTasks() {
+                               ^
+    其中, T是类型变量:
+      T扩展已在类 BrainActivityGroup中声明的LivingEntity,SmartBrainOwner<T>
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:135: 错误: 类型参数? extends BaseGirlEntityAI不在类型变量T的范围内
+     public BrainActivityGroup<? extends BaseGirlEntityAI> getFightTasks() {
+                               ^
+    其中, T是类型变量:
+      T扩展已在类 BrainActivityGroup中声明的LivingEntity,SmartBrainOwner<T>
+  注: 某些输入文件使用了未经检查或不安全的操作。
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:129: 错误: 找不到符号
+              new OneRandomBehaviour(new SetRandomWalkTarget(), new Idle().runFor(entity -> entity.getRandom().nextBetween(30, 60)))
+                                                                                                  ^
+    符号:   方法 getRandom()
+    位置: 类型为Object的变量 entity
+  警告: 未知的枚举常量 Level.FULL
+    原因: 找不到com.google.j2objc.annotations.ReflectionSupport$Level的类文件
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:100: 错误: 不兼容的类型: BaseGirlEntityAI无法转换为LivingEntity
+        return new SmartBrainProvider(this);
+                                      ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:121: 错误: 不兼容的类型: MoveToWalkTarget无法转换为MultiTickTask
+        return BrainActivityGroup.coreTasks(new MultiTickTask[]{new LookAtTarget(), new MoveToWalkTarget()});
+                                                                                    ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:128: 错误: 不兼容的类型: FirstApplicableBehaviour无法转换为MultiTickTask
+              new FirstApplicableBehaviour(new SetPlayerLookTarget(), new SetRandomLookTarget()),
+              ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\tamable\BaseGirlEntityAI.java:129: 错误: 不兼容的类型: OneRandomBehaviour无法转换为MultiTickTask
+              new OneRandomBehaviour(new SetRandomWalkTarget(), new Idle().runFor(entity -> entity.getRandom().nextBetween(30, 60)))
+              ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\ai\goal\GirlChopTreesGoal.java:430: 错误: 不兼容的类型: Object无法转换为BlockPos
+           for (BlockPos posx : var11) {
+                                ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\freecam\LocalPlayerMixin.java:38: 错误: 不兼容的类型: LocalPlayerMixin无法转换为FreeCamera
+        if (this instanceof FreeCamera) {
+            ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\freecam\LocalPlayerMixin.java:49: 错误: 不兼容的类型: LocalPlayerMixin无法转换为Entity
+           Entity self = (Entity)this;
+                                 ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerRidingMixin.java:21: 错误: 不兼容的类型: PlayerRidingMixin无法转换为PlayerEntity
+        if (this instanceof PlayerEntity self) {
+            ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerRidingMixin.java:35: 错误: 不兼容的类型: PlayerRidingMixin无法转换为PlayerEntity
+        if (this instanceof PlayerEntity self) {
+            ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:131: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_GIRL_ID);
+                              ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:136: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_GIRL_ID, girlId != null ? girlId : "");
+                       ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:138: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        ((PlayerEntity)this).calculateDimensions();
+                       ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:143: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_STRIPPED);
+                              ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:148: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_STRIPPED, stripped);
+                       ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:153: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_STRIPPING);
+                              ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:158: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_STRIPPING, stripping);
+                       ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:163: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_ANIM_LOCKED);
+                              ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:168: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_ANIM_LOCKED, locked);
+                       ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:182: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_SCENE);
+                              ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:187: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_SCENE, scene);
+                       ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:192: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_SCENE_PHASE);
+                              ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:197: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_SCENE_PHASE, phase);
+                       ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:202: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_SCENE_PROGRESS);
+                              ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:207: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_SCENE_PROGRESS, progress);
+                       ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:212: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_CUM_THRESHOLD);
+                              ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:217: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_CUM_THRESHOLD, threshold);
+                       ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:222: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_THRUSTING);
+                              ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:227: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_THRUSTING, thrusting);
+                       ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:232: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_INTRO_INDEX);
+                              ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:237: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_INTRO_INDEX, index);
+                       ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:242: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_STATIONARY_INDEX);
+                              ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:247: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_STATIONARY_INDEX, index);
+                       ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:252: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_STATIONARY_LOOP);
+                              ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:257: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_STATIONARY_LOOP, loop);
+                       ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:262: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_STATIONARY_LOOP_THRESHOLD);
+                              ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:267: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_STATIONARY_LOOP_THRESHOLD, threshold);
+                       ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:272: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_TRANSFORM_SCENE_PARTNER);
+                              ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:278: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+           ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_SCENE_PARTNER, Optional.empty());
+                          ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:280: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+           ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_TRANSFORM_SCENE_PARTNER, Optional.of(player.getUuid()));
+                          ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:286: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_WAITING_FOR_BED);
+                              ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:291: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_WAITING_FOR_BED, waiting);
+                       ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:296: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        return ((PlayerEntity)this).getDataTracker().get(HEARTBOUND_WAITING_FOR_TARGET);
+                              ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:301: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        ((PlayerEntity)this).getDataTracker().set(HEARTBOUND_WAITING_FOR_TARGET, waiting);
+                       ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:319: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        PlayerEntity self = (PlayerEntity)this;
+                                          ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:354: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        PlayerEntity self = (PlayerEntity)this;
+                                          ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:404: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        PlayerEntity self = (PlayerEntity)this;
+                                          ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:427: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        PlayerEntity self = (PlayerEntity)this;
+                                          ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:458: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        PlayerEntity self = (PlayerEntity)this;
+                                          ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:480: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        PlayerEntity self = (PlayerEntity)this;
+                                          ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:526: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        PlayerEntity self = (PlayerEntity)this;
+                                          ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:542: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        PlayerEntity self = (PlayerEntity)this;
+                                          ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:581: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        PlayerEntity self = (PlayerEntity)this;
+                                          ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:638: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+           PlayerEntity self = (PlayerEntity)this;
+                                             ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\mixins\transformation\PlayerTransformationMixin.java:657: 错误: 不兼容的类型: PlayerTransformationMixin无法转换为PlayerEntity
+        PlayerEntity self = (PlayerEntity)this;
+                                          ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\registries\HeartboundScreenHandlerRegistry.java:18: 错误: 不兼容的类型: 构造器引用无效
+        new ExtendedScreenHandlerType(GirlInventoryScreenHandler::new, HeartboundClient.GirlScreenData.PACKET_CODEC)
+                                      ^
+      对于GirlInventoryScreenHandler(int,PlayerInventory,Object), 找不到合适的构造器
+          构造器 GirlInventoryScreenHandler.GirlInventoryScreenHandler(int,PlayerInventory,GirlScreenData)不适用
+            (参数不匹配; Object无法转换为GirlScreenData)
+          构造器 GirlInventoryScreenHandler.GirlInventoryScreenHandler(int,PlayerInventory,int)不适用
+            (参数不匹配; Object无法转换为int)
+  注: 某些消息已经过简化; 请使用 -Xdiags:verbose 重新编译以获得完整输出
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\entity\base\GirlSceneEntity.java:760: 错误: 已在方法 handleAnimations(AnimationState<GirlSceneEntity>)中定义了变量 current
+                 String current = intros.get(Math.min(this.getIntroIndex(), intros.size() - 1));
+                        ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\networking\HeartboundPackets.java:191: 错误: 已在方法 registerC2SPackets()中定义了变量 sp
+                                ServerPlayerEntity sp = context.player();
+                                                   ^
+  D:\Project\Heart\Heartbound-Port\restore-1.21.1\src\main\java\com\cuddly\heartbound\networking\HeartboundPackets.java:201: 错误: 已在方法 registerC2SPackets()中定义了变量 sp
+                                ServerPlayerEntity sp = context.player();
+                                                   ^
+  70 个错误
+  2 个警告
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 18s
+1 actionable task: 1 executed
