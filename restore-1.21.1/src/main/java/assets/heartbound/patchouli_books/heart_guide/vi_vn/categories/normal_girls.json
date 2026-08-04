@@ -1,0 +1,6 @@
+{
+  "name": "Cô Gái Thường",
+  "description": "Đây là những cô gái tiêu chuẩn bạn có thể tìm thấy trong làng và khu định cư. Họ thân thiện và có thể được tuyển dụng để giúp đỡ các công việc khu định cư.",
+  "icon": "minecraft:villager_spawn_egg",
+  "parent": "heartbound:girls"
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    "DED",
+    "BWB"
+  ],
+  "key": {
+    "X": {
+      "item": "heartbound:x_pill"
+    },
+    "D": {
+      "item": "minecraft:ink_sac"
+    },
+    "E": {
+      "item": "minecraft:egg"
+    },
+    "B": {
+      "item": "minecraft:black_wool"
+    },
+    "W": {
+      "item": "minecraft:wither_rose"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "heartbound:ellie_spawn_egg"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Aly",
+  "icon": "minecraft:amethyst_shard",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Aly 是一个活泼的蓝色小仙女，喜欢到处飘浮和帮助玩家。她可以飞行，性格活泼，对善待她的人很快就会亲近。$(br2)Aly 喜欢开阔的空间，可以自由飞翔，会开心地跟随她喜欢的玩家。"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:aly",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Aly",
+      "text": "活泼开朗的飞行 Aly！"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)驯服物品$()$(br)Aly 被$(#b0b)紫水晶碎片$()所吸引。给她一个来和她成为朋友。$(br2)$(o)场景$()$(br)$(li)性交$(br2)$(o)备注$()$(br)$(li)可以飞行——使用飞行行为和动画$(li)喜爱亲近——喜欢跟随玩家$(li)最好养在开阔的区域让她自由飞翔"
+    }
+  ]
+}

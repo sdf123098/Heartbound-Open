@@ -1,0 +1,31 @@
+{
+  "name": "Ellie",
+  "icon": "heartbound:ellie_spawn_egg",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ellie é uma garota emo que mora nas profundezas da floresta sombria. Ela tem uma personalidade melancólica e prefere a solidão, mas se abre quando confia em você.$(br2)Ela se veste toda de preto e tem uma aura sombria e misteriosa. Você encontra a casa dela na floresta sombria."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:ellie",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Ellie",
+      "text": "Ellie, a garota emo da floresta sombria!"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:ellie_spawn_egg",
+      "title": "Ovo Gerador da Ellie",
+      "text": "Fabrique com uma Pílula X, sacos de tinta, ovo, lã preta e uma rosa do wither."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Item de Domesticação$()$(br)Ellie aprecia a beleza da $(#b0b)Rosa do Wither$() e sua natureza delicada.$(br2)$(o)Cenas$()$(br)$(li)Sexo Oral Forçado$(li)Papai e Mamãe$(li)Cavalgada"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Jenny",
+  "icon": "heartbound:jenny_spawn_egg",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Jenny là một cô gái quyến rũ và lẳng lơ, lang thang trên đồng bằng. Cô ấy luôn tìm kiếm sự chú ý và không ngại ngùng về những gì mình muốn.$(br2)Cô ấy có mái tóc nâu và mặc trang phục tím đậm. Bạn có thể tìm thấy nhà cô ấy ở đồng bằng."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:jenny",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Jenny",
+      "text": "Jenny, cô nàng dâm đãng!"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:jenny_spawn_egg",
+      "title": "Trứng Triệu Hồi Jenny",
+      "text": "Chế tạo với X-Pill, thỏi vàng, trứng và hoa hướng dương."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Vật Phẩm Thuần Hóa$()$(br)Jenny bị thu hút bởi $(#ff0)Thỏi Vàng$(). Tặng cô ấy một cái để bắt đầu xây dựng mối quan hệ.$(br2)$(o)Cảnh$()$(br)$(li)Thủ Dâm$(li)Paizuri$(li)Bú Cu$(li)Doggy"
+    }
+  ]
+}

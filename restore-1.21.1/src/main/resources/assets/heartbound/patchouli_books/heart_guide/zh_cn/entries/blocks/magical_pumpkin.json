@@ -1,0 +1,20 @@
+{
+  "name": "魔法南瓜",
+  "icon": "heartbound:magical_pumpkin",
+  "category": "heartbound:blocks",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(item)魔法南瓜$()是一个特殊的方块，放置正确时可以生成自定义女孩。$(br2)这个南瓜拥有神秘的力量，可以从另一个世界召唤美丽的女孩。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)功能：$()$(br)将$(item)魔法南瓜$()放在$(item)铜块$()的上方来生成Coppie。$(br2)如果条件满足，一个Coppie将出现在附近。$(br2)$(o)注意：确保南瓜周围有足够的空间让女孩生成！$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:magical_pumpkin",
+      "text": "使用普通的雕刻南瓜和一朵虞美人来合成魔法南瓜。"
+    }
+  ]
+}

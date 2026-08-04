@@ -1,0 +1,6 @@
+{
+  "name": "Wild Girls",
+  "description": "These girls roam the wilds and are more feral in nature. They require special items to tame and have unique behaviors.",
+  "icon": "minecraft:slime_spawn_egg",
+  "parent": "heartbound:girls"
+}

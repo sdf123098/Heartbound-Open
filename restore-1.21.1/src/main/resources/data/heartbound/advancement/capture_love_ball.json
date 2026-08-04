@@ -1,0 +1,21 @@
+{
+  "parent": "heartbound:craft_love_ball",
+  "criteria": {
+    "capture_love_ball": {
+      "trigger": "heartbound:capture_love_ball"
+    }
+  },
+  "display": {
+    "title": {"translate": "advancements.heartbound.capture_love_ball.title"},
+    "description": {"translate": "advancements.heartbound.capture_love_ball.description"},
+    "icon": {
+      "count": 1,
+      "id": "heartbound:love_ball"
+    }
+  },
+  "requirements": [
+    [
+      "capture_love_ball"
+    ]
+  ]
+}

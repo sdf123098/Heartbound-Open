@@ -1,0 +1,24 @@
+{
+  "parent": "heartbound:root",
+  "criteria": {
+    "craft": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "heartbound:custom_girl_spawn_egg"
+      }
+    }
+  },
+  "display": {
+    "title": {"translate": "advancements.heartbound.craft_custom_girl_spawn_egg.title"},
+    "description": {"translate": "advancements.heartbound.craft_custom_girl_spawn_egg.description"},
+    "icon": {
+      "count": 1,
+      "id": "heartbound:custom_girl_spawn_egg"
+    }
+  },
+  "requirements": [
+    [
+      "craft"
+    ]
+  ]
+}

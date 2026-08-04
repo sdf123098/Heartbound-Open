@@ -1,0 +1,21 @@
+{
+  "parent": "heartbound:root",
+  "criteria": {
+    "kill_girl": {
+      "trigger": "heartbound:kill_girl"
+    }
+  },
+  "display": {
+    "title": {"translate": "advancements.heartbound.kill_girl.title"},
+    "description": {"translate": "advancements.heartbound.kill_girl.description"},
+    "icon": {
+      "count": 1,
+      "id": "minecraft:iron_sword"
+    }
+  },
+  "requirements": [
+    [
+      "kill_girl"
+    ]
+  ]
+}

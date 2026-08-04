@@ -1,0 +1,31 @@
+{
+  "name": "Bia",
+  "icon": "heartbound:bia_spawn_egg",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Bia 是一只有魔法的棕色泰迪熊，活了过来。她开朗、爱玩，总是充满活力。$(br2)她有柔软的棕色毛皮，喜欢让别人开心。你可以在白桦森林找到她的房子。"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:bia",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Bia",
+      "text": "Bia，魔法泰迪熊！"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:bia_spawn_egg",
+      "title": "Bia 刷怪蛋",
+      "text": "用 X-药丸、棕色羊毛和鸡蛋合成。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)驯服物品$()$(br)Bia 喜欢$(#fa8072)三文鱼$()。这是她最爱的食物！$(br2)$(o)场景$()$(br)$(li)肛交$(li)后入式"
+    }
+  ]
+}

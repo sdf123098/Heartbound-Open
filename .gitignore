@@ -5,3 +5,6 @@ out/
 .idea/
 *.iml
 .vscode/
+# large analysis artifacts (reproducible downloads / derived)
+analysis/tools/
+analysis/heartbound-named.jar

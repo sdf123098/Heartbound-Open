@@ -1,0 +1,31 @@
+{
+  "name": "Ellie",
+  "icon": "heartbound:ellie_spawn_egg",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ellie là một cô gái emo sống sâu trong rừng tối. Cô ấy có tính cách u sầu và thích ở một mình, nhưng sẽ mở lòng khi tin tưởng bạn.$(br2)Cô ấy mặc toàn đồ đen và có aura tối tăm, bí ẩn. Bạn có thể tìm thấy nhà cô ấy trong rừng tối."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:ellie",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Ellie",
+      "text": "Ellie, cô gái emo rừng tối!"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:ellie_spawn_egg",
+      "title": "Trứng Triệu Hồi Ellie",
+      "text": "Chế tạo với X-Pill, túi mực, trứng, len đen và hoa wither."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Vật Phẩm Thuần Hóa$()$(br)Ellie đánh giá cao vẻ đẹp của $(#b0b)Hoa Wither$() và bản chất mong manh của chúng.$(br2)$(o)Cảnh$()$(br)$(li)Địt Mặt$(li)Missionary$(li)Cowgirl"
+    }
+  ]
+}

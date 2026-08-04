@@ -1,0 +1,31 @@
+{
+  "name": "Bia",
+  "icon": "heartbound:bia_spawn_egg",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Bia is a magical brown teddy bear who came to life. She's cheerful, playful, and always full of energy.$(br2)She has soft brown fur and loves making others smile. You can find her house in the birch forest."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:bia",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Bia",
+      "text": "Bia, the magical teddy bear!"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:bia_spawn_egg",
+      "title": "Bia Spawn Egg",
+      "text": "Craft with an X-Pill, brown wool, and an egg."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Tame Item$()$(br)Bia loves $(#fa8072)Salmon$(). It's her favorite treat!$(br2)$(o)Scenes$()$(br)$(li)Anal$(li)Doggy Style"
+    }
+  ]
+}

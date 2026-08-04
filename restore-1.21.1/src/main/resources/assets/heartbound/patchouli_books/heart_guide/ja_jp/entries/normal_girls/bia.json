@@ -1,0 +1,31 @@
+{
+  "name": "ビア",
+  "icon": "heartbound:bia_spawn_egg",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "ビアは命を得た魔法の茶色いテディベアです。明るくて遊び好きで、いつもエネルギーに満ちています。$(br2)柔らかい茶色の毛皮で、みんなを笑顔にするのが大好きです。白樺の森で彼女の家を見つけることができます。"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:bia",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "ビア",
+      "text": "ビア、魔法のテディベア！"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:bia_spawn_egg",
+      "title": "ビアのスポーンエッグ",
+      "text": "X-ピル、茶色の羊毛、卵で作成。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)なつかせアイテム$()$(br)ビアは$(#fa8072)サーモン$()が大好きです。彼女のお気に入りのおやつです！$(br2)$(o)シーン$()$(br)$(li)アナル$(li)バック"
+    }
+  ]
+}

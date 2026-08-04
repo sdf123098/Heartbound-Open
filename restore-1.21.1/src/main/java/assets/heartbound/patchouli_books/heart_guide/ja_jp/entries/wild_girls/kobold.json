@@ -1,0 +1,25 @@
+{
+  "name": "コボルド",
+  "icon": "minecraft:raw_iron",
+  "category": "heartbound:wild_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "コボルドは鱗と角を持つ小さなドラゴンのような生き物です。獰猛で縄張り意識が強く、洞窟や山岳地帯でよく見られます。$(br2)このワイルドガールはとても防衛的で、強い忠誠心を持っています。気性が荒いこともありますが、なつかせると最高のパートナーになります。"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:kobold",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "コボルド",
+      "text": "野生の守護者、獰猛なコボルド！"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)なつかせアイテム$()$(br)コボルドは$(#b0b)鉄の原石$()に惹かれ、価値あるものと見なします。$(br2)$(o)シーン$()$(br)$(li)フェラ$(li)アナル"
+    }
+  ]
+}

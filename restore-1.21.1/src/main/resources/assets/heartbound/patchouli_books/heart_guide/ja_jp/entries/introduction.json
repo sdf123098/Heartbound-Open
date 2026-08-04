@@ -1,0 +1,15 @@
+{
+  "name": "ガールの紹介",
+  "icon": "minecraft:player_head",
+  "category": "heartbound:girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "ハートガイドへようこそ！この本にはPleasure Horizonsの世界で出会える全ての美しいガールの情報が載っています。$(br2)ガールは捕獲、なつかせ、お世話できる特別なエンティティです。それぞれ固有の性格、能力、ストーリーを持っています。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "ガールは3つのカテゴリーに分かれています：$(br2)$(l:normal_girls)ノーマルガール$(/l) - ガール村に自然にスポーンするフレンドリーなガール。$(br)$(l:wild_girls)ワイルドガール$(/l) - 野生で見つかる野性的なガール。$(br)$(l:custom_girls)カスタムガール$(/l) - JSON設定から読み込まれる特別なガール。$(br2)マスターリングを使ってガールを捕獲し、なつかせましょう！"
+    }
+  ]
+}

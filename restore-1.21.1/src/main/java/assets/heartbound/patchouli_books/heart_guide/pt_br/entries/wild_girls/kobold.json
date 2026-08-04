@@ -1,0 +1,25 @@
+{
+  "name": "Kobold",
+  "icon": "minecraft:raw_iron",
+  "category": "heartbound:wild_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Kobolds são criaturas pequenas, semelhantes a dragões, com escamas e chifres. Elas são ferozes e territoriais, frequentemente encontradas em cavernas e áreas montanhosas.$(br2)Essas garotas selvagens são muito protetoras e têm um forte senso de lealdade. Elas podem ser bastante agitadas, mas são excelentes companheiras depois de domesticadas."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:kobold",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Kobold",
+      "text": "Uma Kobold feroz, guardiã da natureza!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Item de Domesticação$()$(br)Kobolds são atraídas por $(#b0b)Ferro Bruto$() e o consideram valioso.$(br2)$(o)Cenas$()$(br)$(li)Boquete$(li)Anal"
+    }
+  ]
+}

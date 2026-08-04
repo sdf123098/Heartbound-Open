@@ -1,0 +1,6 @@
+{
+  "name": "Normal Girls",
+  "description": "These are the standard girls you can find in villages and settlements. They are friendly and can be recruited to help with settlement tasks.",
+  "icon": "minecraft:villager_spawn_egg",
+  "parent": "heartbound:girls"
+}

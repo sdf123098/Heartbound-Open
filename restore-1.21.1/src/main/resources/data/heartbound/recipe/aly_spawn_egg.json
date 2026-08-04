@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    "LEB",
+    "DCD"
+  ],
+  "key": {
+    "X": {
+      "item": "heartbound:x_pill"
+    },
+    "L": {
+      "item": "minecraft:light_blue_wool"
+    },
+    "E": {
+      "item": "minecraft:egg"
+    },
+    "B": {
+      "item": "minecraft:blue_wool"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "C": {
+      "item": "minecraft:cyan_wool"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "heartbound:aly_spawn_egg"
+  }
+}

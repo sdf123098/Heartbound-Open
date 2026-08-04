@@ -1,0 +1,304 @@
+{
+  "girl_id": "jenny",
+  "events": [
+    {
+      "key": "stripMSG1",
+      "random_sounds": [
+        "heartbound:jenny.giggle"
+      ],
+      "messages": [
+        "msg.heartbound.scene.jenny.stripMSG1"
+      ]
+    },
+    {
+      "key": "paizuriStartMSG1",
+      "sounds": [
+        "heartbound:misc.pounding"
+      ]
+    },
+    {
+      "key": "paizuriSlowMSG1",
+      "sounds": [
+        "heartbound:misc.pounding"
+      ]
+    },
+    {
+      "key": "paizuriFastMSG1",
+      "sounds": [
+        "heartbound:misc.pounding"
+      ],
+      "random_sounds": [
+        "heartbound:jenny.ahh",
+        "heartbound:jenny.mmm"
+      ]
+    },
+    {
+      "key": "bjiMSG1",
+      "sounds": [
+        "heartbound:jenny.mmm"
+      ],
+      "messages": [
+        "msg.heartbound.scene.jenny.bjiMSG1"
+      ]
+    },
+    {
+      "key": "bjiMSG2",
+      "sounds": [
+        "heartbound:jenny.lightbreathing"
+      ],
+      "messages": [
+        "msg.heartbound.scene.jenny.bjiMSG2"
+      ]
+    },
+    {
+      "key": "bjiMSG3",
+      "sounds": [
+        "heartbound:jenny.aftersessionmoan"
+      ],
+      "messages": [
+        "msg.heartbound.scene.jenny.bjiMSG3"
+      ]
+    },
+    {
+      "key": "bjiMSG4",
+      "sounds": [
+        "heartbound:misc.belljingle"
+      ]
+    },
+    {
+      "key": "bjiMSG5",
+      "sounds": [
+        "heartbound:jenny.hmph"
+      ],
+      "messages": [
+        "msg.heartbound.scene.jenny.bjiMSG5"
+      ]
+    },
+    {
+      "key": "bjiMSG6",
+      "sounds": [
+        "heartbound:jenny.lightbreathing"
+      ],
+      "messages": [
+        "msg.heartbound.scene.jenny.bjiMSG6"
+      ]
+    },
+    {
+      "key": "bjiMSG7",
+      "sounds": [
+        "heartbound:jenny.giggle"
+      ],
+      "messages": [
+        "msg.heartbound.scene.jenny.bjiMSG7"
+      ]
+    },
+    {
+      "key": "bjiMSG8",
+      "sounds": [
+        "heartbound:misc.plob"
+      ],
+      "player_messages": [
+        "msg.heartbound.scene.player.bjiMSG8"
+      ]
+    },
+    {
+      "key": "bjiMSG9",
+      "sounds": [
+        "heartbound:jenny.giggle"
+      ],
+      "messages": [
+        "msg.heartbound.scene.jenny.bjiMSG9"
+      ]
+    },
+    {
+      "key": "bjiMSG11",
+      "random_sounds": [
+        "heartbound:jenny.lipsound",
+        "heartbound:jenny.bjmoan"
+      ]
+    },
+    {
+      "key": "bjiMSG12",
+      "sounds": [
+        "heartbound:jenny.lipsound"
+      ]
+    },
+    {
+      "key": "bjtMSG1",
+      "sounds": [
+        "heartbound:jenny.mmm",
+        "heartbound:jenny.lipsound"
+      ]
+    },
+    {
+      "key": "bjcMSG1",
+      "sounds": [
+        "heartbound:jenny.bjmoan"
+      ]
+    },
+    {
+      "key": "bjcMSG2",
+      "sounds": [
+        "heartbound:jenny.bjmoan"
+      ]
+    },
+    {
+      "key": "bjcMSG3",
+      "sounds": [
+        "heartbound:jenny.aftersessionmoan"
+      ]
+    },
+    {
+      "key": "bjcMSG4",
+      "sounds": [
+        "heartbound:jenny.lightbreathing"
+      ]
+    },
+    {
+      "key": "bjcMSG5",
+      "sounds": [
+        "heartbound:jenny.lightbreathing"
+      ]
+    },
+    {
+      "key": "bjcMSG6",
+      "sounds": [
+        "heartbound:jenny.lightbreathing"
+      ]
+    },
+    {
+      "key": "doggyLayOnBedMSG1",
+      "sounds": [
+        "heartbound:misc.bedrustle"
+      ]
+    },
+    {
+      "key": "doggyLayOnBedMSG2",
+      "sounds": [
+        "heartbound:jenny.lightbreathing"
+      ],
+      "messages": [
+        "msg.heartbound.scene.jenny.doggyLayOnBedMSG2"
+      ]
+    },
+    {
+      "key": "doggyLayOnBedMSG3",
+      "sounds": [
+        "heartbound:jenny.giggle"
+      ],
+      "messages": [
+        "msg.heartbound.scene.jenny.doggyLayOnBedMSG3"
+      ]
+    },
+    {
+      "key": "doggyLayOnBedMSG4",
+      "sounds": [
+        "heartbound:misc.slap"
+      ]
+    },
+    {
+      "key": "doggyintroMSG1",
+      "sounds": [
+        "heartbound:misc.touch"
+      ],
+      "messages": [
+        "msg.heartbound.scene.jenny.doggyintroMSG1"
+      ]
+    },
+    {
+      "key": "doggyintroMSG2",
+      "sounds": [
+        "heartbound:misc.touch"
+      ]
+    },
+    {
+      "key": "doggyintroMSG3",
+      "sounds": [
+        "heartbound:misc.bedrustle"
+      ]
+    },
+    {
+      "key": "doggyintroMSG4",
+      "sounds": [
+        "heartbound:misc.smallinserts",
+        "heartbound:jenny.mmm"
+      ],
+      "messages": [
+        "msg.heartbound.scene.jenny.doggyintroMSG4"
+      ]
+    },
+    {
+      "key": "doggyintroMSG5",
+      "sounds": [
+        "heartbound:misc.pounding",
+        "heartbound:jenny.moan"
+      ],
+      "messages": [
+        "msg.heartbound.scene.jenny.doggyintroMSG5"
+      ]
+    },
+    {
+      "key": "doggyslowMSG1",
+      "sounds": [
+        "heartbound:misc.pounding"
+      ],
+      "random_sounds": [
+        "heartbound:jenny.moan",
+        "heartbound:jenny.heavybreathing",
+        "heartbound:jenny.mmm"
+      ]
+    },
+    {
+      "key": "doggyslowMSG2",
+      "sounds": [
+        "heartbound:jenny.lightbreathing"
+      ]
+    },
+    {
+      "key": "doggyfastMSG1",
+      "sounds": [
+        "heartbound:misc.pounding"
+      ],
+      "random_sounds": [
+        "heartbound:jenny.moan",
+        "heartbound:jenny.heavybreathing",
+        "heartbound:jenny.ahh"
+      ]
+    },
+    {
+      "key": "doggycumMSG1",
+      "sounds": [
+        "heartbound:misc.pounding",
+        "heartbound:misc.cuminflation",
+        "heartbound:jenny.moan"
+      ],
+      "messages": [
+        "msg.heartbound.scene.jenny.doggycumMSG1"
+      ]
+    },
+    {
+      "key": "doggycumMSG2",
+      "sounds": [
+        "heartbound:jenny.heavybreathing"
+      ]
+    },
+    {
+      "key": "doggycumMSG3",
+      "sounds": [
+        "heartbound:jenny.heavybreathing"
+      ]
+    },
+    {
+      "key": "doggycumMSG4",
+      "sounds": [
+        "heartbound:jenny.heavybreathing"
+      ]
+    },
+    {
+      "key": "doggycumMSG5",
+      "sounds": [
+        "heartbound:jenny.heavybreathing"
+      ]
+    }
+  ]
+}

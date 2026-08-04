@@ -1,0 +1,20 @@
+{
+  "name": "Transformação",
+  "icon": "heartbound:x_pill",
+  "category": "heartbound:features",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Mecânicas de Transformação$()$(br2)A $(item)Pílula X$() permite que você se transforme em qualquer garota do jogo. Enquanto transformado, seu modelo de jogador muda para corresponder à garota selecionada, e você pode acessar as cenas exclusivas dela.$(br2)Use outra $(item)Pílula X$() para voltar à sua forma normal."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Como se Transformar:$()$(br)$(li)Fabrique uma $(item)Pílula X$() (veja a receita na próxima página)$(li)Clique com o botão direito com a $(item)Pílula X$() para abrir a tela de seleção de garota$(li)Escolha a garota em que deseja se transformar$(li)Você está transformado!$(br2)$(bold)Enquanto Transformado:$()$(br)$(li)Pressione a tecla de $(item)Cena de Transformação$() para iniciar uma cena$(li)Use outra $(item)Pílula X$() para voltar à forma humana$(br2)$(o)Nota: A Pílula X é consumida ao usar (a menos que esteja no modo Criativo).$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:x_pill",
+      "text": "Fabrique a Pílula X usando uma papoula, açúcar, uma poção, uma maçã e uma tigela."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "変身",
+  "icon": "heartbound:x_pill",
+  "category": "heartbound:features",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)変身メカニクス$()$(br2)$(item)X-ピル$()を使うと、ゲーム内のどのガールにも変身できます。変身中はプレイヤーモデルが選択したガールに変わり、そのガール固有のシーンにアクセスできます。$(br2)もう一つの$(item)X-ピル$()を使って元の姿に戻ります。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)変身方法：$()$(br)$(li)$(item)X-ピル$()をクラフトする（レシピは次のページ）$(li)$(item)X-ピル$()を右クリックしてガール選択画面を開く$(li)変身したいガールを選ぶ$(li)変身完了！$(br2)$(bold)変身中：$()$(br)$(li)$(item)変身シーン$()キーバインドを押してシーンを開始$(li)もう一つの$(item)X-ピル$()を使って人間に戻る$(br2)$(o)注意：X-ピルは使用時に消費されます（クリエイティブモードを除く）。$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:x_pill",
+      "text": "ポピー、砂糖、ポーション、リンゴ、ボウルでX-ピルをクラフトします。"
+    }
+  ]
+}

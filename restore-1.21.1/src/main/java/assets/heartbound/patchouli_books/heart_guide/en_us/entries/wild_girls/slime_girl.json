@@ -1,0 +1,25 @@
+{
+  "name": "Slime Girl",
+  "icon": "minecraft:slime_ball",
+  "category": "heartbound:wild_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Slime Girls are bouncy and playful creatures found in swamps and wet biomes. They have a gelatinous body and are very energetic.$(br2)These wild girls are harder to tame but offer unique interactions. They love jumping around and can be quite mischievous."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:slime",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Slime Girl",
+      "text": "A wild Slime Girl, full of bouncy energy!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Tame Item$()$(br)Slime Girls are attracted to $(#b0b)Slime Ball$(), which they find fascinating.$(br2)$(o)Scenes$()$(br)$(li)Blow Job$(li)Doggy Style"
+    }
+  ]
+}

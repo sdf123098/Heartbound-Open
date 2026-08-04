@@ -1,0 +1,15 @@
+{
+  "name": "Fusing Spawn Eggs",
+  "icon": "heartbound:fusion_table",
+  "category": "heartbound:features",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Fusion Mechanics$()$(br2)The Fusion Table allows you to combine $(item)Custom Girl Spawn Eggs$() with tame items to create specialized girl variants. This process uses ancient magic to infuse the spawn egg with new properties."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Step-by-Step Instructions:$()$(br)$(li)Right-click the $(item)Fusion Table$() to open it$(li)Place a $(item)Custom Girl Spawn Egg$() in the base slot$(li)Place $(bold)two identical$() tame items in the other slots$(li)Take the result from the output slot$(br2)$(o)Important: Both tame items must be exactly the same type!$()"
+    }
+  ]
+}

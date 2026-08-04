@@ -1,0 +1,6 @@
+{
+  "name": "Garotas Normais",
+  "description": "Estas são as garotas padrão que você pode encontrar em vilas e assentamentos. Elas são amigáveis e podem ser recrutadas para ajudar nas tarefas do assentamento.",
+  "icon": "minecraft:villager_spawn_egg",
+  "parent": "heartbound:girls"
+}

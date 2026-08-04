@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " R ",
+    "PBP",
+    " D "
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:poppy"
+    },
+    "P": {
+      "item": "minecraft:pink_dye"
+    },
+    "B": {
+      "item": "minecraft:book"
+    },
+    "D": {
+      "item": "minecraft:dandelion"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "heartbound:heart_guide"
+  }
+}

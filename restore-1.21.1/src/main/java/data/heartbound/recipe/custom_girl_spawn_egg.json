@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    "BEB",
+    "LCL"
+  ],
+  "key": {
+    "X": {
+      "item": "heartbound:x_pill"
+    },
+    "B": {
+      "item": "minecraft:bone"
+    },
+    "E": {
+      "item": "minecraft:egg"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "C": {
+      "item": "minecraft:clay_ball"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "heartbound:custom_girl_spawn_egg"
+  }
+}

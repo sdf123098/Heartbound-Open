@@ -1,0 +1,24 @@
+{
+  "parent": "heartbound:root",
+  "criteria": {
+    "craft": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "heartbound:x_pill"
+      }
+    }
+  },
+  "display": {
+    "title": {"translate": "advancements.heartbound.craft_x_pill.title"},
+    "description": {"translate": "advancements.heartbound.craft_x_pill.description"},
+    "icon": {
+      "count": 1,
+      "id": "heartbound:x_pill"
+    }
+  },
+  "requirements": [
+    [
+      "craft"
+    ]
+  ]
+}

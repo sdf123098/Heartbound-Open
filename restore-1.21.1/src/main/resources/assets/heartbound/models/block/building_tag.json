@@ -1,0 +1,23 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "heartbound:block/building_tag_house",
+		"particle": "heartbound:block/building_tag_house"
+	},
+	"elements": [
+		{
+			"from": [0, 3, 14],
+			"to": [16, 13, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 13.5]},
+			"faces": {
+				"north": {"uv": [0, 0, 8, 5], "texture": "#0"},
+				"east": {"uv": [8, 2, 9, 12], "texture": "#0"},
+				"south": {"uv": [0, 5, 8, 10], "texture": "#0"},
+				"west": {"uv": [8, 2, 9, 12], "texture": "#0"},
+				"up": {"uv": [8, 0, 16, 2], "texture": "#0"},
+				"down": {"uv": [8, 0, 16, 2], "texture": "#0"}
+			}
+		}
+	],
+	"format_version": "1.9.0"
+}

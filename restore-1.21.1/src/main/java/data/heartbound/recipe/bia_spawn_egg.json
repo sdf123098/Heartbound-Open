@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    "WEW",
+    " W "
+  ],
+  "key": {
+    "X": {
+      "item": "heartbound:x_pill"
+    },
+    "W": {
+      "item": "minecraft:brown_wool"
+    },
+    "E": {
+      "item": "minecraft:egg"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "heartbound:bia_spawn_egg"
+  }
+}

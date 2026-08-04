@@ -1,0 +1,25 @@
+{
+  "name": "Coppie",
+  "icon": "minecraft:copper_ingot",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Coppie é uma garota trabalhadora e prática que adora qualquer coisa brilhante. Ela tem uma forte ética de trabalho e é muito confiável.$(br2)Coppie tem detalhes metálicos em sua aparência e gosta de fabricar e construir. Ela é perfeita para trabalhos no assentamento."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:coppie",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Coppie",
+      "text": "Coppie, a artesã trabalhadora!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Item de Domesticação$()$(br)Coppie é fascinada por $(#b0b)Barra de Cobre$() e suas propriedades brilhantes.$(br2)$(o)Cenas$()$(br)$(li)Anal$(li)De Quatro"
+    }
+  ]
+}

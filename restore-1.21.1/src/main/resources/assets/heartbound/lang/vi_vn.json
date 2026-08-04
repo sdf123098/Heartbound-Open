@@ -1,0 +1,569 @@
+{
+  "item.heartbound.jenny_spawn_egg": "Trứng Triệu Hồi Jenny",
+
+  "item.heartbound.ellie_spawn_egg": "Trứng Triệu Hồi Ellie",
+
+  "item.heartbound.bia_spawn_egg": "Trứng Triệu Hồi Bia",
+
+  "item.heartbound.slime_spawn_egg": "Trứng Triệu Hồi Slime",
+
+  "item.heartbound.kobold_spawn_egg": "Trứng Triệu Hồi Kobold",
+
+  "item.heartbound.coppie_spawn_egg": "Trứng Triệu Hồi Coppie",
+  "item.heartbound.aly_spawn_egg": "Trứng Triệu Hồi Aly",
+
+  "item.heartbound.custom_girl_spawn_egg": "Trứng Triệu Hồi Cô Gái Tùy Chỉnh",
+  "item.heartbound.custom_girl_spawn_egg.named": "Trứng Triệu Hồi %s",
+
+  "item.heartbound.love_ball": "Quả Cầu Tình Yêu",
+  "item.heartbound.love_ball.filled": "Quả Cầu Tình Yêu (Đã Bắt)",
+  "item.heartbound.love_ball.tooltip.girl": "Cô gái: %s",
+  "item.heartbound.love_ball.tooltip.owner": "Chủ nhân: %s",
+  "item.heartbound.love_ball.invalid_entity": "Chỉ có thể sử dụng trên thực thể cô gái!",
+  "item.heartbound.love_ball.not_tamed": "Cô gái này chưa được thuần hóa!",
+  "item.heartbound.love_ball.not_owner": "Bạn không sở hữu cô gái này!",
+  "item.heartbound.love_ball.not_owner_release": "Chỉ chủ nhân mới có thể thả cô gái này!",
+  "item.heartbound.love_ball.not_tameable": "Cô gái này không thể bị bắt!",
+  "item.heartbound.love_ball.already_contains": "Quả Cầu Tình Yêu này đã chứa một cô gái rồi!",
+  "item.heartbound.love_ball.stored": "Đã lưu %s vào Quả Cầu Tình Yêu",
+  "item.heartbound.love_ball.empty": "Quả Cầu Tình Yêu này trống!",
+  "item.heartbound.love_ball.released": "Đã thả %s ra khỏi Quả Cầu Tình Yêu",
+  "item.heartbound.love_ball.invalid_data": "Thả thất bại - dữ liệu không hợp lệ!",
+  "item.heartbound.love_ball.spawn_failed": "Triệu hồi cô gái thất bại!",
+
+  "item.heartbound.master_ring": "Nhẫn Chủ Nhân",
+  "item.heartbound.master_ring.filled": "Nhẫn Chủ Nhân (Đã Bắt)",
+  "item.heartbound.master_ring.tooltip.girl": "Cô gái: %s",
+  "item.heartbound.master_ring.tooltip.owner": "Chủ nhân: %s",
+  "item.heartbound.master_ring.invalid_entity": "Chỉ có thể sử dụng trên thực thể cô gái!",
+  "item.heartbound.master_ring.not_tamed": "Cô gái này chưa được thuần hóa!",
+  "item.heartbound.master_ring.not_owner": "Bạn không sở hữu cô gái này!",
+  "item.heartbound.master_ring.not_owner_release": "Chỉ chủ nhân mới có thể thả cô gái này!",
+  "item.heartbound.master_ring.not_tameable": "Cô gái này không thể bị bắt!",
+  "item.heartbound.master_ring.already_contains": "Nhẫn Chủ Nhân này đã chứa một cô gái rồi!",
+  "item.heartbound.master_ring.has_owner": "Cô gái này đã có chủ nhân rồi!",
+  "item.heartbound.master_ring.stored": "Đã lưu %s vào Nhẫn Chủ Nhân",
+  "item.heartbound.master_ring.empty": "Nhẫn Chủ Nhân này trống!",
+  "item.heartbound.master_ring.released": "Đã thả %s ra khỏi Nhẫn Chủ Nhân",
+  "item.heartbound.master_ring.invalid_data": "Thả thất bại - dữ liệu không hợp lệ!",
+  "item.heartbound.master_ring.spawn_failed": "Triệu hồi cô gái thất bại!",
+
+  "item.heartbound.heart_guide": "Cẩm Nang Trái Tim",
+  "item.heartbound.heart_guide.tooltip.edition": "Ấn Bản Thứ Nhất",
+
+  "item.heartbound.x_pill": "Viên X",
+  "gui.heartbound.girl_selection": "Biến Hình Thành...",
+
+  "block.heartbound.fusion_table" : "Bàn Dung Hợp",
+
+  "block.heartbound.magical_pumpkin" : "Bí Ngô Ma Thuật",
+  "block.heartbound.litted_magical_pumpkin" : "Bí Ngô Ma Thuật Phát Sáng",
+
+  "entity.heartbound.jenny": "Jenny",
+
+  "entity.heartbound.ellie": "Ellie",
+
+  "entity.heartbound.bia": "Bia",
+
+  "entity.heartbound.slime": "Slime",
+
+  "entity.heartbound.coppie": "Coppie",
+
+  "entity.heartbound.kobold": "Kobold",
+
+  "entity.heartbound.aly": "Aly",
+
+  "entity.heartbound.custom_girl": "Cô Gái Tùy Chỉnh",
+
+  "screen.heartbound.girl_inventory": "Kho Đồ",
+  "screen.heartbound.girl_inventory.relationship_tooltip": "Mức Độ Quan Hệ",
+  "screen.heartbound.fusion_table": "Bàn Dung Hợp",
+
+  "gui.heartbound.fusion_table": "Bàn Dung Hợp",
+
+  "gui.heartbound.sceneOptions": "Tùy Chọn Cảnh",
+  "gui.heartbound.tooltip.requiresLevel": "Yêu cầu Mức Độ Quan Hệ %s",
+
+  "gui.heartbound.button.breakUp": "Chia Tay",
+  "gui.heartbound.button.setBase": "Đặt Căn Cứ Tại Đây",
+  "gui.heartbound.button.goToBase": "Về Căn Cứ",
+  "gui.heartbound.button.roamAtBase": "Đi Loanh Quanh Căn Cứ",
+  "gui.heartbound.button.stopRoaming": "Ngừng Đi Loanh Quanh",
+  "gui.heartbound.button.chopTrees": "Chặt Cây",
+  "gui.heartbound.button.stopChopping": "Ngừng Chặt",
+  "gui.heartbound.button.customize": "Tùy Chỉnh",
+  "gui.heartbound.button.baseFeature": "Tính Năng Căn Cứ",
+  "gui.heartbound.button.playerFeature": "Tính Năng Người Chơi",
+  "gui.heartbound.featureGroup.baseFeatures": "Tính Năng Căn Cứ",
+  "gui.heartbound.featureGroup.playerFeatures": "Tính Năng Người Chơi",
+  "gui.heartbound.button.sit": "Ngồi",
+  "gui.heartbound.button.stand": "Đứng",
+  "gui.heartbound.button.followMe": "Đi Theo Tôi",
+  "gui.heartbound.button.stopFollowing": "Ngừng Đi Theo",
+  "gui.heartbound.button.mineOres": "Đào Quặng",
+  "gui.heartbound.button.stopMining": "Ngừng Đào",
+  "gui.heartbound.button.strip": "Cởi Đồ",
+  "gui.heartbound.button.dressUp": "Mặc Đồ",
+  "gui.heartbound.button.sex": "Quan Hệ",
+  "gui.heartbound.button.select": "Chọn",
+  "gui.heartbound.button.confirm": "Xác Nhận",
+  "gui.heartbound.button.cancel": "Hủy",
+  "gui.heartbound.button.clear": "Xóa",
+  "gui.heartbound.button.randomize": "Ngẫu Nhiên",
+
+  "gui.heartbound.button.defaultGirl": "Cô Gái Mặc Định",
+  "gui.heartbound.button.customGirl": "Cô Gái Tùy Chỉnh",
+  "gui.heartbound.button.back": "Quay Lại",
+
+  "gui.heartbound.search": "Tìm Kiếm",
+  "gui.heartbound.search.placeholder": "Tìm kiếm...",
+
+  "gui.heartbound.customizeGirl": "Tùy Chỉnh Cô Gái",
+  "gui.heartbound.customizeKobold": "Tùy Chỉnh Kobold",
+
+  "gui.heartbound.customize.breastSize": "Kích Thước Ngực",
+  "gui.heartbound.customize.breastOffset": "Vị Trí Ngực",
+  "gui.heartbound.customize.bodySize": "Kích Thước Cơ Thể",
+  "gui.heartbound.customize.bodySize.tooltip": "Kích thước ảnh hưởng chiều cao hitbox\n65 = 1 khối, 115 = 1.75 khối",
+  "gui.heartbound.customize.breastSize.tooltip": "Điều chỉnh kích thước ngực (60-160)",
+  "gui.heartbound.customize.colorPattern": "Mẫu Màu:",
+  "gui.heartbound.customize.irisColor": "Màu Mống Mắt:",
+  "gui.heartbound.customize.topHorns": "Sừng Trên:",
+  "gui.heartbound.customize.bottomHorns": "Sừng Dưới:",
+  "gui.heartbound.customize.type": "Loại %s",
+  "gui.heartbound.customize.offset": "Dịch Chuyển %s",
+
+  "scene.heartbound.masturbation": "Thủ Dâm",
+  "scene.heartbound.paizuri": "Paizuri",
+  "scene.heartbound.blowJob": "Bú Cu",
+  "scene.heartbound.doggy": "Doggy",
+  "scene.heartbound.faceFuck": "Địt Mặt",
+  "scene.heartbound.missionary": "Missionary",
+  "scene.heartbound.cowgirl": "Cowgirl",
+  "scene.heartbound.anal": "Hậu Môn",
+  "scene.heartbound.sex": "Quan Hệ",
+  "scene.heartbound.nelson": "Nelson",
+
+  "jei.heartbound.fusion": "Công Thức Dung Hợp",
+
+  "itemgroup.heartbound.pleasure_craft_items": "Vật Phẩm Heartbound",
+
+  "itemgroup.heartbound.pleasure_craft_blocks": "Khối Heartbound",
+
+  "msg.heartbound.noBedFound" : "Chúng ta cần một chiếc giường trống gần đây cho việc này...",
+  "msg.heartbound.needsToStrip" : "Bạn cần cởi đồ trước khi làm điều này.",
+
+  "msg.heartbound.alreadyInRelationship" : "Cô ấy đã có quan hệ với người khác rồi",
+
+  "msg.heartbound.sheIgnoresYou": "Cô ấy phớt lờ bạn. Thử tặng cô ấy một %s xem.",
+  "msg.heartbound.askedOutYes": "Bạn đã tỏ tình với %s và cô ấy nói §aCó",
+  "msg.heartbound.brokeUp": "Bạn đã chia tay với %s",
+  "msg.heartbound.diedRespawned": "%s đã chết và hồi sinh tại căn cứ: %s, %s, %s",
+  "msg.heartbound.baseSet": "Đã đặt căn cứ tại (%s, %s, %s)",
+  "msg.heartbound.mustFollowToMine": "Cô gái phải đang đi theo để đào quặng",
+
+  "msg.heartbound.sheLikedTheGift": "Cô Ấy Thích Món Quà",
+
+  "msg.heartbound.gift.like.1": "Hay đấy",
+  "msg.heartbound.gift.like.2": "Cảm ơn bạn nhiều lắm",
+  "msg.heartbound.gift.love.1": "Ồ, cảm ơn nhé",
+  "msg.heartbound.gift.love.2": "Yêu bạn ~_^",
+
+  "msg.heartbound.jenny.gift.like.1": "Wow, cho mình á? Cảm ơn!",
+  "msg.heartbound.jenny.gift.like.2": "Hoa allium á? Dễ thương quá…!",
+  "msg.heartbound.jenny.gift.like.3": "Ahaha, tuyệt vời!",
+  "msg.heartbound.jenny.gift.love.1": "Ồ, thêm một cái nữa á? Thật ra bạn mới là món quà đẹp nhất~.",
+  "msg.heartbound.jenny.gift.love.2": "Anh ơi, anh tốt quá. Và nóng bỏng nữa~.",
+  "msg.heartbound.jenny.gift.love.3": "Thôi đừng tặng quà nữa mà làm luôn đi~!",
+
+  "msg.heartbound.ellie.gift.like.1": "Khoan, đó là… Một bông Hoa Wither thật sao…!",
+  "msg.heartbound.ellie.gift.like.2": "Cậu hơi nhạt nhẽo nhưng cái này thì… Cảm ơn…!",
+  "msg.heartbound.ellie.gift.like.3": "Tuyệt vời… Vậy đây là hoa Wither thật à…!",
+  "msg.heartbound.ellie.gift.love.1": "Mm, cậu thật ra cũng nóng bỏng phết đấy…",
+  "msg.heartbound.ellie.gift.love.2": "Cậu đang cần một người mẹ hay sao?",
+  "msg.heartbound.ellie.gift.love.3": "T-Thôi đi… Nhiều quá rồi…",
+
+  "msg.heartbound.bia.gift.like.1": "Wow!!! Hoa poppy!! Yay!!",
+  "msg.heartbound.bia.gift.like.2": "Wow, wow wow! Quà cho Bia!",
+  "msg.heartbound.bia.gift.like.3": "Bia thích quà! Cho Bia thêm nữa đi!",
+  "msg.heartbound.bia.gift.love.1": "Yay!! Thêm quà nữa! Bạn thật sự nên làm chủ nhân của Bia!",
+  "msg.heartbound.bia.gift.love.2": "Yay, yay, yay! Mình chơi được chưa!",
+  "msg.heartbound.bia.gift.love.3": "M-Bia đang động dục vì bạn…",
+
+  "msg.heartbound.coppie.gift.like.1": "Golem này chấp nhận… thứ này.",
+  "msg.heartbound.coppie.gift.like.2": "Golem này sẽ tiếp nhận món quà theo đúng quy trình.",
+  "msg.heartbound.coppie.gift.like.3": "Tại sao ngài lại tặng quà cho golem này, chủ nhân?",
+  "msg.heartbound.coppie.gift.love.1": "Golem này… không… Tôi rất trân trọng điều này, chủ nhân.",
+  "msg.heartbound.coppie.gift.love.2": "Điều này thật sự có ý nghĩa lớn với tôi, chủ nhân.",
+  "msg.heartbound.coppie.gift.love.3": "Ngài có chắc không muốn sử dụng chức năng tình dục của tôi không, chủ nhân?",
+
+  "msg.heartbound.scene.jenny.stripMSG1": "Hihi~",
+  "msg.heartbound.scene.jenny.bjiMSG1": "Anh đang làm gì...",
+  "msg.heartbound.scene.jenny.bjiMSG2": "eh... đàn ông...",
+  "msg.heartbound.scene.jenny.bjiMSG3": "OHOhh...!",
+  "msg.heartbound.scene.jenny.bjiMSG5": "Cái này thật sự cần thiết sao?!",
+  "msg.heartbound.scene.jenny.bjiMSG6": "Oh~",
+  "msg.heartbound.scene.jenny.bjiMSG7": "Anh thích không?~",
+  "msg.heartbound.scene.jenny.bjiMSG9": "Hihihi~",
+  "msg.heartbound.scene.jenny.doggyLayOnBedMSG2": "anh còn đợi gì nữa?~",
+  "msg.heartbound.scene.jenny.doggyLayOnBedMSG3": "cái mông này không tự làm được đâu...",
+  "msg.heartbound.scene.jenny.doggyintroMSG1": "Mm~",
+  "msg.heartbound.scene.jenny.doggyintroMSG4": "Oh~!",
+  "msg.heartbound.scene.jenny.doggyintroMSG5": "Ahhh~!",
+  "msg.heartbound.scene.jenny.doggycumMSG1": "Em sắp ra~!",
+
+  "msg.heartbound.scene.player.bjiMSG8": "Yee",
+
+  "msg.heartbound.scene.ellie.carry_introMSG1": "Em đói..",
+  "msg.heartbound.scene.ellie.carry_introMSG2": "heh~",
+  "msg.heartbound.scene.ellie.sitdownMSG1": "Lại đây với mẹ~",
+  "msg.heartbound.scene.ellie.missionary_cumMSG2": "giỏi lắm.. ehh.. con trai.. hehe~",
+  "msg.heartbound.scene.ellie.cowgirlStartMSG1": "Anh thích những gì anh thấy không?~",
+  "msg.heartbound.scene.ellie.cowgirlcumMSG4": "giỏi lắm.. ehh.. con trai.. hehe~",
+
+  "msg.heartbound.scene.bia.sitdownMSG1": "lại đây anh trai~",
+
+  "msg.heartbound.canGoInToFreeCam" : "Để vào chế độ camera tự do nhấn F4",
+
+  "key.Heartbound.thrust": "Đẩy",
+
+  "key.Heartbound.cum": "Xuất",
+
+  "key.Heartbound.transformScene": "Chuyển Đổi Cảnh",
+
+  "key.categories.Heartbound": "Heartbound",
+
+  "subtitles.bedrustle" : "Giường sột soạt",
+
+  "subtitles.belljingle" : "Chuông leng keng",
+
+  "subtitles.clap" : "Vỗ",
+
+  "subtitles.cuminflation" : "Phồng tinh",
+
+  "subtitles.flap" : "Đập",
+
+  "subtitles.inserts" : "Đút vào",
+
+  "subtitles.pounding" : "Đập mạnh",
+
+  "subtitles.slap" : "Tát",
+
+  "subtitles.slide" : "Trượt",
+
+  "subtitles.smallinserts" : "Đút nhẹ",
+
+  "subtitles.touch" : "Chạm",
+
+  "subtitles.plob" : "Plob",
+
+  "subtitles.jenny.heavybreathing": "Thở nặng",
+
+  "subtitles.jenny.hmph": "Hmph",
+
+  "subtitles.jenny.huh": "Huh",
+
+  "subtitles.jenny.aftersessionmoan": "Rên sau phiên",
+
+  "subtitles.jenny.ahh": "Ahh",
+
+  "subtitles.jenny.bjmoan": "Rên BJ",
+
+  "subtitles.jenny.giggle": "Cười khúc khích",
+
+  "subtitles.jenny.happyoh": "Oh vui",
+
+  "subtitles.jenny.lightbreathing": "Thở nhẹ",
+
+  "subtitles.jenny.lipsound": "Tiếng môi",
+
+  "subtitles.jenny.mmm": "Mmm",
+
+  "subtitles.jenny.moan": "Rên",
+
+  "subtitles.jenny.sadoh": "Oh buồn",
+
+  "subtitles.jenny.sigh": "Thở dài",
+
+  "subtitles.bia.ahh": "Ahh",
+
+  "subtitles.bia.bjmoan": "Rên BJ",
+
+  "subtitles.bia.moan": "Rên",
+
+  "subtitles.bia.lightbreathing": "Thở nhẹ",
+
+  "subtitles.bia.giggle": "Cười khúc khích",
+
+  "subtitles.bia.hey": "Hey",
+
+  "subtitles.bia.happyoh": "Oh vui",
+
+  "subtitles.bia.sadoh": "Oh buồn",
+
+  "subtitles.bia.sigh": "Thở dài",
+
+  "subtitles.bia.huh": "Huh",
+
+  "subtitles.bia.hmph": "Hmph",
+
+  "subtitles.bia.mmm": "Mmm",
+
+  "subtitles.ellie.aftersessionmoan": "Rên sau phiên",
+
+  "subtitles.ellie.ahh": "Ahh",
+
+  "subtitles.ellie.bjmoan": "Rên BJ",
+
+  "subtitles.ellie.cometomommy": "Lại đây với mẹ",
+
+  "subtitles.ellie.giggle": "Cười khúc khích",
+
+  "subtitles.ellie.goodboy": "Con trai ngoan",
+
+  "subtitles.ellie.happyoh": "Oh vui",
+
+  "subtitles.ellie.heavybreathing": "Thở nặng",
+
+  "subtitles.ellie.hmph": "Hmph",
+
+  "subtitles.ellie.huh": "Huh",
+
+  "subtitles.ellie.lightbreathing": "Thở nhẹ",
+
+  "subtitles.ellie.lipsound": "Tiếng môi",
+
+  "subtitles.ellie.mmm": "Mmm",
+
+  "subtitles.ellie.moan": "Rên",
+
+  "subtitles.ellie.mommyhorny": "Mẹ đang nứng",
+
+  "subtitles.ellie.sadoh": "Oh buồn",
+
+  "subtitles.ellie.sigh": "Thở dài",
+
+  "key.categories.freecam": "heartbound - Camera Tự Do",
+
+  "key.freecam.toggle": "Bật/Tắt Camera Tự Do",
+
+  "key.freecam.playerControl": "Điều Khiển Người Chơi",
+
+  "key.freecam.tripodReset": "Đặt Lại Tripod",
+
+  "key.freecam.configGui": "Giao Diện Cài Đặt",
+
+  "heartbound.patchouli.heart_guide.name": "Cẩm Nang Trái Tim",
+  "heartbound.patchouli.heart_guide.landing_text": "$(o)Chào mừng đến với Cẩm Nang Trái Tim!$()$(br2)Khám phá tất cả các cô gái xinh đẹp trong thế giới của bạn! Tìm hiểu về tính cách, cách thuần hóa, và những cảnh mà họ thích.$(br2)Duyệt các danh mục bên phải để bắt đầu!",
+
+  "msg.freecam.enable": "Camera tự do đã được bật.",
+
+  "msg.freecam.disable": "Camera tự do đã được tắt.",
+
+  "msg.freecam.openTripod": "Đang mở camera %s",
+
+  "msg.freecam.closeTripod": "Đang đóng camera %s",
+
+  "msg.freecam.tripodReset": "Đã đặt lại camera %s",
+
+  "text.autoconfig.heartbound.category.default": "Heartbound",
+
+  "text.autoconfig.heartbound.category.freecam": "Camera Tự Do",
+
+  "text.autoconfig.heartbound.title": "Tùy Chọn Heartbound",
+
+  "text.autoconfig.heartbound.option.girls": "Các Cô Gái",
+
+  "text.autoconfig.heartbound.option.girls.boobWindow": "Cửa Sổ Ngực",
+
+  "text.autoconfig.heartbound.option.girls.disableShading": "Tắt Đổ Bóng",
+
+  "text.autoconfig.heartbound.option.girls.boobWindow.@Tooltip": "Làm cho giáp trên cô gái có cửa sổ để thấy ngực",
+
+  "text.autoconfig.heartbound.option.girls.disableShading.@Tooltip": "Tắt đổ bóng/bóng trên cô gái và làm cho chúng có ánh sáng phẳng",
+
+  "text.autoconfig.heartbound.option.player": "Người Chơi",
+
+  "text.autoconfig.heartbound.option.player.penisShaftColor": "Màu Thân Dương Vật",
+
+  "text.autoconfig.heartbound.option.player.penisShaftColor.@Tooltip": "Đặt màu thân dương vật trên mô hình người chơi",
+
+  "text.autoconfig.heartbound.option.player.penisHeadColor": "Màu Đầu Dương Vật",
+
+  "text.autoconfig.heartbound.option.player.penisHeadColor.@Tooltip": "Đặt màu đầu dương vật trên mô hình người chơi",
+
+  "text.autoconfig.heartbound.option.controls": "Gán Phím",
+
+  "text.autoconfig.heartbound.option.controls.@Tooltip": "Gán phím camera tự do.",
+
+  "text.autoconfig.heartbound.option.movement": "Tùy Chọn Di Chuyển",
+
+  "text.autoconfig.heartbound.option.movement.@Tooltip": "Cách camera di chuyển.",
+
+  "text.autoconfig.heartbound.option.movement.flightMode": "Chế Độ Bay",
+
+  "text.autoconfig.heartbound.option.movement.flightMode.@Tooltip": "Loại bay được sử dụng bởi camera tự do.",
+
+  "text.autoconfig.heartbound.option.movement.flightMode.default": "Mặc Định",
+
+  "text.autoconfig.heartbound.option.movement.flightMode.creative": "Sáng Tạo",
+
+  "text.autoconfig.heartbound.option.movement.horizontalSpeed": "Tốc Độ Ngang",
+
+  "text.autoconfig.heartbound.option.movement.horizontalSpeed.@Tooltip": "Tốc độ ngang của camera tự do.",
+
+  "text.autoconfig.heartbound.option.movement.verticalSpeed": "Tốc Độ Dọc",
+
+  "text.autoconfig.heartbound.option.movement.verticalSpeed.@Tooltip": "Tốc độ dọc của camera tự do.",
+
+  "text.autoconfig.heartbound.option.collision": "Tùy Chọn Va Chạm",
+
+  "text.autoconfig.heartbound.option.collision.@Tooltip": "Những khối bạn có thể đi xuyên qua trong camera tự do.",
+
+  "text.autoconfig.heartbound.option.collision.ignoreTransparent": "Bỏ Qua Khối Trong Suốt",
+
+  "text.autoconfig.heartbound.option.collision.ignoreTransparent.@Tooltip": "Cho phép đi xuyên qua khối trong suốt trong camera tự do.",
+
+  "text.autoconfig.heartbound.option.collision.ignoreOpenable": "Bỏ Qua Khối Mở Được",
+
+  "text.autoconfig.heartbound.option.collision.ignoreOpenable.@Tooltip": "Cho phép đi xuyên qua cửa/cửa sập/cổng trong camera tự do.",
+
+  "text.autoconfig.heartbound.option.collision.ignoreCustom": "Danh Sách Bỏ Qua Tùy Chỉnh",
+
+  "text.autoconfig.heartbound.option.collision.ignoreCustom.@Tooltip[0]": "Cho phép đi xuyên qua các khối cụ thể trong camera tự do.",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.ids": "Bỏ Qua Theo ID",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.ids.@Tooltip[0]": "Sử dụng id khối, ví dụ \"grass_block\".",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.ids.@Tooltip[1]": "Nếu bỏ qua namespace, \"minecraft:\" sẽ được sử dụng mặc định.",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.patterns": "Bỏ Qua Theo Biểu Thức Chính Quy",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.patterns.@Tooltip[0]": "Sử dụng cú pháp Biểu Thức Chính Quy.",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.patterns.@Tooltip[1]": "So khớp với id khối đầy đủ, ví dụ \"minecraft:grass_block\".",
+
+  "text.autoconfig.heartbound.option.collision.ignoreAll": "Bỏ Qua Tất Cả Va Chạm",
+
+  "text.autoconfig.heartbound.option.collision.ignoreAll.@Tooltip[0]": "Cho phép đi xuyên qua tất cả khối trong camera tự do.",
+
+  "text.autoconfig.heartbound.option.collision.ignoreAll.@Tooltip[1]": "§eGhi đè các cài đặt phía trên.",
+
+  "text.autoconfig.heartbound.option.collision.ignoreAll.@ModrinthTooltip[2]": "§cLƯU Ý: Chỉ có thể sử dụng trong chơi đơn, sáng tạo, hoặc có quyền operator.",
+
+  "text.autoconfig.heartbound.option.collision.alwaysCheck": "Luôn Kiểm Tra Va Chạm Ban Đầu",
+
+  "text.autoconfig.heartbound.option.collision.alwaysCheck.@Tooltip[0]": "Liệu §7Góc Nhìn Ban Đầu§r có nên kiểm tra",
+
+  "text.autoconfig.heartbound.option.collision.alwaysCheck.@Tooltip[1]": "va chạm, ngay cả khi sử dụng §7Bỏ Qua Tất Cả Va Chạm§r.",
+
+  "text.autoconfig.heartbound.option.visual": "Tùy Chọn Hình Ảnh",
+
+  "text.autoconfig.heartbound.option.visual.@Tooltip": "Giao diện của camera tự do.",
+
+  "text.autoconfig.heartbound.option.visual.perspective": "Góc Nhìn Ban Đầu",
+
+  "text.autoconfig.heartbound.option.visual.perspective.@Tooltip": "Góc nhìn ban đầu của camera.",
+
+  "text.autoconfig.heartbound.option.visual.perspective.firstPerson": "Ngôi Thứ Nhất",
+
+  "text.autoconfig.heartbound.option.visual.perspective.thirdPerson": "Ngôi Thứ Ba",
+
+  "text.autoconfig.heartbound.option.visual.perspective.thirdPersonMirror": "Gương",
+
+  "text.autoconfig.heartbound.option.visual.perspective.inside": "Bên Trong",
+
+  "text.autoconfig.heartbound.option.visual.hidePlayer": "Ẩn Người Chơi",
+
+  "text.autoconfig.heartbound.option.visual.hidePlayer.@Tooltip": "Ẩn mô hình người chơi của bạn.",
+
+  "text.autoconfig.heartbound.option.visual.showHand": "Hiện Tay",
+
+  "text.autoconfig.heartbound.option.visual.showHand.@Tooltip": "Liệu bạn có thể thấy tay trong camera tự do.",
+
+  "text.autoconfig.heartbound.option.visual.fullBright": "Độ Sáng Tối Đa",
+
+  "text.autoconfig.heartbound.option.visual.fullBright.@Tooltip": "Tăng độ sáng khi ở trong camera tự do.",
+
+  "text.autoconfig.heartbound.option.visual.showSubmersion": "Hiện Sương Mù Ngập",
+
+  "text.autoconfig.heartbound.option.visual.showSubmersion.@Tooltip": "Liệu bạn có thấy lớp sương mù khi ở dưới nước, trong dung nham, hoặc tuyết bột.",
+
+  "text.autoconfig.heartbound.option.utility": "Tùy Chọn Tiện Ích",
+
+  "text.autoconfig.heartbound.option.utility.@Tooltip": "Cải tiến camera tự do.",
+
+  "text.autoconfig.heartbound.option.utility.disableOnDamage": "Tắt Khi Nhận Sát Thương",
+
+  "text.autoconfig.heartbound.option.utility.disableOnDamage.@Tooltip": "Tắt camera tự do khi nhận sát thương.",
+
+  "text.autoconfig.heartbound.option.utility.freezePlayer": "Đóng Băng Người Chơi",
+
+  "text.autoconfig.heartbound.option.utility.freezePlayer.@Tooltip[0]": "Ngăn người chơi di chuyển khi camera tự do đang hoạt động.",
+
+  "text.autoconfig.heartbound.option.utility.freezePlayer.@Tooltip[1]": "§cCẢNH BÁO: Không khuyến khích sử dụng trong chơi mạng.",
+
+  "text.autoconfig.heartbound.option.utility.allowInteract": "Cho Phép Tương Tác",
+
+  "text.autoconfig.heartbound.option.utility.allowInteract.@Tooltip[0]": "Liệu bạn có thể tương tác với khối/thực thể trong camera tự do.",
+
+  "text.autoconfig.heartbound.option.utility.interactionMode": "Chế Độ Tương Tác",
+
+  "text.autoconfig.heartbound.option.utility.interactionMode.@Tooltip": "Nguồn tương tác với khối/thực thể.",
+
+  "text.autoconfig.heartbound.option.utility.interactionMode.camera": "Camera",
+
+  "text.autoconfig.heartbound.option.utility.interactionMode.player": "Người Chơi",
+
+  "text.autoconfig.heartbound.option.notification": "Tùy Chọn Thông Báo",
+
+  "text.autoconfig.heartbound.option.notification.@Tooltip": "Hiện hoặc ẩn thông báo.",
+
+  "text.autoconfig.heartbound.option.notification.notifyFreecam": "Thông Báo Camera Tự Do",
+
+  "text.autoconfig.heartbound.option.notification.notifyFreecam.@Tooltip": "Thông báo khi bạn bật/tắt camera tự do.",
+
+  "text.autoconfig.heartbound.option.notification.notifyTripod": "Thông Báo Tripod",
+
+  "text.autoconfig.heartbound.option.notification.notifyTripod.@Tooltip": "Thông báo khi bạn bật/tắt camera tripod.",
+
+  "advancements.heartbound.root.title": "Này, cậu. Cậu cuối cùng cũng tỉnh rồi",
+  "advancements.heartbound.root.description": "Cậu đang cố vượt biên giới, đúng không?",
+  "advancements.heartbound.tame_girl.title": "Mãi Mãi Bên Nhau",
+  "advancements.heartbound.tame_girl.description": "Chinh phục trái tim một cô gái",
+  "advancements.heartbound.max_relationship.title": "Em có muốn lấy anh không?",
+  "advancements.heartbound.max_relationship.description": "Đạt mức quan hệ tối đa với một cô gái",
+  "advancements.heartbound.break_up.title": "Tan vỡ con tim",
+  "advancements.heartbound.break_up.description": "Chia tay với một cô gái",
+  "advancements.heartbound.kill_girl.title": "Ta xin lỗi, bé yêu",
+  "advancements.heartbound.kill_girl.description": "Giết một cô gái",
+  "advancements.heartbound.enter_jenny_house.title": "Nơi này đẹp hơn tôi nhớ",
+  "advancements.heartbound.enter_jenny_house.description": "Tìm thấy nhà của Jenny",
+  "advancements.heartbound.enter_bia_house.title": "Góc nhỏ ấm cúng",
+  "advancements.heartbound.enter_bia_house.description": "Tìm thấy nhà của Bia",
+  "advancements.heartbound.enter_ellie_house.title": "Lâu đài tình ái!!?",
+  "advancements.heartbound.enter_ellie_house.description": "Tìm thấy nhà của Ellie",
+  "advancements.heartbound.summon_coppie.title": "Golem đồng.. Coppie?",
+  "advancements.heartbound.summon_coppie.description": "Triệu hồi một Coppie",
+  "advancements.heartbound.craft_custom_girl_spawn_egg.title": "Homunculus!?",
+  "advancements.heartbound.craft_custom_girl_spawn_egg.description": "Chế tạo trứng triệu hồi cô gái tùy chỉnh",
+  "advancements.heartbound.craft_slime_spawn_egg.title": "Một người bạn nhớt nhợt",
+  "advancements.heartbound.craft_slime_spawn_egg.description": "Chế tạo trứng triệu hồi slime",
+  "advancements.heartbound.craft_aly_spawn_egg.title": "Trông cậu khác quá",
+  "advancements.heartbound.craft_aly_spawn_egg.description": "Chế tạo trứng triệu hồi Aly",
+  "advancements.heartbound.craft_love_ball.title": "Không Gian Bỏ Túi",
+  "advancements.heartbound.craft_love_ball.description": "Chế tạo Quả Cầu Tình Yêu",
+  "advancements.heartbound.craft_fusion_table.title": "Giờ mình chuyển qua chế tạo à…",
+  "advancements.heartbound.craft_fusion_table.description": "Chế tạo Bàn Dung Hợp",
+  "advancements.heartbound.craft_master_ring.title": "Em sẽ thuộc về anh",
+  "advancements.heartbound.craft_master_ring.description": "Chế tạo Nhẫn Chủ Nhân",
+  "advancements.heartbound.craft_x_pill.title": "Viên thuốc này trông buồn cười nhỉ",
+  "advancements.heartbound.craft_x_pill.description": "Chế tạo Viên X",
+  "advancements.heartbound.transform.title": "Thiên thượng thiên hạ, duy ngã độc tôn",
+  "advancements.heartbound.transform.description": "Biến hình bằng Viên X",
+  "advancements.heartbound.capture_love_ball.title": "Cùng nhau đi đến tận chân trời",
+  "advancements.heartbound.capture_love_ball.description": "Bắt một cô gái bằng Quả Cầu Tình Yêu",
+  "advancements.heartbound.capture_master_ring.title": "Lần này không chạy được đâu",
+  "advancements.heartbound.capture_master_ring.description": "Bắt một cô gái bằng Nhẫn Chủ Nhân"
+}

@@ -1,0 +1,42 @@
+{
+  "girl_id": "aly",
+  "events": [
+    {
+      "key": "girl_attack",
+      "sounds": [
+        "heartbound:misc.slap"
+      ]
+    },
+    {
+      "key": "throw_pearl",
+      "sounds": [
+        "heartbound:misc.plob"
+      ]
+    },
+    {
+      "key": "sex_start",
+      "sounds": [
+        "heartbound:misc.touch"
+      ]
+    },
+    {
+      "key": "sex_slow",
+      "sounds": [
+        "heartbound:misc.pounding"
+      ]
+    },
+    {
+      "key": "sex_fast",
+      "sounds": [
+        "heartbound:misc.pounding"
+      ]
+    },
+    {
+      "key": "sex_cum",
+      "sounds": [
+        "heartbound:misc.cuminflation",
+        "heartbound:misc.pounding"
+      ]
+    }
+  ]
+}

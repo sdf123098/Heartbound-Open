@@ -1,0 +1,21 @@
+{
+  "parent": "heartbound:root",
+  "criteria": {
+    "tame_girl": {
+      "trigger": "heartbound:tame_girl"
+    }
+  },
+  "display": {
+    "title": {"translate": "advancements.heartbound.tame_girl.title"},
+    "description": {"translate": "advancements.heartbound.tame_girl.description"},
+    "icon": {
+      "count": 1,
+      "id": "minecraft:lead"
+    }
+  },
+  "requirements": [
+    [
+      "tame_girl"
+    ]
+  ]
+}

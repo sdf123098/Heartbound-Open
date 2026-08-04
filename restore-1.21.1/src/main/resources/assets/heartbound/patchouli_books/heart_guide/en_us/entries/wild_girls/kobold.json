@@ -1,0 +1,25 @@
+{
+  "name": "Kobold",
+  "icon": "minecraft:raw_iron",
+  "category": "heartbound:wild_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Kobolds are small, dragon-like creatures with scales and horns. They are fierce and territorial, often found in caves and mountainous areas.$(br2)These wild girls are very protective and have a strong sense of loyalty. They can be quite feisty but make excellent companions once tamed."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:kobold",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Kobold",
+      "text": "A fierce Kobold, guardian of the wild!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Tame Item$()$(br)Kobolds are drawn to $(#b0b)Raw Iron$() and find it valuable.$(br2)$(o)Scenes$()$(br)$(li)Blow Job$(li)Anal"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Cô Gái Hoang Dã",
+  "description": "Những cô gái này lang thang trong tự nhiên và có bản tính hoang dã hơn. Chúng cần vật phẩm đặc biệt để thuần hóa và có hành vi độc đáo.",
+  "icon": "minecraft:slime_spawn_egg",
+  "parent": "heartbound:girls"
+}

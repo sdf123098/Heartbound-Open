@@ -1,0 +1,15 @@
+{
+  "name": "Giới Thiệu Về Các Cô Gái",
+  "icon": "minecraft:player_head",
+  "category": "heartbound:girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Chào mừng đến với Cẩm Nang Trái Tim! Cuốn sách này chứa thông tin về tất cả các cô gái xinh đẹp mà bạn có thể tìm thấy trong thế giới Pleasure Horizons.$(br2)Các cô gái là những thực thể đặc biệt có thể bắt, thuần hóa và chăm sóc. Mỗi cô gái có tính cách, khả năng và câu chuyện riêng."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Các cô gái được chia thành ba loại chính:$(br2)$(l:normal_girls)Cô Gái Thường$(/l) - Các cô gái thân thiện xuất hiện tự nhiên trong Làng Cô Gái.$(br)$(l:wild_girls)Cô Gái Hoang Dã$(/l) - Các cô gái hoang dã có thể tìm thấy trong tự nhiên.$(br)$(l:custom_girls)Cô Gái Tùy Chỉnh$(/l) - Các cô gái đặc biệt được tải từ cấu hình JSON.$(br2)Sử dụng Nhẫn Chủ Nhân để bắt và thuần hóa các cô gái!"
+    }
+  ]
+}

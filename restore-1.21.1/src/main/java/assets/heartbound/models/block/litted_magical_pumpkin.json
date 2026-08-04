@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "texture": "heartbound:block/magical_pumpkin",
+    "particle": "heartbound:block/magical_pumpkin"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 16, 16],
+      "faces": {
+        "north": {"uv": [3.70625, 12.971875, 6.703125, 15.9625], "texture": "#texture", "cullface": "north"},
+        "east": {"uv": [9.9375, 12.96875, 12.96875, 15.96875], "texture": "#texture", "cullface": "east"},
+        "south": {"uv": [12.96875, 12.96875, 9.9375, 15.96875], "texture": "#texture", "cullface": "south"},
+        "west": {"uv": [9.9375, 12.96875, 12.96875, 15.96875], "texture": "#texture", "cullface": "west"},
+        "up": {"uv": [13.009375, 12.96875, 16, 15.96875], "texture": "#texture", "cullface": "up"},
+        "down": {"uv": [6.825, 9.91562, 9.88125, 12.9], "texture": "#texture", "cullface": "down"}
+      }
+    }
+  ]
+}

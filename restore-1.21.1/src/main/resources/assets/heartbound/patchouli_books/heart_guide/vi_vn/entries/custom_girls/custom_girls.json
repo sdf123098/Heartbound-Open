@@ -1,0 +1,15 @@
+{
+  "name": "Cô Gái Tùy Chỉnh",
+  "icon": "minecraft:knowledge_book",
+  "category": "heartbound:custom_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Cô Gái Tùy Chỉnh là những cô gái đặc biệt có thể được thêm qua cấu hình JSON và gói tài nguyên. Chúng cho phép tùy chỉnh hoàn toàn ngoại hình, hành vi và tương tác.$(br2)Những cô gái này được tải từ file $(o)girls.json$() và có thể có mô hình, texture, âm thanh và cấu hình cảnh độc đáo."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Triệu Hồi:$()$(br)Chế tạo $(item)Trứng Hồi Sinh Cô Gái Tùy Chỉnh$() rồi hợp nhất tại $(item)Bàn Hợp Nhất$() với hai vật phẩm thuần hóa giống nhau để tạo trứng hồi sinh chuyên biệt. Click phải để triệu hồi cô gái.$(br2)$(o)Cài Đặt Cô Gái Tùy Chỉnh:$()$(br)- Cài file $(o)(tên cô gái).json$() vào $(o)\\config\\Heartbound\\girls\\$()$(br)- Cài và bật gói tài nguyên$(br2)$(o)Vật Phẩm Thuần Hóa$() - Có thể cấu hình cho mỗi cô gái$(br)$(o)Cảnh$() - Hoàn toàn tùy chỉnh được"
+    }
+  ]
+}

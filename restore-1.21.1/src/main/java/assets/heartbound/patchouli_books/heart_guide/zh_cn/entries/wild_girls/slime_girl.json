@@ -1,0 +1,25 @@
+{
+  "name": "史莱姆女孩",
+  "icon": "minecraft:slime_ball",
+  "category": "heartbound:wild_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "史莱姆女孩是在沼泽和潮湿生物群系中发现的弹性十足、活泼好动的生物。她们有着凝胶状的身体，非常有活力。$(br2)这些野生女孩更难驯服，但提供独特的互动。她们喜欢到处蹦跳，非常淘气。"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:slime",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "史莱姆女孩",
+      "text": "充满弹性活力的野生史莱姆女孩！"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)驯服物品$()$(br)史莱姆女孩被$(#b0b)粘液球$()所吸引，她们觉得很有趣。$(br2)$(o)场景$()$(br)$(li)口交$(li)后入式"
+    }
+  ]
+}

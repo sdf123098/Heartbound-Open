@@ -1,0 +1,25 @@
+{
+  "name": "Slime Girl",
+  "icon": "minecraft:slime_ball",
+  "category": "heartbound:wild_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Slime Girls são criaturas saltitantes e brincalhonas encontradas em pântanos e biomas úmidos. Elas têm um corpo gelatinoso e são muito energéticas.$(br2)Essas garotas selvagens são mais difíceis de domesticar, mas oferecem interações únicas. Elas adoram pular por aí e podem ser bastante travessas."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:slime",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Slime Girl",
+      "text": "Uma Slime Girl selvagem, cheia de energia saltitante!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Item de Domesticação$()$(br)Slime Girls são atraídas por $(#b0b)Bola de Slime$(), que elas acham fascinante.$(br2)$(o)Cenas$()$(br)$(li)Boquete$(li)De Quatro"
+    }
+  ]
+}

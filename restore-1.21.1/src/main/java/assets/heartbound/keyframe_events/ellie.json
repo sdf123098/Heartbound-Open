@@ -1,0 +1,157 @@
+{
+  "girl_id": "ellie",
+  "events": [
+    {
+      "key": "stripMSG1",
+      "random_sounds": [
+        "heartbound:ellie.giggle"
+      ]
+    },
+    {
+      "key": "carry_introMSG1",
+      "sounds": [
+        "heartbound:ellie.hmph"
+      ],
+      "messages": [
+        "msg.heartbound.scene.ellie.carry_introMSG1"
+      ]
+    },
+    {
+      "key": "carry_introMSG2",
+      "sounds": [
+        "heartbound:ellie.giggle"
+      ],
+      "messages": [
+        "msg.heartbound.scene.ellie.carry_introMSG2"
+      ]
+    },
+    {
+      "key": "lipsound",
+      "sounds": [
+        "heartbound:ellie.lipsound"
+      ]
+    },
+    {
+      "key": "suckFast",
+      "sounds": [
+        "heartbound:misc.pounding"
+      ]
+    },
+    {
+      "key": "cum",
+      "sounds": [
+        "heartbound:misc.inserts",
+        "heartbound:ellie.lipsound"
+      ]
+    },
+    {
+      "key": "sitdownMSG1",
+      "sounds": [
+        "heartbound:ellie.cometomommy"
+      ],
+      "messages": [
+        "msg.heartbound.scene.ellie.sitdownMSG1"
+      ]
+    },
+    {
+      "key": "missionary_slowMSG1",
+      "sounds": [
+        "heartbound:misc.pounding",
+        "heartbound:ellie.ahh"
+      ]
+    },
+    {
+      "key": "missionary_fastMSG1",
+      "sounds": [
+        "heartbound:misc.pounding"
+      ],
+      "random_sounds": [
+        "heartbound:ellie.ahh",
+        "heartbound:ellie.moan"
+      ]
+    },
+    {
+      "key": "bedRustle",
+      "sounds": [
+        "heartbound:misc.pounding",
+        "heartbound:misc.bedrustle"
+      ]
+    },
+    {
+      "key": "missionary_cumMSG1",
+      "sounds": [
+        "heartbound:ellie.ahh"
+      ]
+    },
+    {
+      "key": "missionary_cumMSG2",
+      "sounds": [
+        "heartbound:ellie.goodboy"
+      ],
+      "messages": [
+        "msg.heartbound.scene.ellie.missionary_cumMSG2"
+      ]
+    },
+    {
+      "key": "cowgirlStartMSG0",
+      "sounds": [
+        "heartbound:ellie.giggle"
+      ]
+    },
+    {
+      "key": "cowgirlStartMSG1",
+      "messages": [
+        "msg.heartbound.scene.ellie.cowgirlStartMSG1"
+      ]
+    },
+    {
+      "key": "cowgirlStartMSG2",
+      "sounds": [
+        "heartbound:misc.pounding"
+      ],
+      "random_sounds": [
+        "heartbound:ellie.ahh",
+        "heartbound:ellie.moan"
+      ]
+    },
+    {
+      "key": "cowgirlfastMSG1",
+      "sounds": [
+        "heartbound:misc.pounding"
+      ],
+      "random_sounds": [
+        "heartbound:ellie.ahh",
+        "heartbound:ellie.moan"
+      ]
+    },
+    {
+      "key": "cowgirlcumMSG1",
+      "sounds": [
+        "heartbound:misc.pounding",
+        "heartbound:ellie.ahh"
+      ]
+    },
+    {
+      "key": "cowgirlcumMSG2",
+      "sounds": [
+        "heartbound:misc.pounding",
+        "heartbound:ellie.moan"
+      ]
+    },
+    {
+      "key": "cowgirlcumMSG3",
+      "sounds": [
+        "heartbound:misc.pounding"
+      ]
+    },
+    {
+      "key": "cowgirlcumMSG4",
+      "sounds": [
+        "heartbound:ellie.goodboy"
+      ],
+      "messages": [
+        "msg.heartbound.scene.ellie.cowgirlcumMSG4"
+      ]
+    }
+  ]
+}

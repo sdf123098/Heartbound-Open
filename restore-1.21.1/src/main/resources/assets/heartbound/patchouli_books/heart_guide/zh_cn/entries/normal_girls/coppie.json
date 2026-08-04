@@ -1,0 +1,25 @@
+{
+  "name": "Coppie",
+  "icon": "minecraft:copper_ingot",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Coppie 是一个勤劳务实、喜欢闪亮东西的女孩。她有很强的工作能力，非常可靠。$(br2)Coppie 的外表带有金属光泽，喜欢制作和建造。她非常适合聚落工作。"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:coppie",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Coppie",
+      "text": "勤劳的工匠 Coppie！"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)驯服物品$()$(br)Coppie 对$(#b0b)铜锭$()及其闪亮的特性十分着迷。$(br2)$(o)场景$()$(br)$(li)肛交$(li)后入式"
+    }
+  ]
+}

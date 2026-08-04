@@ -1,0 +1,38 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.cuddly.heartbound.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "bugfix.ScreenHandlerMixin",
+    "transformation.PlayerRidingMixin",
+    "transformation.PlayerTransformationMixin",
+    "transformation.ServerPlayerRespawnMixin"
+  ],
+  "client": [
+    "freecam.BlockStateBaseMixin",
+    "freecam.BubbleColumnAmbientSoundHandlerMixin",
+    "freecam.CameraMixin",
+    "freecam.ClientPacketListenerMixin",
+    "freecam.EntityMixin",
+    "freecam.EntityRenderDispatcherAccessor",
+    "freecam.EntityRenderDispatcherMixin",
+    "freecam.EntityRendererMixin",
+    "freecam.GameRendererMixin",
+    "freecam.GuiMixin",
+    "freecam.ItemInHandRendererMixin",
+    "freecam.LevelRendererMixin",
+    "freecam.LightTextureMixin",
+    "freecam.LivingEntityMixin",
+    "freecam.LocalPlayerMixin",
+    "freecam.MinecraftMixin",
+    "freecam.MultiPlayerGameModeMixin",
+    "freecam.OptionsMixin",
+    "geckolib.GeoBoneMixin",
+    "transformation.InventoryScreenMixin",
+    "transformation.PlayerEntityRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

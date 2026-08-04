@@ -1,0 +1,569 @@
+{
+  "item.heartbound.jenny_spawn_egg": "Jenny 刷怪蛋",
+
+  "item.heartbound.ellie_spawn_egg": "Ellie 刷怪蛋",
+
+  "item.heartbound.bia_spawn_egg": "Bia 刷怪蛋",
+
+  "item.heartbound.slime_spawn_egg": "史莱姆 刷怪蛋",
+
+  "item.heartbound.kobold_spawn_egg": "狗头人 刷怪蛋",
+
+  "item.heartbound.coppie_spawn_egg": "Coppie 刷怪蛋",
+  "item.heartbound.aly_spawn_egg": "Aly 刷怪蛋",
+
+  "item.heartbound.custom_girl_spawn_egg": "自定义女孩 刷怪蛋",
+  "item.heartbound.custom_girl_spawn_egg.named": "%s 刷怪蛋",
+
+  "item.heartbound.love_ball": "乐趣球",
+  "item.heartbound.love_ball.filled": "乐趣球（已捕获）",
+  "item.heartbound.love_ball.tooltip.girl": "女孩：%s",
+  "item.heartbound.love_ball.tooltip.owner": "主人：%s",
+  "item.heartbound.love_ball.invalid_entity": "只能对女孩实体使用！",
+  "item.heartbound.love_ball.not_tamed": "这个女孩还未被驯服！",
+  "item.heartbound.love_ball.not_owner": "你不是这个女孩的主人！",
+  "item.heartbound.love_ball.not_owner_release": "只有主人才能释放这个女孩！",
+  "item.heartbound.love_ball.not_tameable": "这个女孩无法被捕获！",
+  "item.heartbound.love_ball.already_contains": "这个乐趣球里已经有一个女孩了！",
+  "item.heartbound.love_ball.stored": "已将 %s 存入乐趣球",
+  "item.heartbound.love_ball.empty": "这个乐趣球是空的！",
+  "item.heartbound.love_ball.released": "已从乐趣球中释放 %s",
+  "item.heartbound.love_ball.invalid_data": "释放失败 - 数据无效！",
+  "item.heartbound.love_ball.spawn_failed": "生成女孩失败！",
+
+  "item.heartbound.master_ring": "主人之戒",
+  "item.heartbound.master_ring.filled": "主人之戒（已捕获）",
+  "item.heartbound.master_ring.tooltip.girl": "女孩：%s",
+  "item.heartbound.master_ring.tooltip.owner": "主人：%s",
+  "item.heartbound.master_ring.invalid_entity": "只能对女孩实体使用！",
+  "item.heartbound.master_ring.not_tamed": "这个女孩还未被驯服！",
+  "item.heartbound.master_ring.not_owner": "你不是这个女孩的主人！",
+  "item.heartbound.master_ring.not_owner_release": "只有主人才能释放这个女孩！",
+  "item.heartbound.master_ring.not_tameable": "这个女孩无法被捕获！",
+  "item.heartbound.master_ring.already_contains": "这个主人之戒里已经有一个女孩了！",
+  "item.heartbound.master_ring.has_owner": "这个女孩已经有主人了！",
+  "item.heartbound.master_ring.stored": "已将 %s 存入主人之戒",
+  "item.heartbound.master_ring.empty": "这个主人之戒是空的！",
+  "item.heartbound.master_ring.released": "已从主人之戒中释放 %s",
+  "item.heartbound.master_ring.invalid_data": "释放失败 - 数据无效！",
+  "item.heartbound.master_ring.spawn_failed": "生成女孩失败！",
+
+  "item.heartbound.heart_guide": "乐趣百科",
+  "item.heartbound.heart_guide.tooltip.edition": "第一版",
+
+  "item.heartbound.x_pill": "X药丸",
+  "gui.heartbound.girl_selection": "变身为...",
+
+  "block.heartbound.fusion_table": "融合台",
+
+  "block.heartbound.magical_pumpkin": "魔法南瓜",
+  "block.heartbound.litted_magical_pumpkin": "发光魔法南瓜",
+
+  "entity.heartbound.jenny": "Jenny",
+
+  "entity.heartbound.ellie": "Ellie",
+
+  "entity.heartbound.bia": "Bia",
+
+  "entity.heartbound.slime": "史莱姆",
+
+  "entity.heartbound.coppie": "Coppie",
+
+  "entity.heartbound.kobold": "狗头人",
+
+  "entity.heartbound.aly": "Aly",
+
+  "entity.heartbound.custom_girl": "自定义女孩",
+
+  "screen.heartbound.girl_inventory": "背包",
+  "screen.heartbound.girl_inventory.relationship_tooltip": "好感度",
+  "screen.heartbound.fusion_table": "融合台",
+
+  "gui.heartbound.fusion_table": "融合台",
+
+  "gui.heartbound.sceneOptions": "场景选项",
+  "gui.heartbound.tooltip.requiresLevel": "需要好感度等级 %s",
+
+  "gui.heartbound.button.breakUp": "分手",
+  "gui.heartbound.button.setBase": "设为据点",
+  "gui.heartbound.button.goToBase": "前往据点",
+  "gui.heartbound.button.roamAtBase": "在据点闲逛",
+  "gui.heartbound.button.stopRoaming": "停止闲逛",
+  "gui.heartbound.button.chopTrees": "砍树",
+  "gui.heartbound.button.stopChopping": "停止砍树",
+  "gui.heartbound.button.customize": "自定义",
+  "gui.heartbound.button.baseFeature": "据点功能",
+  "gui.heartbound.button.playerFeature": "玩家功能",
+  "gui.heartbound.featureGroup.baseFeatures": "据点功能",
+  "gui.heartbound.featureGroup.playerFeatures": "玩家功能",
+  "gui.heartbound.button.sit": "坐下",
+  "gui.heartbound.button.stand": "站起",
+  "gui.heartbound.button.followMe": "跟随我",
+  "gui.heartbound.button.stopFollowing": "停止跟随",
+  "gui.heartbound.button.mineOres": "挖矿",
+  "gui.heartbound.button.stopMining": "停止挖矿",
+  "gui.heartbound.button.strip": "太热了",
+  "gui.heartbound.button.dressUp": "冷飕飕",
+  "gui.heartbound.button.sex": "互动",
+  "gui.heartbound.button.select": "选择",
+  "gui.heartbound.button.confirm": "确认",
+  "gui.heartbound.button.cancel": "取消",
+  "gui.heartbound.button.clear": "清除",
+  "gui.heartbound.button.randomize": "随机",
+
+  "gui.heartbound.button.defaultGirl": "默认女孩",
+  "gui.heartbound.button.customGirl": "自定义女孩",
+  "gui.heartbound.button.back": "返回",
+
+  "gui.heartbound.search": "搜索",
+  "gui.heartbound.search.placeholder": "搜索...",
+
+  "gui.heartbound.customizeGirl": "自定义女孩",
+  "gui.heartbound.customizeKobold": "狗头人自定义",
+
+  "gui.heartbound.customize.breastSize": "胸部大小",
+  "gui.heartbound.customize.breastOffset": "胸部偏移",
+  "gui.heartbound.customize.bodySize": "体型大小",
+  "gui.heartbound.customize.bodySize.tooltip": "体型影响碰撞箱高度\n65 = 1格, 115 = 1.75格",
+  "gui.heartbound.customize.breastSize.tooltip": "调整胸部大小 (60-160)",
+  "gui.heartbound.customize.colorPattern": "颜色方案:",
+  "gui.heartbound.customize.irisColor": "虹膜颜色:",
+  "gui.heartbound.customize.topHorns": "上方角:",
+  "gui.heartbound.customize.bottomHorns": "下方角:",
+  "gui.heartbound.customize.type": "类型 %s",
+  "gui.heartbound.customize.offset": "%s 偏移",
+
+  "scene.heartbound.masturbation": "让我看看",
+  "scene.heartbound.paizuri": "胸口碎大石",
+  "scene.heartbound.blowJob": "大嘴巴子",
+  "scene.heartbound.doggy": "乌鸦坐飞机",
+  "scene.heartbound.faceFuck": "嘴巴嘟嘟",
+  "scene.heartbound.missionary": "传教士式",
+  "scene.heartbound.cowgirl": "骑乘式",
+  "scene.heartbound.anal": "后面",
+  "scene.heartbound.sex": "喜欢",
+  "scene.heartbound.nelson": "尼尔森",
+
+  "jei.heartbound.fusion": "融合配方",
+
+  "itemgroup.heartbound.pleasure_craft_items": "Heartbound 物品",
+
+  "itemgroup.heartbound.pleasure_craft_blocks": "Heartbound 方块",
+
+  "msg.heartbound.noBedFound": "附近需要一张空床才能进行……",
+  "msg.heartbound.needsToStrip": "你需要先脱掉衣服才能进行此操作。",
+
+  "msg.heartbound.alreadyInRelationship": "她已经和别人在一起了",
+
+  "msg.heartbound.sheIgnoresYou": "她无视了你。也许试着给她一个%s。",
+  "msg.heartbound.askedOutYes": "你向%s告白了，她说§a好的",
+  "msg.heartbound.brokeUp": "你和%s分手了",
+  "msg.heartbound.diedRespawned": "%s死亡并在据点重生：%s, %s, %s",
+  "msg.heartbound.baseSet": "据点已设置在（%s, %s, %s）",
+  "msg.heartbound.mustFollowToMine": "女孩必须处于跟随状态才能挖矿",
+
+  "msg.heartbound.sheLikedTheGift": "她喜欢这个礼物",
+
+  "msg.heartbound.gift.like.1": "不错",
+  "msg.heartbound.gift.like.2": "非常感谢",
+  "msg.heartbound.gift.love.1": "哦，谢谢你",
+  "msg.heartbound.gift.love.2": "爱你 ~_^",
+
+  "msg.heartbound.jenny.gift.like.1": "哇，给我的？谢谢！",
+  "msg.heartbound.jenny.gift.like.2": "绒球葱？你真好……！",
+  "msg.heartbound.jenny.gift.like.3": "啊哈，太棒了！",
+  "msg.heartbound.jenny.gift.love.1": "又一个？嗯，你才是真正的礼物呢~",
+  "msg.heartbound.jenny.gift.love.2": "宝贝，你太好了。还很帅~",
+  "msg.heartbound.jenny.gift.love.3": "别再送礼物了，直接来操我吧~！",
+
+  "msg.heartbound.ellie.gift.like.1": "等等，那是……真的凋灵玫瑰……！",
+  "msg.heartbound.ellie.gift.like.2": "你挺无聊的，但这个……谢了……！",
+  "msg.heartbound.ellie.gift.like.3": "太棒了……原来凋灵玫瑰长这样……！",
+  "msg.heartbound.ellie.gift.love.1": "嗯，你其实还挺帅的……",
+  "msg.heartbound.ellie.gift.love.2": "你是不是需要一个妈妈呀？",
+  "msg.heartbound.ellie.gift.love.3": "别……别这样……太过分了……",
+
+  "msg.heartbound.bia.gift.like.1": "哇！！！虞美人！！耶！！",
+  "msg.heartbound.bia.gift.like.2": "哇哇哇！给Bia的礼物！",
+  "msg.heartbound.bia.gift.like.3": "Bia喜欢礼物！再给Bia更多！",
+  "msg.heartbound.bia.gift.love.1": "耶！！又一个礼物！你真的应该当Bia的主人！",
+  "msg.heartbound.bia.gift.love.2": "耶耶耶！我们现在可以玩了吗！",
+  "msg.heartbound.bia.gift.love.3": "M-Bia因为你……发情了……",
+
+  "msg.heartbound.coppie.gift.like.1": "此傀儡接受这个……东西。",
+  "msg.heartbound.coppie.gift.like.2": "此傀儡将接受这份礼物。",
+  "msg.heartbound.coppie.gift.like.3": "主人为何要给此傀儡送礼物？",
+  "msg.heartbound.coppie.gift.love.1": "此傀儡……不……我很感激，主人。",
+  "msg.heartbound.coppie.gift.love.2": "这对我意义重大，主人。",
+  "msg.heartbound.coppie.gift.love.3": "主人确定不想使用我的性功能吗？",
+
+  "msg.heartbound.scene.jenny.stripMSG1": "嘻嘻~",
+  "msg.heartbound.scene.jenny.bjiMSG1": "你在干什么...",
+  "msg.heartbound.scene.jenny.bjiMSG2": "嗯...男孩子...",
+  "msg.heartbound.scene.jenny.bjiMSG3": "啊哦...！",
+  "msg.heartbound.scene.jenny.bjiMSG5": "这真的有必要吗？！",
+  "msg.heartbound.scene.jenny.bjiMSG6": "哦~",
+  "msg.heartbound.scene.jenny.bjiMSG7": "你喜欢吗？~",
+  "msg.heartbound.scene.jenny.bjiMSG9": "嘻嘻嘻~",
+  "msg.heartbound.scene.jenny.doggyLayOnBedMSG2": "你还在等什么？~",
+  "msg.heartbound.scene.jenny.doggyLayOnBedMSG3": "这屁股可不会自己动...",
+  "msg.heartbound.scene.jenny.doggyintroMSG1": "嗯~",
+  "msg.heartbound.scene.jenny.doggyintroMSG4": "哦~！",
+  "msg.heartbound.scene.jenny.doggyintroMSG5": "啊啊~！",
+  "msg.heartbound.scene.jenny.doggycumMSG1": "我要去了~！",
+
+  "msg.heartbound.scene.player.bjiMSG8": "耶",
+
+  "msg.heartbound.scene.ellie.carry_introMSG1": "我饿了..",
+  "msg.heartbound.scene.ellie.carry_introMSG2": "嘿~",
+  "msg.heartbound.scene.ellie.sitdownMSG1": "到妈妈这里来~",
+  "msg.heartbound.scene.ellie.missionary_cumMSG2": "好孩子...嗯...嘿嘿~",
+  "msg.heartbound.scene.ellie.cowgirlStartMSG1": "喜欢你看到的吗亲爱的？~",
+  "msg.heartbound.scene.ellie.cowgirlcumMSG4": "好孩子...嗯...嘿嘿~",
+
+  "msg.heartbound.scene.bia.sitdownMSG1": "过来吧大男孩~",
+
+  "msg.heartbound.canGoInToFreeCam": "按 F4 进入自由镜头模式",
+
+  "key.Heartbound.thrust": "冲刺",
+
+  "key.Heartbound.cum": "射精",
+
+  "key.Heartbound.transformScene": "变换场景",
+
+  "key.categories.Heartbound": "Heartbound",
+
+  "subtitles.bedrustle": "床铺摩擦",
+
+  "subtitles.belljingle": "铃铛叮当",
+
+  "subtitles.clap": "拍击",
+
+  "subtitles.cuminflation": "膨胀",
+
+  "subtitles.flap": "拍打",
+
+  "subtitles.inserts": "插入",
+
+  "subtitles.pounding": "撞击",
+
+  "subtitles.slap": "拍打",
+
+  "subtitles.slide": "滑动",
+
+  "subtitles.smallinserts": "轻微插入",
+
+  "subtitles.touch": "触摸",
+
+  "subtitles.plob": "扑通",
+
+  "subtitles.jenny.heavybreathing": "粗重呼吸",
+
+  "subtitles.jenny.hmph": "哼",
+
+  "subtitles.jenny.huh": "嗯？",
+
+  "subtitles.jenny.aftersessionmoan": "事后呻吟",
+
+  "subtitles.jenny.ahh": "啊",
+
+  "subtitles.jenny.bjmoan": "口中呻吟",
+
+  "subtitles.jenny.giggle": "咯咯笑",
+
+  "subtitles.jenny.happyoh": "开心的哦",
+
+  "subtitles.jenny.lightbreathing": "轻微呼吸",
+
+  "subtitles.jenny.lipsound": "唇音",
+
+  "subtitles.jenny.mmm": "嗯嗯",
+
+  "subtitles.jenny.moan": "呻吟",
+
+  "subtitles.jenny.sadoh": "悲伤的哦",
+
+  "subtitles.jenny.sigh": "叹息",
+
+  "subtitles.bia.ahh": "啊",
+
+  "subtitles.bia.bjmoan": "口中呻吟",
+
+  "subtitles.bia.moan": "呻吟",
+
+  "subtitles.bia.lightbreathing": "轻微呼吸",
+
+  "subtitles.bia.giggle": "咯咯笑",
+
+  "subtitles.bia.hey": "嘿",
+
+  "subtitles.bia.happyoh": "开心的哦",
+
+  "subtitles.bia.sadoh": "悲伤的哦",
+
+  "subtitles.bia.sigh": "叹息",
+
+  "subtitles.bia.huh": "嗯？",
+
+  "subtitles.bia.hmph": "哼",
+
+  "subtitles.bia.mmm": "嗯嗯",
+
+  "subtitles.ellie.aftersessionmoan": "事后呻吟",
+
+  "subtitles.ellie.ahh": "啊",
+
+  "subtitles.ellie.bjmoan": "口中呻吟",
+
+  "subtitles.ellie.cometomommy": "到妈妈这里来",
+
+  "subtitles.ellie.giggle": "咯咯笑",
+
+  "subtitles.ellie.goodboy": "好孩子",
+
+  "subtitles.ellie.happyoh": "开心的哦",
+
+  "subtitles.ellie.heavybreathing": "粗重呼吸",
+
+  "subtitles.ellie.hmph": "哼",
+
+  "subtitles.ellie.huh": "嗯？",
+
+  "subtitles.ellie.lightbreathing": "轻微呼吸",
+
+  "subtitles.ellie.lipsound": "唇音",
+
+  "subtitles.ellie.mmm": "嗯嗯",
+
+  "subtitles.ellie.moan": "呻吟",
+
+  "subtitles.ellie.mommyhorny": "妈妈想要了",
+
+  "subtitles.ellie.sadoh": "悲伤的哦",
+
+  "subtitles.ellie.sigh": "叹息",
+
+  "key.categories.freecam": "Heartbound - 自由镜头",
+
+  "key.freecam.toggle": "切换自由镜头",
+
+  "key.freecam.playerControl": "控制玩家",
+
+  "key.freecam.tripodReset": "重置三脚架",
+
+  "key.freecam.configGui": "配置界面",
+
+  "heartbound.patchouli.heart_guide.name": "乐趣百科",
+  "heartbound.patchouli.heart_guide.landing_text": "$(o)欢迎来到乐趣百科！$()$(br2)探索你世界中所有美丽的女孩！了解她们的性格、如何驯服她们，以及她们喜欢的场景。$(br2)浏览右侧的分类开始探索吧！",
+
+  "msg.freecam.enable": "自由镜头已启用。",
+
+  "msg.freecam.disable": "自由镜头已禁用。",
+
+  "msg.freecam.openTripod": "打开镜头 %s",
+
+  "msg.freecam.closeTripod": "关闭镜头 %s",
+
+  "msg.freecam.tripodReset": "重置镜头 %s",
+
+  "text.autoconfig.heartbound.category.default": "Heartbound",
+
+  "text.autoconfig.heartbound.category.freecam": "自由镜头",
+
+  "text.autoconfig.heartbound.title": "Heartbound 选项",
+
+  "text.autoconfig.heartbound.option.girls": "女孩",
+
+  "text.autoconfig.heartbound.option.girls.boobWindow": "胸部窗口",
+
+  "text.autoconfig.heartbound.option.girls.disableShading": "禁用着色",
+
+  "text.autoconfig.heartbound.option.girls.boobWindow.@Tooltip": "使女孩的盔甲带有窗口以展示胸部",
+
+  "text.autoconfig.heartbound.option.girls.disableShading.@Tooltip": "禁用女孩身上的着色/阴影，使其使用平面光照",
+
+  "text.autoconfig.heartbound.option.player": "玩家",
+
+  "text.autoconfig.heartbound.option.player.penisShaftColor": "阴茎柱体颜色",
+
+  "text.autoconfig.heartbound.option.player.penisShaftColor.@Tooltip": "设置玩家模型上阴茎柱体的颜色",
+
+  "text.autoconfig.heartbound.option.player.penisHeadColor": "龟头颜色",
+
+  "text.autoconfig.heartbound.option.player.penisHeadColor.@Tooltip": "设置玩家模型上龟头的颜色",
+
+  "text.autoconfig.heartbound.option.controls": "按键绑定",
+
+  "text.autoconfig.heartbound.option.controls.@Tooltip": "自由镜头按键绑定。",
+
+  "text.autoconfig.heartbound.option.movement": "移动选项",
+
+  "text.autoconfig.heartbound.option.movement.@Tooltip": "镜头的移动方式。",
+
+  "text.autoconfig.heartbound.option.movement.flightMode": "飞行模式",
+
+  "text.autoconfig.heartbound.option.movement.flightMode.@Tooltip": "自由镜头使用的飞行类型。",
+
+  "text.autoconfig.heartbound.option.movement.flightMode.default": "默认",
+
+  "text.autoconfig.heartbound.option.movement.flightMode.creative": "创造",
+
+  "text.autoconfig.heartbound.option.movement.horizontalSpeed": "水平速度",
+
+  "text.autoconfig.heartbound.option.movement.horizontalSpeed.@Tooltip": "自由镜头的水平速度。",
+
+  "text.autoconfig.heartbound.option.movement.verticalSpeed": "垂直速度",
+
+  "text.autoconfig.heartbound.option.movement.verticalSpeed.@Tooltip": "自由镜头的垂直速度。",
+
+  "text.autoconfig.heartbound.option.collision": "碰撞选项",
+
+  "text.autoconfig.heartbound.option.collision.@Tooltip": "自由镜头中可以穿过哪些方块。",
+
+  "text.autoconfig.heartbound.option.collision.ignoreTransparent": "忽略透明方块",
+
+  "text.autoconfig.heartbound.option.collision.ignoreTransparent.@Tooltip": "允许在自由镜头中穿过透明方块。",
+
+  "text.autoconfig.heartbound.option.collision.ignoreOpenable": "忽略可开启方块",
+
+  "text.autoconfig.heartbound.option.collision.ignoreOpenable.@Tooltip": "允许在自由镜头中穿过门/活板门/栅栏门。",
+
+  "text.autoconfig.heartbound.option.collision.ignoreCustom": "自定义忽略列表",
+
+  "text.autoconfig.heartbound.option.collision.ignoreCustom.@Tooltip[0]": "允许在自由镜头中穿过指定方块。",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.ids": "忽略的方块ID",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.ids.@Tooltip[0]": "使用方块ID，例如 \"grass_block\"。",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.ids.@Tooltip[1]": "如果省略命名空间，默认使用 \"minecraft:\"。",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.patterns": "忽略的正则表达式",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.patterns.@Tooltip[0]": "使用正则表达式语法。",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.patterns.@Tooltip[1]": "匹配完整方块ID，例如 \"minecraft:grass_block\"。",
+
+  "text.autoconfig.heartbound.option.collision.ignoreAll": "忽略所有碰撞",
+
+  "text.autoconfig.heartbound.option.collision.ignoreAll.@Tooltip[0]": "允许在自由镜头中穿过所有方块。",
+
+  "text.autoconfig.heartbound.option.collision.ignoreAll.@Tooltip[1]": "§e覆盖以上设置。",
+
+  "text.autoconfig.heartbound.option.collision.ignoreAll.@ModrinthTooltip[2]": "§c注意：仅在单人游戏、创造模式或拥有管理员权限时可用。",
+
+  "text.autoconfig.heartbound.option.collision.alwaysCheck": "始终检查初始碰撞",
+
+  "text.autoconfig.heartbound.option.collision.alwaysCheck.@Tooltip[0]": "§7初始视角§r 是否应该检查",
+
+  "text.autoconfig.heartbound.option.collision.alwaysCheck.@Tooltip[1]": "碰撞，即使在使用 §7忽略所有碰撞§r 时。",
+
+  "text.autoconfig.heartbound.option.visual": "视觉选项",
+
+  "text.autoconfig.heartbound.option.visual.@Tooltip": "自由镜头的外观。",
+
+  "text.autoconfig.heartbound.option.visual.perspective": "初始视角",
+
+  "text.autoconfig.heartbound.option.visual.perspective.@Tooltip": "镜头的初始视角。",
+
+  "text.autoconfig.heartbound.option.visual.perspective.firstPerson": "第一人称",
+
+  "text.autoconfig.heartbound.option.visual.perspective.thirdPerson": "第三人称",
+
+  "text.autoconfig.heartbound.option.visual.perspective.thirdPersonMirror": "镜像",
+
+  "text.autoconfig.heartbound.option.visual.perspective.inside": "内部",
+
+  "text.autoconfig.heartbound.option.visual.hidePlayer": "隐藏玩家",
+
+  "text.autoconfig.heartbound.option.visual.hidePlayer.@Tooltip": "隐藏你的玩家模型。",
+
+  "text.autoconfig.heartbound.option.visual.showHand": "显示手部",
+
+  "text.autoconfig.heartbound.option.visual.showHand.@Tooltip": "是否在自由镜头中显示手部。",
+
+  "text.autoconfig.heartbound.option.visual.fullBright": "全亮度",
+
+  "text.autoconfig.heartbound.option.visual.fullBright.@Tooltip": "在自由镜头中提高亮度。",
+
+  "text.autoconfig.heartbound.option.visual.showSubmersion": "显示浸没雾效",
+
+  "text.autoconfig.heartbound.option.visual.showSubmersion.@Tooltip": "在水下、岩浆中或细雪中是否显示雾效覆盖。",
+
+  "text.autoconfig.heartbound.option.utility": "实用选项",
+
+  "text.autoconfig.heartbound.option.utility.@Tooltip": "自由镜头增强功能。",
+
+  "text.autoconfig.heartbound.option.utility.disableOnDamage": "受伤时禁用",
+
+  "text.autoconfig.heartbound.option.utility.disableOnDamage.@Tooltip": "受到伤害时禁用自由镜头。",
+
+  "text.autoconfig.heartbound.option.utility.freezePlayer": "冻结玩家",
+
+  "text.autoconfig.heartbound.option.utility.freezePlayer.@Tooltip[0]": "在自由镜头激活时阻止玩家移动。",
+
+  "text.autoconfig.heartbound.option.utility.freezePlayer.@Tooltip[1]": "§c警告：不建议在多人游戏中使用。",
+
+  "text.autoconfig.heartbound.option.utility.allowInteract": "允许交互",
+
+  "text.autoconfig.heartbound.option.utility.allowInteract.@Tooltip[0]": "是否允许在自由镜头中与方块/实体交互。",
+
+  "text.autoconfig.heartbound.option.utility.interactionMode": "交互模式",
+
+  "text.autoconfig.heartbound.option.utility.interactionMode.@Tooltip": "方块/实体交互的来源。",
+
+  "text.autoconfig.heartbound.option.utility.interactionMode.camera": "镜头",
+
+  "text.autoconfig.heartbound.option.utility.interactionMode.player": "玩家",
+
+  "text.autoconfig.heartbound.option.notification": "通知选项",
+
+  "text.autoconfig.heartbound.option.notification.@Tooltip": "显示或隐藏通知。",
+
+  "text.autoconfig.heartbound.option.notification.notifyFreecam": "自由镜头通知",
+
+  "text.autoconfig.heartbound.option.notification.notifyFreecam.@Tooltip": "进入/退出自由镜头时通知你。",
+
+  "text.autoconfig.heartbound.option.notification.notifyTripod": "三脚架通知",
+
+  "text.autoconfig.heartbound.option.notification.notifyTripod.@Tooltip": "进入/退出三脚架镜头时通知你。",
+
+  "advancements.heartbound.root.title": "嘿，你，你终于醒了",
+  "advancements.heartbound.root.description": "你是想偷渡过境的，对吧？",
+  "advancements.heartbound.tame_girl.title": "永远在一起",
+  "advancements.heartbound.tame_girl.description": "赢得一个女孩的芳心",
+  "advancements.heartbound.max_relationship.title": "你愿意嫁给我吗？",
+  "advancements.heartbound.max_relationship.description": "与一个女孩的好感度达到最高",
+  "advancements.heartbound.break_up.title": "心碎",
+  "advancements.heartbound.break_up.description": "与一个女孩分手",
+  "advancements.heartbound.kill_girl.title": "对不起，小家伙",
+  "advancements.heartbound.kill_girl.description": "杀死一个女孩",
+  "advancements.heartbound.enter_jenny_house.title": "看起来比我记忆中的要好",
+  "advancements.heartbound.enter_jenny_house.description": "找到Jenny的房子",
+  "advancements.heartbound.enter_bia_house.title": "温馨的小地方",
+  "advancements.heartbound.enter_bia_house.description": "找到Bia的房子",
+  "advancements.heartbound.enter_ellie_house.title": "妈咪的城堡！！？",
+  "advancements.heartbound.enter_ellie_house.description": "找到Ellie的房子",
+  "advancements.heartbound.summon_coppie.title": "铜傀……Coppie？",
+  "advancements.heartbound.summon_coppie.description": "召唤一个Coppie",
+  "advancements.heartbound.craft_custom_girl_spawn_egg.title": "人造人！？",
+  "advancements.heartbound.craft_custom_girl_spawn_egg.description": "制作一个自定义女孩刷怪蛋",
+  "advancements.heartbound.craft_slime_spawn_egg.title": "黏糊糊的朋友",
+  "advancements.heartbound.craft_slime_spawn_egg.description": "制作一个史莱姆刷怪蛋",
+  "advancements.heartbound.craft_aly_spawn_egg.title": "你看起来不太一样了",
+  "advancements.heartbound.craft_aly_spawn_egg.description": "制作一个Aly刷怪蛋",
+  "advancements.heartbound.craft_love_ball.title": "口袋空间",
+  "advancements.heartbound.craft_love_ball.description": "制作一个乐趣球",
+  "advancements.heartbound.craft_fusion_table.title": "看来我们现在要造女孩了",
+  "advancements.heartbound.craft_fusion_table.description": "制作一个融合台",
+  "advancements.heartbound.craft_master_ring.title": "你将属于我",
+  "advancements.heartbound.craft_master_ring.description": "制作一个主人之戒",
+  "advancements.heartbound.craft_x_pill.title": "这药丸看起来怪怪的",
+  "advancements.heartbound.craft_x_pill.description": "制作一个X药丸",
+  "advancements.heartbound.transform.title": "我乃天上天下唯我独尊之人",
+  "advancements.heartbound.transform.description": "使用X药丸进行变身",
+  "advancements.heartbound.capture_love_ball.title": "跟我走吧",
+  "advancements.heartbound.capture_love_ball.description": "使用乐趣球捕获一个女孩",
+  "advancements.heartbound.capture_master_ring.title": "这次跑不掉了",
+  "advancements.heartbound.capture_master_ring.description": "使用主人之戒捕获一个女孩"
+}

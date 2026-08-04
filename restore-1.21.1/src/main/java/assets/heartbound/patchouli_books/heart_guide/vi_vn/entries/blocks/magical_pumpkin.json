@@ -1,0 +1,20 @@
+{
+  "name": "Bí Ngô Ma Thuật",
+  "icon": "heartbound:magical_pumpkin",
+  "category": "heartbound:blocks",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(item)Bí Ngô Ma Thuật$() là một khối đặc biệt có thể triệu hồi cô gái tùy chỉnh khi đặt đúng cách.$(br2)Quả bí ngô này có đặc tính huyền bí cho phép triệu hồi các cô gái xinh đẹp từ một thế giới khác."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Chức năng:$()$(br)Đặt $(item)Bí Ngô Ma Thuật$() lên trên $(item)Khối Đồng$() để triệu hồi Coppie.$(br2)Một Coppie sẽ xuất hiện gần đó nếu đủ điều kiện.$(br2)$(o)Lưu ý: Đảm bảo có đủ không gian xung quanh bí ngô để cô gái xuất hiện!$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:magical_pumpkin",
+      "text": "Chế tạo Bí Ngô Ma Thuật bằng bí ngô khắc thường và hoa poppy."
+    }
+  ]
+}

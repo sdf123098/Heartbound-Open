@@ -1,0 +1,104 @@
+{
+  "girl_id": "bia",
+  "events": [
+    {
+      "key": "stripMSG1",
+      "random_sounds": [
+        "heartbound:bia.giggle"
+      ]
+    },
+    {
+      "key": "sitdownMSG1",
+      "sounds": [
+        "heartbound:bia.breath"
+      ],
+      "messages": [
+        "msg.heartbound.scene.bia.sitdownMSG1"
+      ]
+    },
+    {
+      "key": "slide",
+      "sounds": [
+        "heartbound:misc.slide"
+      ]
+    },
+    {
+      "key": "pound",
+      "sounds": [
+        "heartbound:misc.pounding"
+      ]
+    },
+    {
+      "key": "doggyMoan",
+      "random_sounds": [
+        "heartbound:bia.ahh",
+        "heartbound:bia.mmm"
+      ]
+    },
+    {
+      "key": "cum",
+      "sounds": [
+        "heartbound:misc.inserts"
+      ]
+    },
+    {
+      "key": "orgasm1",
+      "sounds": [
+        "heartbound:bia.mmm"
+      ]
+    },
+    {
+      "key": "orgasm2",
+      "sounds": [
+        "heartbound:bia.mmm"
+      ]
+    },
+    {
+      "key": "anal_prepareMSG1",
+      "sounds": [
+        "heartbound:misc.plob"
+      ]
+    },
+    {
+      "key": "anal_prepareMSG2",
+      "sounds": [
+        "heartbound:misc.bedrustle"
+      ]
+    },
+    {
+      "key": "anal_startMSG1",
+      "sounds": [
+        "heartbound:bia.ahh"
+      ]
+    },
+    {
+      "key": "anal_startMSG2",
+      "sounds": [
+        "heartbound:misc.pounding"
+      ],
+      "random_sounds": [
+        "heartbound:bia.mmm"
+      ]
+    },
+    {
+      "key": "anal_slowMSG1",
+      "sounds": [
+        "heartbound:bia.ahh",
+        "heartbound:misc.pounding"
+      ]
+    },
+    {
+      "key": "anal_fastMSG1",
+      "sounds": [
+        "heartbound:bia.ahh",
+        "heartbound:misc.pounding"
+      ]
+    },
+    {
+      "key": "anal_cumMSG2",
+      "sounds": [
+        "heartbound:bia.ahh"
+      ]
+    }
+  ]
+}

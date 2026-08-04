@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "heartbound:item/loveball_empty"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "heartbound:captured": 1
+      },
+      "model": "heartbound:item/love_ball_captured"
+    }
+  ]
+}

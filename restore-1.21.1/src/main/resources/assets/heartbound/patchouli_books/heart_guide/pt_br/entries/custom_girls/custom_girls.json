@@ -1,0 +1,15 @@
+{
+  "name": "Garotas Personalizadas",
+  "icon": "minecraft:knowledge_book",
+  "category": "heartbound:custom_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Garotas Personalizadas são garotas especiais que podem ser adicionadas através de configurações JSON e pacotes de recursos. Elas permitem aparências, comportamentos e interações completamente personalizáveis.$(br2)Essas garotas são carregadas a partir de arquivos $(o)girls.json$() e podem ter modelos, texturas, sons e configurações de cenas únicos."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Invocação:$()$(br)Fabrique um $(item)Ovo Gerador de Garota Personalizada$() e depois funda-o na $(item)Mesa de Fusão$() com dois itens de domesticação idênticos para criar um ovo gerador especializado. Clique com o botão direito para invocar a garota.$(br2)$(o)Instalação de Garota Personalizada:$()$(br)- Instale o arquivo $(o)(nome da garota).json$() em $(o)\\config\\Heartbound\\girls\\$()$(br)- Instale e ative o pacote de recursos$(br2)$(o)Item de Domesticação$() - Configurável por garota$(br)$(o)Cenas$() - Totalmente personalizáveis"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "マジカルパンプキン",
+  "icon": "heartbound:magical_pumpkin",
+  "category": "heartbound:blocks",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(item)マジカルパンプキン$()は、正しく設置するとカスタムガールをスポーンさせることができる特別なブロックです。$(br2)このパンプキンは異世界から美しいガールを召喚する神秘的な力を持っています。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)機能：$()$(br)$(item)銅ブロック$()の上に$(item)マジカルパンプキン$()を置くとコッピーがスポーンします。$(br2)条件が満たされると、近くにコッピーが出現します。$(br2)$(o)注意：ガールがスポーンできるよう、パンプキンの周りに十分なスペースを確保してください！$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:magical_pumpkin",
+      "text": "通常のくり抜かれたカボチャとポピーでマジカルパンプキンをクラフトします。"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    "GEG",
+    " M "
+  ],
+  "key": {
+    "X": {
+      "item": "heartbound:x_pill"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "E": {
+      "item": "minecraft:egg"
+    },
+    "M": {
+      "item": "minecraft:sunflower"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "heartbound:jenny_spawn_egg"
+  }
+}

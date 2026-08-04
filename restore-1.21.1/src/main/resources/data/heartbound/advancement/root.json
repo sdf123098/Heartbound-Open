@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "first_login": {
+      "trigger": "heartbound:first_login"
+    }
+  },
+  "display": {
+    "title": {"translate": "advancements.heartbound.root.title"},
+    "description": {"translate": "advancements.heartbound.root.description"},
+    "icon": {
+      "count": 1,
+      "id": "heartbound:heart_guide"
+    },
+    "background": "minecraft:textures/block/stone_bricks.png",
+    "announce_to_chat": false,
+    "show_toast": true
+  },
+  "requirements": [
+    [
+      "first_login"
+    ]
+  ]
+}

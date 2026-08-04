@@ -1,0 +1,21 @@
+{
+  "parent": "heartbound:root",
+  "criteria": {
+    "break_up": {
+      "trigger": "heartbound:break_up"
+    }
+  },
+  "display": {
+    "title": {"translate": "advancements.heartbound.break_up.title"},
+    "description": {"translate": "advancements.heartbound.break_up.description"},
+    "icon": {
+      "count": 1,
+      "id": "heartbound:love_ball"
+    }
+  },
+  "requirements": [
+    [
+      "break_up"
+    ]
+  ]
+}

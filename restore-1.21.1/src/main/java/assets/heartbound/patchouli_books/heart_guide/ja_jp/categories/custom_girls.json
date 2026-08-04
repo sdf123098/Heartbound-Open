@@ -1,0 +1,6 @@
+{
+  "name": "カスタムガール",
+  "description": "JSON設定やリソースパックから読み込まれる特別なガールです。完全にカスタムな外見、行動、シーンを持つことができます。",
+  "icon": "minecraft:knowledge_book",
+  "parent": "heartbound:girls"
+}

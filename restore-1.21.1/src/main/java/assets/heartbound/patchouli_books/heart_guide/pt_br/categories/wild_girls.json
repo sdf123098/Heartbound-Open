@@ -1,0 +1,6 @@
+{
+  "name": "Garotas Selvagens",
+  "description": "Estas garotas vagam pela natureza e são mais ferais por natureza. Elas requerem itens especiais para domesticar e possuem comportamentos únicos.",
+  "icon": "minecraft:slime_spawn_egg",
+  "parent": "heartbound:girls"
+}

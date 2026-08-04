@@ -1,0 +1,89 @@
+{
+  "name": "Receitas de Fabricação",
+  "icon": "minecraft:crafting_table",
+  "category": "heartbound:crafting",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Receitas de Fabricação Essenciais$()$(br2)Aqui estão as principais receitas de fabricação que você precisará para criar e interagir com as garotas no Pleasure Horizons. Cada receita serve a um propósito específico na sua jornada."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:fusion_table",
+      "title": "Mesa de Fusão",
+      "text": "A mesa mágica para fundir ovos geradores. Requer pó de blaze, diamantes, pérolas do End e barras de ferro."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:magical_pumpkin",
+      "title": "Abóbora Mágica",
+      "text": "Usada para invocar garotas personalizadas quando colocada sobre lã branca."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:master_ring",
+      "title": "Anel do Mestre",
+      "text": "Usado para capturar garotas, até mesmo as selvagens, mas você não pode capturar uma que já tenha dono."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:love_ball",
+      "title": "Esfera do Prazer",
+      "text": "Usada para conter a garota que você domesticou, não pode capturar garotas selvagens."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:heart_guide",
+      "title": "Wiki do Prazer",
+      "text": "Este livro! Contém todas as informações sobre garotas e mecânicas."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:x_pill",
+      "title": "Pílula X",
+      "text": "Um catalisador mágico usado em muitas receitas. Também transforma você em uma garota. Use novamente para reverter."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:custom_girl_spawn_egg",
+      "title": "Ovo Gerador de Garota Personalizada",
+      "text": "Crie uma garota personalizada estilo homúnculo com ossos, couro, argila, uma Pílula X e um ovo."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:jenny_spawn_egg",
+      "title": "Ovo Gerador da Jenny",
+      "text": "Invoque a garota ousada das planícies com barras de ouro, um girassol, uma Pílula X e um ovo."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:ellie_spawn_egg",
+      "title": "Ovo Gerador da Ellie",
+      "text": "Invoque a garota emo da floresta sombria com sacos de tinta, lã preta, uma rosa do wither, uma Pílula X e um ovo."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:bia_spawn_egg",
+      "title": "Ovo Gerador da Bia",
+      "text": "Invoque a ursinha de pelúcia mágica com lã marrom, uma Pílula X e um ovo."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:aly_spawn_egg",
+      "title": "Ovo Gerador da Aly",
+      "text": "Invoque a garota fada com lã azul, lã ciano, diamantes, uma Pílula X e um ovo."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:slime_spawn_egg",
+      "title": "Ovo Gerador da Slime",
+      "text": "Invoque a garota slime com bolas de slime, uma Pílula X e um ovo."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:kobold_spawn_egg",
+      "title": "Ovo Gerador da Kobold",
+      "text": "Invoque a kobold cavernícola com couro, carvão, uma Pílula X e um ovo."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "女孩介绍",
+  "icon": "minecraft:player_head",
+  "category": "heartbound:girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "欢迎来到乐趣百科！本书包含了关于你在   世界中可以找到的所有美丽女孩的信息。$(br2)女孩是可以被捕获、驯服和照顾的特殊实体。每个女孩都有自己的性格、能力和故事。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": " "
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Cô Gái Slime",
+  "icon": "minecraft:slime_ball",
+  "category": "heartbound:wild_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Cô Gái Slime là những sinh vật nhún nhảy và nghịch ngợm được tìm thấy trong đầm lầy và vùng ẩm ướt. Chúng có cơ thể như thạch và rất năng động.$(br2)Những cô gái hoang dã này khó thuần hóa hơn nhưng mang đến tương tác độc đáo. Chúng thích nhảy nhót và có thể khá tinh nghịch."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:slime",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Cô Gái Slime",
+      "text": "Một Cô Gái Slime hoang dã, tràn đầy năng lượng nhún nhảy!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Vật Phẩm Thuần Hóa$()$(br)Cô Gái Slime bị thu hút bởi $(#b0b)Slime Ball$(), thứ mà chúng thấy hấp dẫn.$(br2)$(o)Cảnh$()$(br)$(li)Bú Cu$(li)Doggy"
+    }
+  ]
+}

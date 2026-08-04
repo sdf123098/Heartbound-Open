@@ -1,0 +1,31 @@
+{
+  "name": "Jenny",
+  "icon": "heartbound:jenny_spawn_egg",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Jenny is a seductive and flirty girl who roams the plains. She's always looking for attention and isn't shy about what she wants.$(br2)She has brown hair and wears a dark purple outfit. You can find her house in the plains."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:jenny",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Jenny",
+      "text": "Jenny, the horny girl!"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:jenny_spawn_egg",
+      "title": "Jenny Spawn Egg",
+      "text": "Craft with an X-Pill, gold ingots, egg, and a sunflower."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Tame Item$()$(br)Jenny is attracted to $(#ff0)Gold Ingots$(). Give her one to start building a relationship.$(br2)$(o)Scenes$()$(br)$(li)Masturbation$(li)Paizuri$(li)Blow Job$(li)Doggy Style"
+    }
+  ]
+}

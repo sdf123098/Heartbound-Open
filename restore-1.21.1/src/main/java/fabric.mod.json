@@ -1,0 +1,48 @@
+{
+	"schemaVersion": 1,
+	"id": "heartbound",
+	"version": "0.6.9+1.21.1_WIP3",
+	"name": "姬伴",
+	"description": "我的世界珍妮老师官网lsp8.top.",
+	"authors": [
+		"MC珍妮老师"
+	],
+	"contact": {
+		"homepage": "https://lsp8.top",
+		"sources": "https://lsp8.top"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/heartbound/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.cuddly.heartbound.Heartbound"
+		],
+		"client": [
+			"com.cuddly.heartbound.HeartboundClient"
+		],
+        "modmenu": [
+          "com.cuddly.heartbound.ModMenuIntegration"
+        ],
+        "jei_mod_plugin": [
+          "com.cuddly.heartbound.jei.HeartboundJEIPlugin"
+        ]
+	},
+  "mixins": [
+    "heartbound.mixins.json"
+  ],
+	"depends": {
+		"fabricloader": ">=0.18.1",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*",
+		"geckolib" : ">=4.8.3",
+		"cloth-config": ">=15.0.140",
+		"smartbrainlib": ">=1.16.8",
+		"patchouli": "*"
+	},
+	"suggests": {
+		"jei": "*",
+		"another-mod": "*"
+	}
+}

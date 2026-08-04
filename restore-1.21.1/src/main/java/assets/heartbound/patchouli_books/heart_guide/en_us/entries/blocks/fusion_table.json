@@ -1,0 +1,20 @@
+{
+  "name": "Fusion Table",
+  "icon": "heartbound:fusion_table",
+  "category": "heartbound:blocks",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The $(item)Fusion Table$() is a magical crafting station that allows you to fuse $(item)Custom Girl Spawn Eggs$() with different items to create specialized variants.$(br2)This table harnesses ancient fusion magic to combine spawn eggs with tame items."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Function:$()$(br)Right-click the Fusion Table to open its GUI. Place a $(item)Custom Girl Spawn Egg$() in the base slot, then add two identical tame items to the other slots.$(br2)Different tame items will create different girl variants. The result will appear in the output slot.$(br2)$(o)Note: Only identical tame items work for fusion!$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:fusion_table",
+      "text": "Craft the Fusion Table using blaze powder, diamonds, ender pearls, and iron ingots in this specific pattern."
+    }
+  ]
+}

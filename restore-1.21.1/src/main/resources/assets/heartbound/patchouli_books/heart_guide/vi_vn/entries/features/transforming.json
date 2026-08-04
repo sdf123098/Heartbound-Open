@@ -1,0 +1,20 @@
+{
+  "name": "Biến Hình",
+  "icon": "heartbound:x_pill",
+  "category": "heartbound:features",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Cơ Chế Biến Hình$()$(br2)$(item)Viên X$() cho phép bạn biến hình thành bất kỳ cô gái nào trong trò chơi. Khi đã biến hình, mô hình nhân vật của bạn sẽ thay đổi theo cô gái được chọn, và bạn có thể truy cập các cảnh độc đáo của cô ấy.$(br2)Sử dụng thêm một $(item)Viên X$() khác để trở về hình dạng bình thường."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Cách Biến Hình:$()$(br)$(li)Chế tạo $(item)Viên X$() (xem công thức ở trang tiếp theo)$(li)Click phải với $(item)Viên X$() để mở màn hình chọn cô gái$(li)Chọn cô gái bạn muốn biến hình thành$(li)Bạn đã biến hình!$(br2)$(bold)Khi Đã Biến Hình:$()$(br)$(li)Nhấn phím $(item)Transform Scene$() để bắt đầu một cảnh$(li)Sử dụng thêm $(item)Viên X$() để trở về hình dạng con người$(br2)$(o)Lưu ý: Viên X sẽ bị tiêu thụ khi sử dụng (trừ khi ở chế độ Sáng Tạo).$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:x_pill",
+      "text": "Chế tạo Viên X bằng hoa anh túc, đường, lọ thuốc, táo và bát."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "变身",
+  "icon": "heartbound:x_pill",
+  "category": "heartbound:features",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)变身机制$()$(br2)$(item)X药丸$()允许你变身为游戏中的任何女孩。变身后，你的玩家模型将变为所选女孩的外观，并且可以体验她独特的场景。$(br2)再使用一颗$(item)X药丸$()即可恢复原形。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)如何变身：$()$(br)$(li)合成$(item)X药丸$()（配方见下一页）$(li)右键使用$(item)X药丸$()打开女孩选择界面$(li)选择你想要变身的女孩$(li)变身完成！$(br2)$(bold)变身期间：$()$(br)$(li)按下$(item)Transform Scene$()按键来开始场景$(li)再次使用$(item)X药丸$()恢复人类形态$(br2)$(o)注意：X药丸使用后会被消耗（创造模式除外）。$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:x_pill",
+      "text": "使用虞美人、糖、药水、苹果和碗合成X药丸。"
+    }
+  ]
+}

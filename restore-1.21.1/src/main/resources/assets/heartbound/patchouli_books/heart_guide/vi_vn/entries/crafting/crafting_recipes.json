@@ -1,0 +1,89 @@
+{
+  "name": "Công Thức Chế Tạo",
+  "icon": "minecraft:crafting_table",
+  "category": "heartbound:crafting",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Công Thức Chế Tạo Thiết Yếu$()$(br2)Đây là các công thức chế tạo quan trọng bạn cần để tạo và tương tác với các cô gái trong Pleasure Horizons. Mỗi công thức phục vụ một mục đích cụ thể trong hành trình của bạn."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:fusion_table",
+      "title": "Bàn Dung Hợp",
+      "text": "Bàn ma thuật để dung hợp trứng triệu hồi. Cần bột blaze, kim cương, ngọc ender và thỏi sắt."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:magical_pumpkin",
+      "title": "Bí Ngô Ma Thuật",
+      "text": "Dùng để triệu hồi cô gái tùy chỉnh khi đặt trên len trắng."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:master_ring",
+      "title": "Nhẫn Chủ Nhân",
+      "text": "Dùng để bắt các cô gái, kể cả cô gái hoang dã, nhưng không thể bắt cô gái đã có chủ nhân."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:love_ball",
+      "title": "Quả Cầu Tình Yêu",
+      "text": "Dùng để chứa cô gái đã thuần hóa, không thể bắt cô gái hoang dã."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:heart_guide",
+      "title": "Cẩm Nang Trái Tim",
+      "text": "Chính là cuốn sách này! Chứa tất cả thông tin về các cô gái và cơ chế."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:x_pill",
+      "title": "Viên X",
+      "text": "Chất xúc tác ma thuật dùng trong nhiều công thức. Cũng biến hình bạn thành cô gái. Sử dụng lại để trở về."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:custom_girl_spawn_egg",
+      "title": "Trứng Triệu Hồi Cô Gái Tùy Chỉnh",
+      "text": "Tạo cô gái tùy chỉnh kiểu homunculus từ xương, da, đất sét, Viên X và trứng."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:jenny_spawn_egg",
+      "title": "Trứng Triệu Hồi Jenny",
+      "text": "Triệu hồi cô gái đồng bằng táo bạo với thỏi vàng, hoa hướng dương, Viên X và trứng."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:ellie_spawn_egg",
+      "title": "Trứng Triệu Hồi Ellie",
+      "text": "Triệu hồi cô gái emo rừng tối với túi mực, len đen, hoa wither, Viên X và trứng."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:bia_spawn_egg",
+      "title": "Trứng Triệu Hồi Bia",
+      "text": "Triệu hồi chú gấu bông ma thuật với len nâu, Viên X và trứng."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:aly_spawn_egg",
+      "title": "Trứng Triệu Hồi Aly",
+      "text": "Triệu hồi cô gái tiên với len xanh, len lục lam, kim cương, Viên X và trứng."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:slime_spawn_egg",
+      "title": "Trứng Triệu Hồi Slime",
+      "text": "Triệu hồi cô gái slime với bóng slime, Viên X và trứng."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:kobold_spawn_egg",
+      "title": "Trứng Triệu Hồi Kobold",
+      "text": "Triệu hồi kobold hang động với da, than, Viên X và trứng."
+    }
+  ]
+}

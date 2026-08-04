@@ -1,0 +1,15 @@
+{
+  "name": " ",
+  "icon": "minecraft:knowledge_book",
+  "category": "heartbound:custom_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " "
+    },
+    {
+      "type": "patchouli:text",
+      "text": " "
+    }
+  ]
+}
