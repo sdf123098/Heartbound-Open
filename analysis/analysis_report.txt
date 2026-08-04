@@ -1,0 +1,281 @@
+TOTAL ENTRIES: 1182 | uncompressed size: 43.7 MB
+
+=== TOP-LEVEL ===
+assets                         728
+com                            366
+data                           83
+(root)                         3
+META-INF                       2
+
+=== fabric.mod.json ===
+{
+  "schemaVersion": 1,
+  "id": "heartbound",
+  "version": "0.6.9+1.21.1_WIP3",
+  "name": "姬伴",
+  "description": "我的世界珍妮老师官网lsp8.top.",
+  "authors": [
+    "MC珍妮老师"
+  ],
+  "contact": {
+    "homepage": "https://lsp8.top",
+    "sources": "https://lsp8.top"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/heartbound/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.cuddly.heartbound.Heartbound"
+    ],
+    "client": [
+      "com.cuddly.heartbound.HeartboundClient"
+    ],
+    "modmenu": [
+      "com.cuddly.heartbound.ModMenuIntegration"
+    ],
+    "jei_mod_plugin": [
+      "com.cuddly.heartbound.jei.HeartboundJEIPlugin"
+    ]
+  },
+  "mixins": [
+    "heartbound.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.1",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*",
+    "geckolib": ">=4.8.3",
+    "cloth-config": ">=15.0.140",
+    "smartbrainlib": ">=1.16.8",
+    "patchouli": "*"
+  },
+  "suggests": {
+    "jei": "*",
+    "another-mod": "*"
+  }
+}
+
+=== MIXIN CONFIGS ===
+
+--- heartbound.mixins.json ---
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.cuddly.heartbound.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "bugfix.ScreenHandlerMixin",
+    "transformation.PlayerRidingMixin",
+    "transformation.PlayerTransformationMixin",
+    "transformation.ServerPlayerRespawnMixin"
+  ],
+  "client": [
+    "freecam.BlockStateBaseMixin",
+    "freecam.BubbleColumnAmbientSoundHandlerMixin",
+    "freecam.CameraMixin",
+    "freecam.ClientPacketListenerMixin",
+    "freecam.EntityMixin",
+    "freecam.EntityRenderDispatcherAccessor",
+    "freecam.EntityRenderDispatcherMixin",
+    "freecam.EntityRendererMixin",
+    "freecam.GameRendererMixin",
+    "freecam.GuiMixin",
+    "freecam.ItemInHandRendererMixin",
+    "freecam.LevelRendererMixin",
+    "freecam.LightTextureMixin",
+    "freecam.LivingEntityMixin",
+    "freecam.LocalPlayerMixin",
+    "freecam.MinecraftMixin",
+    "freecam.MultiPlayerGameModeMixin",
+    "freecam.OptionsMixin",
+    "geckolib.GeoBoneMixin",
+    "transformation.InventoryScreenMixin",
+    "transformation.PlayerEntityRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
+
+=== REFMAPS ===
+
+=== ACCESS WIDENER ===
+
+=== JAR-IN-JAR ===
+
+=== LANG FILES === 6
+  assets/heartbound/lang/
+  assets/heartbound/lang/en_us.json
+  assets/heartbound/lang/ja_jp.json
+  assets/heartbound/lang/pt_br.json
+  assets/heartbound/lang/vi_vn.json
+  assets/heartbound/lang/zh_cn.json
+
+CLASS FILES: 310
+First class: com/cuddly/heartbound/advancement/criterion/BreakUpCriterion$Conditions.class | class file major: 65 => Java 21
+
+=== NAMESPACE SCAN (all classes) ===
+intermediary class refs (net/minecraft/class_): 6180
+intermediary method refs (method_): 2214
+intermediary field refs (field_): 783
+yarn-ish refs (net/minecraft/world/entity|client/render): 0
+
+=== GeckoLib usage (19 classes) ===
+  com/cuddly/heartbound/client/models/AbstractGirlModel.class
+  com/cuddly/heartbound/client/models/CustomGirlModel.class
+  com/cuddly/heartbound/client/models/TransformedPlayerModel.class
+  com/cuddly/heartbound/client/rendering/layers/BoneOverrideRenderLayer.class
+  com/cuddly/heartbound/client/rendering/renderers/AbstractGirlRenderer$1.class
+  com/cuddly/heartbound/client/rendering/renderers/AbstractGirlRenderer.class
+  com/cuddly/heartbound/client/rendering/renderers/AlyRenderer.class
+  com/cuddly/heartbound/client/rendering/renderers/BiaRenderer.class
+  com/cuddly/heartbound/client/rendering/renderers/CoppieRenderer.class
+  com/cuddly/heartbound/client/rendering/renderers/CustomGirlRenderer.class
+  com/cuddly/heartbound/client/rendering/renderers/EllieRenderer.class
+  com/cuddly/heartbound/client/rendering/renderers/JennyRenderer.class
+  com/cuddly/heartbound/client/rendering/renderers/KoboldRenderer.class
+  com/cuddly/heartbound/client/rendering/renderers/SlimeRenderer.class
+  com/cuddly/heartbound/client/rendering/renderers/TransformedPlayerRenderer$2.class
+  com/cuddly/heartbound/client/rendering/renderers/TransformedPlayerRenderer.class
+  com/cuddly/heartbound/client/rendering/TransformedPlayerAnimatable.class
+  com/cuddly/heartbound/entity/base/GirlSceneEntity.class
+  com/cuddly/heartbound/mixins/geckolib/GeoBoneMixin.class
+
+=== SmartBrainLib usage (1 classes) ===
+  com/cuddly/heartbound/entity/base/tamable/BaseGirlEntityAI.class
+
+=== Patchouli usage (1 classes) ===
+  com/cuddly/heartbound/item/items/HeartGuide.class
+
+=== ClothConfig usage (6 classes) ===
+  com/cuddly/heartbound/config/gui/AutoConfigExtensions.class
+  com/cuddly/heartbound/config/gui/DoubleSliderEntry.class
+  com/cuddly/heartbound/config/gui/ModBindingsConfigImpl.class
+  com/cuddly/heartbound/config/ModConfig$FlightMode.class
+  com/cuddly/heartbound/config/ModConfig$InteractionMode.class
+  com/cuddly/heartbound/config/ModConfig$Perspective.class
+
+=== JEI usage (2 classes) ===
+  com/cuddly/heartbound/jei/FusionRecipeCategory.class
+  com/cuddly/heartbound/jei/HeartboundJEIPlugin.class
+
+=== ModMenu usage (1 classes) ===
+  com/cuddly/heartbound/ModMenuIntegration.class
+
+=== Architectury usage (0 classes) ===
+
+=== MOD CLASS COUNT: 310 ===
+   33  com/cuddly/heartbound/networking/C2S
+   23  com/cuddly/heartbound/entity/ai/goal
+   18  com/cuddly/heartbound/mixins/freecam
+   17  com/cuddly/heartbound/advancement/criterion
+   16  com/cuddly/heartbound/client/gui/screen
+   14  com/cuddly/heartbound/client/rendering/renderers
+   13  com/cuddly/heartbound/registries
+   12  com/cuddly/heartbound/config
+   12  com/cuddly/heartbound/util
+   11  com/cuddly/heartbound/client/models
+   11  com/cuddly/heartbound/util/variables
+   10  com/cuddly/heartbound/networking/S2C
+   10  com/cuddly/heartbound/screen
+    9  com/cuddly/heartbound/client/gui/screen/customize
+    9  com/cuddly/heartbound/entity/girls
+    7  com/cuddly/heartbound/config/gui
+    6  com/cuddly/heartbound/mixins/transformation
+    5  com/cuddly/heartbound/freecam
+    5  com/cuddly/heartbound/util/rendering
+    4  com/cuddly/heartbound/config/keys
+    4  com/cuddly/heartbound
+    4  com/cuddly/heartbound/item/items
+    4  com/cuddly/heartbound/util/inventory/slot
+    3  com/cuddly/heartbound/block/blocks
+    3  com/cuddly/heartbound/client
+    3  com/cuddly/heartbound/client/rendering
+    3  com/cuddly/heartbound/entity/base
+    3  com/cuddly/heartbound/entity/base/tamable
+    3  com/cuddly/heartbound/item
+    3  com/cuddly/heartbound/jei
+    3  com/cuddly/heartbound/transformation
+    3  com/cuddly/heartbound/util/json
+    2  com/cuddly/heartbound/block/entity/entities
+    2  com/cuddly/heartbound/command
+    2  com/cuddly/heartbound/entity/ai/brain
+    2  com/cuddly/heartbound/entity/ai/pathing
+    2  com/cuddly/heartbound/entity
+    2  com/cuddly/heartbound/freecam/tripod
+    2  com/cuddly/heartbound/networking
+    2  com/cuddly/heartbound/util/inventory
+    1  com/cuddly/heartbound/block/entity
+    1  com/cuddly/heartbound/block
+    1  com/cuddly/heartbound/client/gui/screen/hud
+    1  com/cuddly/heartbound/client/rendering/layers
+    1  com/cuddly/heartbound/component
+    1  com/cuddly/heartbound/entity/base/wild
+    1  com/cuddly/heartbound/mixins/bugfix
+    1  com/cuddly/heartbound/mixins/geckolib
+    1  com/cuddly/heartbound/networking/codec
+    1  com/cuddly/heartbound/util/managers
+
+=== FULL CLASS LISTS for key packages ===
+  com/cuddly/heartbound/config/gui/AutoConfigExtensions.class
+  com/cuddly/heartbound/config/gui/BoundedContinuous.class
+  com/cuddly/heartbound/config/gui/BoundedContinuousImpl.class
+  com/cuddly/heartbound/config/gui/DoubleSliderEntry$Slider.class
+  com/cuddly/heartbound/config/gui/DoubleSliderEntry.class
+  com/cuddly/heartbound/config/gui/ModBindingsConfig.class
+  com/cuddly/heartbound/config/gui/ModBindingsConfigImpl.class
+  com/cuddly/heartbound/config/keys/FreecamComboKeyMapping.class
+  com/cuddly/heartbound/config/keys/FreecamKeyMapping.class
+  com/cuddly/heartbound/config/keys/FreecamKeyMappingBuilder.class
+  com/cuddly/heartbound/config/keys/HoldAction.class
+  com/cuddly/heartbound/config/ModBindings.class
+  com/cuddly/heartbound/config/ModConfig$ControlsConfig.class
+  com/cuddly/heartbound/config/ModConfig$FlightMode.class
+  com/cuddly/heartbound/config/ModConfig$GirlConfig.class
+  com/cuddly/heartbound/config/ModConfig$InteractionMode.class
+  com/cuddly/heartbound/config/ModConfig$MovementConfig.class
+  com/cuddly/heartbound/config/ModConfig$NotificationConfig.class
+  com/cuddly/heartbound/config/ModConfig$Perspective.class
+  com/cuddly/heartbound/config/ModConfig$PlayerConfig.class
+  com/cuddly/heartbound/config/ModConfig$UtilityConfig.class
+  com/cuddly/heartbound/config/ModConfig$VisualConfig.class
+  com/cuddly/heartbound/config/ModConfig.class
+  com/cuddly/heartbound/jei/FusionRecipe.class
+  com/cuddly/heartbound/jei/FusionRecipeCategory.class
+  com/cuddly/heartbound/jei/HeartboundJEIPlugin.class
+  com/cuddly/heartbound/ModMenuIntegration.class
+
+=== ASSETS (top-2-level) ===
+    1  heartbound/
+    9  heartbound/animations
+    4  heartbound/blockstates
+   19  heartbound/geo
+    1  heartbound/icon.png
+   12  heartbound/items
+    6  heartbound/keyframe_events
+    6  heartbound/lang
+   25  heartbound/models
+  152  heartbound/patchouli_books
+   13  heartbound/python
+  435  heartbound/sounds
+    1  heartbound/sounds.json
+   43  heartbound/textures
+
+=== DATA (top-2-level) ===
+    1  heartbound/
+   20  heartbound/advancement
+    4  heartbound/loot_table
+    3  heartbound/patchouli_books
+   15  heartbound/recipe
+    6  heartbound/structure
+    9  heartbound/tags
+   24  heartbound/worldgen
+
+=== ROOT + META-INF FILES ===
+  fabric.mod.json 1003
+  heartbound.mixins.json 1127
+  LICENSE_Heartbound 839
+  META-INF/ 0
+  META-INF/MANIFEST.MF 416
