@@ -254,7 +254,7 @@ java -jar analysis/tools/vineflower-1.10.1.jar \
 - 备选 JDK 21：`C:\Program Files\Zulu\zulu-21`（LuminaBox 工程在用）
 - git-bash 环境；`./gradlew` 脚本可直接运行（无需 gradlew.bat）
 - 无全局 Gradle；wrapper 文件取自本机 LuminaBox-1.21.1 工程
-- 代理：本机 127.0.0.1:7897 有代理（LuminaBox 配置），但直连各 Maven 均正常，不需要代理
+- **网络**：`services.gradle.org` 直连可用（307 → github.com），但 Java 客户端连 github 发行资产被重置 → wrapper 改用腾讯镜像 `https://mirrors.cloud.tencent.com/gradle/gradle-8.14.2-bin.zip`（已验证 200）。本机另有代理 127.0.0.1:7897（存活，备用）。
 
 ## 19. Git 提交计划
 
