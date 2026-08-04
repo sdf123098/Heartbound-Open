@@ -118,22 +118,20 @@ public abstract class BaseGirlEntityAI extends TameableGirlEntity implements Sma
 
    @Override
    public BrainActivityGroup<? extends BaseGirlEntityAI> getCoreTasks() {
-      return BrainActivityGroup.coreTasks(new MultiTickTask[]{new LookAtTarget(), new MoveToWalkTarget()});
+      return BrainActivityGroup.<BaseGirlEntityAI>coreTasks(new LookAtTarget(), new MoveToWalkTarget());
    }
 
    @Override
    public BrainActivityGroup<? extends BaseGirlEntityAI> getIdleTasks() {
-      return BrainActivityGroup.idleTasks(
-         new MultiTickTask[]{
-            new FirstApplicableBehaviour(new SetPlayerLookTarget(), new SetRandomLookTarget()),
-            new OneRandomBehaviour(new SetRandomWalkTarget(), new Idle().runFor(entity -> entity.getRandom().nextBetween(30, 60)))
-         }
+      return BrainActivityGroup.<BaseGirlEntityAI>idleTasks(
+         new FirstApplicableBehaviour<BaseGirlEntityAI>(new SetPlayerLookTarget<BaseGirlEntityAI>(), new SetRandomLookTarget<BaseGirlEntityAI>()),
+         new OneRandomBehaviour<BaseGirlEntityAI>(new SetRandomWalkTarget<BaseGirlEntityAI>(), new Idle<BaseGirlEntityAI>().runFor(entity -> entity.getRandom().nextBetween(30, 60)))
       );
    }
 
    @Override
    public BrainActivityGroup<? extends BaseGirlEntityAI> getFightTasks() {
-      return BrainActivityGroup.empty();
+      return BrainActivityGroup.<BaseGirlEntityAI>empty();
    }
 
    @Override

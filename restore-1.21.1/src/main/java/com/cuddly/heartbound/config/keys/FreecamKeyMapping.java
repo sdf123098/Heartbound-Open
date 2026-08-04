@@ -24,7 +24,6 @@ public class FreecamKeyMapping extends KeyBinding implements TextureTickListener
       this.tickHandler.accept(this);
    }
 
-   @Override
    public void reset() {
       while (this.wasPressed()) {
       }

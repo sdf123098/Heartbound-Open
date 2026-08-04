@@ -15,7 +15,7 @@ public class HeartboundScreenHandlerRegistry {
    public static final ExtendedScreenHandlerType<GirlInventoryScreenHandler, HeartboundClient.GirlScreenData> GIRL_INVENTORY_SCREEN_HANDLER = Registry.register(
       Registries.SCREEN_HANDLER,
       Identifier.of("heartbound", "girl_inventory_screen"),
-      new ExtendedScreenHandlerType(GirlInventoryScreenHandler::new, HeartboundClient.GirlScreenData.PACKET_CODEC)
+      new ExtendedScreenHandlerType<>(GirlInventoryScreenHandler::new, HeartboundClient.GirlScreenData.PACKET_CODEC)
    );
    public static final ExtendedScreenHandlerType<FusionTableScreenHandler, Object> FUSION_TABLE_SCREEN_HANDLER = Registry.register(
       Registries.SCREEN_HANDLER,

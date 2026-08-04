@@ -412,7 +412,7 @@ public class GirlChopTreesGoal extends Goal {
    private void chopTree() {
       if (this.world instanceof ServerWorld serverWorld) {
          this.findTreeBlocks(this.targetTreePos);
-         ArrayList var11 = new ArrayList();
+         ArrayList<BlockPos> var11 = new ArrayList<>();
 
          for (BlockPos pos : this.treeBlocks) {
             if (this.isLogBlock(this.world.getBlockState(pos))) {
