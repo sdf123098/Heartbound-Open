@@ -285,11 +285,13 @@ public class HeartboundPackets {
                   if (tp.heartbound$isTransformSceneActive()) {
                      tp.heartbound$setTransformThrusting(packet.held());
                   }
-               } else {
-                  TransformablePlayer tp = (TransformablePlayer)player;
-                  if (tp.heartbound$isTransformSceneActive()) {
-                     tp.heartbound$setTransformThrusting(packet.held());
-                  }
+               }
+
+               // 修复：骑乘非场景实体（如 Kobold 坐骑）时，thrust 也必须传给玩家自身的变身场景，
+               // 否则按住 thrust 键时变身动画停留在 slow 导致姿势错误
+               TransformablePlayer selfTp = (TransformablePlayer)player;
+               if (selfTp.heartbound$isTransformSceneActive()) {
+                  selfTp.heartbound$setTransformThrusting(packet.held());
                }
             })
       );

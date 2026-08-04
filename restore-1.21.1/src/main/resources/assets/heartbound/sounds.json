@@ -1777,5 +1777,110 @@
         "stream": false
       }
     ]
+  },
+  "bia.breath": {
+    "subtitle": "subtitles.bia.breath",
+    "sounds": [
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing0",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing1",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing2",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing3",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing4",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing5",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing6",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing7",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing8",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing9",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing10",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing11",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing12",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing13",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing14",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing15",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing16",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing17",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing18",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing19",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing20",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing21",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing22",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing23",
+        "stream": false
+      },
+      {
+        "name": "heartbound:girls/bia/lightbreathing/lightbreathing24",
+        "stream": false
+      }
+    ]
   }
 }
