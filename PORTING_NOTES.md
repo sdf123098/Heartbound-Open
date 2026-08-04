@@ -89,8 +89,9 @@ Fabric-Loom-Mixin-Remap-Type: static
 | modmenu（代码实际引用） | — | 11.0.0（编译期 modCompileOnly） | maven.terraformersmc.com | ✅ |
 
 - **无 jar-in-jar**（META-INF/jars 为空）。
-- 恢复工程的构建工具链（复刻原构建）：Gradle **8.14.2**（wrapper）+ Fabric Loom **1.13.6** + Yarn **1.21.1+build.3** + Java 21。
-- 说明：Loom 1.13.6 的 plugin marker 不在 Fabric Maven 上（库构件在），settings.gradle 用 `resolutionStrategy.useModule` 直接解析 `net.fabricmc:fabric-loom:1.13.6`。
+- 恢复工程实际采用的构建工具链：Gradle **9.5.1**（wrapper）+ Fabric Loom **1.17.17** + Yarn **1.21.1+build.3** + Java 21。
+- 工具链选型说明：GeckoLib 4.9.2 等 2026 年版依赖是用 **Loom 1.17.13** 构建的，Loom 1.13.6 会直接拒绝（`Mod was built with a newer version of Loom`）；Loom 1.17.x 要求 Gradle 9.5+。故采用 Loom 1.17.17 + Gradle 9.5.1（本机已缓存发行版）。
+- Loom 的 plugin marker 由 settings.gradle 的 `resolutionStrategy.useModule` 直接解析 `net.fabricmc:fabric-loom` 库构件（marker 不在 Fabric Maven 上）。
 
 ## 5. 命名空间确认
 
@@ -225,8 +226,8 @@ java -jar analysis/tools/vineflower-1.10.1.jar \
 
 | 组件 | 版本 | 理由 |
 |---|---|---|
-| Gradle（wrapper） | 8.14.2 | 与原构建一致（MANIFEST） |
-| Fabric Loom | 1.13.6 | 与原构建一致；useModule 解析 |
+| Gradle（wrapper） | 9.5.1 | Loom 1.17 要求 Gradle 9.5+；腾讯镜像下载 |
+| Fabric Loom | 1.17.17 | 依赖（GeckoLib 4.9.2）用 Loom 1.17.13 构建，旧 Loom 拒绝加载；useModule 解析 |
 | Fabric Loader | 0.18.6 | 满足 >=0.18.1，0.18.x 最新 |
 | Yarn | 1.21.1+build.3 | 1.21.1 最终 build |
 | Fabric API | 0.116.15+1.21.1 | 1.21.1 最新线 |
@@ -253,14 +254,15 @@ java -jar analysis/tools/vineflower-1.10.1.jar \
 - 运行 Gradle：`unset JAVA_HOME`（JAVA_HOME=JDK 25 会被 Gradle 8.14.2 拒绝）；PATH java = JDK 21.0.12
 - 备选 JDK 21：`C:\Program Files\Zulu\zulu-21`（LuminaBox 工程在用）
 - git-bash 环境；`./gradlew` 脚本可直接运行（无需 gradlew.bat）
-- 无全局 Gradle；wrapper 文件取自本机 LuminaBox-1.21.1 工程
-- **网络**：`services.gradle.org` 直连可用（307 → github.com），但 Java 客户端连 github 发行资产被重置 → wrapper 改用腾讯镜像 `https://mirrors.cloud.tencent.com/gradle/gradle-8.14.2-bin.zip`（已验证 200）。本机另有代理 127.0.0.1:7897（存活，备用）。
+- 无全局 Gradle。⚠️ LuminaBox 系列工程的 gradlew / gradlew.bat / gradle-wrapper.jar 均已损坏（脚本含 LLM 垃圾文本且双重 `set --`；jar 缺 `Main-Class`）——**不可复用**，wrapper 一律用发行版 `gradle wrapper` 重新生成
+- **网络**：`services.gradle.org` 直连可用（307 → github.com），但 Java 客户端连 github 发行资产被重置 → wrapper 用腾讯镜像 `https://mirrors.cloud.tencent.com/gradle/gradle-9.5.1-bin.zip`（已验证 200）。生成 wrapper 时加 `--no-validate-url` 跳过联网校验。本机另有代理 127.0.0.1:7897（存活，备用）。
 
 ## 19. Git 提交计划
 
 - [x] `chore: initialize 1.21.1 restoration workspace`
 - [x] `docs: document original jar structure`
 - [x] `build: configure fabric 1.21.1 environment`
+- [x] `fix: regenerate canonical wrapper, upgrade to gradle 9.5.1 + loom 1.17.17`
 - [ ] `refactor: restore decompiled source tree`（阶段二）
 - [ ] `fix: ...`（阶段三，按组提交）
 - [ ] `build: establish working 1.21.1 baseline`（阶段四）
