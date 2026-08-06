@@ -53,36 +53,12 @@ public class TransformedPlayerRenderManager {
          matrices.pushPose();
          TransformedPlayerRenderer.TransformedPlayerRenderState state = null;
          try {
-            TransformedPlayerAnimatable anim = TransformedPlayerAnimatable.INSTANCE;
-            AnimatableInstanceCache cache = anim.getAnimatableInstanceCache();
-            Object manager = cache == null ? null : cache.getManagerForId(player.getId());
-            Heartbound.LOGGER.info(
-               "[TransformedPlayerRenderManager] diag: instanceCache={} manager(player {} id {})={} animatable={}",
-               cache, player.getScoreboardName(), player.getId(), manager, anim
-            );
-            if (manager != null) {
-               TransformedPlayerRenderer.TransformedPlayerRenderState probe = new TransformedPlayerRenderer.TransformedPlayerRenderState();
-               probe.addGeckolibData((DataTicket)DataTickets.ANIMATABLE_MANAGER, manager);
-               Heartbound.LOGGER.info(
-                  "[TransformedPlayerRenderManager] probe: add->get ANIMATABLE_MANAGER = {} (put {}) | mapIdentity={} keys={}",
-                  probe.getGeckolibData(DataTickets.ANIMATABLE_MANAGER),
-                  manager,
-                  System.identityHashCode(probe.getDataMap()),
-                  probe.getDataMap().keySet()
-               );
-            }
             float partialTick = Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaPartialTick(false);
             state = renderer.createRenderState(player, partialTick);
             renderer.extractRenderState(player, state, partialTick);
             renderer.submit(state, matrices, collector, cameraRenderState);
          } catch (Exception var12) {
             Heartbound.LOGGER.error("Failed to render transformed player model for girl '{}'", girlId, var12);
-            if (state != null) {
-               Heartbound.LOGGER.error(
-                  "[TransformedPlayerRenderManager] diag: state={} dataMap keys={} hasManager={}",
-                  state, state.getDataMap().keySet(), state.getDataMap().containsKey(DataTickets.ANIMATABLE_MANAGER)
-               );
-            }
          } finally {
             matrices.popPose();
          }

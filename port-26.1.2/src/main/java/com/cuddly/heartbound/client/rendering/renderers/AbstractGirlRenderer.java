@@ -28,13 +28,33 @@ import com.geckolib.renderer.layer.builtin.BlockAndItemGeoLayer;
 import com.geckolib.renderer.layer.builtin.BlockAndItemGeoLayer.RenderData;
 
 public abstract class AbstractGirlRenderer<T extends GirlSceneEntity> extends GeoEntityRenderer<T, AbstractGirlRenderer.GirlRenderState> {
+   /**
+    * 注意：GeckoLib 5.5.2 的 EntityRenderStateMixin 会给 EntityRenderState 注入独立的 geckolib$data map，
+    * 若此处不复写 addGeckolibData/getDataMap 会落入 mixin 的 map，与 GeckoLib 内部读取不一致（ANIMATABLE_MANAGER null）。
+    * 因此全部方法显式指向本类自己的 map（子类方法遮蔽 mixin 注入方法）。
+    */
    public static class GirlRenderState extends LivingEntityRenderState implements GeoRenderState {
       public GirlSceneEntity animatable;
-      private final GeoRenderState.Impl geckolibData = new GeoRenderState.Impl();
+      private final Map<DataTicket<?>, Object> geckolibDataMap = new it.unimi.dsi.fastutil.objects.Reference2ObjectOpenHashMap<>();
 
       @Override
       public Map<DataTicket<?>, Object> getDataMap() {
-         return this.geckolibData.getDataMap();
+         return this.geckolibDataMap;
+      }
+
+      @Override
+      public <D> void addGeckolibData(DataTicket<D> dataTicket, D data) {
+         this.geckolibDataMap.put(dataTicket, data);
+      }
+
+      @Override
+      public boolean hasGeckolibData(DataTicket<?> dataTicket) {
+         return this.geckolibDataMap.containsKey(dataTicket);
+      }
+
+      @Override
+      public <D> D getGeckolibData(DataTicket<D> dataTicket) {
+         return (D)this.geckolibDataMap.get(dataTicket);
       }
    }
 
