@@ -38,16 +38,28 @@ public class BedGoal extends Goal {
 
    @Override
    public boolean canUse() {
-      return this.entity.shouldMoveToBed() && this.entity.targetBedPos != null;
+      boolean use = this.entity.shouldMoveToBed() && this.entity.targetBedPos != null;
+      if (use) {
+         Heartbound.LOGGER.info(
+            "[HB-DBG] BedGoal.canUse=true girl={} targetBed={} scenePlayer={} phase={}",
+            this.entity.getGirlID(), this.entity.targetBedPos, this.entity.getScenePlayer(), this.entity.getCurrentScenePhase()
+         );
+      }
+      return use;
    }
 
    @Override
    public boolean canContinueToUse() {
-      return this.entity.targetBedPos != null && Utils.checkForBlockAt(this.entity.level(), this.entity.targetBedPos, null, BlockTags.BEDS);
+      boolean cont = this.entity.targetBedPos != null && Utils.checkForBlockAt(this.entity.level(), this.entity.targetBedPos, null, BlockTags.BEDS);
+      if (!cont) {
+         Heartbound.LOGGER.info("[HB-DBG] BedGoal.canContinue=false girl={} targetBed={}", this.entity.getGirlID(), this.entity.targetBedPos);
+      }
+      return cont;
    }
 
    @Override
    public void start() {
+      Heartbound.LOGGER.info("[HB-DBG] BedGoal.start girl={} targetBed={}", this.entity.getGirlID(), this.entity.targetBedPos);
       Heartbound.usedBeds.put(this.entity.getUUID(), this.entity.targetBedPos);
       BlockState state = this.entity.level().getBlockState(this.entity.targetBedPos);
       if (state.hasProperty(BlockStateProperties.HORIZONTAL_FACING)) {
@@ -97,6 +109,10 @@ public class BedGoal extends Goal {
             }
 
             this.entity.setWaitingAtBedState(true);
+            Heartbound.LOGGER.info(
+               "[HB-DBG] BedGoal arrived girl={} waitingAtBed=true phase={} snapPos={}",
+               this.entity.getGirlID(), this.entity.getCurrentScenePhase(), this.snapPos
+            );
             if (!this.entity.level().isClientSide()) {
                this.entity.teleportTo(this.snapPos.x, this.snapPos.y, this.snapPos.z);
                this.entity.setYRot(targetYaw);
@@ -117,6 +133,13 @@ public class BedGoal extends Goal {
       if (this.entity.isWaitingAtBed()) {
          if (this.entity.getScenePlayer() != null) {
             UUID playerId = this.entity.getScenePlayer().getUUID();
+            Heartbound.LOGGER.info(
+               "[HB-DBG] BedGoal.startOnContact girl={} dist={} phase={} activeScenes={}",
+               this.entity.getGirlID(),
+               this.entity.distanceToSqr(this.entity.getScenePlayer()),
+               this.entity.getCurrentScenePhase(),
+               Heartbound.activeScenes
+            );
             if (!Heartbound.activeScenes.containsKey(playerId)) {
                if (this.entity.distanceToSqr(this.entity.getScenePlayer()) <= 1.5 && this.entity.getCurrentScenePhase().equals(ScenePhase.BED_IDLE)) {
                   Heartbound.activeScenes.put(playerId, this.entity.getUUID());

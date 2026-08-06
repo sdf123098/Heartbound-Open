@@ -404,6 +404,10 @@ public abstract class GirlSceneEntity extends GirlEntity implements GeoEntity {
 
                if (option.sceneType().equals(SceneType.ON_BED)) {
                   Utils.BlockInfo bedInfo = Utils.findNearbyBed(this.level(), this.blockPosition(), 15);
+                  Heartbound.LOGGER.info(
+                     "[HB-DBG] startScene ON_BED girl={} pos={} bedInfo={} usedBeds={}",
+                     this.getGirlID(), this.blockPosition(), bedInfo, Heartbound.usedBeds
+                  );
                   if (bedInfo == null) {
                      this.messageAsEntity(false, HeartboundLangUtils.getStringFromKey("msg.heartbound.noBedFound"));
                   } else {
@@ -428,6 +432,10 @@ public abstract class GirlSceneEntity extends GirlEntity implements GeoEntity {
 
    public void startRidingScene(Player player) {
       SceneType type = this.getCurrentScene().sceneType();
+      Heartbound.LOGGER.info(
+         "[HB-DBG] startRidingScene girl={} type={} player={} playerVehicle={} sceneState={}",
+         this.getGirlID(), type, player.getScoreboardName(), player.getVehicle(), this.isSceneActive()
+      );
       if (!type.equals(SceneType.STATIONARY_INTRO) && !type.equals(SceneType.STATIONARY)) {
          player.setInvisible(true);
          this.getScenePlayer().sendOverlayMessage(Component.nullToEmpty("msg.heartbound.canGoInToFreeCam"));

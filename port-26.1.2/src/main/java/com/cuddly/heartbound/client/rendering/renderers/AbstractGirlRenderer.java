@@ -1,6 +1,7 @@
 package com.cuddly.heartbound.client.rendering.renderers;
 
 import com.cuddly.heartbound.client.models.AbstractGirlModel;
+import com.cuddly.heartbound.client.rendering.layers.BoneOverrideRenderLayer;
 import com.cuddly.heartbound.config.ModConfig;
 import com.cuddly.heartbound.entity.base.GirlSceneEntity;
 import com.cuddly.heartbound.networking.C2S.BonePosSyncC2SPacket;
@@ -88,6 +89,7 @@ public abstract class AbstractGirlRenderer<T extends GirlSceneEntity> extends Ge
 
    public AbstractGirlRenderer(Context ctx, GeoModel<T> model) {
       super(ctx, model);
+      this.withRenderLayer(new BoneOverrideRenderLayer<>(this));
       this.withRenderLayer(
          new BlockAndItemGeoLayer<T, Void, GirlRenderState>(ctx, this) {
             @Override
@@ -181,9 +183,11 @@ public abstract class AbstractGirlRenderer<T extends GirlSceneEntity> extends Ge
 
    protected void updateBoneVisibility(T entity, BakedGeoModel bakedModel, BoneSnapshots snapshots) {
       boolean isSceneActive = entity.isSceneActive();
+      boolean steveHasOverride = entity.boneTextureOverrides != null && entity.boneTextureOverrides.get("steve") != null;
       snapshots.get("steve").ifPresent(snap -> {
-         snap.skipRender(!isSceneActive);
-         snap.skipChildrenRender(!isSceneActive);
+         boolean hide = !isSceneActive || steveHasOverride;
+         snap.skipRender(hide);
+         snap.skipChildrenRender(hide);
       });
       if (entity.boneVisibility != null) {
          for (Map.Entry<String, Boolean> entry : entity.boneVisibility.entrySet()) {

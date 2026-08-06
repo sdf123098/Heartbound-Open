@@ -1,5 +1,6 @@
 package com.cuddly.heartbound.client.models;
 
+import com.cuddly.heartbound.Heartbound;
 import com.cuddly.heartbound.client.rendering.renderers.AbstractGirlRenderer;
 import com.cuddly.heartbound.config.ModConfig;
 import com.cuddly.heartbound.entity.base.GirlSceneEntity;
@@ -27,6 +28,7 @@ public abstract class AbstractGirlModel<T extends GirlSceneEntity> extends GeoMo
    private static final double FIXED_TIMESTEP = 0.04;
    private final Map<Long, Double> timeAccumulator = new HashMap<>();
    private static final List<AbstractGirlModel<?>> MODEL_INSTANCES = new ArrayList<>();
+   private static final java.util.Set<String> LOGGED_RESOURCE_KEYS = new java.util.HashSet<>();
 
    public AbstractGirlModel() {
       MODEL_INSTANCES.add(this);
@@ -56,7 +58,12 @@ public abstract class AbstractGirlModel<T extends GirlSceneEntity> extends GeoMo
       boolean stripped = animatable.isStripped();
       String girlID = animatable.getGirlID();
       String folder = stripped ? "nude/" : "dressed/";
-      return Identifier.fromNamespaceAndPath("heartbound", folder + girlID);
+      Identifier key = Identifier.fromNamespaceAndPath("heartbound", folder + girlID);
+      String logKey = "model:" + key;
+      if (LOGGED_RESOURCE_KEYS.add(logKey)) {
+         Heartbound.LOGGER.info("[HB-DBG] {} (stripped={}, animatable={})", logKey, stripped, animatable.getId());
+      }
+      return key;
    }
 
    @Override
@@ -68,7 +75,12 @@ public abstract class AbstractGirlModel<T extends GirlSceneEntity> extends GeoMo
 
       String girlID = animatable.getGirlID();
       String filePath = "textures/entities/" + girlID + ".png";
-      return Identifier.fromNamespaceAndPath("heartbound", filePath);
+      Identifier key = Identifier.fromNamespaceAndPath("heartbound", filePath);
+      String logKey = "texture:" + key;
+      if (LOGGED_RESOURCE_KEYS.add(logKey)) {
+         Heartbound.LOGGER.info("[HB-DBG] {} (animatable={})", logKey, animatable.getId());
+      }
+      return key;
    }
 
    @Override

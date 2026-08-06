@@ -175,10 +175,12 @@ public class GirlSelectionScreen extends Screen {
       } else {
          Level world = Minecraft.getInstance().level;
          if (world == null) {
+            Heartbound.LOGGER.info("[HB-DBG] preview {} skipped: world==null", girlId);
             return null;
          } else {
             try {
                LivingEntity entity = this.createPreview(girlId, world);
+               Heartbound.LOGGER.info("[HB-DBG] preview {} created={} type={}", girlId, entity != null, entity != null ? entity.getType() : null);
                if (entity != null) {
                   if (entity instanceof GirlEntity girl) {
                      for (String bone : ARMOR_BONES) {
@@ -193,7 +195,7 @@ public class GirlSelectionScreen extends Screen {
 
                return entity;
             } catch (Exception var10) {
-               Heartbound.LOGGER.warn("Failed to create preview for '{}'", girlId);
+               Heartbound.LOGGER.warn("Failed to create preview for '{}'", girlId, var10);
                return null;
             }
          }

@@ -1,5 +1,6 @@
 package com.cuddly.heartbound.mixins.transformation;
 
+import com.cuddly.heartbound.Heartbound;
 import com.cuddly.heartbound.client.rendering.TransformedPlayerRenderManager;
 import com.cuddly.heartbound.entity.base.GirlSceneEntity;
 import com.cuddly.heartbound.transformation.TransformablePlayer;
@@ -46,17 +47,20 @@ public abstract class LivingEntityRendererSubmitMixin {
       if (player.getVehicle() instanceof Player ridden) {
          TransformablePlayer riddenTp = (TransformablePlayer)ridden;
          if (riddenTp.heartbound$isTransformSceneActive()) {
+            Heartbound.LOGGER.info("[HB-DBG] playerRender {} cancelled: riding scene-active player {}", player.getScoreboardName(), ridden.getScoreboardName());
             ci.cancel();
             return;
          }
       }
 
       if (player.getVehicle() instanceof GirlSceneEntity girl && girl.isSceneActive()) {
+         Heartbound.LOGGER.info("[HB-DBG] playerRender {} cancelled: riding scene-active girl {} id={}", player.getScoreboardName(), girl.getGirlID(), girl.getId());
          ci.cancel();
          return;
       }
 
       if (player instanceof TransformablePlayer tp && tp.heartbound$isTransformed()) {
+         Heartbound.LOGGER.info("[HB-DBG] playerRender {} replaced as girl '{}'", player.getScoreboardName(), tp.heartbound$getTransformGirlId());
          ci.cancel();
          String girlId = tp.heartbound$getTransformGirlId();
          TransformedPlayerRenderManager.render(player, girlId, matrices, collector, cameraRenderState);

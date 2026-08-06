@@ -2,10 +2,12 @@ package com.cuddly.heartbound.client.rendering.renderers;
 
 import com.cuddly.heartbound.client.models.TransformedPlayerModel;
 import com.cuddly.heartbound.client.rendering.TransformedPlayerAnimatable;
+import com.cuddly.heartbound.config.ModConfig;
 import com.cuddly.heartbound.networking.C2S.BonePosSyncC2SPacket;
 import com.cuddly.heartbound.transformation.TransformablePlayer;
 import com.cuddly.heartbound.util.variables.Scene;
 import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,12 +17,15 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
+import java.util.function.BiConsumer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider.Context;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.client.renderer.item.ItemStackRenderState;
+import net.minecraft.client.renderer.SubmitNodeCollector;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.player.Player;
@@ -69,6 +74,7 @@ public class TransformedPlayerRenderer extends GeoReplacedEntityRenderer<Transfo
    }
 
    private final TransformedPlayerModel girlModel;
+   private Identifier cachedSkinTexture = Identifier.withDefaultNamespace("textures/entity/player/wide/steve.png");
    private static final Map<EquipmentSlot, List<String>> ARMOR_BONES = Map.of(
       EquipmentSlot.HEAD,
       List.of("armorHelmet"),
@@ -110,6 +116,24 @@ public class TransformedPlayerRenderer extends GeoReplacedEntityRenderer<Transfo
    public TransformedPlayerRenderer(Context context) {
       super(context, new TransformedPlayerModel(), TransformedPlayerAnimatable.INSTANCE);
       this.girlModel = (TransformedPlayerModel)this.getGeoModel();
+      this.withRenderLayer(
+         new com.geckolib.renderer.layer.GeoRenderLayer<TransformedPlayerAnimatable, Player, TransformedPlayerRenderState>(this) {
+            @Override
+            public void addPerBoneRender(
+               RenderPassInfo<TransformedPlayerRenderState> renderPassInfo,
+               BiConsumer<GeoBone, com.geckolib.renderer.base.PerBoneRender<TransformedPlayerRenderState>> consumer
+            ) {
+               Player player = TransformedPlayerAnimatable.INSTANCE.getCurrentEntity();
+               if (player == null || !(player instanceof TransformablePlayer tp) || !tp.heartbound$isTransformSceneActive()) {
+                  return;
+               }
+
+               renderPassInfo.model().getBone("steve").ifPresent(bone -> consumer.accept(bone, (passInfo, b, tasks) -> {
+                  TransformedPlayerRenderer.this.submitSteveSubtree(passInfo, b, tasks);
+               }));
+            }
+         }
+      );
       this.withRenderLayer(
          new BlockAndItemGeoLayer<TransformedPlayerAnimatable, Player, TransformedPlayerRenderState>(context, this) {
             @Override
@@ -163,6 +187,12 @@ public class TransformedPlayerRenderer extends GeoReplacedEntityRenderer<Transfo
       super.extractRenderState(player, state, partialTick);
       state.animatable = this.animatable;
       this.positionListenersRegistered = false;
+      if (player instanceof AbstractClientPlayer clientPlayer) {
+         Identifier tex = clientPlayer.getSkin().body().texturePath();
+         if (tex != null) {
+            this.cachedSkinTexture = tex;
+         }
+      }
    }
 
    @Override
@@ -189,7 +219,10 @@ public class TransformedPlayerRenderer extends GeoReplacedEntityRenderer<Transfo
       }
 
       boolean steveVisible = showSteve;
-      snapshots.get("steve").ifPresent(snap -> snap.skipRender(!steveVisible));
+      snapshots.get("steve").ifPresent(snap -> {
+         snap.skipRender(true);
+         snap.skipChildrenRender(true);
+      });
       if (player != null) {
          TransformablePlayer tp = (TransformablePlayer)player;
          boolean stripped = tp.heartbound$isStripped();
@@ -241,6 +274,45 @@ public class TransformedPlayerRenderer extends GeoReplacedEntityRenderer<Transfo
                });
             }
          }
+      }
+   }
+
+   private void submitSteveSubtree(RenderPassInfo<TransformedPlayerRenderState> passInfo, GeoBone bone, SubmitNodeCollector tasks) {
+      this.submitBoneWithTexture(passInfo, bone, tasks, this.cachedSkinTexture);
+      this.submitBoneWithTexture(passInfo, bone, tasks, Identifier.fromNamespaceAndPath("heartbound", "textures/player/penis.png"));
+   }
+
+   private void submitBoneWithTexture(RenderPassInfo<TransformedPlayerRenderState> passInfo, GeoBone bone, SubmitNodeCollector tasks, Identifier texture) {
+      net.minecraft.client.renderer.rendertype.RenderType renderType = net.minecraft.client.renderer.rendertype.RenderTypes.entityTranslucentCullItemTarget(texture);
+      tasks.submitCustomGeometry(passInfo.poseStack(), renderType, (pose, vertexConsumer) -> {
+         PoseStack poseStack = passInfo.poseStack();
+         poseStack.pushPose();
+         poseStack.last().set(pose);
+         this.renderSteveSubtree(passInfo, bone, poseStack, vertexConsumer);
+         poseStack.popPose();
+      });
+   }
+
+   private void renderSteveSubtree(RenderPassInfo<TransformedPlayerRenderState> passInfo, GeoBone bone, PoseStack poseStack, VertexConsumer vertexConsumer) {
+      int color = this.getSteveBoneColor(bone.name());
+      if (bone instanceof com.geckolib.cache.model.cuboid.CuboidGeoBone cuboid) {
+         for (com.geckolib.cache.model.cuboid.GeoCube cube : cuboid.cubes) {
+            cube.render(poseStack, vertexConsumer, passInfo.packedLight(), passInfo.packedOverlay(), color);
+         }
+      }
+
+      for (GeoBone child : bone.children()) {
+         child.positionAndRender(passInfo, vertexConsumer, passInfo.packedLight(), passInfo.packedOverlay(), color);
+      }
+   }
+
+   private int getSteveBoneColor(String boneName) {
+      if ("nut".equals(boneName)) {
+         return ModConfig.INSTANCE.player.penisHeadColor | 0xFF000000;
+      } else if ("shaft".equals(boneName) || "ballL".equals(boneName) || "ballR".equals(boneName)) {
+         return ModConfig.INSTANCE.player.penisShaftColor | 0xFF000000;
+      } else {
+         return -1;
       }
    }
 
