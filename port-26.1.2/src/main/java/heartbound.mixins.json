@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "bugfix.ScreenHandlerMixin",
+    "bugfix.SpawnEggItemMixin",
     "transformation.PlayerJumpBlockMixin",
     "transformation.PlayerRidingMixin",
     "transformation.PlayerTransformationMixin",

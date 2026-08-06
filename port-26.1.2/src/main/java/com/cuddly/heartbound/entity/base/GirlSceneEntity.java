@@ -124,7 +124,13 @@ public abstract class GirlSceneEntity extends GirlEntity implements GeoEntity {
 
    protected GirlSceneEntity(EntityType<? extends GirlSceneEntity> entityType, Level world) {
       super(entityType, world);
+      Heartbound.LOGGER.info(
+         "[GirlSceneEntity] {} constructed at {} (server={})",
+         entityType, world.isClientSide() ? "CLIENT" : "SERVER", world instanceof ServerLevel
+      );
    }
+
+   private boolean heartbound$tickLogDone = false;
 
    @Override
    protected void defineSynchedData(Builder builder) {
@@ -624,6 +630,14 @@ public abstract class GirlSceneEntity extends GirlEntity implements GeoEntity {
    @Override
    public void tick() {
       super.tick();
+      if (!this.heartbound$tickLogDone) {
+         this.heartbound$tickLogDone = true;
+         Heartbound.LOGGER.info(
+            "[GirlSceneEntity] {} alive in world at {} (server={})",
+            this.getType(), this.blockPosition(), this.level() instanceof ServerLevel
+         );
+      }
+
       this.updateClothingAndArmor();
       this.modelLogic();
       if (!this.level().isClientSide()) {
