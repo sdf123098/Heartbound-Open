@@ -16,13 +16,13 @@ public class CustomGirlModel extends AbstractGirlModel<CustomGirlEntity> {
    public Identifier getModelResource(GeoRenderState renderState) {
       CustomGirlEntity animatable = (CustomGirlEntity)this.getAnimatableFrom(renderState);
       if (animatable == null) {
-         return Identifier.fromNamespaceAndPath("heartbound", "geo/dressed/default.geo.json");
+         return Identifier.fromNamespaceAndPath("heartbound", "dressed/default");
       }
 
       boolean stripped = animatable.isStripped();
       String girlID = animatable.getGirlID();
       String folder = stripped ? "nude/" : "dressed/";
-      String filePath = "geo/" + folder + girlID + ".geo.json";
+      String filePath = "geckolib/models/" + folder + girlID + ".geo.json";
       boolean inGui = Minecraft.getInstance().screen != null;
       boolean exists = ClientUtils.assetExistsClient(Identifier.fromNamespaceAndPath("heartbound", filePath));
       if (!exists) {
@@ -31,9 +31,9 @@ public class CustomGirlModel extends AbstractGirlModel<CustomGirlEntity> {
             Heartbound.LOGGER.error("Model files for " + girlID + " doesn't exist");
          }
 
-         return Identifier.fromNamespaceAndPath("heartbound", "geo/" + folder + "default.geo.json");
+         return Identifier.fromNamespaceAndPath("heartbound", folder + "default");
       } else if (inGui && this.fallbackUsed.getOrDefault(girlID, false)) {
-         return Identifier.fromNamespaceAndPath("heartbound", "geo/" + folder + "default.geo.json");
+         return Identifier.fromNamespaceAndPath("heartbound", folder + "default");
       } else {
          this.fallbackUsed.put(girlID, false);
          return super.getModelResource(renderState);
@@ -41,8 +41,7 @@ public class CustomGirlModel extends AbstractGirlModel<CustomGirlEntity> {
    }
 
    public Identifier getAnimationResource(CustomGirlEntity animatable) {
-      String folder = "animations/";
-      String filePath = folder + animatable.getGirlID() + ".animation.json";
+      String filePath = "geckolib/animations/" + animatable.getGirlID() + ".animation.json";
       return ClientUtils.assetExistsClient(Identifier.fromNamespaceAndPath("heartbound", filePath)) ? super.getAnimationResource(animatable) : null;
    }
 

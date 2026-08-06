@@ -52,7 +52,7 @@ public class TransformedPlayerModel extends GeoModel<TransformedPlayerAnimatable
       }
 
       String folder = stripped ? "nude/" : "dressed/";
-      return Identifier.fromNamespaceAndPath("heartbound", "geo/" + folder + this.currentGirlId + ".geo.json");
+      return Identifier.fromNamespaceAndPath("heartbound", folder + this.currentGirlId);
    }
 
    @Override
@@ -62,7 +62,7 @@ public class TransformedPlayerModel extends GeoModel<TransformedPlayerAnimatable
 
    @Override
    public Identifier getAnimationResource(TransformedPlayerAnimatable animatable) {
-      return Identifier.fromNamespaceAndPath("heartbound", "animations/" + this.currentGirlId + ".animation.json");
+      return Identifier.fromNamespaceAndPath("heartbound", this.currentGirlId + ".animation");
    }
 
    public void applyFrameBoneTransforms(TransformedPlayerAnimatable animatable, BakedGeoModel model, BoneSnapshots snapshots, float headPitch, float headYaw) {

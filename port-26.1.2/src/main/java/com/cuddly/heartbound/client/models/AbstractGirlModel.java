@@ -50,14 +50,13 @@ public abstract class AbstractGirlModel<T extends GirlSceneEntity> extends GeoMo
    public Identifier getModelResource(GeoRenderState renderState) {
       GirlSceneEntity animatable = this.getAnimatableFrom(renderState);
       if (animatable == null) {
-         return Identifier.fromNamespaceAndPath("heartbound", "geo/dressed/jenny.geo.json");
+         return Identifier.fromNamespaceAndPath("heartbound", "dressed/jenny");
       }
 
       boolean stripped = animatable.isStripped();
       String girlID = animatable.getGirlID();
       String folder = stripped ? "nude/" : "dressed/";
-      String filePath = "geo/" + folder + girlID + ".geo.json";
-      return Identifier.fromNamespaceAndPath("heartbound", filePath);
+      return Identifier.fromNamespaceAndPath("heartbound", folder + girlID);
    }
 
    @Override
@@ -74,7 +73,7 @@ public abstract class AbstractGirlModel<T extends GirlSceneEntity> extends GeoMo
 
    @Override
    public Identifier getAnimationResource(T animatable) {
-      return Identifier.fromNamespaceAndPath("heartbound", "animations/" + animatable.getGirlID() + ".animation.json");
+      return Identifier.fromNamespaceAndPath("heartbound", animatable.getGirlID() + ".animation");
    }
 
    public void applyFrameBoneTransforms(T animatable, BakedGeoModel model, BoneSnapshots snapshots, float headPitch, float headYaw) {

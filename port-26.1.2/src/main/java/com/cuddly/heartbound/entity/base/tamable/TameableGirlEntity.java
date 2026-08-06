@@ -5,6 +5,7 @@ import com.cuddly.heartbound.component.HeartboundDataComponentTypes;
 import com.cuddly.heartbound.entity.base.GirlSceneEntity;
 import com.cuddly.heartbound.item.HeartboundItems;
 import com.cuddly.heartbound.registries.HeartboundSoundEventRegistry;
+import com.cuddly.heartbound.registries.HeartboundTrackedDataRegistry;
 import com.cuddly.heartbound.screen.GirlInventoryScreenHandlerFactory;
 import com.cuddly.heartbound.util.managers.TamedGirlManager;
 import java.util.List;
@@ -56,7 +57,7 @@ import org.jetbrains.annotations.Nullable;
 
 public abstract class TameableGirlEntity extends GirlSceneEntity implements OwnableEntity {
    protected static final EntityDataAccessor<Byte> TAMEABLE_FLAGS = SynchedEntityData.defineId(TameableGirlEntity.class, EntityDataSerializers.BYTE);
-   protected static final EntityDataAccessor<Optional<UUID>> OWNER_UUID = SynchedEntityData.defineId(TameableGirlEntity.class, EntityDataSerializer.forValueType(ByteBufCodecs.optional(UUIDUtil.STREAM_CODEC)));
+   protected static final EntityDataAccessor<Optional<UUID>> OWNER_UUID = SynchedEntityData.defineId(TameableGirlEntity.class, HeartboundTrackedDataRegistry.OPTIONAL_UUID);
 
    public List<String> giftRepliesLike() {
       return List.of("msg.heartbound.gift.like.1", "msg.heartbound.gift.like.2");
