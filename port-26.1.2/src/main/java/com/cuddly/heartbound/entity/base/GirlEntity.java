@@ -693,7 +693,7 @@ public abstract class GirlEntity extends PathfinderMob implements RangedAttackMo
 
    public Vec3 getPassengerPos() {
       boolean isZero = this.getPassengerBonePosition().closerThan(Vec3.ZERO, 0.1);
-      return !isZero && this.isHavingSex()
+      return !isZero
          ? this.position().add(this.getPassengerBonePosition()).add(0.0, (double)this.passengerYOffset, 0.0)
          : this.position().add(0.0, 1.0, 0.0);
    }
