@@ -62,7 +62,7 @@ public class TransformedPlayerModel extends GeoModel<TransformedPlayerAnimatable
 
    @Override
    public Identifier getAnimationResource(TransformedPlayerAnimatable animatable) {
-      return Identifier.fromNamespaceAndPath("heartbound", this.currentGirlId + ".animation");
+      return Identifier.fromNamespaceAndPath("heartbound", this.currentGirlId);
    }
 
    public void applyFrameBoneTransforms(TransformedPlayerAnimatable animatable, BakedGeoModel model, BoneSnapshots snapshots, float headPitch, float headYaw) {

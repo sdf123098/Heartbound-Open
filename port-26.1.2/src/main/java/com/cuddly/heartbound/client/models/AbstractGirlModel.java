@@ -73,7 +73,7 @@ public abstract class AbstractGirlModel<T extends GirlSceneEntity> extends GeoMo
 
    @Override
    public Identifier getAnimationResource(T animatable) {
-      return Identifier.fromNamespaceAndPath("heartbound", animatable.getGirlID() + ".animation");
+      return Identifier.fromNamespaceAndPath("heartbound", animatable.getGirlID());
    }
 
    public void applyFrameBoneTransforms(T animatable, BakedGeoModel model, BoneSnapshots snapshots, float headPitch, float headYaw) {
