@@ -776,6 +776,7 @@ public abstract class GirlEntity extends PathfinderMob implements RangedAttackMo
          .add(Attributes.MAX_HEALTH, 20.0)
          .add(Attributes.MOVEMENT_SPEED, 0.2)
          .add(Attributes.FOLLOW_RANGE, 100.0)
+         .add(Attributes.TEMPT_RANGE, 10.0)
          .add(Attributes.ATTACK_DAMAGE, 2.0);
    }
 
