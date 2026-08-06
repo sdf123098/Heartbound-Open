@@ -3,6 +3,8 @@ package com.cuddly.heartbound.client.rendering;
 import com.cuddly.heartbound.Heartbound;
 import com.cuddly.heartbound.client.rendering.renderers.TransformedPlayerRenderer;
 import com.mojang.blaze3d.vertex.PoseStack;
+import com.geckolib.animatable.instance.AnimatableInstanceCache;
+import com.geckolib.constant.DataTickets;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -48,15 +50,29 @@ public class TransformedPlayerRenderManager {
          lastRenderedGirlIdMap.put(playerId, girlId);
 
          matrices.pushPose();
+         TransformedPlayerRenderer.TransformedPlayerRenderState state = null;
          try {
-             float partialTick = Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaPartialTick(false);
-             TransformedPlayerRenderer.TransformedPlayerRenderState state = renderer.createRenderState(player, partialTick);
-             renderer.extractRenderState(player, state, partialTick);
-             renderer.submit(state, matrices, collector, cameraRenderState);
+            TransformedPlayerAnimatable anim = TransformedPlayerAnimatable.INSTANCE;
+            AnimatableInstanceCache cache = anim.getAnimatableInstanceCache();
+            Object manager = cache == null ? null : cache.getManagerForId(player.getId());
+            Heartbound.LOGGER.info(
+               "[TransformedPlayerRenderManager] diag: instanceCache={} manager(player {} id {})={} animatable={}",
+               cache, player.getScoreboardName(), player.getId(), manager, anim
+            );
+            float partialTick = Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaPartialTick(false);
+            state = renderer.createRenderState(player, partialTick);
+            renderer.extractRenderState(player, state, partialTick);
+            renderer.submit(state, matrices, collector, cameraRenderState);
          } catch (Exception var12) {
-             Heartbound.LOGGER.error("Failed to render transformed player model for girl '{}'", girlId, var12);
+            Heartbound.LOGGER.error("Failed to render transformed player model for girl '{}'", girlId, var12);
+            if (state != null) {
+               Heartbound.LOGGER.error(
+                  "[TransformedPlayerRenderManager] diag: state={} dataMap keys={} hasManager={}",
+                  state, state.getDataMap().keySet(), state.getDataMap().containsKey(DataTickets.ANIMATABLE_MANAGER)
+               );
+            }
          } finally {
-             matrices.popPose();
+            matrices.popPose();
          }
          }
    }
