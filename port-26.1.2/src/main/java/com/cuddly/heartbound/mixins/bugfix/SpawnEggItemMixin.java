@@ -39,7 +39,7 @@ public abstract class SpawnEggItemMixin {
       method = {"spawnMob(Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;ZZ)Lnet/minecraft/world/InteractionResult;"},
       at = {@At("HEAD")}
    )
-   private void heartbound$logSpawnMob(
+   private static void heartbound$logSpawnMob(
       LivingEntity user, ItemStack stack, Level level, BlockPos pos, boolean spawnEvenIfSameType, boolean spawnInAir,
       CallbackInfoReturnable<InteractionResult> cir
    ) {
