@@ -66,6 +66,7 @@ public abstract class AbstractGirlRenderer<T extends GirlSceneEntity> extends Ge
    private int syncTickCounter = 0;
    private static final int SYNC_INTERVAL = 1;
    private int hbBoyCamLogCounter = 0;
+   private int hbListenerLogCounter = 0;
    private boolean positionListenersRegistered = false;
    private static Vec3 clientBoyCamPos = null;
    private static int trackedGirlEntityId = -1;
@@ -146,6 +147,16 @@ public abstract class AbstractGirlRenderer<T extends GirlSceneEntity> extends Ge
             this.positionListenersRegistered = true;
             renderPassInfo.addBonePositionListener(animatable.passengerBoneName, (position, rotation, scale) -> this.onBoyCamPosition(animatable, position));
          }
+         if (++this.hbListenerLogCounter % 40 == 0) {
+            Heartbound.LOGGER.info(
+               "[HB-DBG] adjustBones girl={} phase={} boneName={} boneFound={} posTicket={}",
+               animatable.getGirlID(),
+               animatable.getCurrentScenePhase(),
+               animatable.passengerBoneName,
+               renderPassInfo.model().getBone(animatable.passengerBoneName).isPresent(),
+               renderPassInfo.renderState().getGeckolibData(com.geckolib.constant.DataTickets.POSITION)
+            );
+         }
       } else if (animatable.getId() == trackedGirlEntityId) {
          clearCameraPosition();
       }
@@ -158,10 +169,16 @@ public abstract class AbstractGirlRenderer<T extends GirlSceneEntity> extends Ge
 
    private void onBoyCamPosition(T animatable, Vec3 position) {
       if (position == null || Double.isNaN(position.x) || Double.isNaN(position.y) || Double.isNaN(position.z)) {
+         if (++this.hbBoyCamLogCounter % 40 == 0) {
+            Heartbound.LOGGER.info("[HB-DBG] boyCamReject girl={} NULL_OR_NAN", animatable.getGirlID());
+         }
          return;
       }
 
       if (Math.abs(position.x) < 1.0E-6 && Math.abs(position.y) < 1.0E-6 && Math.abs(position.z) < 1.0E-6) {
+         if (++this.hbBoyCamLogCounter % 40 == 0) {
+            Heartbound.LOGGER.info("[HB-DBG] boyCamReject girl={} ZERO pos={}", animatable.getGirlID(), position);
+         }
          return;
       }
 

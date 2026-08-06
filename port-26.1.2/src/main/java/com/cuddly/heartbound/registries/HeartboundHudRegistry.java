@@ -31,7 +31,9 @@ public class HeartboundHudRegistry {
       Player localPlayer = client.player;
       if (localPlayer != null) {
          if (localPlayer.getVehicle() instanceof GirlSceneEntity scene) {
-            if (scene.getAnimationKeyFrameEvent().contains("sexui")) {
+            if (scene.getAnimationKeyFrameEvent().contains("sexui")
+               || scene.getCurrentScenePhase() == ScenePhase.HAVING_SEX
+               || scene.getCurrentScenePhase() == ScenePhase.CUM) {
                SceneProgressOverlay.setActive(true);
             }
 

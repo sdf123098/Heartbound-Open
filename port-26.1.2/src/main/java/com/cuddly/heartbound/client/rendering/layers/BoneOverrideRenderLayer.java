@@ -55,12 +55,20 @@ public class BoneOverrideRenderLayer<T extends GirlSceneEntity> extends GeoRende
       }));
    }
 
+   private static int hbLayerLogCounter = 0;
+
    private void submitSteveSubtree(
       RenderPassInfo<GirlRenderState> passInfo, GeoBone bone, SubmitNodeCollector tasks, GirlSceneEntity animatable, Identifier texture
    ) {
       int boneColor = animatable.boneColorOverrides != null ? animatable.boneColorOverrides.getOrDefault("steve", -1) : -1;
       RenderType renderType = RenderTypes.entityTranslucentCullItemTarget(texture);
       tasks.submitCustomGeometry(passInfo.poseStack(), renderType, (pose, vertexConsumer) -> {
+         if (++hbLayerLogCounter % 40 == 0) {
+            com.cuddly.heartbound.Heartbound.LOGGER.info(
+               "[HB-DBG] steveLayer run girl={} bone={} children={} pose={}",
+               animatable.getGirlID(), bone.name(), bone.children().length, pose.pose()
+            );
+         }
          PoseStack poseStack = passInfo.poseStack();
          poseStack.pushPose();
          poseStack.last().set(pose);
