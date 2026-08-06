@@ -43,19 +43,17 @@ public class TransformedPlayerRenderManager {
 
          lastRenderedGirlIdMap.put(playerId, girlId);
 
+         matrices.pushPose();
          try {
-            float partialTick = Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaPartialTick(false);
-            TransformedPlayerRenderer.TransformedPlayerRenderState state = renderer.createRenderState(player, partialTick);
-            renderer.extractRenderState(player, state, partialTick);
-            renderer.submit(state, matrices, collector, cameraRenderState);
+             float partialTick = Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaPartialTick(false);
+             TransformedPlayerRenderer.TransformedPlayerRenderState state = renderer.createRenderState(player, partialTick);
+             renderer.extractRenderState(player, state, partialTick);
+             renderer.submit(state, matrices, collector, cameraRenderState);
          } catch (Exception var12) {
-            Heartbound.LOGGER.error("Failed to render transformed player model for girl '{}': {}", girlId, var12.getMessage());
-
-            try {
-               matrices.popPose();
-            } catch (Exception var11) {
-            }
+             Heartbound.LOGGER.error("Failed to render transformed player model for girl '{}'", girlId, var12);
+         } finally {
+             matrices.popPose();
          }
-      }
+         }
    }
 }

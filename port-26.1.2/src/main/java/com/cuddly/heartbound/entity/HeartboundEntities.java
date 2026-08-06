@@ -7,10 +7,12 @@ import java.util.function.BiFunction;
 import java.util.function.Supplier;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobCategory;
@@ -18,6 +20,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.item.SpawnEggItem;
+import net.minecraft.world.item.component.TypedEntityData;
 import net.minecraft.world.level.Level;
 
 public class HeartboundEntities {
@@ -66,7 +69,11 @@ public class HeartboundEntities {
          if (createSpawnEgg) {
             Identifier eggId = Identifier.fromNamespaceAndPath("heartbound", id + "_spawn_egg");
             ResourceKey<Item> eggKey = ResourceKey.create(Registries.ITEM, eggId);
-            Item egg = Registry.register(BuiltInRegistries.ITEM, eggKey, new SpawnEggItem(new Properties().setId(eggKey)));
+            Item egg = Registry.register(
+               BuiltInRegistries.ITEM,
+               eggKey,
+               new SpawnEggItem(new Properties().setId(eggKey).component(DataComponents.ENTITY_DATA, TypedEntityData.of(type, new CompoundTag())))
+            );
             AUTO_SPAWN_EGGS.add(egg);
          }
 

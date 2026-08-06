@@ -5,11 +5,11 @@
     "component": "heartbound:stored_entity",
     "on_true": {
       "type": "minecraft:model",
-      "model": "heartbound:item/love_ball_captured"
+      "model": "heartbound:item/master_ring_captured"
     },
     "on_false": {
       "type": "minecraft:model",
-      "model": "heartbound:item/love_ball"
+      "model": "heartbound:item/master_ring"
     }
   }
 }
