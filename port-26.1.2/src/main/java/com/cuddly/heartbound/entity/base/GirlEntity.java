@@ -1,5 +1,6 @@
 package com.cuddly.heartbound.entity.base;
 
+import com.cuddly.heartbound.Heartbound;
 import com.cuddly.heartbound.advancement.criterion.HeartboundCriteria;
 import com.cuddly.heartbound.entity.ai.pathing.GirlNavigation;
 import com.cuddly.heartbound.registries.HeartboundTrackedDataRegistry;
@@ -117,6 +118,7 @@ public abstract class GirlEntity extends PathfinderMob implements RangedAttackMo
    private int ticksSinceLastHit;
    public float previousYaw = 0.0F;
    public float passengerYOffset = -1.0F;
+   private int hbPassengerLogCounter = 0;
    public boolean currentLoopState = false;
    public boolean currentHoldState = false;
    private boolean guiOpenSate = false;
@@ -693,9 +695,21 @@ public abstract class GirlEntity extends PathfinderMob implements RangedAttackMo
 
    public Vec3 getPassengerPos() {
       boolean isZero = this.getPassengerBonePosition().closerThan(Vec3.ZERO, 0.1);
-      return !isZero
+      Vec3 result = !isZero
          ? this.position().add(this.getPassengerBonePosition()).add(0.0, (double)this.passengerYOffset, 0.0)
          : this.position().add(0.0, 1.0, 0.0);
+      if (!this.level().isClientSide() && ++this.hbPassengerLogCounter % 30 == 0) {
+         Heartbound.LOGGER.info(
+            "[HB-DBG] passengerPos girl={} phase={} bonePos={} isZero={} yOff={} result={}",
+            this.getGirlID(),
+            this instanceof GirlSceneEntity scene ? scene.getCurrentScenePhase() : null,
+            this.getPassengerBonePosition(),
+            isZero,
+            this.passengerYOffset,
+            result
+         );
+      }
+      return result;
    }
 
    @Override

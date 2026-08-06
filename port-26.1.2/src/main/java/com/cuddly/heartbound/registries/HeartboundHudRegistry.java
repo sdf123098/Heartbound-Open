@@ -1,5 +1,6 @@
 package com.cuddly.heartbound.registries;
 
+import com.cuddly.heartbound.Heartbound;
 import com.cuddly.heartbound.client.gui.screen.hud.SceneProgressOverlay;
 import com.cuddly.heartbound.entity.base.GirlSceneEntity;
 import com.cuddly.heartbound.transformation.TransformablePlayer;
@@ -15,6 +16,7 @@ import net.minecraft.world.entity.player.Player;
 
 public class HeartboundHudRegistry {
    private static final Identifier OVERLAY_ID = Identifier.fromNamespaceAndPath("heartbound", "scene_progress_overlay");
+   private static int hbHudLogCounter = 0;
 
    private HeartboundHudRegistry() {
    }
@@ -34,6 +36,17 @@ public class HeartboundHudRegistry {
             }
 
             SceneProgressOverlay.render(context, scene.getSceneProgress(), scene.getCumThreshold());
+            if (++hbHudLogCounter % 20 == 0) {
+               Heartbound.LOGGER.info(
+                  "[HB-DBG] hud girlScene id={} phase={} hasSexui={} active={} prog={} thr={}",
+                  scene.getId(),
+                  scene.getCurrentScenePhase(),
+                  scene.getAnimationKeyFrameEvent().contains("sexui"),
+                  SceneProgressOverlay.isActive(),
+                  scene.getSceneProgress(),
+                  scene.getCumThreshold()
+               );
+            }
          } else {
             TransformablePlayer localTp = (TransformablePlayer)localPlayer;
             if (localTp.heartbound$isTransformSceneActive()) {
@@ -43,6 +56,15 @@ public class HeartboundHudRegistry {
                }
 
                SceneProgressOverlay.render(context, localTp.heartbound$getTransformSceneProgress(), localTp.heartbound$getTransformCumThreshold());
+               if (++hbHudLogCounter % 20 == 0) {
+                  Heartbound.LOGGER.info(
+                     "[HB-DBG] hud transform phase={} active={} prog={} thr={}",
+                     phase,
+                     SceneProgressOverlay.isActive(),
+                     localTp.heartbound$getTransformSceneProgress(),
+                     localTp.heartbound$getTransformCumThreshold()
+                  );
+               }
             } else {
                if (localPlayer.getVehicle() instanceof Player ridden) {
                   TransformablePlayer riddenTp = (TransformablePlayer)ridden;

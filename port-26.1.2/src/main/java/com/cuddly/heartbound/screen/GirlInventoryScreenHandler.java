@@ -22,12 +22,12 @@ import net.minecraft.world.level.Level;
 public class GirlInventoryScreenHandler extends AbstractContainerMenu {
    private final Container inventory;
    private final TameableGirlEntity girl;
-   public static final Identifier EMPTY_HELMET_SLOT_TEXTURE = Identifier.withDefaultNamespace("item/empty_armor_slot_helmet");
-   public static final Identifier EMPTY_CHESTPLATE_SLOT_TEXTURE = Identifier.withDefaultNamespace("item/empty_armor_slot_chestplate");
-   public static final Identifier EMPTY_LEGGINGS_SLOT_TEXTURE = Identifier.withDefaultNamespace("item/empty_armor_slot_leggings");
-   public static final Identifier EMPTY_BOOTS_SLOT_TEXTURE = Identifier.withDefaultNamespace("item/empty_armor_slot_boots");
-   public static final Identifier EMPTY_SWORD_TEXTURE = Identifier.withDefaultNamespace("item/empty_slot_sword");
-   public static final Identifier EMPTY_BOW_TEXTURE = Identifier.withDefaultNamespace("item/empty_armor_slot_shield");
+   public static final Identifier EMPTY_HELMET_SLOT_TEXTURE = Identifier.fromNamespaceAndPath("minecraft", "container/slot/helmet");
+   public static final Identifier EMPTY_CHESTPLATE_SLOT_TEXTURE = Identifier.fromNamespaceAndPath("minecraft", "container/slot/chestplate");
+   public static final Identifier EMPTY_LEGGINGS_SLOT_TEXTURE = Identifier.fromNamespaceAndPath("minecraft", "container/slot/leggings");
+   public static final Identifier EMPTY_BOOTS_SLOT_TEXTURE = Identifier.fromNamespaceAndPath("minecraft", "container/slot/boots");
+   public static final Identifier EMPTY_SWORD_TEXTURE = Identifier.fromNamespaceAndPath("minecraft", "container/slot/sword");
+   public static final Identifier EMPTY_BOW_TEXTURE = Identifier.fromNamespaceAndPath("heartbound", "container/slot/bow");
    public static final Map<EquipmentSlot, Identifier> EMPTY_ARMOR_SLOT_TEXTURES = Map.of(
       EquipmentSlot.FEET,
       EMPTY_BOOTS_SLOT_TEXTURE,

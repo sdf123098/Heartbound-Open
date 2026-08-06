@@ -1,5 +1,6 @@
 package com.cuddly.heartbound.client.rendering.renderers;
 
+import com.cuddly.heartbound.Heartbound;
 import com.cuddly.heartbound.client.models.AbstractGirlModel;
 import com.cuddly.heartbound.client.rendering.layers.BoneOverrideRenderLayer;
 import com.cuddly.heartbound.config.ModConfig;
@@ -64,6 +65,7 @@ public abstract class AbstractGirlRenderer<T extends GirlSceneEntity> extends Ge
    protected boolean shadingEnabled = true;
    private int syncTickCounter = 0;
    private static final int SYNC_INTERVAL = 1;
+   private int hbBoyCamLogCounter = 0;
    private boolean positionListenersRegistered = false;
    private static Vec3 clientBoyCamPos = null;
    private static int trackedGirlEntityId = -1;
@@ -169,6 +171,17 @@ public abstract class AbstractGirlRenderer<T extends GirlSceneEntity> extends Ge
       Vec3 relativePos = position.subtract(entityPos);
       if (Math.abs(relativePos.x) > 50.0 || Math.abs(relativePos.y) > 50.0 || Math.abs(relativePos.z) > 50.0) {
          return;
+      }
+
+      if (++this.hbBoyCamLogCounter % 20 == 0) {
+         Heartbound.LOGGER.info(
+            "[HB-DBG] boyCam girl={} phase={} world={} entityPos={} rel={}",
+            animatable.getGirlID(),
+            animatable.getCurrentScenePhase(),
+            position,
+            entityPos,
+            relativePos
+         );
       }
 
       this.syncBoyCamPosition(animatable, relativePos);

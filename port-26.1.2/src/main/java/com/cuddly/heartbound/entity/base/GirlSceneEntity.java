@@ -692,6 +692,9 @@ public abstract class GirlSceneEntity extends GirlEntity implements GeoEntity {
    private void handleSoundKeyframe(KeyFrameEvent<GirlSceneEntity, SoundKeyframeData> event) {
       if (this.level().isClientSide()) {
          String key = event.keyframeData().getSound().toLowerCase();
+         if (key.contains("sex") || key.contains("cum") || key.contains("ui")) {
+            Heartbound.LOGGER.info("[HB-DBG] keyframe sexKey={} phase={}", key, this.getCurrentScenePhase());
+         }
          this.getAnimationKeyFrameEvent().add(key);
          this.handleAnimationEventClient(key);
          ClientPlayNetworking.send(new SoundEventSyncC2SPacket(this.getId(), key));

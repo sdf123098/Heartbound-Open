@@ -1,5 +1,6 @@
 package com.cuddly.heartbound.mixins.freecam;
 
+import com.cuddly.heartbound.Heartbound;
 import com.cuddly.heartbound.client.rendering.renderers.AbstractGirlRenderer;
 import com.cuddly.heartbound.client.rendering.renderers.TransformedPlayerRenderer;
 import com.cuddly.heartbound.config.ModConfig;
@@ -37,6 +38,8 @@ public class CameraMixin {
    private MutableBlockPos blockPosition;
    @Unique
    private boolean heartbound$wasTransformed = false;
+   @Unique
+   private int hbCamLogCounter = 0;
 
    @Inject(
       method = {"setEntity(Lnet/minecraft/world/entity/Entity;)V"},
@@ -97,8 +100,20 @@ public class CameraMixin {
 
                if (player.getVehicle() instanceof GirlSceneEntity girl && girl.isHavingSex()) {
                   Vec3 boyCamPos = AbstractGirlRenderer.getBoyCamPos();
-                  if (boyCamPos != null && AbstractGirlRenderer.getTrackedGirlEntityId() == girl.getId()) {
+                  boolean snapped = boyCamPos != null && AbstractGirlRenderer.getTrackedGirlEntityId() == girl.getId();
+                  if (snapped) {
                      this.heartbound$setCameraPos(boyCamPos);
+                  }
+                  if (++this.hbCamLogCounter % 20 == 0) {
+                     Heartbound.LOGGER.info(
+                        "[HB-DBG] cam girlScene id={} phase={} havingSex={} boyCam={} tracked={} snapped={}",
+                        girl.getId(),
+                        girl.getCurrentScenePhase(),
+                        girl.isHavingSex(),
+                        boyCamPos,
+                        AbstractGirlRenderer.getTrackedGirlEntityId(),
+                        snapped
+                     );
                   }
                }
             }
