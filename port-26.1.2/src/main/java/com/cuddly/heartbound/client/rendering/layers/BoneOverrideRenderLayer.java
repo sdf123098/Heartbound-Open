@@ -55,23 +55,19 @@ public class BoneOverrideRenderLayer<T extends GirlSceneEntity> extends GeoRende
       }));
    }
 
-   private static int hbLayerLogCounter = 0;
-
    private void submitSteveSubtree(
       RenderPassInfo<GirlRenderState> passInfo, GeoBone bone, SubmitNodeCollector tasks, GirlSceneEntity animatable, Identifier texture
    ) {
       int boneColor = animatable.boneColorOverrides != null ? animatable.boneColorOverrides.getOrDefault("steve", -1) : -1;
       RenderType renderType = RenderTypes.entityTranslucentCullItemTarget(texture);
       tasks.submitCustomGeometry(passInfo.poseStack(), renderType, (pose, vertexConsumer) -> {
-         if (++hbLayerLogCounter % 40 == 0) {
-            com.cuddly.heartbound.Heartbound.LOGGER.info(
-               "[HB-DBG] steveLayer run girl={} bone={} children={} pose={}",
-               animatable.getGirlID(), bone.name(), bone.children().length, pose.pose()
-            );
-         }
          PoseStack poseStack = passInfo.poseStack();
          poseStack.pushPose();
-         poseStack.last().set(pose);
+         // GL5 5.5.2 捕获的 pose 是模型局部系（实测平移 ~0.6，非世界系）：
+         // 原 set(pose) 把当前世界系 pose 整体替换 → 形象渲染在错误位置（与女孩重叠）。
+         // 改为：先重置为 pass 创建时的世界变换（objectRenderPose），再叠加局部 pose。
+         poseStack.last().set(passInfo.getPreRenderMatrixPose());
+         poseStack.last().pose().mul(pose.pose());
          this.renderBoneSubtree(passInfo, bone, poseStack, vertexConsumer, animatable, boneColor);
          poseStack.popPose();
       });

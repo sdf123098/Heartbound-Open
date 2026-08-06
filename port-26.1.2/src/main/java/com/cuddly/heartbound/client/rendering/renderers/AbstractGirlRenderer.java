@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRendererProvider.Context;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.client.renderer.item.ItemStackRenderState;
@@ -19,7 +20,9 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.Vec3;
+import com.geckolib.animation.state.BoneSnapshot;
 import com.geckolib.cache.model.BakedGeoModel;
+import com.geckolib.cache.model.GeoBone;
 import com.geckolib.constant.dataticket.DataTicket;
 import com.geckolib.model.GeoModel;
 import com.geckolib.renderer.GeoEntityRenderer;
@@ -28,6 +31,8 @@ import com.geckolib.renderer.base.GeoRenderState;
 import com.geckolib.renderer.base.RenderPassInfo;
 import com.geckolib.renderer.layer.builtin.BlockAndItemGeoLayer;
 import com.geckolib.renderer.layer.builtin.BlockAndItemGeoLayer.RenderData;
+import java.util.Collections;
+import org.joml.Matrix4f;
 
 public abstract class AbstractGirlRenderer<T extends GirlSceneEntity> extends GeoEntityRenderer<T, AbstractGirlRenderer.GirlRenderState> {
    /**
@@ -147,6 +152,18 @@ public abstract class AbstractGirlRenderer<T extends GirlSceneEntity> extends Ge
             this.positionListenersRegistered = true;
             renderPassInfo.addBonePositionListener(animatable.passengerBoneName, (position, rotation, scale) -> this.onBoyCamPosition(animatable, position));
          }
+         // GeckoLib 5.5.2 的 per-bone position listener 依赖被 deferred 提交破坏的 pose 上下文，
+         // 实测从不触发（bonePos 恒 0 → 乘客钉在 girl+1.0）。这里用与 GL5 相同的逐骨矩阵数学
+         // （pivot/16、snapshot 平移 X 取反、baseRot+snapRot 弧度、Rz→Ry→Rx）手动计算 bone 世界位置。
+         Vec3 worldPos = this.computeBoneWorldPosition(renderPassInfo, animatable.passengerBoneName, animatable);
+         if (worldPos != null && Minecraft.getInstance().player != null && Minecraft.getInstance().player.getVehicle() == animatable) {
+            clientBoyCamPos = worldPos;
+            trackedGirlEntityId = animatable.getId();
+            Vec3 relativePos = worldPos.subtract(animatable.position());
+            if (Math.abs(relativePos.x) <= 50.0 && Math.abs(relativePos.y) <= 50.0 && Math.abs(relativePos.z) <= 50.0) {
+               this.syncBoyCamPosition(animatable, relativePos);
+            }
+         }
          if (++this.hbListenerLogCounter % 40 == 0) {
             Heartbound.LOGGER.info(
                "[HB-DBG] adjustBones girl={} phase={} boneName={} boneFound={} posTicket={}",
@@ -209,6 +226,57 @@ public abstract class AbstractGirlRenderer<T extends GirlSceneEntity> extends Ge
          this.syncTickCounter = 0;
          ClientPlayNetworking.send(new BonePosSyncC2SPacket(animatable.getId(), position));
       }
+   }
+
+   /**
+    * 手动计算骨骼世界位置，复刻 GL5 providePositionsToListeners 的逐骨矩阵数学：
+    * 每骨 = T(-snap/16, X取反) · T(+pivot/16) · Rz·Ry·Rx(baseRot+snapRot, 弧度) · S · T(-pivot/16)。
+    * 从模型根骨累乘到目标骨（identity 起点），结果 = 目标骨相对模型原点的偏移（格），
+    * 加实体世界位置得世界坐标（模型原点 = 实体位置）。不依赖被破坏的 pass pose 上下文。
+    */
+   private Vec3 computeBoneWorldPosition(RenderPassInfo<GirlRenderState> renderPassInfo, String boneName, T animatable) {
+      GeoBone target = renderPassInfo.model().getBone(boneName).orElse(null);
+      if (target == null) {
+         return null;
+      }
+
+      List<GeoBone> chain = new ArrayList<>();
+      for (GeoBone b = target; b != null; b = b.parent()) {
+         chain.add(b);
+      }
+      Collections.reverse(chain);
+
+      Matrix4f m = new Matrix4f();
+      for (GeoBone b : chain) {
+         BoneSnapshot snap = b.frameSnapshot;
+         if (snap != null && snap.hasTranslation()) {
+            m.translate(-snap.getTranslateX() / 16.0F, snap.getTranslateY() / 16.0F, snap.getTranslateZ() / 16.0F);
+         }
+         m.translate(b.pivotX() / 16.0F, b.pivotY() / 16.0F, b.pivotZ() / 16.0F);
+         float rotX = b.baseRotX() + (snap != null ? snap.getRotX() : 0.0F);
+         float rotY = b.baseRotY() + (snap != null ? snap.getRotY() : 0.0F);
+         float rotZ = b.baseRotZ() + (snap != null ? snap.getRotZ() : 0.0F);
+         if (rotZ != 0.0F) {
+            m.rotateZ(rotZ);
+         }
+         if (rotY != 0.0F) {
+            m.rotateY(rotY);
+         }
+         if (rotX != 0.0F) {
+            m.rotateX(rotX);
+         }
+         if (snap != null && snap.hasScale()) {
+            m.scale(snap.getScaleX(), snap.getScaleY(), snap.getScaleZ());
+         }
+         m.translate(-b.pivotX() / 16.0F, -b.pivotY() / 16.0F, -b.pivotZ() / 16.0F);
+      }
+
+      Vec3 local = new Vec3(m.m30(), m.m31(), m.m32());
+      if (Double.isNaN(local.x) || Double.isNaN(local.y) || Double.isNaN(local.z)
+         || Math.abs(local.x) > 1000.0 || Math.abs(local.y) > 1000.0 || Math.abs(local.z) > 1000.0) {
+         return null;
+      }
+      return animatable.position().add(local);
    }
 
    protected void updateBoneVisibility(T entity, BakedGeoModel bakedModel, BoneSnapshots snapshots) {
