@@ -1,0 +1,25 @@
+{
+  "name": "Coppie",
+  "icon": "minecraft:copper_ingot",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Coppie là một cô gái chăm chỉ và thực tế, yêu mọi thứ sáng bóng. Cô ấy có đạo đức làm việc mạnh mẽ và rất đáng tin cậy.$(br2)Coppie có những chi tiết kim loại trong ngoại hình và thích chế tạo và xây dựng. Cô ấy hoàn hảo cho công việc khu định cư."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:coppie",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Coppie",
+      "text": "Coppie, thợ thủ công chăm chỉ!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Vật Phẩm Thuần Hóa$()$(br)Coppie bị mê hoặc bởi $(#b0b)Thỏi Đồng$() và đặc tính sáng bóng của nó.$(br2)$(o)Cảnh$()$(br)$(li)Hậu Môn$(li)Doggy"
+    }
+  ]
+}

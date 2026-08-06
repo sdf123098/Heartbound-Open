@@ -1,0 +1,6 @@
+{
+  "name": "Cô Gái Tùy Chỉnh",
+  "description": "Đây là những cô gái đặc biệt được tải từ cấu hình JSON và gói tài nguyên. Chúng có thể có ngoại hình, hành vi và cảnh hoàn toàn tùy chỉnh.",
+  "icon": "minecraft:knowledge_book",
+  "parent": "heartbound:girls"
+}

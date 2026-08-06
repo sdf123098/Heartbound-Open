@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    "LEL",
+    " C "
+  ],
+  "key": {
+    "X": {
+      "item": "heartbound:x_pill"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "E": {
+      "item": "minecraft:egg"
+    },
+    "C": {
+      "item": "minecraft:coal"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "heartbound:kobold_spawn_egg"
+  }
+}

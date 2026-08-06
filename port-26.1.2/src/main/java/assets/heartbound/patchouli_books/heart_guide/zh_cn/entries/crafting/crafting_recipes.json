@@ -1,0 +1,89 @@
+{
+  "name": "合成配方",
+  "icon": "minecraft:crafting_table",
+  "category": "heartbound:crafting",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)基本合成配方$()$(br2)以下是你在 Pleasure Horizons 中创造和与女孩互动所需的关键合成配方。每个配方在你的旅程中都有特定的用途。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:fusion_table",
+      "title": "融合台",
+      "text": "用于融合刷怪蛋的魔法工作台。需要烈焰粉、钻石、末影珍珠和铁锭。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:magical_pumpkin",
+      "title": "魔法南瓜",
+      "text": "放在白色羊毛上方时可以生成自定义女孩。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:master_ring",
+      "title": "主人之戒",
+      "text": "用于捕获女孩，包括野生女孩，但无法捕获已经有主人的女孩。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:love_ball",
+      "title": "乐趣球",
+      "text": "用于收纳已驯服的女孩，无法捕获野生女孩。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:heart_guide",
+      "title": "乐趣百科",
+      "text": "就是这本书！包含关于女孩和游戏机制的所有信息。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:x_pill",
+      "title": "X药丸",
+      "text": "一种用于许多配方的魔法催化剂。也可以将你变身为女孩。再次使用即可恢复。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:custom_girl_spawn_egg",
+      "title": "自定义女孩刷怪蛋",
+      "text": "用骨头、皮革、粘土球、X药丸和鸡蛋以人造人风格创造自定义女孩。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:jenny_spawn_egg",
+      "title": "Jenny 刷怪蛋",
+      "text": "用金锭、向日葵、X药丸和鸡蛋召唤大胆的平原女孩。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:ellie_spawn_egg",
+      "title": "Ellie 刷怪蛋",
+      "text": "用墨囊、黑色羊毛、凋灵玫瑰、X药丸和鸡蛋召唤黑暗森林emo女孩。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:bia_spawn_egg",
+      "title": "Bia 刷怪蛋",
+      "text": "用棕色羊毛、X药丸和鸡蛋召唤魔法泰迪熊。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:aly_spawn_egg",
+      "title": "Aly 刷怪蛋",
+      "text": "用蓝色羊毛、青色羊毛、钻石、X药丸和鸡蛋召唤精灵女孩。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:slime_spawn_egg",
+      "title": "史莱姆刷怪蛋",
+      "text": "用粘液球、X药丸和鸡蛋召唤史莱姆女孩。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:kobold_spawn_egg",
+      "title": "狗头人刷怪蛋",
+      "text": "用皮革、煤炭、X药丸和鸡蛋召唤洞穴狗头人。"
+    }
+  ]
+}

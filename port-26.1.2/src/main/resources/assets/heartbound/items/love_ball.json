@@ -1,0 +1,21 @@
+{
+  "model": {
+    "type": "minecraft:conditional",
+    "cases": [
+      {
+        "when": {
+          "type": "minecraft:has_component",
+          "component": "heartbound:stored_entity"
+        },
+        "model": {
+          "type": "minecraft:model",
+          "model": "heartbound:item/love_ball_captured"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "heartbound:item/love_ball"
+    }
+  }
+}

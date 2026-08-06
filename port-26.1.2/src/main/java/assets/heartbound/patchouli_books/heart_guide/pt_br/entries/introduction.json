@@ -1,0 +1,15 @@
+{
+  "name": "Introdução às Garotas",
+  "icon": "minecraft:player_head",
+  "category": "heartbound:girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Bem-vindo à Wiki do Prazer! Este livro contém informações sobre todas as garotas lindas que você pode encontrar no mundo de Pleasure Horizons.$(br2)Garotas são entidades especiais que podem ser capturadas, domesticadas e cuidadas. Cada garota tem sua própria personalidade, habilidades e história."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "As garotas são divididas em três categorias principais:$(br2)$(l:normal_girls)Garotas Normais$(/l) - Garotas amigáveis que surgem naturalmente na Vila das Garotas.$(br)$(l:wild_girls)Garotas Selvagens$(/l) - Garotas ferais que podem ser encontradas na natureza.$(br)$(l:custom_girls)Garotas Personalizadas$(/l) - Garotas especiais carregadas a partir de configurações JSON.$(br2)Use o Anel do Mestre para capturar e domesticar garotas!"
+    }
+  ]
+}

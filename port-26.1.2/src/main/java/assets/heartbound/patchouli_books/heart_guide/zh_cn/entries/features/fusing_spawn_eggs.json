@@ -1,0 +1,15 @@
+{
+  "name": "融合刷怪蛋",
+  "icon": "heartbound:fusion_table",
+  "category": "heartbound:features",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)融合机制$()$(br2)融合台允许你将$(item)自定义女孩刷怪蛋$()与驯服物品结合，创造出特殊的女孩变体。这个过程使用古老的魔法为刷怪蛋注入新的属性。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)操作步骤：$()$(br)$(li)右键点击$(item)融合台$()打开界面$(li)将$(item)自定义女孩刷怪蛋$()放入基础槽位$(li)在其他槽位放入$(bold)两个相同的$()驯服物品$(li)从输出槽位取出结果$(br2)$(o)重要：两个驯服物品必须是完全相同的类型！$()"
+    }
+  ]
+}

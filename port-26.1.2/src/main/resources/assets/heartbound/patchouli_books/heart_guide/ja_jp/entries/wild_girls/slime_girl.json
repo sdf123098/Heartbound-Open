@@ -1,0 +1,25 @@
+{
+  "name": "スライムガール",
+  "icon": "minecraft:slime_ball",
+  "category": "heartbound:wild_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "スライムガールは沼地や湿地帯に生息する弾力のある遊び好きな生き物です。ゼラチン質の体を持ち、とてもエネルギッシュです。$(br2)このワイルドガールはなつかせるのが難しいですが、ユニークなインタラクションを楽しめます。跳ね回るのが大好きで、いたずらっ子なこともあります。"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:slime",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "スライムガール",
+      "text": "弾力エネルギー全開のワイルドスライムガール！"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)なつかせアイテム$()$(br)スライムガールは$(#b0b)スライムボール$()に惹かれ、魅力的だと感じます。$(br2)$(o)シーン$()$(br)$(li)フェラ$(li)バック"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "ワイルドガール",
+  "description": "野生をさまよう、より野性的なガールです。懐かせるには特別なアイテムが必要で、独自の行動パターンを持っています。",
+  "icon": "minecraft:slime_spawn_egg",
+  "parent": "heartbound:girls"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "heartbound.patchouli.heart_guide.name",
+  "landing_text": "heartbound.patchouli.heart_guide.landing_text",
+  "version": 1,
+  "edition": "heartbound:heart_guide",
+  "creative_tab": "minecraft:tools_and_utilities",
+  "use_resource_pack": true,
+  "i18n": true,
+  "book_texture": "patchouli:textures/gui/book_purple.png",
+  "show_progress": false,
+  "pause_game": true
+}

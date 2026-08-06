@@ -1,0 +1,15 @@
+{
+    "placement": {
+        "type": "minecraft:random_spread",
+        "salt": 48153762,
+        "separation": 8,
+        "spacing": 32,
+        "spread_type": "triangular"
+    },
+    "structures": [
+        {
+            "structure": "heartbound:sandguard",
+            "weight": 1
+        }
+    ]
+}

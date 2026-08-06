@@ -1,0 +1,31 @@
+{
+  "name": "ジェニー",
+  "icon": "heartbound:jenny_spawn_egg",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "ジェニーは平原をうろつく誘惑的でいちゃつくガールです。いつも注目を求めていて、自分の欲しいものに対して恥ずかしがりません。$(br2)茶色の髪にダークパープルの服を着ています。平原で彼女の家を見つけることができます。"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:jenny",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "ジェニー",
+      "text": "ジェニー、エッチなガール！"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:jenny_spawn_egg",
+      "title": "ジェニーのスポーンエッグ",
+      "text": "X-ピル、金インゴット、卵、ヒマワリで作成。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)なつかせアイテム$()$(br)ジェニーは$(#ff0)金インゴット$()に惹かれます。一つあげて関係を築き始めましょう。$(br2)$(o)シーン$()$(br)$(li)自慰$(li)パイズリ$(li)フェラ$(li)バック"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Mesa de Fusão",
+  "icon": "heartbound:fusion_table",
+  "category": "heartbound:blocks",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "A $(item)Mesa de Fusão$() é uma estação de fabricação mágica que permite fundir $(item)Ovos Geradores de Garota Personalizada$() com diferentes itens para criar variantes especializadas.$(br2)Esta mesa utiliza magia de fusão ancestral para combinar ovos geradores com itens de domesticação."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Função:$()$(br)Clique com o botão direito na Mesa de Fusão para abrir sua interface. Coloque um $(item)Ovo Gerador de Garota Personalizada$() no slot base, depois adicione dois itens de domesticação idênticos nos outros slots.$(br2)Diferentes itens de domesticação criarão diferentes variantes de garotas. O resultado aparecerá no slot de saída.$(br2)$(o)Nota: Apenas itens de domesticação idênticos funcionam para fusão!$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:fusion_table",
+      "text": "Fabrique a Mesa de Fusão usando pó de blaze, diamantes, pérolas do End e barras de ferro neste padrão específico."
+    }
+  ]
+}

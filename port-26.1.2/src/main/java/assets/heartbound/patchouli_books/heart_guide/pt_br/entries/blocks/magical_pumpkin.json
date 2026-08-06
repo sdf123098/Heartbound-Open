@@ -1,0 +1,20 @@
+{
+  "name": "Abóbora Mágica",
+  "icon": "heartbound:magical_pumpkin",
+  "category": "heartbound:blocks",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "A $(item)Abóbora Mágica$() é um bloco especial que pode invocar garotas personalizadas quando colocado corretamente.$(br2)Esta abóbora possui propriedades místicas que permitem invocar garotas lindas de outro reino."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Função:$()$(br)Coloque uma $(item)Abóbora Mágica$() em cima de um $(item)Bloco de Cobre$() para invocar uma Coppie.$(br2)Uma Coppie aparecerá por perto se as condições forem atendidas.$(br2)$(o)Nota: Certifique-se de que há espaço suficiente ao redor da abóbora para a garota surgir!$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:magical_pumpkin",
+      "text": "Fabrique a Abóbora Mágica usando uma abóbora esculpida comum e uma flor de papoula."
+    }
+  ]
+}

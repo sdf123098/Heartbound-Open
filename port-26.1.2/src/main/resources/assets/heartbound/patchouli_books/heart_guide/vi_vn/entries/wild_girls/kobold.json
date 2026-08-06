@@ -1,0 +1,25 @@
+{
+  "name": "Kobold",
+  "icon": "minecraft:raw_iron",
+  "category": "heartbound:wild_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Kobold là những sinh vật nhỏ giống rồng với vảy và sừng. Chúng hung dữ và bảo vệ lãnh thổ, thường được tìm thấy trong hang động và vùng núi.$(br2)Những cô gái hoang dã này rất bảo vệ và có lòng trung thành mạnh mẽ. Chúng có thể khá nóng tính nhưng là bạn đồng hành tuyệt vời khi đã thuần hóa."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:kobold",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Kobold",
+      "text": "Một Kobold hung dữ, người bảo vệ hoang dã!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Vật Phẩm Thuần Hóa$()$(br)Kobold bị thu hút bởi $(#b0b)Sắt Thô$() và coi nó là có giá trị.$(br2)$(o)Cảnh$()$(br)$(li)Bú Cu$(li)Hậu Môn"
+    }
+  ]
+}

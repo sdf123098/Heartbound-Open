@@ -1,0 +1,15 @@
+{
+  "name": "Dung Hợp Trứng Triệu Hồi",
+  "icon": "heartbound:fusion_table",
+  "category": "heartbound:features",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Cơ Chế Dung Hợp$()$(br2)Bàn Dung Hợp cho phép bạn kết hợp $(item)Trứng Triệu Hồi Cô Gái Tùy Chỉnh$() với vật phẩm thuần hóa để tạo ra các biến thể cô gái chuyên biệt. Quá trình này sử dụng phép thuật cổ đại để truyền đặc tính mới vào trứng triệu hồi."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Hướng Dẫn Từng Bước:$()$(br)$(li)Click phải vào $(item)Bàn Dung Hợp$() để mở$(li)Đặt $(item)Trứng Triệu Hồi Cô Gái Tùy Chỉnh$() vào ô cơ bản$(li)Đặt $(bold)hai$() vật phẩm thuần hóa giống hệt nhau vào các ô khác$(li)Lấy kết quả từ ô đầu ra$(br2)$(o)Quan trọng: Cả hai vật phẩm thuần hóa phải cùng loại!$()"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Bia",
+  "icon": "heartbound:bia_spawn_egg",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Bia là một chú gấu bông nâu ma thuật đã sống dậy. Cô ấy vui vẻ, nghịch ngợm và luôn tràn đầy năng lượng.$(br2)Cô ấy có bộ lông nâu mềm mại và thích làm người khác cười. Bạn có thể tìm thấy nhà cô ấy trong rừng bạch dương."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:bia",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Bia",
+      "text": "Bia, chú gấu bông ma thuật!"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:bia_spawn_egg",
+      "title": "Trứng Triệu Hồi Bia",
+      "text": "Chế tạo với X-Pill, len nâu và trứng."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Vật Phẩm Thuần Hóa$()$(br)Bia yêu $(#fa8072)Cá Hồi$(). Đó là món ăn yêu thích của cô ấy!$(br2)$(o)Cảnh$()$(br)$(li)Hậu Môn$(li)Doggy"
+    }
+  ]
+}

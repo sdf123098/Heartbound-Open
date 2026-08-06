@@ -1,0 +1,25 @@
+{
+  "name": "Aly",
+  "icon": "minecraft:amethyst_shard",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Aly é uma fada azul alegre que adora flutuar por aí e ajudar jogadores. Ela pode voar, é brincalhona e rapidamente se afeiçoa a qualquer um que a trate com carinho.$(br2)Aly prefere espaços abertos onde possa voar livremente e ficará feliz em seguir jogadores de quem gosta."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:aly",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Aly",
+      "text": "Aly em toda sua glória alegre e voadora!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Item de Domesticação$()$(br)Aly é atraída por $(#b0b)Fragmento de Ametista$(). Ofereça um para fazer amizade com ela.$(br2)$(o)Cenas$()$(br)$(li)Sexo$(br2)$(o)Notas$()$(br)$(li)Pode voar — usa comportamentos e animações de voo$(li)Carinhosa — gosta de seguir o jogador$(li)Melhor mantida em áreas abertas onde possa voar livremente"
+    }
+  ]
+}

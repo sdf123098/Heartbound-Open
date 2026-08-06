@@ -1,0 +1,22 @@
+{
+  "parent": "heartbound:tame_girl",
+  "criteria": {
+    "max_relationship": {
+      "trigger": "heartbound:max_relationship"
+    }
+  },
+  "display": {
+    "title": {"translate": "advancements.heartbound.max_relationship.title"},
+    "description": {"translate": "advancements.heartbound.max_relationship.description"},
+    "icon": {
+      "count": 1,
+      "id": "heartbound:master_ring"
+    },
+    "frame": "challenge"
+  },
+  "requirements": [
+    [
+      "max_relationship"
+    ]
+  ]
+}

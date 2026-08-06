@@ -1,0 +1,6 @@
+{
+  "name": "ノーマルガール",
+  "description": "村や集落で見つかるスタンダードなガールです。フレンドリーで、集落の作業を手伝ってくれます。",
+  "icon": "minecraft:villager_spawn_egg",
+  "parent": "heartbound:girls"
+}

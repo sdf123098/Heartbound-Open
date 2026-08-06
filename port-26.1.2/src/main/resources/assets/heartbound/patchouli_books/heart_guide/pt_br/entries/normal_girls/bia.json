@@ -1,0 +1,31 @@
+{
+  "name": "Bia",
+  "icon": "heartbound:bia_spawn_egg",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Bia é uma ursinha de pelúcia marrom mágica que ganhou vida. Ela é alegre, brincalhona e sempre cheia de energia.$(br2)Ela tem pelo marrom macio e adora fazer os outros sorrirem. Você pode encontrar a casa dela na floresta de bétulas."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:bia",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Bia",
+      "text": "Bia, a ursinha de pelúcia mágica!"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:bia_spawn_egg",
+      "title": "Ovo Gerador da Bia",
+      "text": "Fabrique com uma Pílula X, lã marrom e um ovo."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Item de Domesticação$()$(br)Bia adora $(#fa8072)Salmão$(). É o petisco favorito dela!$(br2)$(o)Cenas$()$(br)$(li)Anal$(li)De Quatro"
+    }
+  ]
+}

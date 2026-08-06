@@ -1,0 +1,569 @@
+{
+  "item.heartbound.jenny_spawn_egg": "Jenny Spawn Egg",
+
+  "item.heartbound.ellie_spawn_egg": "Ellie Spawn Egg",
+
+  "item.heartbound.bia_spawn_egg": "Bia Spawn Egg",
+
+  "item.heartbound.slime_spawn_egg": "Slime Spawn Egg",
+
+  "item.heartbound.kobold_spawn_egg": "Kobold Spawn Egg",
+
+  "item.heartbound.coppie_spawn_egg": "Coppie Spawn Egg",
+  "item.heartbound.aly_spawn_egg": "Aly Spawn Egg",
+  
+  "item.heartbound.custom_girl_spawn_egg": "Custom Girl Spawn Egg",
+  "item.heartbound.custom_girl_spawn_egg.named": "%s Spawn Egg",
+
+  "item.heartbound.love_ball": "Love Ball",
+  "item.heartbound.love_ball.filled": "Love Ball (Captured)",
+  "item.heartbound.love_ball.tooltip.girl": "Girl: %s",
+  "item.heartbound.love_ball.tooltip.owner": "Owner: %s",
+  "item.heartbound.love_ball.invalid_entity": "This can only be used on girl entities!",
+  "item.heartbound.love_ball.not_tamed": "This girl is not tamed!",
+  "item.heartbound.love_ball.not_owner": "You don't own this girl!",
+  "item.heartbound.love_ball.not_owner_release": "Only the owner can release this girl!",
+  "item.heartbound.love_ball.not_tameable": "This girl cannot be captured!",
+  "item.heartbound.love_ball.already_contains": "This Love Ball already contains a girl!",
+  "item.heartbound.love_ball.stored": "Stored %s in the Love Ball",
+  "item.heartbound.love_ball.empty": "This Love Ball is empty!",
+  "item.heartbound.love_ball.released": "Released %s from the Love Ball",
+  "item.heartbound.love_ball.invalid_data": "Failed to release - invalid data!",
+  "item.heartbound.love_ball.spawn_failed": "Failed to spawn the girl!",
+
+  "item.heartbound.master_ring": "Master Ring",
+  "item.heartbound.master_ring.filled": "Master Ring (Captured)",
+  "item.heartbound.master_ring.tooltip.girl": "Girl: %s",
+  "item.heartbound.master_ring.tooltip.owner": "Owner: %s",
+  "item.heartbound.master_ring.invalid_entity": "This can only be used on girl entities!",
+  "item.heartbound.master_ring.not_tamed": "This girl is not tamed!",
+  "item.heartbound.master_ring.not_owner": "You don't own this girl!",
+  "item.heartbound.master_ring.not_owner_release": "Only the owner can release this girl!",
+  "item.heartbound.master_ring.not_tameable": "This girl cannot be captured!",
+  "item.heartbound.master_ring.already_contains": "This Master Ring already contains a girl!",
+  "item.heartbound.master_ring.has_owner": "This girl already has an owner!",
+  "item.heartbound.master_ring.stored": "Stored %s in the Master Ring",
+  "item.heartbound.master_ring.empty": "This Master Ring is empty!",
+  "item.heartbound.master_ring.released": "Released %s from the Master Ring",
+  "item.heartbound.master_ring.invalid_data": "Failed to release - invalid data!",
+  "item.heartbound.master_ring.spawn_failed": "Failed to spawn the girl!",
+
+  "item.heartbound.heart_guide": "Heart Guide",
+  "item.heartbound.heart_guide.tooltip.edition": "1st Edition",
+
+  "item.heartbound.x_pill": "X-Pill",
+  "gui.heartbound.girl_selection": "Transform Into...",
+
+  "block.heartbound.fusion_table" : "Fusion Table",
+  
+  "block.heartbound.magical_pumpkin" : "Magical Pumpkin",
+  "block.heartbound.litted_magical_pumpkin" : "Litted Magical Pumpkin",
+
+  "entity.heartbound.jenny": "Jenny",
+
+  "entity.heartbound.ellie": "Ellie",
+
+  "entity.heartbound.bia": "Bia",
+
+  "entity.heartbound.slime": "Slime",
+  
+  "entity.heartbound.coppie": "Coppie",
+
+  "entity.heartbound.kobold": "Kobold",
+
+  "entity.heartbound.aly": "Aly",
+
+  "entity.heartbound.custom_girl": "Custom Girl",
+
+  "screen.heartbound.girl_inventory": "Inventory",
+  "screen.heartbound.girl_inventory.relationship_tooltip": "Relationship",
+  "screen.heartbound.fusion_table": "Fusion Table",
+
+  "gui.heartbound.fusion_table": "Fusion Table",
+
+  "gui.heartbound.sceneOptions": "Scene Options",
+  "gui.heartbound.tooltip.requiresLevel": "Requires Relationship Level %s",
+
+  "gui.heartbound.button.breakUp": "Break Up",
+  "gui.heartbound.button.setBase": "Set Base Here",
+  "gui.heartbound.button.goToBase": "Go To Base",
+  "gui.heartbound.button.roamAtBase": "Roam at Base",
+  "gui.heartbound.button.stopRoaming": "Stop Roaming",
+  "gui.heartbound.button.chopTrees": "Chop Trees",
+  "gui.heartbound.button.stopChopping": "Stop Chopping",
+  "gui.heartbound.button.customize": "Customize",
+  "gui.heartbound.button.baseFeature": "Base Feature",
+  "gui.heartbound.button.playerFeature": "Player Feature",
+  "gui.heartbound.featureGroup.baseFeatures": "Base Features",
+  "gui.heartbound.featureGroup.playerFeatures": "Player Features",
+  "gui.heartbound.button.sit": "Sit",
+  "gui.heartbound.button.stand": "Stand",
+  "gui.heartbound.button.followMe": "Follow Me",
+  "gui.heartbound.button.stopFollowing": "Stop Following",
+  "gui.heartbound.button.mineOres": "Mine Ores",
+  "gui.heartbound.button.stopMining": "Stop Mining",
+  "gui.heartbound.button.strip": "Strip",
+  "gui.heartbound.button.dressUp": "Dress Up",
+  "gui.heartbound.button.sex": "Sex",
+  "gui.heartbound.button.select": "Select",
+  "gui.heartbound.button.confirm": "Confirm",
+  "gui.heartbound.button.cancel": "Cancel",
+  "gui.heartbound.button.clear": "Clear",
+  "gui.heartbound.button.randomize": "Randomize",
+
+  "gui.heartbound.button.defaultGirl": "Default Girl",
+  "gui.heartbound.button.customGirl": "Custom Girl",
+  "gui.heartbound.button.back": "Back",
+
+  "gui.heartbound.search": "Search",
+  "gui.heartbound.search.placeholder": "Search...",
+
+  "gui.heartbound.customizeGirl": "Customize Girl",
+  "gui.heartbound.customizeKobold": "Kobold Customization",
+
+  "gui.heartbound.customize.breastSize": "Breast Size",
+  "gui.heartbound.customize.breastOffset": "Breast Offset",
+  "gui.heartbound.customize.bodySize": "Body Size",
+  "gui.heartbound.customize.bodySize.tooltip": "Size affects hitbox height\n65 = 1 block, 115 = 1.75 blocks",
+  "gui.heartbound.customize.breastSize.tooltip": "Adjust breast size (60-160)",
+  "gui.heartbound.customize.colorPattern": "Color Pattern:",
+  "gui.heartbound.customize.irisColor": "Iris Color:",
+  "gui.heartbound.customize.topHorns": "Top Horns:",
+  "gui.heartbound.customize.bottomHorns": "Bottom Horns:",
+  "gui.heartbound.customize.type": "Type %s",
+  "gui.heartbound.customize.offset": "%s Offset",
+
+  "scene.heartbound.masturbation": "Masturbation",
+  "scene.heartbound.paizuri": "Paizuri",
+  "scene.heartbound.blowJob": "Blow Job",
+  "scene.heartbound.doggy": "Doggy",
+  "scene.heartbound.faceFuck": "Face Fuck",
+  "scene.heartbound.missionary": "Missionary",
+  "scene.heartbound.cowgirl": "Cowgirl",
+  "scene.heartbound.anal": "Anal",
+  "scene.heartbound.sex": "Sex",
+  "scene.heartbound.nelson": "Nelson",
+
+  "jei.heartbound.fusion": "Fusion Recipe",
+
+  "itemgroup.heartbound.pleasure_craft_items": "Heartbound Items",
+
+  "itemgroup.heartbound.pleasure_craft_blocks": "Heartbound Blocks",
+
+  "msg.heartbound.noBedFound" : "We need a vacant bed nearby for this...",
+  "msg.heartbound.needsToStrip" : "You need to be stripped to do this.",
+
+  "msg.heartbound.alreadyInRelationship" : "She's Already In A Relationship With Someone",
+
+  "msg.heartbound.sheIgnoresYou": "She ignores you. Maybe try giving her a %s.",
+  "msg.heartbound.askedOutYes": "You Asked %s Out And She Said §aYes",
+  "msg.heartbound.brokeUp": "You Broke Up With %s",
+  "msg.heartbound.diedRespawned": "%s died and respawned at base: %s, %s, %s",
+  "msg.heartbound.baseSet": "Base set at (%s, %s, %s)",
+  "msg.heartbound.mustFollowToMine": "Girl must be following to mine ores",
+
+  "msg.heartbound.sheLikedTheGift": "She Liked The Gift",
+
+  "msg.heartbound.gift.like.1": "Nice",
+  "msg.heartbound.gift.like.2": "Thank you so much",
+  "msg.heartbound.gift.love.1": "Oh, Thank you",
+  "msg.heartbound.gift.love.2": "Love you ~_^",
+
+  "msg.heartbound.jenny.gift.like.1": "Wow, for me? Thanks!",
+  "msg.heartbound.jenny.gift.like.2": "An allium? That's so nice of you…!",
+  "msg.heartbound.jenny.gift.like.3": "Ahah, this is great!",
+  "msg.heartbound.jenny.gift.love.1": "Oh, another one? Well, you're the real gift here~.",
+  "msg.heartbound.jenny.gift.love.2": "Babe, you're too nice. And hot~.",
+  "msg.heartbound.jenny.gift.love.3": "Stop giving me gifts and just fuck me already~!",
+
+  "msg.heartbound.ellie.gift.like.1": "Wait is that… An actual Wither Rose…!",
+  "msg.heartbound.ellie.gift.like.2": "You're a pretty lame but this is… Thanks…!",
+  "msg.heartbound.ellie.gift.like.3": "Amazing… So that's what a Wither Rose looks like…!",
+  "msg.heartbound.ellie.gift.love.1": "Mm, you're actually pretty hot y'know…",
+  "msg.heartbound.ellie.gift.love.2": "Are you in need of a mommy or something?",
+  "msg.heartbound.ellie.gift.love.3": "C-Come on… This is too much…",
+
+  "msg.heartbound.bia.gift.like.1": "Wow!!! A poppy!! Yay!!",
+  "msg.heartbound.bia.gift.like.2": "Wow, wow wow! A gift for me!",
+  "msg.heartbound.bia.gift.like.3": "Bia loves gifts! Give Bia more!",
+  "msg.heartbound.bia.gift.love.1": "Yay!! Another gift! You should really be my owner!",
+  "msg.heartbound.bia.gift.love.2": "Yay, yay, yay! Can we play now!",
+  "msg.heartbound.bia.gift.love.3": "M-Bia is in heat because of you…",
+
+  "msg.heartbound.coppie.gift.like.1": "This golem accepts this… thing.",
+  "msg.heartbound.coppie.gift.like.2": "This golem will accept the gift accordingly.",
+  "msg.heartbound.coppie.gift.like.3": "Why are you giving this golem gifts, master?",
+  "msg.heartbound.coppie.gift.love.1": "This golem… no… I appreciate this, master.",
+  "msg.heartbound.coppie.gift.love.2": "This really means alot to me master.",
+  "msg.heartbound.coppie.gift.love.3": "Are you sure you don't want to use my sexual functions, master?",
+
+  "msg.heartbound.scene.jenny.stripMSG1": "Hihi~",
+  "msg.heartbound.scene.jenny.bjiMSG1": "What are you...",
+  "msg.heartbound.scene.jenny.bjiMSG2": "eh... boys...",
+  "msg.heartbound.scene.jenny.bjiMSG3": "OHOhh...!",
+  "msg.heartbound.scene.jenny.bjiMSG5": "Was this really necessary?!",
+  "msg.heartbound.scene.jenny.bjiMSG6": "Oh~",
+  "msg.heartbound.scene.jenny.bjiMSG7": "You like it?~",
+  "msg.heartbound.scene.jenny.bjiMSG9": "Hihihi~",
+  "msg.heartbound.scene.jenny.doggyLayOnBedMSG2": "what are you waiting for?~",
+  "msg.heartbound.scene.jenny.doggyLayOnBedMSG3": "this ass ain't gonna fuck itself...",
+  "msg.heartbound.scene.jenny.doggyintroMSG1": "Mm~",
+  "msg.heartbound.scene.jenny.doggyintroMSG4": "Oh~!",
+  "msg.heartbound.scene.jenny.doggyintroMSG5": "Ahhh~!",
+  "msg.heartbound.scene.jenny.doggycumMSG1": "I'm cumming~!",
+
+  "msg.heartbound.scene.player.bjiMSG8": "Yee",
+
+  "msg.heartbound.scene.ellie.carry_introMSG1": "I'm hungry..",
+  "msg.heartbound.scene.ellie.carry_introMSG2": "heh~",
+  "msg.heartbound.scene.ellie.sitdownMSG1": "Come to mommy~",
+  "msg.heartbound.scene.ellie.missionary_cumMSG2": "goooood.. ehh.. boy.. hehe~",
+  "msg.heartbound.scene.ellie.cowgirlStartMSG1": "Do you like what you see honey?~",
+  "msg.heartbound.scene.ellie.cowgirlcumMSG4": "goooood.. ehh.. boy.. hehe~",
+
+  "msg.heartbound.scene.bia.sitdownMSG1": "come here big boy~",
+
+  "msg.heartbound.canGoInToFreeCam" : "To go into freecam mode press F4",
+
+  "key.Heartbound.thrust": "Thrust",
+
+  "key.Heartbound.cum": "Cum",
+
+  "key.Heartbound.transformScene": "Transform Scene",
+
+  "key.categories.Heartbound": "Heartbound",
+
+  "subtitles.bedrustle" : "Bed rustles",
+
+  "subtitles.belljingle" : "Bell Jingles",
+
+  "subtitles.clap" : "Clap",
+
+  "subtitles.cuminflation" : "Cum Inflation",
+
+  "subtitles.flap" : "Flap",
+
+  "subtitles.inserts" : "Inserts",
+
+  "subtitles.pounding" : "Pounding",
+
+  "subtitles.slap" : "Slap",
+
+  "subtitles.slide" : "Slide",
+
+  "subtitles.smallinserts" : "Small Inserts",
+
+  "subtitles.touch" : "Touch",
+
+  "subtitles.plob" : "Plob",
+
+  "subtitles.jenny.heavybreathing": "Heavy breathing",
+
+  "subtitles.jenny.hmph": "Hmph",
+
+  "subtitles.jenny.huh": "Huh",
+
+  "subtitles.jenny.aftersessionmoan": "After Session Moan",
+
+  "subtitles.jenny.ahh": "Ahh",
+
+  "subtitles.jenny.bjmoan": "BJ Moan",
+
+  "subtitles.jenny.giggle": "Giggle",
+
+  "subtitles.jenny.happyoh": "Happy Oh",
+
+  "subtitles.jenny.lightbreathing": "Light Breathing",
+
+  "subtitles.jenny.lipsound": "Lip Sounds",
+
+  "subtitles.jenny.mmm": "Mmm",
+
+  "subtitles.jenny.moan": "Moan",
+
+  "subtitles.jenny.sadoh": "Sad Oh",
+
+  "subtitles.jenny.sigh": "Sigh",
+
+  "subtitles.bia.ahh": "Ahh",
+
+  "subtitles.bia.bjmoan": "BJ Moan",
+
+  "subtitles.bia.moan": "Moan",
+
+  "subtitles.bia.lightbreathing": "Light Breathing",
+
+  "subtitles.bia.giggle": "Giggle",
+
+  "subtitles.bia.hey": "Hey",
+
+  "subtitles.bia.happyoh": "Happy Oh",
+
+  "subtitles.bia.sadoh": "Sad Oh",
+
+  "subtitles.bia.sigh": "Sigh",
+
+  "subtitles.bia.huh": "Huh",
+
+  "subtitles.bia.hmph": "Hmph",
+
+  "subtitles.bia.mmm": "Mmm",
+
+  "subtitles.ellie.aftersessionmoan": "After Session Moan",
+
+  "subtitles.ellie.ahh": "Ahh",
+
+  "subtitles.ellie.bjmoan": "BJ Moan",
+
+  "subtitles.ellie.cometomommy": "Come To Mommy",
+
+  "subtitles.ellie.giggle": "Giggle",
+
+  "subtitles.ellie.goodboy": "Good Boy",
+
+  "subtitles.ellie.happyoh": "Happy Oh",
+
+  "subtitles.ellie.heavybreathing": "Heavy Breathing",
+
+  "subtitles.ellie.hmph": "Hmph",
+
+  "subtitles.ellie.huh": "Huh",
+
+  "subtitles.ellie.lightbreathing": "Light Breathing",
+
+  "subtitles.ellie.lipsound": "Lip Sounds",
+
+  "subtitles.ellie.mmm": "Mmm",
+
+  "subtitles.ellie.moan": "Moan",
+
+  "subtitles.ellie.mommyhorny": "Mommy's hornny",
+
+  "subtitles.ellie.sadoh": "Sad Oh",
+
+  "subtitles.ellie.sigh": "Sigh",
+
+  "key.categories.freecam": "heartbound - Freecam",
+
+  "key.freecam.toggle": "Toggle Freecam",
+
+  "key.freecam.playerControl": "Control Player",
+
+  "key.freecam.tripodReset": "Reset Tripod",
+
+  "key.freecam.configGui": "Config GUI",
+
+  "heartbound.patchouli.heart_guide.name": "Heart Guide",
+  "heartbound.patchouli.heart_guide.landing_text": "$(o)Welcome to the Heart Guide!$()$(br2)Discover all the beautiful girls in your world! Learn about their personalities, how to tame them, and what scenes they enjoy.$(br2)Browse the categories on the right to get started!",
+
+  "msg.freecam.enable": "Freecam has been enabled.",
+
+  "msg.freecam.disable": "Freecam has been disabled.",
+
+  "msg.freecam.openTripod": "Opening camera %s",
+
+  "msg.freecam.closeTripod": "Closing camera %s",
+
+  "msg.freecam.tripodReset": "Reset camera %s",
+
+  "text.autoconfig.heartbound.category.default": "Heartbound",
+
+  "text.autoconfig.heartbound.category.freecam": "Free Cam",
+
+  "text.autoconfig.heartbound.title": "Heartbound Options",
+
+  "text.autoconfig.heartbound.option.girls": "Girls",
+
+  "text.autoconfig.heartbound.option.girls.boobWindow": "Boob Window",
+
+  "text.autoconfig.heartbound.option.girls.disableShading": "Disable Shading",
+
+  "text.autoconfig.heartbound.option.girls.boobWindow.@Tooltip": "Makes the armor on the girls have a window to see their breast",
+
+  "text.autoconfig.heartbound.option.girls.disableShading.@Tooltip": "Disables the shading/shadows on the girls and makes them have flat lighting",
+
+  "text.autoconfig.heartbound.option.player": "Player",
+
+  "text.autoconfig.heartbound.option.player.penisShaftColor": "Penis Shaft Color",
+
+  "text.autoconfig.heartbound.option.player.penisShaftColor.@Tooltip": "Sets the color of the shaft of penis on the player model",
+
+  "text.autoconfig.heartbound.option.player.penisHeadColor": "Penis Head Color",
+
+  "text.autoconfig.heartbound.option.player.penisHeadColor.@Tooltip": "Sets the color of the head of penis on the player model",
+
+  "text.autoconfig.heartbound.option.controls": "Key Bindings",
+
+  "text.autoconfig.heartbound.option.controls.@Tooltip": "Freecam key bindings.",
+
+  "text.autoconfig.heartbound.option.movement": "Movement Options",
+
+  "text.autoconfig.heartbound.option.movement.@Tooltip": "How the camera moves.",
+
+  "text.autoconfig.heartbound.option.movement.flightMode": "Flight Mode",
+
+  "text.autoconfig.heartbound.option.movement.flightMode.@Tooltip": "The type of flight used by freecam.",
+
+  "text.autoconfig.heartbound.option.movement.flightMode.default": "Default",
+
+  "text.autoconfig.heartbound.option.movement.flightMode.creative": "Creative",
+
+  "text.autoconfig.heartbound.option.movement.horizontalSpeed": "Horizontal Speed",
+
+  "text.autoconfig.heartbound.option.movement.horizontalSpeed.@Tooltip": "The horizontal speed of freecam.",
+
+  "text.autoconfig.heartbound.option.movement.verticalSpeed": "Vertical Speed",
+
+  "text.autoconfig.heartbound.option.movement.verticalSpeed.@Tooltip": "The vertical speed of freecam.",
+
+  "text.autoconfig.heartbound.option.collision": "Collision Options",
+
+  "text.autoconfig.heartbound.option.collision.@Tooltip": "Which blocks you can travel through in freecam.",
+
+  "text.autoconfig.heartbound.option.collision.ignoreTransparent": "Ignore Transparent Blocks",
+
+  "text.autoconfig.heartbound.option.collision.ignoreTransparent.@Tooltip": "Allows travelling through transparent blocks in freecam.",
+
+  "text.autoconfig.heartbound.option.collision.ignoreOpenable": "Ignore Openable Blocks",
+
+  "text.autoconfig.heartbound.option.collision.ignoreOpenable.@Tooltip": "Allows travelling through doors/trapdoors/gates in freecam.",
+
+  "text.autoconfig.heartbound.option.collision.ignoreCustom": "Custom Ignore List",
+
+  "text.autoconfig.heartbound.option.collision.ignoreCustom.@Tooltip[0]": "Allows travelling through specific blocks in freecam.",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.ids": "Ignore IDs",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.ids.@Tooltip[0]": "Use block id, e.g. \"grass_block\".",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.ids.@Tooltip[1]": "If the namespace is omitted, \"minecraft:\" is assumed.",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.patterns": "Ignore Regular Expressions",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.patterns.@Tooltip[0]": "Use Regular Expression syntax.",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.patterns.@Tooltip[1]": "Matched against full block id, e.g. \"minecraft:grass_block\".",
+
+  "text.autoconfig.heartbound.option.collision.ignoreAll": "Ignore All Collision",
+
+  "text.autoconfig.heartbound.option.collision.ignoreAll.@Tooltip[0]": "Allows travelling through all blocks in freecam.",
+
+  "text.autoconfig.heartbound.option.collision.ignoreAll.@Tooltip[1]": "§eOverrides above settings.",
+
+  "text.autoconfig.heartbound.option.collision.ignoreAll.@ModrinthTooltip[2]": "§cNOTE: Can only be used in singleplayer, creative, or with operator status.",
+
+  "text.autoconfig.heartbound.option.collision.alwaysCheck": "Always Check Initial Collision",
+
+  "text.autoconfig.heartbound.option.collision.alwaysCheck.@Tooltip[0]": "Whether §7Initial Perspective§r should check for",
+
+  "text.autoconfig.heartbound.option.collision.alwaysCheck.@Tooltip[1]": "collision, even when using §7Ignore All Collision§r.",
+
+  "text.autoconfig.heartbound.option.visual": "Visual Options",
+
+  "text.autoconfig.heartbound.option.visual.@Tooltip": "The look of freecam.",
+
+  "text.autoconfig.heartbound.option.visual.perspective": "Initial Perspective",
+
+  "text.autoconfig.heartbound.option.visual.perspective.@Tooltip": "The initial perspective of the camera.",
+
+  "text.autoconfig.heartbound.option.visual.perspective.firstPerson": "First Person",
+
+  "text.autoconfig.heartbound.option.visual.perspective.thirdPerson": "Third Person",
+
+  "text.autoconfig.heartbound.option.visual.perspective.thirdPersonMirror": "Mirror",
+
+  "text.autoconfig.heartbound.option.visual.perspective.inside": "Inside",
+
+  "text.autoconfig.heartbound.option.visual.hidePlayer": "Hide Player",
+
+  "text.autoconfig.heartbound.option.visual.hidePlayer.@Tooltip": "Hides your player model.",
+
+  "text.autoconfig.heartbound.option.visual.showHand": "Show Hand",
+
+  "text.autoconfig.heartbound.option.visual.showHand.@Tooltip": "Whether you can see your hand in freecam.",
+
+  "text.autoconfig.heartbound.option.visual.fullBright": "Full Brightness",
+
+  "text.autoconfig.heartbound.option.visual.fullBright.@Tooltip": "Increases brightness while in freecam.",
+
+  "text.autoconfig.heartbound.option.visual.showSubmersion": "Show Submersion Fog",
+
+  "text.autoconfig.heartbound.option.visual.showSubmersion.@Tooltip": "Whether you see a fog overlay underwater, in lava, or powdered snow.",
+
+  "text.autoconfig.heartbound.option.utility": "Utility Options",
+
+  "text.autoconfig.heartbound.option.utility.@Tooltip": "Freecam enhancements.",
+
+  "text.autoconfig.heartbound.option.utility.disableOnDamage": "Disable on Damage",
+
+  "text.autoconfig.heartbound.option.utility.disableOnDamage.@Tooltip": "Disables freecam when damage is received.",
+
+  "text.autoconfig.heartbound.option.utility.freezePlayer": "Freeze Player",
+
+  "text.autoconfig.heartbound.option.utility.freezePlayer.@Tooltip[0]": "Prevents player movement while freecam is active.",
+
+  "text.autoconfig.heartbound.option.utility.freezePlayer.@Tooltip[1]": "§cWARNING: Multiplayer usage not advised.",
+
+  "text.autoconfig.heartbound.option.utility.allowInteract": "Allow Interaction",
+
+  "text.autoconfig.heartbound.option.utility.allowInteract.@Tooltip[0]": "Whether you can interact with blocks/entities in freecam.",
+
+  "text.autoconfig.heartbound.option.utility.interactionMode": "Interaction Mode",
+
+  "text.autoconfig.heartbound.option.utility.interactionMode.@Tooltip": "The source of block/entity interactions.",
+
+  "text.autoconfig.heartbound.option.utility.interactionMode.camera": "Camera",
+
+  "text.autoconfig.heartbound.option.utility.interactionMode.player": "Player",
+
+  "text.autoconfig.heartbound.option.notification": "Notification Options",
+
+  "text.autoconfig.heartbound.option.notification.@Tooltip": "Show or hide notifications.",
+
+  "text.autoconfig.heartbound.option.notification.notifyFreecam": "Freecam Notifications",
+
+  "text.autoconfig.heartbound.option.notification.notifyFreecam.@Tooltip": "Notifies you when entering/exiting freecam.",
+
+  "text.autoconfig.heartbound.option.notification.notifyTripod": "Tripod Notifications",
+
+  "text.autoconfig.heartbound.option.notification.notifyTripod.@Tooltip": "Notifies you when entering/exiting tripod cameras.",
+
+  "advancements.heartbound.root.title": "Hey, you. You're finally awake",
+  "advancements.heartbound.root.description": "You were trying to cross the border, right?",
+  "advancements.heartbound.tame_girl.title": "Together Forever",
+  "advancements.heartbound.tame_girl.description": "Win a girl's heart",
+  "advancements.heartbound.max_relationship.title": "Will you marry me?",
+  "advancements.heartbound.max_relationship.description": "Reach max relationship with a girl",
+  "advancements.heartbound.break_up.title": "Heart broken",
+  "advancements.heartbound.break_up.description": "Break up with a girl",
+  "advancements.heartbound.kill_girl.title": "I'm sorry little one",
+  "advancements.heartbound.kill_girl.description": "Kill a girl",
+  "advancements.heartbound.enter_jenny_house.title": "This looks better than I remember",
+  "advancements.heartbound.enter_jenny_house.description": "Found Jenny's house",
+  "advancements.heartbound.enter_bia_house.title": "Cozy little place",
+  "advancements.heartbound.enter_bia_house.description": "Found Bia's house",
+  "advancements.heartbound.enter_ellie_house.title": "Mommy's castle!!?",
+  "advancements.heartbound.enter_ellie_house.description": "Found Ellie's house",
+  "advancements.heartbound.summon_coppie.title": "Copper gol.. Coppie?",
+  "advancements.heartbound.summon_coppie.description": "Summon a Coppie",
+  "advancements.heartbound.craft_custom_girl_spawn_egg.title": "Homunculus!?",
+  "advancements.heartbound.craft_custom_girl_spawn_egg.description": "Craft a custom girl spawn egg",
+  "advancements.heartbound.craft_slime_spawn_egg.title": "A slimy friend",
+  "advancements.heartbound.craft_slime_spawn_egg.description": "Craft a slime girl spawn egg",
+  "advancements.heartbound.craft_aly_spawn_egg.title": "You looks different",
+  "advancements.heartbound.craft_aly_spawn_egg.description": "Craft an Aly spawn egg",
+  "advancements.heartbound.craft_love_ball.title": "Pocket Dimension",
+  "advancements.heartbound.craft_love_ball.description": "Craft a Love Ball",
+  "advancements.heartbound.craft_fusion_table.title": "I guess we making girls now",
+  "advancements.heartbound.craft_fusion_table.description": "Craft a Fusion Table",
+  "advancements.heartbound.craft_master_ring.title": "You shall be mine",
+  "advancements.heartbound.craft_master_ring.description": "Craft a Master Ring",
+  "advancements.heartbound.craft_x_pill.title": "This pill looks funny",
+  "advancements.heartbound.craft_x_pill.description": "Craft an X-Pill",
+  "advancements.heartbound.transform.title": "I alone am the honored one",
+  "advancements.heartbound.transform.description": "Transform using an X-Pill",
+  "advancements.heartbound.capture_love_ball.title": "Come Along with Me",
+  "advancements.heartbound.capture_love_ball.description": "Capture a girl using a Love Ball",
+  "advancements.heartbound.capture_master_ring.title": "Can't run away this time",
+  "advancements.heartbound.capture_master_ring.description": "Capture a girl using a Master Ring"
+}

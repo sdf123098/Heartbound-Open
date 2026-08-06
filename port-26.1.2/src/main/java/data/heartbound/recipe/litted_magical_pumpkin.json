@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {"item": "heartbound:magical_pumpkin"},
+    {"item": "minecraft:torch"}
+  ],
+  "result": {
+    "count": 1,
+    "id": "heartbound:litted_magical_pumpkin"
+  }
+}

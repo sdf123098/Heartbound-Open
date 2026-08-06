@@ -1,0 +1,24 @@
+{
+  "parent": "heartbound:root",
+  "criteria": {
+    "craft": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "heartbound:love_ball"
+      }
+    }
+  },
+  "display": {
+    "title": {"translate": "advancements.heartbound.craft_love_ball.title"},
+    "description": {"translate": "advancements.heartbound.craft_love_ball.description"},
+    "icon": {
+      "count": 1,
+      "id": "heartbound:love_ball"
+    }
+  },
+  "requirements": [
+    [
+      "craft"
+    ]
+  ]
+}

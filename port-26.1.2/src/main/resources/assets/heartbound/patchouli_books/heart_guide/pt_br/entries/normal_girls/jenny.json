@@ -1,0 +1,31 @@
+{
+  "name": "Jenny",
+  "icon": "heartbound:jenny_spawn_egg",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Jenny é uma garota sedutora e provocante que vaga pelas planícies. Ela está sempre procurando atenção e não é tímida sobre o que quer.$(br2)Ela tem cabelo castanho e usa uma roupa roxa escura. Você pode encontrar a casa dela nas planícies."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:jenny",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Jenny",
+      "text": "Jenny, a garota tarada!"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:jenny_spawn_egg",
+      "title": "Ovo Gerador da Jenny",
+      "text": "Fabrique com uma Pílula X, barras de ouro, ovo e um girassol."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Item de Domesticação$()$(br)Jenny é atraída por $(#ff0)Barras de Ouro$(). Dê uma para ela para começar a construir um relacionamento.$(br2)$(o)Cenas$()$(br)$(li)Masturbação$(li)Paizuri$(li)Boquete$(li)De Quatro"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "融合台",
+  "icon": "heartbound:fusion_table",
+  "category": "heartbound:blocks",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(item)融合台$()是一个神奇的工作台，允许你将$(item)自定义女孩刷怪蛋$()与不同的物品融合，创造出特殊的变体。$(br2)这个工作台利用古老的融合魔法来组合刷怪蛋和驯服物品。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)功能：$()$(br)右键点击融合台打开界面。将$(item)自定义女孩刷怪蛋$()放在基础槽位，然后在其他槽位放入两个相同的驯服物品。$(br2)不同的驯服物品会创造不同的女孩变体。结果会出现在输出槽位。$(br2)$(o)注意：只有相同的驯服物品才能进行融合！$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:fusion_table",
+      "text": "使用烈焰粉、钻石、末影珍珠和铁锭按特定图案合成融合台。"
+    }
+  ]
+}

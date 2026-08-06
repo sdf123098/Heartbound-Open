@@ -1,0 +1,25 @@
+{
+  "name": "アリー",
+  "icon": "minecraft:amethyst_shard",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "アリーは陽気な青い妖精で、浮遊しながらプレイヤーを手伝うのが大好きです。飛ぶことができ、遊び好きで、親切にしてくれる人にはすぐに懐きます。$(br2)アリーは自由に飛び回れる開けた場所を好み、気に入ったプレイヤーに喜んでついていきます。"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:aly",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "アリー",
+      "text": "陽気に空を飛ぶアリーの姿！"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)なつかせアイテム$()$(br)アリーは$(#b0b)アメジストの欠片$()に惹かれます。一つあげて仲良くなりましょう。$(br2)$(o)シーン$()$(br)$(li)セックス$(br2)$(o)備考$()$(br)$(li)飛行可能 — 飛行行動とアニメーションを使用$(li)愛情深い — プレイヤーについていくのが好き$(li)自由に飛べる開けた場所で飼うのが最適"
+    }
+  ]
+}

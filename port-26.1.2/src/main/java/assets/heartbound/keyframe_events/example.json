@@ -1,0 +1,29 @@
+{
+  "girl_id": "daisy",
+  "events": [
+    {
+      "key": "angry",
+      "sounds": [],
+      "random_sounds": [
+        "heartbound:momo.breath",
+        "minecraft:block.metal.break"
+      ],
+      "messages": [
+        "*Sigh*"
+      ],
+      "player_messages": []
+    },
+    {
+      "key": "doggyCumMSG1",
+      "sounds": [
+        "heartbound:misc.cuminflation",
+        "heartbound:momo.ahh"
+      ],
+      "random_sounds": [],
+      "messages": [
+        "OooOh~"
+      ],
+      "player_messages": []
+    }
+  ]
+}

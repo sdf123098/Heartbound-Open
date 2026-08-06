@@ -1,0 +1,32 @@
+{
+  "parent": "heartbound:root",
+  "criteria": {
+    "summon_coppie": {
+      "trigger": "minecraft:summoned_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "heartbound:coppie"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "title": {"translate": "advancements.heartbound.summon_coppie.title"},
+    "description": {"translate": "advancements.heartbound.summon_coppie.description"},
+    "icon": {
+      "count": 1,
+      "id": "heartbound:magical_pumpkin"
+    }
+  },
+  "requirements": [
+    [
+      "summon_coppie"
+    ]
+  ]
+}

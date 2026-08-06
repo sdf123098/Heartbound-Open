@@ -1,0 +1,89 @@
+{
+  "name": "Crafting Recipes",
+  "icon": "minecraft:crafting_table",
+  "category": "heartbound:crafting",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Essential Crafting Recipes$()$(br2)Here are the key crafting recipes you'll need to create and interact with the girls in Pleasure Horizons. Each recipe serves a specific purpose in your journey."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:fusion_table",
+      "title": "Fusion Table",
+      "text": "The magical table for fusing spawn eggs. Requires blaze powder, diamonds, ender pearls, and iron ingots."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:magical_pumpkin",
+      "title": "Magical Pumpkin",
+      "text": "Used to spawn custom girls when placed on white wool."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:master_ring",
+      "title": "Master Ring",
+      "text": "Used for capturing girls, even the wild ones, but you can't capture the one who already have owner."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:love_ball",
+      "title": "Love Ball",
+      "text": "Used for containing the girl you tamed, can't capture wild girl."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:heart_guide",
+      "title": "Heart Guide",
+      "text": "This book! Contains all information about girls and mechanics."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:x_pill",
+      "title": "X-Pill",
+      "text": "A magical catalyst used in many recipes. Also transforms you into a girl. Use again to revert."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:custom_girl_spawn_egg",
+      "title": "Custom Girl Spawn Egg",
+      "text": "Create a homunculus-style custom girl from bones, leather, clay, an X-Pill, and an egg."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:jenny_spawn_egg",
+      "title": "Jenny Spawn Egg",
+      "text": "Summon the bold plains girl with gold ingots, a sunflower, an X-Pill, and an egg."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:ellie_spawn_egg",
+      "title": "Ellie Spawn Egg",
+      "text": "Summon the dark forest emo girl with ink sacs, black wool, a wither rose, an X-Pill, and an egg."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:bia_spawn_egg",
+      "title": "Bia Spawn Egg",
+      "text": "Summon the magical teddy bear with brown wool, an X-Pill, and an egg."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:aly_spawn_egg",
+      "title": "Aly Spawn Egg",
+      "text": "Summon the fairy girl with blue wool, cyan wool, diamonds, an X-Pill, and an egg."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:slime_spawn_egg",
+      "title": "Slime Spawn Egg",
+      "text": "Summon the slime girl with slime balls, an X-Pill, and an egg."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:kobold_spawn_egg",
+      "title": "Kobold Spawn Egg",
+      "text": "Summon the cave-dwelling kobold with leather, coal, an X-Pill, and an egg."
+    }
+  ]
+}

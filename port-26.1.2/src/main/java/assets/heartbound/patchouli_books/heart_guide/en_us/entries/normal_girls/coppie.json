@@ -1,0 +1,25 @@
+{
+  "name": "Coppie",
+  "icon": "minecraft:copper_ingot",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Coppie is a hardworking and practical girl who loves anything shiny. She has a strong work ethic and is very reliable.$(br2)Coppie has metallic accents in her appearance and enjoys crafting and building. She's perfect for settlement work."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:coppie",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Coppie",
+      "text": "Coppie, the hardworking craftswoman!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Tame Item$()$(br)Coppie is fascinated by $(#b0b)Copper Ingot$() and its shiny properties.$(br2)$(o)Scenes$()$(br)$(li)Anal$(li)Doggy Style"
+    }
+  ]
+}

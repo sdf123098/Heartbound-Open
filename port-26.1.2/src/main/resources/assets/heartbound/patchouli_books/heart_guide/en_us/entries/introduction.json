@@ -1,0 +1,15 @@
+{
+  "name": "Introduction to Girls",
+  "icon": "minecraft:player_head",
+  "category": "heartbound:girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Welcome to the Heart Guide! This book contains information about all the beautiful girls you can find in the world of Pleasure Horizons.$(br2)Girls are special entities that can be captured, tamed, and cared for. Each girl has her own personality, abilities, and story."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Girls are divided into three main categories:$(br2)$(l:normal_girls)Normal Girls$(/l) - Friendly girls that spawn naturally in Girl Village.$(br)$(l:wild_girls)Wild Girls$(/l) - Feral girls that can be found in the wild.$(br)$(l:custom_girls)Custom Girls$(/l) - Special girls loaded from JSON configurations.$(br2)Use the Master Ring to capture and tame girls!"
+    }
+  ]
+}

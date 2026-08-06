@@ -1,0 +1,20 @@
+{
+  "name": "Transforming",
+  "icon": "heartbound:x_pill",
+  "category": "heartbound:features",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Transformation Mechanics$()$(br2)The $(item)X-Pill$() allows you to transform into any girl in the game. While transformed, your player model changes to match the selected girl, and you can access her unique scenes.$(br2)Use another $(item)X-Pill$() to revert back to your normal form."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)How to Transform:$()$(br)$(li)Craft an $(item)X-Pill$() (see recipe on next page)$(li)Right-click with the $(item)X-Pill$() to open the girl selection screen$(li)Choose the girl you want to transform into$(li)You are now transformed!$(br2)$(bold)While Transformed:$()$(br)$(li)Press the $(item)Transform Scene$() keybind to start a scene$(li)Use another $(item)X-Pill$() to revert back to human form$(br2)$(o)Note: The X-Pill is consumed on use (unless in Creative mode).$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:x_pill",
+      "text": "Craft the X-Pill using a poppy, sugar, a potion, an apple, and a bowl."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Aly",
+  "icon": "minecraft:amethyst_shard",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Aly is a jolly blue fairy who loves to float around and help players. She can fly, is playful, and quickly warms to anyone who treats her kindly.$(br2)Aly prefers open spaces where she can flutter freely and will happily follow players she likes."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:aly",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Aly",
+      "text": "Aly in all her cheerful, airborne glory!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Tame Item$()$(br)Aly is attracted to $(#b0b)Amethyst Shard$(). Offer one to befriend her.$(br2)$(o)Scenes$()$(br)$(li)Sex$(br2)$(o)Notes$()$(br)$(li)Can fly — uses flying behaviors and animations$(li)Affectionate — likes following the player$(li)Best kept in open areas where she can fly freely"
+    }
+  ]
+}

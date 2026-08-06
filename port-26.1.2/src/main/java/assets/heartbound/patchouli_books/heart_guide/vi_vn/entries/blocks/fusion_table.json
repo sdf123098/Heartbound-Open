@@ -1,0 +1,20 @@
+{
+  "name": "Bàn Dung Hợp",
+  "icon": "heartbound:fusion_table",
+  "category": "heartbound:blocks",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(item)Bàn Dung Hợp$() là một trạm chế tạo ma thuật cho phép bạn dung hợp $(item)Trứng Triệu Hồi Cô Gái Tùy Chỉnh$() với các vật phẩm khác nhau để tạo ra các biến thể chuyên biệt.$(br2)Bàn này sử dụng phép thuật dung hợp cổ đại để kết hợp trứng triệu hồi với vật phẩm thuần hóa."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Chức năng:$()$(br)Click phải vào Bàn Dung Hợp để mở giao diện. Đặt $(item)Trứng Triệu Hồi Cô Gái Tùy Chỉnh$() vào ô cơ bản, sau đó thêm hai vật phẩm thuần hóa giống nhau vào các ô khác.$(br2)Các vật phẩm thuần hóa khác nhau sẽ tạo ra các biến thể cô gái khác nhau. Kết quả sẽ xuất hiện ở ô đầu ra.$(br2)$(o)Lưu ý: Chỉ các vật phẩm thuần hóa giống hệt nhau mới hoạt động cho dung hợp!$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:fusion_table",
+      "text": "Chế tạo Bàn Dung Hợp bằng bột blaze, kim cương, ngọc ender và thỏi sắt theo mẫu cụ thể này."
+    }
+  ]
+}

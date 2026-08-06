@@ -1,0 +1,24 @@
+{
+  "parent": "heartbound:root",
+  "criteria": {
+    "craft": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "heartbound:fusion_table"
+      }
+    }
+  },
+  "display": {
+    "title": {"translate": "advancements.heartbound.craft_fusion_table.title"},
+    "description": {"translate": "advancements.heartbound.craft_fusion_table.description"},
+    "icon": {
+      "count": 1,
+      "id": "heartbound:fusion_table"
+    }
+  },
+  "requirements": [
+    [
+      "craft"
+    ]
+  ]
+}

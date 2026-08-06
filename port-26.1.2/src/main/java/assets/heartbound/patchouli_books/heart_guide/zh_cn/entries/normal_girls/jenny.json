@@ -1,0 +1,31 @@
+{
+  "name": "Jenny",
+  "icon": "heartbound:jenny_spawn_egg",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Jenny 是一个大胆且风骚的女孩，在平原上游荡。她总是在寻求关注，对自己想要的东西毫不害羞。$(br2)她有棕色的头发，穿着深紫色的服装。你可以在平原找到她的房子。"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:jenny",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Jenny",
+      "text": "Jenny，骚气的女孩！"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:jenny_spawn_egg",
+      "title": "Jenny 刷怪蛋",
+      "text": "用 X-药丸、金锭、鸡蛋和向日葵合成。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)驯服物品$()$(br)Jenny 被$(#ff0)金锭$()所吸引。给她一个来开始建立关系。$(br2)$(o)场景$()$(br)$(li)自慰$(li)乳交$(li)口交$(li)后入式"
+    }
+  ]
+}

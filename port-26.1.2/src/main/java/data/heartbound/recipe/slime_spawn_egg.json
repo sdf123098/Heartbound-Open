@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    "SES",
+    " S "
+  ],
+  "key": {
+    "X": {
+      "item": "heartbound:x_pill"
+    },
+    "S": {
+      "item": "minecraft:slime_ball"
+    },
+    "E": {
+      "item": "minecraft:egg"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "heartbound:slime_spawn_egg"
+  }
+}

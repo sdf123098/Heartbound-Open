@@ -1,0 +1,20 @@
+{
+  "name": "Magical Pumpkin",
+  "icon": "heartbound:magical_pumpkin",
+  "category": "heartbound:blocks",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The $(item)Magical Pumpkin$() is a special block that can spawn custom girls when placed correctly.$(br2)This pumpkin has mystical properties that allow it to summon beautiful girls from another realm."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Function:$()$(br)Place a $(item)Magical Pumpkin$() on top of a $(item)Copper Block$() to spawn a Coppie.$(br2)A Coppie will appear nearby if the conditions are met.$(br2)$(o)Note: Make sure there's enough space around the pumpkin for the girl to spawn!$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:magical_pumpkin",
+      "text": "Craft the Magical Pumpkin using a regular carved pumpkin and a poppy flower."
+    }
+  ]
+}

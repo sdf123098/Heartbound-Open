@@ -1,0 +1,13 @@
+{
+    "placement": {
+        "type": "minecraft:random_spread",
+        "salt": 29041583,
+        "separation": 10,
+        "spacing": 40,
+        "spread_type": "triangular"
+    },
+    "structures": [{
+        "structure": "heartbound:bia_house",
+        "weight": 1
+    }]
+}

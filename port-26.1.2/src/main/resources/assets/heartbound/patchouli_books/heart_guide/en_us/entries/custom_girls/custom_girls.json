@@ -1,0 +1,15 @@
+{
+  "name": "Custom Girls",
+  "icon": "minecraft:knowledge_book",
+  "category": "heartbound:custom_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Custom Girls are special girls that can be added through JSON configurations and resource packs. They allow for completely customizable appearances, behaviors, and interactions.$(br2)These girls are loaded from $(o)girls.json$() files and can have unique models, textures, sounds, and scene configurations."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Spawning:$()$(br)Craft a $(item)Custom Girl Spawn Egg$() then fuse it at the $(item)Fusion Table$() with two identical tame items to create a specialized spawn egg. Right-click to spawn the girl.$(br2)$(o)Custom Girl Installation:$()$(br)- Install the $(o)(girl name).json$() file into $(o)\\config\\Heartbound\\girls\\$()$(br)- Install and enable the resource pack$(br2)$(o)Tame Item$() - Configurable per girl$(br)$(o)Scenes$() - Fully customizable"
+    }
+  ]
+}

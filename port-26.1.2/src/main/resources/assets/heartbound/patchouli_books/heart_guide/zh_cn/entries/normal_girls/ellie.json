@@ -1,0 +1,31 @@
+{
+  "name": "Ellie",
+  "icon": "heartbound:ellie_spawn_egg",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ellie 是一个住在黑暗森林深处的emo女孩。她性格忧郁，喜欢独处，但一旦信任你就会敞开心扉。$(br2)她全身穿黑色衣服，有着黑暗而神秘的气息。你可以在黑暗森林找到她的房子。"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:ellie",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Ellie",
+      "text": "Ellie，黑暗森林的emo女孩！"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:ellie_spawn_egg",
+      "title": "Ellie 刷怪蛋",
+      "text": "用 X-药丸、墨囊、鸡蛋、黑色羊毛和凋灵玫瑰合成。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)驯服物品$()$(br)Ellie 欣赏$(#b0b)凋灵玫瑰$()的美丽和精致。$(br2)$(o)场景$()$(br)$(li)口爆$(li)传教士式$(li)骑乘式"
+    }
+  ]
+}

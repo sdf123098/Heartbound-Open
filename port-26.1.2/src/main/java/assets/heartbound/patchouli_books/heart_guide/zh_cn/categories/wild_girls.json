@@ -1,0 +1,6 @@
+{
+  "name": "野生女孩",
+  "description": "这些女孩在野外游荡，天性更加狂野。她们需要特殊物品来驯服，并且有独特的行为。",
+  "icon": "minecraft:slime_spawn_egg",
+  "parent": "heartbound:girls"
+}

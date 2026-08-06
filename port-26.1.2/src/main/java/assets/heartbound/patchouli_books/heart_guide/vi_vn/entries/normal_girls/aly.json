@@ -1,0 +1,25 @@
+{
+  "name": "Aly",
+  "icon": "minecraft:amethyst_shard",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Aly là một nàng tiên xanh vui vẻ, thích bay lượn và giúp đỡ người chơi. Cô ấy có thể bay, nghịch ngợm và nhanh chóng thân thiện với bất kỳ ai đối xử tốt với cô ấy.$(br2)Aly thích không gian mở nơi cô có thể bay tự do và sẽ vui vẻ đi theo người chơi mà cô thích."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:aly",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Aly",
+      "text": "Aly trong tất cả vẻ đẹp vui tươi, bay bổng của cô!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Vật Phẩm Thuần Hóa$()$(br)Aly bị thu hút bởi $(#b0b)Mảnh Thạch Anh Tím$(). Tặng một mảnh để kết bạn.$(br2)$(o)Cảnh$()$(br)$(li)Quan Hệ$(br2)$(o)Ghi Chú$()$(br)$(li)Có thể bay — sử dụng hành vi và hoạt ảnh bay$(li)Tình cảm — thích đi theo người chơi$(li)Tốt nhất nên giữ ở nơi rộng rãi để cô có thể bay tự do"
+    }
+  ]
+}

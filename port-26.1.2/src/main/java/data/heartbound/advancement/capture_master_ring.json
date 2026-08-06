@@ -1,0 +1,22 @@
+{
+  "parent": "heartbound:craft_master_ring",
+  "criteria": {
+    "capture_master_ring": {
+      "trigger": "heartbound:capture_master_ring"
+    }
+  },
+  "display": {
+    "title": {"translate": "advancements.heartbound.capture_master_ring.title"},
+    "description": {"translate": "advancements.heartbound.capture_master_ring.description"},
+    "icon": {
+      "count": 1,
+      "id": "heartbound:master_ring"
+    },
+    "frame": "challenge"
+  },
+  "requirements": [
+    [
+      "capture_master_ring"
+    ]
+  ]
+}

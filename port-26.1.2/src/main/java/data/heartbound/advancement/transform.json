@@ -1,0 +1,22 @@
+{
+  "parent": "heartbound:craft_x_pill",
+  "criteria": {
+    "transform": {
+      "trigger": "heartbound:transform"
+    }
+  },
+  "display": {
+    "title": {"translate": "advancements.heartbound.transform.title"},
+    "description": {"translate": "advancements.heartbound.transform.description"},
+    "icon": {
+      "count": 1,
+      "id": "heartbound:x_pill"
+    },
+    "frame": "challenge"
+  },
+  "requirements": [
+    [
+      "transform"
+    ]
+  ]
+}

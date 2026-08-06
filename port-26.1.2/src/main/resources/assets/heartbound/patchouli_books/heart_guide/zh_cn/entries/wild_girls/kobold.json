@@ -1,0 +1,25 @@
+{
+  "name": "狗头人",
+  "icon": "minecraft:raw_iron",
+  "category": "heartbound:wild_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "狗头人是带有鳞片和角的小型龙形生物。她们凶猛且有领地意识，通常出现在洞穴和山地区域。$(br2)这些野生女孩非常护主，有很强的忠诚感。她们性格火爆，但一旦被驯服就是很好的伙伴。"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:kobold",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "狗头人",
+      "text": "凶猛的狗头人，野外的守护者！"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)驯服物品$()$(br)狗头人被$(#b0b)粗铁$()所吸引，认为它很有价值。$(br2)$(o)场景$()$(br)$(li)口交$(li)肛交"
+    }
+  ]
+}

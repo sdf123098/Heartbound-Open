@@ -1,0 +1,25 @@
+{
+  "name": "コッピー",
+  "icon": "minecraft:copper_ingot",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "コッピーは勤勉で実用的なガールで、光るものが大好きです。強い労働倫理を持ち、とても頼りになります。$(br2)コッピーは金属的なアクセントの外見を持ち、クラフトや建築を楽しみます。集落の仕事にぴったりです。"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:coppie",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "コッピー",
+      "text": "勤勉な職人、コッピー！"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)なつかせアイテム$()$(br)コッピーは$(#b0b)銅インゴット$()とその輝きに魅了されます。$(br2)$(o)シーン$()$(br)$(li)アナル$(li)バック"
+    }
+  ]
+}

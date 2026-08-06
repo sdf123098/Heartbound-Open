@@ -1,0 +1,66 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    maven { name = 'Fabric'; url = 'https://maven.fabricmc.net/' }
+    maven { name = 'TerraformersMC'; url = 'https://maven.terraformersmc.com/releases/' }
+    maven { name = 'GeckoLib'; url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+    maven { name = 'Jared'; url = 'https://maven.blamejared.com/' }
+    maven { name = 'Modrinth'; url = 'https://api.modrinth.com/maven' }
+    mavenCentral()
+}
+
+loom {
+    mods {
+        "heartbound" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+
+    // fabric.mod.json 'depends' 要求的运行时依赖（26.1.2 版本，满足版本区间）
+    implementation "com.geckolib:geckolib-fabric-${project.minecraft_version}:${project.geckolib_version}"
+    implementation "maven.modrinth:smartbrainlib:${project.sbl_version}"
+    implementation "maven.modrinth:cloth-config:${project.cloth_config_version}"
+    implementation "maven.modrinth:patchouli:${project.patchouli_version}"
+
+    // 可选集成（代码有引用，仅编译期需要；运行时按 suggests 可选）
+    compileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
+    compileOnly "mezz.jei:jei-${project.minecraft_version}-fabric:${project.jei_version}"
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') {
+        expand 'version': project.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 25
+    it.options.compilerArgs += ['-Xmaxerrs', '5000']
+}
+
+java {
+    withSourcesJar()
+
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+}
+
+tasks.named('sourcesJar') {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}

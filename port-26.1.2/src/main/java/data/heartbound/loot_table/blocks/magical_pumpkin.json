@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "heartbound:magical_pumpkin"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "heartbound:blocks/magical_pumpkin"
+}

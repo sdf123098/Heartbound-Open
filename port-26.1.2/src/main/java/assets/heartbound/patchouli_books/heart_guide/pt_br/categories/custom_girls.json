@@ -1,0 +1,6 @@
+{
+  "name": "Garotas Personalizadas",
+  "description": "Estas são garotas especiais carregadas a partir de configurações JSON e pacotes de recursos. Elas podem ter aparências, comportamentos e cenas completamente personalizados.",
+  "icon": "minecraft:knowledge_book",
+  "parent": "heartbound:girls"
+}

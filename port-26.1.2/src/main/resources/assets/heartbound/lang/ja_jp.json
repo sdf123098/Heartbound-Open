@@ -1,0 +1,569 @@
+{
+  "item.heartbound.jenny_spawn_egg": "ジェニーのスポーンエッグ",
+
+  "item.heartbound.ellie_spawn_egg": "エリーのスポーンエッグ",
+
+  "item.heartbound.bia_spawn_egg": "ビアのスポーンエッグ",
+
+  "item.heartbound.slime_spawn_egg": "スライムのスポーンエッグ",
+
+  "item.heartbound.kobold_spawn_egg": "コボルドのスポーンエッグ",
+
+  "item.heartbound.coppie_spawn_egg": "コッピーのスポーンエッグ",
+  "item.heartbound.aly_spawn_egg": "アリーのスポーンエッグ",
+
+  "item.heartbound.custom_girl_spawn_egg": "カスタムガールのスポーンエッグ",
+  "item.heartbound.custom_girl_spawn_egg.named": "%sのスポーンエッグ",
+
+  "item.heartbound.love_ball": "ラブボール",
+  "item.heartbound.love_ball.filled": "ラブボール（捕獲済み）",
+  "item.heartbound.love_ball.tooltip.girl": "ガール: %s",
+  "item.heartbound.love_ball.tooltip.owner": "オーナー: %s",
+  "item.heartbound.love_ball.invalid_entity": "ガールエンティティにのみ使用できます！",
+  "item.heartbound.love_ball.not_tamed": "このガールは懐いていません！",
+  "item.heartbound.love_ball.not_owner": "あなたはこのガールのオーナーではありません！",
+  "item.heartbound.love_ball.not_owner_release": "オーナーだけがこのガールを解放できます！",
+  "item.heartbound.love_ball.not_tameable": "このガールは捕獲できません！",
+  "item.heartbound.love_ball.already_contains": "このラブボールには既にガールが入っています！",
+  "item.heartbound.love_ball.stored": "%sをラブボールに保存しました",
+  "item.heartbound.love_ball.empty": "このラブボールは空です！",
+  "item.heartbound.love_ball.released": "%sをラブボールから解放しました",
+  "item.heartbound.love_ball.invalid_data": "解放に失敗しました - データが無効です！",
+  "item.heartbound.love_ball.spawn_failed": "ガールのスポーンに失敗しました！",
+
+  "item.heartbound.master_ring": "マスターリング",
+  "item.heartbound.master_ring.filled": "マスターリング（捕獲済み）",
+  "item.heartbound.master_ring.tooltip.girl": "ガール: %s",
+  "item.heartbound.master_ring.tooltip.owner": "オーナー: %s",
+  "item.heartbound.master_ring.invalid_entity": "ガールエンティティにのみ使用できます！",
+  "item.heartbound.master_ring.not_tamed": "このガールは懐いていません！",
+  "item.heartbound.master_ring.not_owner": "あなたはこのガールのオーナーではありません！",
+  "item.heartbound.master_ring.not_owner_release": "オーナーだけがこのガールを解放できます！",
+  "item.heartbound.master_ring.not_tameable": "このガールは捕獲できません！",
+  "item.heartbound.master_ring.already_contains": "このマスターリングには既にガールが入っています！",
+  "item.heartbound.master_ring.has_owner": "このガールには既にオーナーがいます！",
+  "item.heartbound.master_ring.stored": "%sをマスターリングに保存しました",
+  "item.heartbound.master_ring.empty": "このマスターリングは空です！",
+  "item.heartbound.master_ring.released": "%sをマスターリングから解放しました",
+  "item.heartbound.master_ring.invalid_data": "解放に失敗しました - データが無効です！",
+  "item.heartbound.master_ring.spawn_failed": "ガールのスポーンに失敗しました！",
+
+  "item.heartbound.heart_guide": "ハートガイド",
+  "item.heartbound.heart_guide.tooltip.edition": "初版",
+
+  "item.heartbound.x_pill": "X-ピル",
+  "gui.heartbound.girl_selection": "変身先...",
+
+  "block.heartbound.fusion_table": "フュージョンテーブル",
+
+  "block.heartbound.magical_pumpkin": "マジカルパンプキン",
+  "block.heartbound.litted_magical_pumpkin": "光るマジカルパンプキン",
+
+  "entity.heartbound.jenny": "ジェニー",
+
+  "entity.heartbound.ellie": "エリー",
+
+  "entity.heartbound.bia": "ビア",
+
+  "entity.heartbound.slime": "スライム",
+
+  "entity.heartbound.coppie": "コッピー",
+
+  "entity.heartbound.kobold": "コボルド",
+
+  "entity.heartbound.aly": "アリー",
+
+  "entity.heartbound.custom_girl": "カスタムガール",
+
+  "screen.heartbound.girl_inventory": "インベントリ",
+  "screen.heartbound.girl_inventory.relationship_tooltip": "好感度",
+  "screen.heartbound.fusion_table": "フュージョンテーブル",
+
+  "gui.heartbound.fusion_table": "フュージョンテーブル",
+
+  "gui.heartbound.sceneOptions": "シーンオプション",
+  "gui.heartbound.tooltip.requiresLevel": "好感度レベル%sが必要",
+
+  "gui.heartbound.button.breakUp": "別れる",
+  "gui.heartbound.button.setBase": "拠点を設定",
+  "gui.heartbound.button.goToBase": "拠点へ移動",
+  "gui.heartbound.button.roamAtBase": "拠点で散歩",
+  "gui.heartbound.button.stopRoaming": "散歩を止める",
+  "gui.heartbound.button.chopTrees": "木を伐る",
+  "gui.heartbound.button.stopChopping": "伐採を止める",
+  "gui.heartbound.button.customize": "カスタマイズ",
+  "gui.heartbound.button.baseFeature": "拠点機能",
+  "gui.heartbound.button.playerFeature": "プレイヤー機能",
+  "gui.heartbound.featureGroup.baseFeatures": "拠点機能",
+  "gui.heartbound.featureGroup.playerFeatures": "プレイヤー機能",
+  "gui.heartbound.button.sit": "座る",
+  "gui.heartbound.button.stand": "立つ",
+  "gui.heartbound.button.followMe": "ついて来て",
+  "gui.heartbound.button.stopFollowing": "追従を止める",
+  "gui.heartbound.button.mineOres": "鉱石を採掘",
+  "gui.heartbound.button.stopMining": "採掘を止める",
+  "gui.heartbound.button.strip": "脱がす",
+  "gui.heartbound.button.dressUp": "着せる",
+  "gui.heartbound.button.sex": "エッチ",
+  "gui.heartbound.button.select": "選択",
+  "gui.heartbound.button.confirm": "確認",
+  "gui.heartbound.button.cancel": "キャンセル",
+  "gui.heartbound.button.clear": "クリア",
+  "gui.heartbound.button.randomize": "ランダム",
+
+  "gui.heartbound.button.defaultGirl": "デフォルトガール",
+  "gui.heartbound.button.customGirl": "カスタムガール",
+  "gui.heartbound.button.back": "戻る",
+
+  "gui.heartbound.search": "検索",
+  "gui.heartbound.search.placeholder": "検索...",
+
+  "gui.heartbound.customizeGirl": "ガールのカスタマイズ",
+  "gui.heartbound.customizeKobold": "コボルドのカスタマイズ",
+
+  "gui.heartbound.customize.breastSize": "胸のサイズ",
+  "gui.heartbound.customize.breastOffset": "胸のオフセット",
+  "gui.heartbound.customize.bodySize": "体のサイズ",
+  "gui.heartbound.customize.bodySize.tooltip": "サイズは当たり判定の高さに影響します\n65 = 1ブロック、115 = 1.75ブロック",
+  "gui.heartbound.customize.breastSize.tooltip": "胸のサイズを調整（60-160）",
+  "gui.heartbound.customize.colorPattern": "カラーパターン:",
+  "gui.heartbound.customize.irisColor": "瞳の色:",
+  "gui.heartbound.customize.topHorns": "上の角:",
+  "gui.heartbound.customize.bottomHorns": "下の角:",
+  "gui.heartbound.customize.type": "タイプ %s",
+  "gui.heartbound.customize.offset": "%s オフセット",
+
+  "scene.heartbound.masturbation": "自慰",
+  "scene.heartbound.paizuri": "パイズリ",
+  "scene.heartbound.blowJob": "フェラ",
+  "scene.heartbound.doggy": "バック",
+  "scene.heartbound.faceFuck": "イラマチオ",
+  "scene.heartbound.missionary": "正常位",
+  "scene.heartbound.cowgirl": "騎乗位",
+  "scene.heartbound.anal": "アナル",
+  "scene.heartbound.sex": "セックス",
+  "scene.heartbound.nelson": "ネルソン",
+
+  "jei.heartbound.fusion": "フュージョンレシピ",
+
+  "itemgroup.heartbound.pleasure_craft_items": "Heartboundアイテム",
+
+  "itemgroup.heartbound.pleasure_craft_blocks": "Heartboundブロック",
+
+  "msg.heartbound.noBedFound": "近くに空いているベッドが必要です...",
+  "msg.heartbound.needsToStrip": "これをするには脱ぐ必要があります。",
+
+  "msg.heartbound.alreadyInRelationship": "彼女は既に他の人と付き合っています",
+
+  "msg.heartbound.sheIgnoresYou": "彼女はあなたを無視しています。%sをあげてみましょう。",
+  "msg.heartbound.askedOutYes": "%sに告白したら§aOKされました",
+  "msg.heartbound.brokeUp": "%sと別れました",
+  "msg.heartbound.diedRespawned": "%sが死亡し、拠点にリスポーンしました: %s, %s, %s",
+  "msg.heartbound.baseSet": "拠点を設定しました（%s, %s, %s）",
+  "msg.heartbound.mustFollowToMine": "採掘するにはガールが追従している必要があります",
+
+  "msg.heartbound.sheLikedTheGift": "彼女はプレゼントを気に入りました",
+
+  "msg.heartbound.gift.like.1": "いいね",
+  "msg.heartbound.gift.like.2": "ありがとう",
+  "msg.heartbound.gift.love.1": "あら、ありがとう",
+  "msg.heartbound.gift.love.2": "大好き～_^",
+
+  "msg.heartbound.jenny.gift.like.1": "わぁ、私に？ありがとう！",
+  "msg.heartbound.jenny.gift.like.2": "アリウム？嬉しい…！",
+  "msg.heartbound.jenny.gift.like.3": "あはは、最高！",
+  "msg.heartbound.jenny.gift.love.1": "また？あなたこそ最高のプレゼントよ～",
+  "msg.heartbound.jenny.gift.love.2": "もう、優しすぎ。そしてカッコいい～",
+  "msg.heartbound.jenny.gift.love.3": "プレゼントはいいから早くヤって～！",
+
+  "msg.heartbound.ellie.gift.like.1": "え、これって…本物のウィザーローズ…！",
+  "msg.heartbound.ellie.gift.like.2": "あんたダサいけどこれは…ありがと…！",
+  "msg.heartbound.ellie.gift.like.3": "すごい…これがウィザーローズなんだ…！",
+  "msg.heartbound.ellie.gift.love.1": "ん、あんた結構カッコいいじゃん…",
+  "msg.heartbound.ellie.gift.love.2": "ママが欲しいの？",
+  "msg.heartbound.ellie.gift.love.3": "も、もう…やりすぎ…",
+
+  "msg.heartbound.bia.gift.like.1": "わーい！！ポピーだ！！やったー！！",
+  "msg.heartbound.bia.gift.like.2": "わーわーわー！ビアにプレゼント！",
+  "msg.heartbound.bia.gift.like.3": "ビアはプレゼント大好き！もっとちょうだい！",
+  "msg.heartbound.bia.gift.love.1": "やったー！！またプレゼント！ご主人様になってよ！",
+  "msg.heartbound.bia.gift.love.2": "やったやったやった！遊ぼう！",
+  "msg.heartbound.bia.gift.love.3": "モ、ビア…あなたのせいで発情しちゃった…",
+
+  "msg.heartbound.coppie.gift.like.1": "このゴーレムはこの…物を受け取ります。",
+  "msg.heartbound.coppie.gift.like.2": "このゴーレムはプレゼントを適切に受け取ります。",
+  "msg.heartbound.coppie.gift.like.3": "なぜこのゴーレムにプレゼントをくれるのですか、マスター？",
+  "msg.heartbound.coppie.gift.love.1": "このゴーレムは…いえ…私はこれを嬉しく思います、マスター。",
+  "msg.heartbound.coppie.gift.love.2": "これは本当に嬉しいです、マスター。",
+  "msg.heartbound.coppie.gift.love.3": "私の性的機能を使いたくないのですか、マスター？",
+
+  "msg.heartbound.scene.jenny.stripMSG1": "えへへ～",
+  "msg.heartbound.scene.jenny.bjiMSG1": "何してるの...",
+  "msg.heartbound.scene.jenny.bjiMSG2": "えぇ...男って...",
+  "msg.heartbound.scene.jenny.bjiMSG3": "おほぉ...！",
+  "msg.heartbound.scene.jenny.bjiMSG5": "これ本当に必要だったの？！",
+  "msg.heartbound.scene.jenny.bjiMSG6": "あぁ～",
+  "msg.heartbound.scene.jenny.bjiMSG7": "気持ちいい？～",
+  "msg.heartbound.scene.jenny.bjiMSG9": "えへへへ～",
+  "msg.heartbound.scene.jenny.doggyLayOnBedMSG2": "何を待ってるの？～",
+  "msg.heartbound.scene.jenny.doggyLayOnBedMSG3": "このお尻は勝手にヤれないよ...",
+  "msg.heartbound.scene.jenny.doggyintroMSG1": "んん～",
+  "msg.heartbound.scene.jenny.doggyintroMSG4": "あぁ～！",
+  "msg.heartbound.scene.jenny.doggyintroMSG5": "ああぁ～！",
+  "msg.heartbound.scene.jenny.doggycumMSG1": "イクっ～！",
+
+  "msg.heartbound.scene.player.bjiMSG8": "いぇい",
+
+  "msg.heartbound.scene.ellie.carry_introMSG1": "お腹空いた..",
+  "msg.heartbound.scene.ellie.carry_introMSG2": "ふふ～",
+  "msg.heartbound.scene.ellie.sitdownMSG1": "ママのところにおいで～",
+  "msg.heartbound.scene.ellie.missionary_cumMSG2": "いい子...えぇ...ふふ～",
+  "msg.heartbound.scene.ellie.cowgirlStartMSG1": "見てるの好き？～",
+  "msg.heartbound.scene.ellie.cowgirlcumMSG4": "いい子...えぇ...ふふ～",
+
+  "msg.heartbound.scene.bia.sitdownMSG1": "こっちにおいで～",
+
+  "msg.heartbound.canGoInToFreeCam": "フリーカメラモードに入るにはF4を押してください",
+
+  "key.Heartbound.thrust": "突き",
+
+  "key.Heartbound.cum": "射精",
+
+  "key.Heartbound.transformScene": "変身シーン",
+
+  "key.categories.heartbound": "Heartbound",
+
+  "subtitles.bedrustle": "ベッドのきしみ",
+
+  "subtitles.belljingle": "鈴が鳴る",
+
+  "subtitles.clap": "パンパン",
+
+  "subtitles.cuminflation": "中出し膨張",
+
+  "subtitles.flap": "パタパタ",
+
+  "subtitles.inserts": "挿入",
+
+  "subtitles.pounding": "激しく突く",
+
+  "subtitles.slap": "ぺちん",
+
+  "subtitles.slide": "ズルッ",
+
+  "subtitles.smallinserts": "浅い挿入",
+
+  "subtitles.touch": "タッチ",
+
+  "subtitles.plob": "ポロン",
+
+  "subtitles.jenny.heavybreathing": "荒い息",
+
+  "subtitles.jenny.hmph": "ふんっ",
+
+  "subtitles.jenny.huh": "えっ",
+
+  "subtitles.jenny.aftersessionmoan": "事後の喘ぎ",
+
+  "subtitles.jenny.ahh": "あぁ",
+
+  "subtitles.jenny.bjmoan": "フェラの喘ぎ",
+
+  "subtitles.jenny.giggle": "くすくす",
+
+  "subtitles.jenny.happyoh": "嬉しいあぁ",
+
+  "subtitles.jenny.lightbreathing": "軽い息",
+
+  "subtitles.jenny.lipsound": "リップ音",
+
+  "subtitles.jenny.mmm": "んん",
+
+  "subtitles.jenny.moan": "喘ぎ",
+
+  "subtitles.jenny.sadoh": "悲しいあぁ",
+
+  "subtitles.jenny.sigh": "ため息",
+
+  "subtitles.bia.ahh": "あぁ",
+
+  "subtitles.bia.bjmoan": "フェラの喘ぎ",
+
+  "subtitles.bia.moan": "喘ぎ",
+
+  "subtitles.bia.lightbreathing": "軽い息",
+
+  "subtitles.bia.giggle": "くすくす",
+
+  "subtitles.bia.hey": "ねぇ",
+
+  "subtitles.bia.happyoh": "嬉しいあぁ",
+
+  "subtitles.bia.sadoh": "悲しいあぁ",
+
+  "subtitles.bia.sigh": "ため息",
+
+  "subtitles.bia.huh": "えっ",
+
+  "subtitles.bia.hmph": "ふんっ",
+
+  "subtitles.bia.mmm": "んん",
+
+  "subtitles.ellie.aftersessionmoan": "事後の喘ぎ",
+
+  "subtitles.ellie.ahh": "あぁ",
+
+  "subtitles.ellie.bjmoan": "フェラの喘ぎ",
+
+  "subtitles.ellie.cometomommy": "ママのところにおいで",
+
+  "subtitles.ellie.giggle": "くすくす",
+
+  "subtitles.ellie.goodboy": "いい子",
+
+  "subtitles.ellie.happyoh": "嬉しいあぁ",
+
+  "subtitles.ellie.heavybreathing": "荒い息",
+
+  "subtitles.ellie.hmph": "ふんっ",
+
+  "subtitles.ellie.huh": "えっ",
+
+  "subtitles.ellie.lightbreathing": "軽い息",
+
+  "subtitles.ellie.lipsound": "リップ音",
+
+  "subtitles.ellie.mmm": "んん",
+
+  "subtitles.ellie.moan": "喘ぎ",
+
+  "subtitles.ellie.mommyhorny": "ママ発情中",
+
+  "subtitles.ellie.sadoh": "悲しいあぁ",
+
+  "subtitles.ellie.sigh": "ため息",
+
+  "key.categories.freecam": "Heartbound - フリーカメラ",
+
+  "key.freecam.toggle": "フリーカメラ切替",
+
+  "key.freecam.playerControl": "プレイヤー操作",
+
+  "key.freecam.tripodReset": "三脚リセット",
+
+  "key.freecam.configGui": "設定画面",
+
+  "heartbound.patchouli.heart_guide.name": "ハートガイド",
+  "heartbound.patchouli.heart_guide.landing_text": "$(o)ハートガイドへようこそ！$()$(br2)あなたの世界にいる全てのガールを発見しましょう！性格やなつかせ方、好きなシーンについて学べます。$(br2)右のカテゴリーを選んで始めましょう！",
+
+  "msg.freecam.enable": "フリーカメラが有効になりました。",
+
+  "msg.freecam.disable": "フリーカメラが無効になりました。",
+
+  "msg.freecam.openTripod": "カメラ%sを開いています",
+
+  "msg.freecam.closeTripod": "カメラ%sを閉じています",
+
+  "msg.freecam.tripodReset": "カメラ%sをリセット",
+
+  "text.autoconfig.heartbound.category.default": "Heartbound",
+
+  "text.autoconfig.heartbound.category.freecam": "フリーカメラ",
+
+  "text.autoconfig.heartbound.title": "Heartbound設定",
+
+  "text.autoconfig.heartbound.option.girls": "ガール",
+
+  "text.autoconfig.heartbound.option.girls.boobWindow": "胸の窓",
+
+  "text.autoconfig.heartbound.option.girls.disableShading": "シェーディング無効",
+
+  "text.autoconfig.heartbound.option.girls.boobWindow.@Tooltip": "ガールの防具に胸が見える窓を追加します",
+
+  "text.autoconfig.heartbound.option.girls.disableShading.@Tooltip": "ガールのシェーディング/影を無効にしてフラットライティングにします",
+
+  "text.autoconfig.heartbound.option.player": "プレイヤー",
+
+  "text.autoconfig.heartbound.option.player.penisShaftColor": "ペニスの竿の色",
+
+  "text.autoconfig.heartbound.option.player.penisShaftColor.@Tooltip": "プレイヤーモデルのペニスの竿の色を設定します",
+
+  "text.autoconfig.heartbound.option.player.penisHeadColor": "ペニスの先端の色",
+
+  "text.autoconfig.heartbound.option.player.penisHeadColor.@Tooltip": "プレイヤーモデルのペニスの先端の色を設定します",
+
+  "text.autoconfig.heartbound.option.controls": "キー設定",
+
+  "text.autoconfig.heartbound.option.controls.@Tooltip": "フリーカメラのキー設定。",
+
+  "text.autoconfig.heartbound.option.movement": "移動オプション",
+
+  "text.autoconfig.heartbound.option.movement.@Tooltip": "カメラの移動方法。",
+
+  "text.autoconfig.heartbound.option.movement.flightMode": "飛行モード",
+
+  "text.autoconfig.heartbound.option.movement.flightMode.@Tooltip": "フリーカメラで使用する飛行タイプ。",
+
+  "text.autoconfig.heartbound.option.movement.flightMode.default": "デフォルト",
+
+  "text.autoconfig.heartbound.option.movement.flightMode.creative": "クリエイティブ",
+
+  "text.autoconfig.heartbound.option.movement.horizontalSpeed": "水平速度",
+
+  "text.autoconfig.heartbound.option.movement.horizontalSpeed.@Tooltip": "フリーカメラの水平速度。",
+
+  "text.autoconfig.heartbound.option.movement.verticalSpeed": "垂直速度",
+
+  "text.autoconfig.heartbound.option.movement.verticalSpeed.@Tooltip": "フリーカメラの垂直速度。",
+
+  "text.autoconfig.heartbound.option.collision": "衝突オプション",
+
+  "text.autoconfig.heartbound.option.collision.@Tooltip": "フリーカメラで通過できるブロック。",
+
+  "text.autoconfig.heartbound.option.collision.ignoreTransparent": "透明ブロックを無視",
+
+  "text.autoconfig.heartbound.option.collision.ignoreTransparent.@Tooltip": "フリーカメラで透明ブロックを通過できます。",
+
+  "text.autoconfig.heartbound.option.collision.ignoreOpenable": "開閉ブロックを無視",
+
+  "text.autoconfig.heartbound.option.collision.ignoreOpenable.@Tooltip": "フリーカメラでドア/トラップドア/ゲートを通過できます。",
+
+  "text.autoconfig.heartbound.option.collision.ignoreCustom": "カスタム無視リスト",
+
+  "text.autoconfig.heartbound.option.collision.ignoreCustom.@Tooltip[0]": "フリーカメラで特定のブロックを通過できます。",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.ids": "無視するID",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.ids.@Tooltip[0]": "ブロックIDを使用してください。例: \"grass_block\"。",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.ids.@Tooltip[1]": "名前空間を省略すると\"minecraft:\"が使われます。",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.patterns": "無視する正規表現",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.patterns.@Tooltip[0]": "正規表現構文を使用してください。",
+
+  "text.autoconfig.heartbound.option.collision.whitelist.patterns.@Tooltip[1]": "完全なブロックIDに対してマッチします。例: \"minecraft:grass_block\"。",
+
+  "text.autoconfig.heartbound.option.collision.ignoreAll": "全ての衝突を無視",
+
+  "text.autoconfig.heartbound.option.collision.ignoreAll.@Tooltip[0]": "フリーカメラで全てのブロックを通過できます。",
+
+  "text.autoconfig.heartbound.option.collision.ignoreAll.@Tooltip[1]": "§e上記の設定を上書きします。",
+
+  "text.autoconfig.heartbound.option.collision.ignoreAll.@ModrinthTooltip[2]": "§c注意: シングルプレイヤー、クリエイティブ、またはオペレーター権限でのみ使用できます。",
+
+  "text.autoconfig.heartbound.option.collision.alwaysCheck": "常に初期衝突をチェック",
+
+  "text.autoconfig.heartbound.option.collision.alwaysCheck.@Tooltip[0]": "§7初期パースペクティブ§rが衝突をチェックするかどうか",
+
+  "text.autoconfig.heartbound.option.collision.alwaysCheck.@Tooltip[1]": "§7全ての衝突を無視§rを使用している場合でも。",
+
+  "text.autoconfig.heartbound.option.visual": "ビジュアルオプション",
+
+  "text.autoconfig.heartbound.option.visual.@Tooltip": "フリーカメラの見た目。",
+
+  "text.autoconfig.heartbound.option.visual.perspective": "初期パースペクティブ",
+
+  "text.autoconfig.heartbound.option.visual.perspective.@Tooltip": "カメラの初期パースペクティブ。",
+
+  "text.autoconfig.heartbound.option.visual.perspective.firstPerson": "一人称",
+
+  "text.autoconfig.heartbound.option.visual.perspective.thirdPerson": "三人称",
+
+  "text.autoconfig.heartbound.option.visual.perspective.thirdPersonMirror": "ミラー",
+
+  "text.autoconfig.heartbound.option.visual.perspective.inside": "内部",
+
+  "text.autoconfig.heartbound.option.visual.hidePlayer": "プレイヤーを非表示",
+
+  "text.autoconfig.heartbound.option.visual.hidePlayer.@Tooltip": "プレイヤーモデルを非表示にします。",
+
+  "text.autoconfig.heartbound.option.visual.showHand": "手を表示",
+
+  "text.autoconfig.heartbound.option.visual.showHand.@Tooltip": "フリーカメラで手を表示するかどうか。",
+
+  "text.autoconfig.heartbound.option.visual.fullBright": "フル明るさ",
+
+  "text.autoconfig.heartbound.option.visual.fullBright.@Tooltip": "フリーカメラ中の明るさを上げます。",
+
+  "text.autoconfig.heartbound.option.visual.showSubmersion": "水没フォグを表示",
+
+  "text.autoconfig.heartbound.option.visual.showSubmersion.@Tooltip": "水中、溶岩中、粉雪中にフォグオーバーレイを表示するかどうか。",
+
+  "text.autoconfig.heartbound.option.utility": "ユーティリティオプション",
+
+  "text.autoconfig.heartbound.option.utility.@Tooltip": "フリーカメラの拡張機能。",
+
+  "text.autoconfig.heartbound.option.utility.disableOnDamage": "ダメージで無効",
+
+  "text.autoconfig.heartbound.option.utility.disableOnDamage.@Tooltip": "ダメージを受けるとフリーカメラを無効にします。",
+
+  "text.autoconfig.heartbound.option.utility.freezePlayer": "プレイヤーを固定",
+
+  "text.autoconfig.heartbound.option.utility.freezePlayer.@Tooltip[0]": "フリーカメラ中のプレイヤーの移動を防ぎます。",
+
+  "text.autoconfig.heartbound.option.utility.freezePlayer.@Tooltip[1]": "§c警告: マルチプレイヤーでの使用は非推奨。",
+
+  "text.autoconfig.heartbound.option.utility.allowInteract": "インタラクションを許可",
+
+  "text.autoconfig.heartbound.option.utility.allowInteract.@Tooltip[0]": "フリーカメラでブロック/エンティティとインタラクションできるかどうか。",
+
+  "text.autoconfig.heartbound.option.utility.interactionMode": "インタラクションモード",
+
+  "text.autoconfig.heartbound.option.utility.interactionMode.@Tooltip": "ブロック/エンティティインタラクションのソース。",
+
+  "text.autoconfig.heartbound.option.utility.interactionMode.camera": "カメラ",
+
+  "text.autoconfig.heartbound.option.utility.interactionMode.player": "プレイヤー",
+
+  "text.autoconfig.heartbound.option.notification": "通知オプション",
+
+  "text.autoconfig.heartbound.option.notification.@Tooltip": "通知の表示/非表示。",
+
+  "text.autoconfig.heartbound.option.notification.notifyFreecam": "フリーカメラ通知",
+
+  "text.autoconfig.heartbound.option.notification.notifyFreecam.@Tooltip": "フリーカメラの開始/終了を通知します。",
+
+  "text.autoconfig.heartbound.option.notification.notifyTripod": "三脚通知",
+
+  "text.autoconfig.heartbound.option.notification.notifyTripod.@Tooltip": "三脚カメラの開始/終了を通知します。",
+
+  "advancements.heartbound.root.title": "おい、お前。やっと目を覚ましたか",
+  "advancements.heartbound.root.description": "国境を越えようとしてたんだろ？",
+  "advancements.heartbound.tame_girl.title": "ずっと一緒",
+  "advancements.heartbound.tame_girl.description": "ガールのハートを射止めよう",
+  "advancements.heartbound.max_relationship.title": "結婚してくれますか？",
+  "advancements.heartbound.max_relationship.description": "ガールとの好感度を最大にする",
+  "advancements.heartbound.break_up.title": "失恋",
+  "advancements.heartbound.break_up.description": "ガールと別れる",
+  "advancements.heartbound.kill_girl.title": "許してくれ…",
+  "advancements.heartbound.kill_girl.description": "ガールを殺す",
+  "advancements.heartbound.enter_jenny_house.title": "記憶よりずっと素敵",
+  "advancements.heartbound.enter_jenny_house.description": "ジェニーの家を発見する",
+  "advancements.heartbound.enter_bia_house.title": "居心地のいい場所",
+  "advancements.heartbound.enter_bia_house.description": "ビアの家を発見する",
+  "advancements.heartbound.enter_ellie_house.title": "ママのお城！！？",
+  "advancements.heartbound.enter_ellie_house.description": "エリーの家を発見する",
+  "advancements.heartbound.summon_coppie.title": "銅のゴー…コッピー？",
+  "advancements.heartbound.summon_coppie.description": "コッピーを召喚する",
+  "advancements.heartbound.craft_custom_girl_spawn_egg.title": "ホムンクルス！？",
+  "advancements.heartbound.craft_custom_girl_spawn_egg.description": "カスタムガールのスポーンエッグをクラフトする",
+  "advancements.heartbound.craft_slime_spawn_egg.title": "ぷるぷるの友達",
+  "advancements.heartbound.craft_slime_spawn_egg.description": "スライムガールのスポーンエッグをクラフトする",
+  "advancements.heartbound.craft_aly_spawn_egg.title": "なんか見た目違くない？",
+  "advancements.heartbound.craft_aly_spawn_egg.description": "アリーのスポーンエッグをクラフトする",
+  "advancements.heartbound.craft_love_ball.title": "ポケット・ディメンション",
+  "advancements.heartbound.craft_love_ball.description": "ラブボールをクラフトする",
+  "advancements.heartbound.craft_fusion_table.title": "ガール作りを始めるか",
+  "advancements.heartbound.craft_fusion_table.description": "フュージョンテーブルをクラフトする",
+  "advancements.heartbound.craft_master_ring.title": "お前は私のものだ",
+  "advancements.heartbound.craft_master_ring.description": "マスターリングをクラフトする",
+  "advancements.heartbound.craft_x_pill.title": "この錠剤、なんか変だな",
+  "advancements.heartbound.craft_x_pill.description": "X-ピルをクラフトする",
+  "advancements.heartbound.transform.title": "天上天下唯我独尊",
+  "advancements.heartbound.transform.description": "X-ピルを使って変身する",
+  "advancements.heartbound.capture_love_ball.title": "僕と一緒に行こう",
+  "advancements.heartbound.capture_love_ball.description": "ラブボールでガールを捕獲する",
+  "advancements.heartbound.capture_master_ring.title": "今度は逃がさないぞ",
+  "advancements.heartbound.capture_master_ring.description": "マスターリングでガールを捕獲する"
+}

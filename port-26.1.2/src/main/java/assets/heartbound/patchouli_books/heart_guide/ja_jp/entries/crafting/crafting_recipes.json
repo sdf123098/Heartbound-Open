@@ -1,0 +1,89 @@
+{
+  "name": "クラフトレシピ",
+  "icon": "minecraft:crafting_table",
+  "category": "heartbound:crafting",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)必須クラフトレシピ$()$(br2)Pleasure Horizonsでガールを作成し、交流するために必要な主要クラフトレシピです。各レシピにはあなたの冒険における特定の役割があります。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:fusion_table",
+      "title": "フュージョンテーブル",
+      "text": "スポーンエッグを融合させる魔法のテーブル。ブレイズパウダー、ダイヤモンド、エンダーパール、鉄インゴットが必要です。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:magical_pumpkin",
+      "title": "マジカルパンプキン",
+      "text": "白いウールの上に置くとカスタムガールをスポーンさせます。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:master_ring",
+      "title": "マスターリング",
+      "text": "ワイルドガールも含めてガールを捕獲するために使用します。ただし、既にオーナーがいるガールは捕獲できません。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:love_ball",
+      "title": "ラブボール",
+      "text": "なつかせたガールを収納するために使用します。ワイルドガールは捕獲できません。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:heart_guide",
+      "title": "ハートガイド",
+      "text": "この本！ガールとメカニクスに関する全ての情報が載っています。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:x_pill",
+      "title": "X-ピル",
+      "text": "多くのレシピで使われる魔法の触媒。ガールに変身もできます。もう一度使うと元に戻ります。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:custom_girl_spawn_egg",
+      "title": "カスタムガールのスポーンエッグ",
+      "text": "骨、革、粘土球、X-ピル、卵でホムンクルス風カスタムガールを作成。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:jenny_spawn_egg",
+      "title": "ジェニーのスポーンエッグ",
+      "text": "金インゴット、ヒマワリ、X-ピル、卵で大胆な平原のガールを召喚。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:ellie_spawn_egg",
+      "title": "エリーのスポーンエッグ",
+      "text": "イカスミ、黒い羊毛、ウィザーローズ、X-ピル、卵でダークフォレストのエモガールを召喚。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:bia_spawn_egg",
+      "title": "ビアのスポーンエッグ",
+      "text": "茶色の羊毛、X-ピル、卵で魔法のテディベアを召喚。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:aly_spawn_egg",
+      "title": "アリーのスポーンエッグ",
+      "text": "青い羊毛、シアンの羊毛、ダイヤモンド、X-ピル、卵でフェアリーガールを召喚。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:slime_spawn_egg",
+      "title": "スライムのスポーンエッグ",
+      "text": "スライムボール、X-ピル、卵でスライムガールを召喚。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:kobold_spawn_egg",
+      "title": "コボルドのスポーンエッグ",
+      "text": "革、石炭、X-ピル、卵で洞窟のコボルドを召喚。"
+    }
+  ]
+}

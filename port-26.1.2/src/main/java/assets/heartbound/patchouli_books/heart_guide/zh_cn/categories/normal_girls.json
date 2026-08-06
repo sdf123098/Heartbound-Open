@@ -1,0 +1,6 @@
+{
+  "name": "普通女孩",
+  "description": "这些是你可以在村庄和聚落中找到的标准女孩。她们很友好，可以被招募来帮助完成聚落任务。",
+  "icon": "minecraft:villager_spawn_egg",
+  "parent": "heartbound:girls"
+}

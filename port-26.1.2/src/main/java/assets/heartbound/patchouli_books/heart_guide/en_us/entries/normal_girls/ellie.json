@@ -1,0 +1,31 @@
+{
+  "name": "Ellie",
+  "icon": "heartbound:ellie_spawn_egg",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ellie is an emo girl who lives deep in the dark forest. She has a melancholic personality and prefers solitude, but opens up once she trusts you.$(br2)She dresses in all black and has a dark, mysterious aura. You find her house in the dark forest."
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:ellie",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "Ellie",
+      "text": "Ellie, the dark forest emo girl!"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:ellie_spawn_egg",
+      "title": "Ellie Spawn Egg",
+      "text": "Craft with an X-Pill, ink sacs, egg, black wool, and a wither rose."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)Tame Item$()$(br)Ellie appreciates the beauty of $(#b0b)Wither Rose$() and their delicate nature.$(br2)$(o)Scenes$()$(br)$(li)Face Fuck$(li)Missionary$(li)Cowgirl"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "エリー",
+  "icon": "heartbound:ellie_spawn_egg",
+  "category": "heartbound:normal_girls",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "エリーはダークフォレストの奥深くに住むエモなガールです。憂鬱な性格で孤独を好みますが、信頼を得ると心を開きます。$(br2)全身黒い服を着て、暗くて神秘的なオーラがあります。ダークフォレストで彼女の家を見つけることができます。"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "heartbound:ellie",
+      "scale": 0.8,
+      "offset": 0.3,
+      "rotate": false,
+      "default_rotation": 0,
+      "name": "エリー",
+      "text": "エリー、ダークフォレストのエモガール！"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "heartbound:ellie_spawn_egg",
+      "title": "エリーのスポーンエッグ",
+      "text": "X-ピル、イカスミ、卵、黒い羊毛、ウィザーローズで作成。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(o)なつかせアイテム$()$(br)エリーは$(#b0b)ウィザーローズ$()の美しさと繊細さを愛でます。$(br2)$(o)シーン$()$(br)$(li)イラマチオ$(li)正常位$(li)騎乗位"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Fundindo Ovos Geradores",
+  "icon": "heartbound:fusion_table",
+  "category": "heartbound:features",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Mecânicas de Fusão$()$(br2)A Mesa de Fusão permite combinar $(item)Ovos Geradores de Garota Personalizada$() com itens de domesticação para criar variantes especializadas de garotas. Este processo usa magia ancestral para infundir o ovo gerador com novas propriedades."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Instruções Passo a Passo:$()$(br)$(li)Clique com o botão direito na $(item)Mesa de Fusão$() para abri-la$(li)Coloque um $(item)Ovo Gerador de Garota Personalizada$() no slot base$(li)Coloque $(bold)dois$() itens de domesticação idênticos nos outros slots$(li)Pegue o resultado no slot de saída$(br2)$(o)Importante: Ambos os itens de domesticação devem ser exatamente do mesmo tipo!$()"
+    }
+  ]
+}

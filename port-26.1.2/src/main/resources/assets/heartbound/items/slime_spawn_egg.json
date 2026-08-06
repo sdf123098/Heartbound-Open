@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "heartbound:item/slime_spawn_egg"
+  }
+}
