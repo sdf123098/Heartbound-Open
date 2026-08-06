@@ -5,6 +5,7 @@ import com.cuddly.heartbound.client.rendering.renderers.TransformedPlayerRendere
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.geckolib.animatable.instance.AnimatableInstanceCache;
 import com.geckolib.constant.DataTickets;
+import com.geckolib.constant.dataticket.DataTicket;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -59,6 +60,17 @@ public class TransformedPlayerRenderManager {
                "[TransformedPlayerRenderManager] diag: instanceCache={} manager(player {} id {})={} animatable={}",
                cache, player.getScoreboardName(), player.getId(), manager, anim
             );
+            if (manager != null) {
+               TransformedPlayerRenderer.TransformedPlayerRenderState probe = new TransformedPlayerRenderer.TransformedPlayerRenderState();
+               probe.addGeckolibData((DataTicket)DataTickets.ANIMATABLE_MANAGER, manager);
+               Heartbound.LOGGER.info(
+                  "[TransformedPlayerRenderManager] probe: add->get ANIMATABLE_MANAGER = {} (put {}) | mapIdentity={} keys={}",
+                  probe.getGeckolibData(DataTickets.ANIMATABLE_MANAGER),
+                  manager,
+                  System.identityHashCode(probe.getDataMap()),
+                  probe.getDataMap().keySet()
+               );
+            }
             float partialTick = Minecraft.getInstance().getDeltaTracker().getGameTimeDeltaPartialTick(false);
             state = renderer.createRenderState(player, partialTick);
             renderer.extractRenderState(player, state, partialTick);
