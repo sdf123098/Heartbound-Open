@@ -41,6 +41,10 @@ public class TransformedPlayerRenderManager {
             TransformedPlayerAnimatable.INSTANCE.resetAnimationState((long)player.getId());
          }
 
+         if (!girlId.equals(lastGirlId)) {
+            Heartbound.LOGGER.info("[TransformedPlayerRenderManager] start rendering player {} ({}) as girl '{}'", player.getScoreboardName(), player.getId(), girlId);
+         }
+
          lastRenderedGirlIdMap.put(playerId, girlId);
 
          matrices.pushPose();

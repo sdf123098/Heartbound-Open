@@ -5,6 +5,7 @@ import com.cuddly.heartbound.block.HeartboundBlocks;
 import com.cuddly.heartbound.block.entity.HeartboundBlockEntities;
 import com.cuddly.heartbound.command.Commands;
 import com.cuddly.heartbound.component.HeartboundDataComponentTypes;
+import com.cuddly.heartbound.entity.HeartboundEntities;
 import com.cuddly.heartbound.entity.ai.brain.GirlMemoryTypes;
 import com.cuddly.heartbound.item.HeartboundItemGroups;
 import com.cuddly.heartbound.item.HeartboundItems;
@@ -61,6 +62,9 @@ public class Heartbound implements ModInitializer {
       ServerTickEvents.END_LEVEL_TICK.register(world -> {
          if (!world.isClientSide()) {
             TamedGirlManager.get(world).cleanupDeadGirls(world);
+            if (world.getServer().getTickCount() == 1) {
+               HeartboundEntities.runSelfChecks();
+            }
          }
       });
       HeartboundPackets.registerPackets();

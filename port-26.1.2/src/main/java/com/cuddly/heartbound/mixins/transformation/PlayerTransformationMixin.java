@@ -134,6 +134,7 @@ public abstract class PlayerTransformationMixin implements TransformablePlayer {
       ((Player)(Object)this).getEntityData().set(HEARTBOUND_TRANSFORM_GIRL_ID, girlId != null ? girlId : "");
       this.heartbound$setStripped(false);
       ((Player)(Object)this).refreshDimensions();
+      Heartbound.LOGGER.info("[PlayerTransformationMixin] {} setTransformGirlId -> '{}' (stripped reset, dimensions refreshed)", ((Player)(Object)this).getScoreboardName(), girlId);
    }
 
    @Override

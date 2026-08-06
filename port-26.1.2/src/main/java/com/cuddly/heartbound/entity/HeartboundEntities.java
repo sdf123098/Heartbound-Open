@@ -1,5 +1,6 @@
 package com.cuddly.heartbound.entity;
 
+import com.cuddly.heartbound.Heartbound;
 import com.cuddly.heartbound.entity.base.GirlSceneEntity;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,12 +20,14 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Item.Properties;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.item.component.TypedEntityData;
 import net.minecraft.world.level.Level;
 
 public class HeartboundEntities {
    private static final List<Runnable> ATTRIBUTE_REGISTRATIONS = new ArrayList<>();
+   private static final List<Runnable> SELF_CHECKS = new ArrayList<>();
    private static final List<Item> AUTO_SPAWN_EGGS = new ArrayList<>();
    private static final List<EntityType<? extends Mob>> GIRLS = new ArrayList<>();
 
@@ -75,6 +78,16 @@ public class HeartboundEntities {
                new SpawnEggItem(new Properties().setId(eggKey).component(DataComponents.ENTITY_DATA, TypedEntityData.of(type, new CompoundTag())))
             );
             AUTO_SPAWN_EGGS.add(egg);
+            SELF_CHECKS.add(() -> {
+               EntityType<?> resolved = SpawnEggItem.getType(new ItemStack(egg));
+               Heartbound.LOGGER.info(
+                  "[HeartboundEntities] self-check: SpawnEggItem.getType(new ItemStack({})) -> {} (expected {})",
+                  eggId, resolved, type
+               );
+            });
+            Heartbound.LOGGER.info("[HeartboundEntities] registered girl '{}' type={} egg={}", id, type, eggId);
+         } else {
+            Heartbound.LOGGER.info("[HeartboundEntities] registered girl '{}' type={} (no egg)", id, type);
          }
 
          GIRLS.add(type);
@@ -86,6 +99,11 @@ public class HeartboundEntities {
 
    public static void registerAttributes() {
       ATTRIBUTE_REGISTRATIONS.forEach(Runnable::run);
+   }
+
+   public static void runSelfChecks() {
+      SELF_CHECKS.forEach(Runnable::run);
+      SELF_CHECKS.clear();
    }
 
    public static Item getFirstSpawnEgg() {
