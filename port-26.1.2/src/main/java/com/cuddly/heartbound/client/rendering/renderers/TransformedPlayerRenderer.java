@@ -41,6 +41,7 @@ import com.geckolib.renderer.base.GeoRenderState;
 import com.geckolib.renderer.base.RenderPassInfo;
 import com.geckolib.renderer.layer.builtin.BlockAndItemGeoLayer;
 import com.geckolib.renderer.layer.builtin.BlockAndItemGeoLayer.RenderData;
+import com.geckolib.util.RenderUtil;
 
 public class TransformedPlayerRenderer extends GeoReplacedEntityRenderer<TransformedPlayerAnimatable, Player, TransformedPlayerRenderer.TransformedPlayerRenderState> {
    /**
@@ -128,8 +129,13 @@ public class TransformedPlayerRenderer extends GeoReplacedEntityRenderer<Transfo
                   return;
                }
 
+               Minecraft client = Minecraft.getInstance();
+               boolean hideHeadForCamera = client.options.getCameraType().isFirstPerson()
+                  && !player.getPassengers().isEmpty()
+                  && client.getCameraEntity() == player.getPassengers().get(0);
+               boolean slim = TransformedPlayerRenderer.this.computeSteveSlim(player);
                renderPassInfo.model().getBone("steve").ifPresent(bone -> consumer.accept(bone, (passInfo, b, tasks) -> {
-                  TransformedPlayerRenderer.this.submitSteveSubtree(passInfo, b, tasks);
+                  TransformedPlayerRenderer.this.submitSteveSubtree(passInfo, b, tasks, hideHeadForCamera, slim);
                }));
             }
          }
@@ -208,6 +214,10 @@ public class TransformedPlayerRenderer extends GeoReplacedEntityRenderer<Transfo
       Player player = this.animatable.getCurrentEntity();
       boolean sceneActive = false;
       boolean showSteve = false;
+      Minecraft client = Minecraft.getInstance();
+      boolean isLocalFirstPerson = player != null
+         && client.options.getCameraType().isFirstPerson()
+         && client.getCameraEntity() == player;
       if (player != null) {
          TransformablePlayer tp = (TransformablePlayer)player;
          sceneActive = tp.heartbound$isTransformSceneActive();
@@ -245,65 +255,123 @@ public class TransformedPlayerRenderer extends GeoReplacedEntityRenderer<Transfo
       }
 
       if (sceneActive && player != null) {
-         this.skipVisualRender = false;
          if (!this.positionListenersRegistered) {
             this.positionListenersRegistered = true;
-            renderPassInfo.addBonePositionListener("girlCam", (position, rotation, scale) -> this.onGirlCamPosition(player, position));
+            renderPassInfo.model().getBone("girlCam").ifPresent(bone -> renderPassInfo.addPerBoneRender(bone, (passInfo, b, tasks) -> {
+               RenderUtil.providePositionsToListeners(
+                  passInfo.poseStack(),
+                  passInfo,
+                  new RenderPassInfo.BonePositionListener[]{(position, rotation, scale) -> this.onGirlCamPosition(player, position)}
+               );
+            }));
             if (steveVisible) {
-               renderPassInfo.addBonePositionListener("boyCam", (position, rotation, scale) -> this.onBoyCamPosition(player, position));
+               renderPassInfo.model().getBone("boyCam").ifPresent(bone -> renderPassInfo.addPerBoneRender(bone, (passInfo, b, tasks) -> {
+                  RenderUtil.providePositionsToListeners(
+                     passInfo.poseStack(),
+                     passInfo,
+                     new RenderPassInfo.BonePositionListener[]{(position, rotation, scale) -> this.onBoyCamPosition(player, position)}
+                  );
+               }));
             }
          }
       } else {
          if (player != null && player.getId() == trackedSceneEntityId) {
             clearCameraPositions();
          }
+      }
 
-         if (player != null && isWorldRenderPass) {
-            Minecraft client = Minecraft.getInstance();
-            boolean isFirstPerson = client.options.getCameraType().isFirstPerson();
-            this.skipVisualRender = isFirstPerson && client.getCameraEntity() == player && !sceneActive;
-         } else {
-            this.skipVisualRender = false;
-         }
-
-         if (this.skipVisualRender) {
-            for (GeoBone bone : renderPassInfo.model().topLevelBones()) {
-               Optional.ofNullable(snapshots.get(bone)).ifPresent(snap -> {
-                  snap.skipRender(true);
-                  snap.skipChildrenRender(true);
-               });
-            }
+      // Match 1.21.1: during a scene the model must remain traversable so girlCam
+      // keeps updating; TransformedPlayerModel hides only geometry around the camera.
+      this.skipVisualRender = isLocalFirstPerson && !sceneActive;
+      if (this.skipVisualRender) {
+         for (GeoBone bone : renderPassInfo.model().topLevelBones()) {
+            Optional.ofNullable(snapshots.get(bone)).ifPresent(snap -> {
+               snap.skipRender(true);
+               snap.skipChildrenRender(true);
+            });
          }
       }
    }
 
-   private void submitSteveSubtree(RenderPassInfo<TransformedPlayerRenderState> passInfo, GeoBone bone, SubmitNodeCollector tasks) {
-      this.submitBoneWithTexture(passInfo, bone, tasks, this.cachedSkinTexture);
-      this.submitBoneWithTexture(passInfo, bone, tasks, Identifier.fromNamespaceAndPath("heartbound", "textures/player/penis.png"));
+   private void submitSteveSubtree(
+      RenderPassInfo<TransformedPlayerRenderState> passInfo,
+      GeoBone bone,
+      SubmitNodeCollector tasks,
+      boolean hideHeadForCamera,
+      boolean slim
+   ) {
+      this.submitBoneWithTexture(passInfo, bone, tasks, this.cachedSkinTexture, hideHeadForCamera, slim);
+      this.submitBoneWithTexture(
+         passInfo,
+         bone,
+         tasks,
+         Identifier.fromNamespaceAndPath("heartbound", "textures/player/penis.png"),
+         hideHeadForCamera,
+         slim
+      );
    }
 
-   private void submitBoneWithTexture(RenderPassInfo<TransformedPlayerRenderState> passInfo, GeoBone bone, SubmitNodeCollector tasks, Identifier texture) {
+   private void submitBoneWithTexture(
+      RenderPassInfo<TransformedPlayerRenderState> passInfo,
+      GeoBone bone,
+      SubmitNodeCollector tasks,
+      Identifier texture,
+      boolean hideHeadForCamera,
+      boolean slim
+   ) {
       net.minecraft.client.renderer.rendertype.RenderType renderType = net.minecraft.client.renderer.rendertype.RenderTypes.entityTranslucentCullItemTarget(texture);
       tasks.submitCustomGeometry(passInfo.poseStack(), renderType, (pose, vertexConsumer) -> {
          PoseStack poseStack = passInfo.poseStack();
          poseStack.pushPose();
          poseStack.last().set(pose);
-         this.renderSteveSubtree(passInfo, bone, poseStack, vertexConsumer);
+         // GeoLib per-bone tasks use an attachment pose located at the bone pivot.
+         // Restore the normal mesh pose before drawing the root and recursively
+         // applying its child-bone transforms.
+         bone.translateAwayFromPivotPoint(poseStack);
+         this.renderSteveSubtree(passInfo, bone, poseStack, vertexConsumer, hideHeadForCamera, slim);
          poseStack.popPose();
       });
    }
 
-   private void renderSteveSubtree(RenderPassInfo<TransformedPlayerRenderState> passInfo, GeoBone bone, PoseStack poseStack, VertexConsumer vertexConsumer) {
+   private void renderSteveSubtree(
+      RenderPassInfo<TransformedPlayerRenderState> passInfo,
+      GeoBone bone,
+      PoseStack poseStack,
+      VertexConsumer vertexConsumer,
+      boolean hideHeadForCamera,
+      boolean slim
+   ) {
+      if (this.shouldSkipSteveBone(bone.name(), slim)) {
+         return;
+      }
+
       int color = this.getSteveBoneColor(bone.name());
-      if (bone instanceof com.geckolib.cache.model.cuboid.CuboidGeoBone cuboid) {
+      boolean hideBoneGeometry = hideHeadForCamera && "Head2".equals(bone.name());
+      if (!hideBoneGeometry && bone instanceof com.geckolib.cache.model.cuboid.CuboidGeoBone cuboid) {
          for (com.geckolib.cache.model.cuboid.GeoCube cube : cuboid.cubes) {
             cube.render(poseStack, vertexConsumer, passInfo.packedLight(), passInfo.packedOverlay(), color);
          }
       }
 
       for (GeoBone child : bone.children()) {
-         child.positionAndRender(passInfo, vertexConsumer, passInfo.packedLight(), passInfo.packedOverlay(), color);
+         poseStack.pushPose();
+         RenderUtil.prepMatrixForBoneAndUpdateListeners(poseStack, child, passInfo);
+         child.translateAwayFromPivotPoint(poseStack);
+         this.renderSteveSubtree(passInfo, child, poseStack, vertexConsumer, hideHeadForCamera, slim);
+         poseStack.popPose();
       }
+   }
+
+   private boolean shouldSkipSteveBone(String boneName, boolean slim) {
+      return slim
+         ? "leftArmSteve".equals(boneName)
+            || "leftLowerArmSteve".equals(boneName)
+            || "rightArmSteve".equals(boneName)
+            || "rightLowerArmSteve".equals(boneName)
+         : "leftArmAlex".equals(boneName)
+            || "leftLowerArmAlex".equals(boneName)
+            || "rightArmAlex".equals(boneName)
+            || "rightLowerArmAlex".equals(boneName);
    }
 
    private int getSteveBoneColor(String boneName) {

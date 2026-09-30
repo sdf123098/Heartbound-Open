@@ -370,6 +370,10 @@ public abstract class PlayerTransformationMixin implements TransformablePlayer {
                && !Utils.checkForBlockAt(self.level(), this.heartbound$bedPos, null, BlockTags.BEDS)) {
                this.heartbound$stopTransformScene();
             } else {
+               if (type == SceneType.ON_BED) {
+                  this.heartbound$anchorBedScene();
+               }
+
                if (phase == ScenePhase.BED_IDLE && !self.isVehicle()) {
                   this.heartbound$tickWaitingForContact();
                }
@@ -388,14 +392,31 @@ public abstract class PlayerTransformationMixin implements TransformablePlayer {
    @Unique
    private Vec3 heartbound$calculateBedSnapPos(BlockPos bedPos, Direction facing) {
       float offset = this.heartbound$getTransformScene().bedAlignmentOffset();
+      double bedSceneY = (double)bedPos.getY();
 
       return switch (facing) {
-         case NORTH -> new Vec3((double)bedPos.getX() + 0.5, (double)bedPos.getY(), (double)bedPos.getZ() + 1.5 - (double)offset);
-         case EAST -> new Vec3((double)bedPos.getX() - 0.5 + (double)offset, (double)bedPos.getY(), (double)bedPos.getZ() + 0.5);
-         case SOUTH -> new Vec3((double)bedPos.getX() + 0.5, (double)bedPos.getY(), (double)bedPos.getZ() - 0.5 + (double)offset);
-         case WEST -> new Vec3((double)bedPos.getX() + 1.5 - (double)offset, (double)bedPos.getY(), (double)bedPos.getZ() + 0.5);
-         default -> bedPos.getCenter();
+         case NORTH -> new Vec3((double)bedPos.getX() + 0.5, bedSceneY, (double)bedPos.getZ() + 1.5 - (double)offset);
+         case EAST -> new Vec3((double)bedPos.getX() - 0.5 + (double)offset, bedSceneY, (double)bedPos.getZ() + 0.5);
+         case SOUTH -> new Vec3((double)bedPos.getX() + 0.5, bedSceneY, (double)bedPos.getZ() - 0.5 + (double)offset);
+         case WEST -> new Vec3((double)bedPos.getX() + 1.5 - (double)offset, bedSceneY, (double)bedPos.getZ() + 0.5);
+         default -> new Vec3((double)bedPos.getX() + 0.5, bedSceneY, (double)bedPos.getZ() + 0.5);
       };
+   }
+
+   @Unique
+   private void heartbound$anchorBedScene() {
+      Player self = (Player)(Object)this;
+      if (self.level().isClientSide() || this.heartbound$bedPos == null) {
+         return;
+      }
+
+      BlockState state = self.level().getBlockState(this.heartbound$bedPos);
+      Direction facing = state.hasProperty(BlockStateProperties.HORIZONTAL_FACING)
+         ? state.getValue(BlockStateProperties.HORIZONTAL_FACING)
+         : Direction.NORTH;
+      Vec3 scenePos = this.heartbound$calculateBedSnapPos(this.heartbound$bedPos, facing);
+      self.teleportTo(scenePos.x, scenePos.y, scenePos.z);
+      self.setDeltaMovement(Vec3.ZERO);
    }
 
    @Unique
@@ -555,6 +576,7 @@ public abstract class PlayerTransformationMixin implements TransformablePlayer {
             }
          }
 
+         this.heartbound$setPassengerBonePosition(Vec3.ZERO);
          if (self.isVehicle()) {
             self.ejectPassengers();
          }

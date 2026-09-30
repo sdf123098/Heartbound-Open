@@ -50,6 +50,10 @@ public class BedGoal extends Goal {
 
    @Override
    public boolean canContinueToUse() {
+      if (this.entity.isSceneActive() && this.entity.isBedScene() && this.scenePos != null) {
+         return true;
+      }
+
       boolean cont = this.entity.targetBedPos != null && Utils.checkForBlockAt(this.entity.level(), this.entity.targetBedPos, null, BlockTags.BEDS);
       if (!cont) {
          Heartbound.LOGGER.info("[HB-DBG] BedGoal.canContinue=false girl={} targetBed={}", this.entity.getGirlID(), this.entity.targetBedPos);
@@ -68,24 +72,28 @@ public class BedGoal extends Goal {
          this.bedFacing = Direction.NORTH;
       }
 
+      // Bed animations were authored relative to the bed block origin, not its
+      // collision surface. Anchoring at the collision top visibly raises both models.
+      double bedSceneY = (double)this.entity.targetBedPos.getY();
+
       if (this.bedFacing == Direction.NORTH) {
          this.snapPos = new Vec3(
-            (double)this.entity.targetBedPos.getX() + 0.5, (double)this.entity.targetBedPos.getY(), (double)this.entity.targetBedPos.getZ() + 1.5
+            (double)this.entity.targetBedPos.getX() + 0.5, bedSceneY, (double)this.entity.targetBedPos.getZ() + 1.5
          );
          this.scenePos = new Vec3(this.snapPos.x(), this.snapPos.y(), this.snapPos.z() - (double)this.entity.getBedOffset());
       } else if (this.bedFacing == Direction.EAST) {
          this.snapPos = new Vec3(
-            (double)this.entity.targetBedPos.getX() - 0.5, (double)this.entity.targetBedPos.getY(), (double)this.entity.targetBedPos.getZ() + 0.5
+            (double)this.entity.targetBedPos.getX() - 0.5, bedSceneY, (double)this.entity.targetBedPos.getZ() + 0.5
          );
          this.scenePos = new Vec3(this.snapPos.x() + (double)this.entity.getBedOffset(), this.snapPos.y(), this.snapPos.z());
       } else if (this.bedFacing == Direction.SOUTH) {
          this.snapPos = new Vec3(
-            (double)this.entity.targetBedPos.getX() + 0.5, (double)this.entity.targetBedPos.getY(), (double)this.entity.targetBedPos.getZ() - 0.5
+            (double)this.entity.targetBedPos.getX() + 0.5, bedSceneY, (double)this.entity.targetBedPos.getZ() - 0.5
          );
          this.scenePos = new Vec3(this.snapPos.x(), this.snapPos.y(), this.snapPos.z() + (double)this.entity.getBedOffset());
       } else if (this.bedFacing == Direction.WEST) {
          this.snapPos = new Vec3(
-            (double)this.entity.targetBedPos.getX() + 1.5, (double)this.entity.targetBedPos.getY(), (double)this.entity.targetBedPos.getZ() + 0.5
+            (double)this.entity.targetBedPos.getX() + 1.5, bedSceneY, (double)this.entity.targetBedPos.getZ() + 0.5
          );
          this.scenePos = new Vec3(this.snapPos.x() - (double)this.entity.getBedOffset(), this.snapPos.y(), this.snapPos.z());
       }
@@ -100,6 +108,20 @@ public class BedGoal extends Goal {
    }
 
    private void handleMovement() {
+      if (this.entity.isSceneActive() && this.entity.isBedScene() && this.scenePos != null) {
+         this.navigation.stop();
+         float targetYaw = this.bedFacing != null ? this.bedFacing.toYRot() : this.entity.getYRot();
+         if (!this.entity.level().isClientSide()) {
+            this.entity.teleportTo(this.scenePos.x, this.scenePos.y, this.scenePos.z);
+            this.entity.setDeltaMovement(Vec3.ZERO);
+         }
+
+         this.entity.setYRot(targetYaw);
+         this.entity.setYHeadRot(targetYaw);
+         this.entity.setYBodyRot(targetYaw);
+         return;
+      }
+
       if (this.entity.targetBedPos != null && this.entity.distanceToSqr(this.entity.targetBedPos.getCenter()) <= 3.0) {
          if (this.entity.getScenePlayer() != null) {
             this.navigation.stop();
@@ -115,6 +137,7 @@ public class BedGoal extends Goal {
             );
             if (!this.entity.level().isClientSide()) {
                this.entity.teleportTo(this.snapPos.x, this.snapPos.y, this.snapPos.z);
+               this.entity.setDeltaMovement(Vec3.ZERO);
                this.entity.setYRot(targetYaw);
             }
 
@@ -143,7 +166,11 @@ public class BedGoal extends Goal {
             if (!Heartbound.activeScenes.containsKey(playerId)) {
                if (this.entity.distanceToSqr(this.entity.getScenePlayer()) <= 1.5 && this.entity.getCurrentScenePhase().equals(ScenePhase.BED_IDLE)) {
                   Heartbound.activeScenes.put(playerId, this.entity.getUUID());
-                  this.entity.setPos(this.scenePos);
+                  if (!this.entity.level().isClientSide()) {
+                     this.entity.teleportTo(this.scenePos.x, this.scenePos.y, this.scenePos.z);
+                     this.entity.setDeltaMovement(Vec3.ZERO);
+                  }
+
                   this.entity.startRidingScene(this.entity.getScenePlayer());
                }
             }

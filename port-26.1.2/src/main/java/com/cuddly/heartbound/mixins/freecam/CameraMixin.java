@@ -1,6 +1,5 @@
 package com.cuddly.heartbound.mixins.freecam;
 
-import com.cuddly.heartbound.Heartbound;
 import com.cuddly.heartbound.client.rendering.renderers.AbstractGirlRenderer;
 import com.cuddly.heartbound.client.rendering.renderers.TransformedPlayerRenderer;
 import com.cuddly.heartbound.config.ModConfig;
@@ -38,8 +37,6 @@ public class CameraMixin {
    private MutableBlockPos blockPosition;
    @Unique
    private boolean heartbound$wasTransformed = false;
-   @Unique
-   private int hbCamLogCounter = 0;
 
    @Inject(
       method = {"setEntity(Lnet/minecraft/world/entity/Entity;)V"},
@@ -98,22 +95,21 @@ public class CameraMixin {
                   return;
                }
 
-               if (player.getVehicle() instanceof GirlSceneEntity girl && girl.isHavingSex()) {
-                  Vec3 boyCamPos = AbstractGirlRenderer.getBoyCamPos();
-                  boolean snapped = boyCamPos != null && AbstractGirlRenderer.getTrackedGirlEntityId() == girl.getId();
-                  if (snapped) {
-                     this.heartbound$setCameraPos(boyCamPos);
+               if (player.getVehicle() instanceof GirlSceneEntity girl) {
+                  // BED_IDLE and LAYING_DOWN are preparation phases.  They can keep
+                  // the scene flag set, but the player's normal first-person camera
+                  // must remain in use until the formal scene has started.
+                  if (!girl.isHavingSex()) {
+                     if (AbstractGirlRenderer.getTrackedGirlEntityId() == girl.getId()) {
+                        AbstractGirlRenderer.clearCameraPosition();
+                     }
+
+                     return;
                   }
-                  if (++this.hbCamLogCounter % 20 == 0) {
-                     Heartbound.LOGGER.info(
-                        "[HB-DBG] cam girlScene id={} phase={} havingSex={} boyCam={} tracked={} snapped={}",
-                        girl.getId(),
-                        girl.getCurrentScenePhase(),
-                        girl.isHavingSex(),
-                        boyCamPos,
-                        AbstractGirlRenderer.getTrackedGirlEntityId(),
-                        snapped
-                     );
+
+                  Vec3 boyCamPos = AbstractGirlRenderer.getBoyCamPos();
+                  if (boyCamPos != null && AbstractGirlRenderer.getTrackedGirlEntityId() == girl.getId()) {
+                     this.heartbound$setCameraPos(boyCamPos);
                   }
                }
             }

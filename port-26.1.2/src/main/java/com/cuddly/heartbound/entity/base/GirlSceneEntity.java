@@ -443,6 +443,9 @@ public abstract class GirlSceneEntity extends GirlEntity implements GeoEntity {
          this.setCumThreshold(this.getCurrentScene().cumThreshold());
          this.setThrusting(false);
          this.targetBedPos = null;
+         this.setMovementLockedState(true);
+         this.setDeltaMovement(Vec3.ZERO);
+         this.getNavigation().stop();
          this.getScenePlayer().startRiding(this, false, false);
          this.setIntroIndex(0);
          this.lastSceneAnim = "";

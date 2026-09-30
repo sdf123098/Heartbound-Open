@@ -9,12 +9,15 @@ import com.geckolib.renderer.base.GeoRenderer;
 import com.geckolib.renderer.base.PerBoneRender;
 import com.geckolib.renderer.base.RenderPassInfo;
 import com.geckolib.renderer.layer.GeoRenderLayer;
+import com.geckolib.util.RenderUtil;
 import com.mojang.blaze3d.vertex.PoseStack;
 import java.util.function.BiConsumer;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.resources.Identifier;
+import net.minecraft.world.entity.player.Player;
 
 /**
  * GeckoLib 5 移植版骨骼纹理覆盖层（原 1.21.1 renderRecursively 逻辑的对应实现）。
@@ -36,60 +39,88 @@ public class BoneOverrideRenderLayer<T extends GirlSceneEntity> extends GeoRende
          return;
       }
 
-      if (animatable.boneTextureOverrides == null || animatable.boneTextureOverrides.get("steve") == null) {
+      // LAYING_DOWN and BED_IDLE are pre-contact animation phases, but the server
+      // currently also exposes them as scene-active. Do not render the player's
+      // replacement mesh until that player has actually mounted the girl.
+      if (!animatable.isHavingSex()
+         || !(animatable.getFirstPassenger() instanceof Player passenger)
+         || !animatable.isCurrentScenePlayer(passenger)) {
          return;
       }
 
-      Identifier skin = animatable.boneTextureOverrides.get("steve");
+      Identifier skin = animatable.boneTextureOverrides != null && animatable.boneTextureOverrides.get("steve") != null
+         ? animatable.boneTextureOverrides.get("steve")
+         : Identifier.withDefaultNamespace("textures/entity/player/wide/steve.png");
       Identifier layer2 = animatable.boneTextureOverridesLayer2 != null ? animatable.boneTextureOverridesLayer2.get("steve") : null;
       Identifier layer3 = animatable.boneTextureOverridesLayer3 != null ? animatable.boneTextureOverridesLayer3.get("steve") : null;
+      Minecraft client = Minecraft.getInstance();
+      boolean hideHeadForCamera = client.options.getCameraType().isFirstPerson() && client.getCameraEntity() == passenger;
       renderPassInfo.model().getBone("steve").ifPresent(bone -> consumer.accept(bone, (passInfo, b, tasks) -> {
-         this.submitSteveSubtree(passInfo, b, tasks, animatable, skin);
+         this.submitSteveSubtree(passInfo, b, tasks, animatable, skin, hideHeadForCamera);
          if (layer2 != null) {
-            this.submitSteveSubtree(passInfo, b, tasks, animatable, layer2);
+            this.submitSteveSubtree(passInfo, b, tasks, animatable, layer2, hideHeadForCamera);
          }
 
          if (layer3 != null) {
-            this.submitSteveSubtree(passInfo, b, tasks, animatable, layer3);
+            this.submitSteveSubtree(passInfo, b, tasks, animatable, layer3, hideHeadForCamera);
          }
       }));
    }
 
    private void submitSteveSubtree(
-      RenderPassInfo<GirlRenderState> passInfo, GeoBone bone, SubmitNodeCollector tasks, GirlSceneEntity animatable, Identifier texture
+      RenderPassInfo<GirlRenderState> passInfo,
+      GeoBone bone,
+      SubmitNodeCollector tasks,
+      GirlSceneEntity animatable,
+      Identifier texture,
+      boolean hideHeadForCamera
    ) {
       int boneColor = animatable.boneColorOverrides != null ? animatable.boneColorOverrides.getOrDefault("steve", -1) : -1;
       RenderType renderType = RenderTypes.entityTranslucentCullItemTarget(texture);
       tasks.submitCustomGeometry(passInfo.poseStack(), renderType, (pose, vertexConsumer) -> {
          PoseStack poseStack = passInfo.poseStack();
          poseStack.pushPose();
-         // GL5 5.5.2 捕获的 pose 是模型局部系（实测平移 ~0.6，非世界系）：
-         // 原 set(pose) 把当前世界系 pose 整体替换 → 形象渲染在错误位置（与女孩重叠）。
-         // 改为：先重置为 pass 创建时的世界变换（objectRenderPose），再叠加局部 pose。
-         poseStack.last().set(passInfo.getPreRenderMatrixPose());
-         poseStack.last().pose().mul(pose.pose());
-         this.renderBoneSubtree(passInfo, bone, poseStack, vertexConsumer, animatable, boneColor);
+         // Per-bone tasks receive an attachment pose: GeoLib has already moved to the
+         // requested bone's pivot. Cubes, however, must render after moving back from
+         // that pivot, exactly as GeoBone.positionAndRender does. Without this inverse
+         // translation the root steve mesh and its children use different spaces.
+         poseStack.last().set(pose);
+         bone.translateAwayFromPivotPoint(poseStack);
+         this.renderBoneSubtree(
+            passInfo, bone, poseStack, vertexConsumer, animatable, boneColor, hideHeadForCamera
+         );
          poseStack.popPose();
       });
    }
 
    private void renderBoneSubtree(
       RenderPassInfo<GirlRenderState> passInfo, GeoBone bone, PoseStack poseStack, com.mojang.blaze3d.vertex.VertexConsumer vertexConsumer,
-      GirlSceneEntity animatable, int inheritedColor
+      GirlSceneEntity animatable, int inheritedColor, boolean hideHeadForCamera
    ) {
+      if (animatable.boneVisibility != null && Boolean.FALSE.equals(animatable.boneVisibility.get(bone.name()))) {
+         return;
+      }
+
       int color = inheritedColor;
       if (animatable.boneColorOverrides != null) {
          color = animatable.boneColorOverrides.getOrDefault(bone.name(), inheritedColor);
       }
 
-      if (bone instanceof CuboidGeoBone cuboid) {
+      boolean hideBoneGeometry = hideHeadForCamera && "Head2".equals(bone.name());
+      if (!hideBoneGeometry && bone instanceof CuboidGeoBone cuboid) {
          for (GeoCube cube : cuboid.cubes) {
             cube.render(poseStack, vertexConsumer, passInfo.packedLight(), passInfo.packedOverlay(), color);
          }
       }
 
       for (GeoBone child : bone.children()) {
-         child.positionAndRender(passInfo, vertexConsumer, passInfo.packedLight(), passInfo.packedOverlay(), color);
+         poseStack.pushPose();
+         RenderUtil.prepMatrixForBoneAndUpdateListeners(poseStack, child, passInfo);
+         child.translateAwayFromPivotPoint(poseStack);
+         this.renderBoneSubtree(
+            passInfo, child, poseStack, vertexConsumer, animatable, color, hideHeadForCamera
+         );
+         poseStack.popPose();
       }
    }
 }
